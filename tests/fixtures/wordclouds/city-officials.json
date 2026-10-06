@@ -1,576 +1,275 @@
 {
- "nA": 3992,
- "nB": 38030,
+ "source": "scripts/build_wordclouds.py with scripts/meta/wordclouds.json, 2026-10-06",
  "phrases": [
   {
    "phrase": "cyber",
-   "panel": 43,
-   "rest": 32,
-   "z": 10.66,
-   "n": 1
-  },
-  {
-   "phrase": "agencies",
-   "panel": 24,
-   "rest": 25,
-   "z": 7.53,
-   "n": 1
+   "group_count": 43,
+   "others_count": 32,
+   "z": 10.6
   },
   {
    "phrase": "oti",
-   "panel": 22,
-   "rest": 18,
-   "z": 7.52,
-   "n": 1
+   "group_count": 22,
+   "others_count": 18,
+   "z": 7.47
+  },
+  {
+   "phrase": "agencies",
+   "group_count": 24,
+   "others_count": 25,
+   "z": 7.47
   },
   {
    "phrase": "cyber command",
-   "panel": 19,
-   "rest": 9,
-   "z": 7.26,
-   "n": 2
+   "group_count": 19,
+   "others_count": 9,
+   "z": 7.22
   },
   {
    "phrase": "agency",
-   "panel": 17,
-   "rest": 13,
-   "z": 6.67,
-   "n": 1
+   "group_count": 17,
+   "others_count": 13,
+   "z": 6.62
   },
   {
    "phrase": "cybersecurity",
-   "panel": 17,
-   "rest": 19,
-   "z": 6.23,
-   "n": 1
+   "group_count": 17,
+   "others_count": 19,
+   "z": 6.18
   },
   {
    "phrase": "dcwp",
-   "panel": 14,
-   "rest": 4,
-   "z": 6.09,
-   "n": 1
+   "group_count": 14,
+   "others_count": 4,
+   "z": 6.06
   },
   {
    "phrase": "administration",
-   "panel": 13,
-   "rest": 11,
-   "z": 5.75,
-   "n": 1
+   "group_count": 13,
+   "others_count": 11,
+   "z": 5.71
   },
   {
    "phrase": "tools",
-   "panel": 30,
-   "rest": 83,
-   "z": 5.6,
-   "n": 1
+   "group_count": 30,
+   "others_count": 83,
+   "z": 5.53
   },
   {
    "phrase": "attack",
-   "panel": 11,
-   "rest": 6,
-   "z": 5.5,
-   "n": 1
+   "group_count": 11,
+   "others_count": 6,
+   "z": 5.47
   },
   {
    "phrase": "algorithmic tools",
-   "panel": 10,
-   "rest": 5,
-   "z": 5.26,
-   "n": 2
+   "group_count": 10,
+   "others_count": 5,
+   "z": 5.23
   },
   {
    "phrase": "law",
-   "panel": 24,
-   "rest": 64,
-   "z": 5.13,
-   "n": 1
+   "group_count": 24,
+   "others_count": 64,
+   "z": 5.07
   },
   {
    "phrase": "city cyber command",
-   "panel": 10,
-   "rest": 2,
-   "z": 4.94,
-   "n": 3
+   "group_count": 10,
+   "others_count": 2,
+   "z": 4.92
   },
   {
    "phrase": "artificial intelligence",
-   "panel": 17,
-   "rest": 40,
-   "z": 4.66,
-   "n": 2
+   "group_count": 17,
+   "others_count": 40,
+   "z": 4.61
   },
   {
    "phrase": "complaints",
-   "panel": 7,
-   "rest": 3,
-   "z": 4.4,
-   "n": 1
+   "group_count": 7,
+   "others_count": 3,
+   "z": 4.38
   },
   {
    "phrase": "local law",
-   "panel": 8,
-   "rest": 8,
-   "z": 4.38,
-   "n": 2
-  },
-  {
-   "phrase": "software",
-   "panel": 9,
-   "rest": 12,
-   "z": 4.32,
-   "n": 1
+   "group_count": 8,
+   "others_count": 8,
+   "z": 4.34
   },
   {
    "phrase": "hiring",
-   "panel": 7,
-   "rest": 5,
-   "z": 4.31,
-   "n": 1
+   "group_count": 7,
+   "others_count": 5,
+   "z": 4.28
+  },
+  {
+   "phrase": "software",
+   "group_count": 9,
+   "others_count": 12,
+   "z": 4.28
   },
   {
    "phrase": "employment",
-   "panel": 6,
-   "rest": 3,
-   "z": 4.07,
-   "n": 1
+   "group_count": 6,
+   "others_count": 3,
+   "z": 4.05
   },
   {
    "phrase": "breach",
-   "panel": 6,
-   "rest": 3,
-   "z": 4.07,
-   "n": 1
+   "group_count": 6,
+   "others_count": 3,
+   "z": 4.05
   },
   {
    "phrase": "microsoft",
-   "panel": 6,
-   "rest": 3,
-   "z": 4.07,
-   "n": 1
+   "group_count": 6,
+   "others_count": 3,
+   "z": 4.05
   },
   {
    "phrase": "office",
-   "panel": 15,
-   "rest": 40,
-   "z": 4.05,
-   "n": 1
+   "group_count": 15,
+   "others_count": 40,
+   "z": 4.0
   },
   {
    "phrase": "management",
-   "panel": 6,
-   "rest": 5,
-   "z": 3.91,
-   "n": 1
+   "group_count": 6,
+   "others_count": 5,
+   "z": 3.88
   },
   {
    "phrase": "duties",
-   "panel": 5,
-   "rest": 2,
-   "z": 3.71,
-   "n": 1
+   "group_count": 5,
+   "others_count": 2,
+   "z": 3.69
   },
   {
    "phrase": "city agencies",
-   "panel": 6,
-   "rest": 8,
-   "z": 3.53,
-   "n": 2
+   "group_count": 6,
+   "others_count": 8,
+   "z": 3.49
   },
   {
    "phrase": "rider",
-   "panel": 5,
-   "rest": 1,
-   "z": 3.49,
-   "n": 1
+   "group_count": 5,
+   "others_count": 1,
+   "z": 3.48
   },
   {
    "phrase": "partners",
-   "panel": 5,
-   "rest": 5,
-   "z": 3.46,
-   "n": 1
+   "group_count": 5,
+   "others_count": 5,
+   "z": 3.43
   },
   {
    "phrase": "reporting",
-   "panel": 12,
-   "rest": 35,
-   "z": 3.41,
-   "n": 1
+   "group_count": 12,
+   "others_count": 35,
+   "z": 3.36
   },
   {
    "phrase": "service",
-   "panel": 6,
-   "rest": 9,
-   "z": 3.39,
-   "n": 1
+   "group_count": 6,
+   "others_count": 9,
+   "z": 3.36
   },
   {
    "phrase": "response",
-   "panel": 7,
-   "rest": 13,
-   "z": 3.37,
-   "n": 1
-  },
-  {
-   "phrase": "system",
-   "panel": 12,
-   "rest": 36,
-   "z": 3.34,
-   "n": 1
+   "group_count": 7,
+   "others_count": 13,
+   "z": 3.33
   },
   {
    "phrase": "nycem",
-   "panel": 4,
-   "rest": 2,
-   "z": 3.33,
-   "n": 1
+   "group_count": 4,
+   "others_count": 2,
+   "z": 3.31
   },
   {
    "phrase": "distributed",
-   "panel": 4,
-   "rest": 2,
-   "z": 3.33,
-   "n": 1
+   "group_count": 4,
+   "others_count": 2,
+   "z": 3.31
+  },
+  {
+   "phrase": "system",
+   "group_count": 12,
+   "others_count": 36,
+   "z": 3.29
   },
   {
    "phrase": "protocols",
-   "panel": 6,
-   "rest": 10,
-   "z": 3.26,
-   "n": 1
+   "group_count": 6,
+   "others_count": 10,
+   "z": 3.23
   },
   {
    "phrase": "cyber attacks",
-   "panel": 4,
-   "rest": 3,
-   "z": 3.24,
-   "n": 2
+   "group_count": 4,
+   "others_count": 3,
+   "z": 3.22
   },
   {
    "phrase": "incident response",
-   "panel": 4,
-   "rest": 3,
-   "z": 3.24,
-   "n": 2
+   "group_count": 4,
+   "others_count": 3,
+   "z": 3.22
   },
   {
    "phrase": "compliant",
-   "panel": 4,
-   "rest": 1,
-   "z": 3.21,
-   "n": 1
+   "group_count": 4,
+   "others_count": 1,
+   "z": 3.2
   },
   {
    "phrase": "impact",
-   "panel": 9,
-   "rest": 24,
-   "z": 3.14,
-   "n": 1
-  },
-  {
-   "phrase": "technology",
-   "panel": 25,
-   "rest": 117,
-   "z": 3.1,
-   "n": 1
+   "group_count": 9,
+   "others_count": 24,
+   "z": 3.1
   },
   {
    "phrase": "coordinate",
-   "panel": 4,
-   "rest": 4,
-   "z": 3.09,
-   "n": 1
+   "group_count": 4,
+   "others_count": 4,
+   "z": 3.07
+  },
+  {
+   "phrase": "technology",
+   "group_count": 25,
+   "others_count": 117,
+   "z": 3.03
   },
   {
    "phrase": "staff",
-   "panel": 6,
-   "rest": 12,
-   "z": 3.01,
-   "n": 1
+   "group_count": 6,
+   "others_count": 12,
+   "z": 2.98
   },
   {
    "phrase": "security",
-   "panel": 15,
-   "rest": 59,
-   "z": 2.94,
-   "n": 1
-  },
-  {
-   "phrase": "enforcement",
-   "panel": 8,
-   "rest": 22,
-   "z": 2.9,
-   "n": 1
+   "group_count": 15,
+   "others_count": 59,
+   "z": 2.88
   },
   {
    "phrase": "mission",
-   "panel": 5,
-   "rest": 9,
-   "z": 2.88,
-   "n": 1
+   "group_count": 5,
+   "others_count": 9,
+   "z": 2.86
+  },
+  {
+   "phrase": "enforcement",
+   "group_count": 8,
+   "others_count": 22,
+   "z": 2.86
   },
   {
    "phrase": "city emergency management",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.85,
-   "n": 3
-  },
-  {
-   "phrase": "functions",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.85,
-   "n": 1
-  },
-  {
-   "phrase": "office of cyber",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.85,
-   "n": 3
-  },
-  {
-   "phrase": "city infrastructure",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.85,
-   "n": 2
-  },
-  {
-   "phrase": "december",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.85,
-   "n": 1
-  },
-  {
-   "phrase": "determining",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.85,
-   "n": 1
-  },
-  {
-   "phrase": "risk assessment",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.85,
-   "n": 2
-  },
-  {
-   "phrase": "function",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.85,
-   "n": 1
-  },
-  {
-   "phrase": "prices",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.85,
-   "n": 1
-  },
-  {
-   "phrase": "reviewing",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.85,
-   "n": 1
-  },
-  {
-   "phrase": "novel",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.85,
-   "n": 1
-  },
-  {
-   "phrase": "cyber security",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.85,
-   "n": 2
-  },
-  {
-   "phrase": "risk",
-   "panel": 20,
-   "rest": 92,
-   "z": 2.84,
-   "n": 1
-  },
-  {
-   "phrase": "complaint",
-   "panel": 3,
-   "rest": 2,
-   "z": 2.84,
-   "n": 1
-  },
-  {
-   "phrase": "rulemaking",
-   "panel": 3,
-   "rest": 2,
-   "z": 2.84,
-   "n": 1
-  },
-  {
-   "phrase": "initial",
-   "panel": 3,
-   "rest": 2,
-   "z": 2.84,
-   "n": 1
-  },
-  {
-   "phrase": "agreements",
-   "panel": 3,
-   "rest": 2,
-   "z": 2.84,
-   "n": 1
-  },
-  {
-   "phrase": "city workers",
-   "panel": 3,
-   "rest": 2,
-   "z": 2.84,
-   "n": 2
-  },
-  {
-   "phrase": "civil service",
-   "panel": 3,
-   "rest": 2,
-   "z": 2.84,
-   "n": 2
-  },
-  {
-   "phrase": "commission",
-   "panel": 3,
-   "rest": 2,
-   "z": 2.84,
-   "n": 1
-  },
-  {
-   "phrase": "notification",
-   "panel": 3,
-   "rest": 2,
-   "z": 2.84,
-   "n": 1
-  },
-  {
-   "phrase": "director",
-   "panel": 7,
-   "rest": 18,
-   "z": 2.83,
-   "n": 1
-  },
-  {
-   "phrase": "regulate",
-   "panel": 7,
-   "rest": 18,
-   "z": 2.83,
-   "n": 1
-  },
-  {
-   "phrase": "decision making",
-   "panel": 4,
-   "rest": 6,
-   "z": 2.77,
-   "n": 2
-  },
-  {
-   "phrase": "requirements",
-   "panel": 5,
-   "rest": 10,
-   "z": 2.75,
-   "n": 1
-  },
-  {
-   "phrase": "roles",
-   "panel": 3,
-   "rest": 3,
-   "z": 2.68,
-   "n": 1
-  },
-  {
-   "phrase": "piece",
-   "panel": 3,
-   "rest": 3,
-   "z": 2.68,
-   "n": 1
-  },
-  {
-   "phrase": "evolve",
-   "panel": 3,
-   "rest": 3,
-   "z": 2.68,
-   "n": 1
-  },
-  {
-   "phrase": "met",
-   "panel": 3,
-   "rest": 3,
-   "z": 2.68,
-   "n": 1
-  },
-  {
-   "phrase": "mhmm",
-   "panel": 3,
-   "rest": 3,
-   "z": 2.68,
-   "n": 1
-  },
-  {
-   "phrase": "plans",
-   "panel": 3,
-   "rest": 3,
-   "z": 2.68,
-   "n": 1
-  },
-  {
-   "phrase": "notify",
-   "panel": 3,
-   "rest": 3,
-   "z": 2.68,
-   "n": 1
-  },
-  {
-   "phrase": "however",
-   "panel": 5,
-   "rest": 11,
-   "z": 2.62,
-   "n": 1
-  },
-  {
-   "phrase": "issues",
-   "panel": 9,
-   "rest": 31,
-   "z": 2.58,
-   "n": 1
-  },
-  {
-   "phrase": "commissioner",
-   "panel": 6,
-   "rest": 16,
-   "z": 2.56,
-   "n": 1
-  },
-  {
-   "phrase": "cyber defense",
-   "panel": 3,
-   "rest": 4,
-   "z": 2.49,
-   "n": 2
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.84
   }
- ],
- "speakers": {
-  "Sarah Milstein": 31,
-  "Benjamin Krakauer": 2,
-  "CJ Dixon": 12,
-  "Samuel Levine": 4,
-  "Jimmy Pan": 1
- },
- "turns": 50,
- "minutes": 46.5,
- "words_panel": 7357
+ ]
 }

@@ -1,0 +1,275 @@
+{
+ "source": "scripts/build_wordclouds.py with scripts/meta/wordclouds.json, 2026-10-06",
+ "phrases": [
+  {
+   "phrase": "google",
+   "group_count": 17,
+   "others_count": 36,
+   "z": 9.14
+  },
+  {
+   "phrase": "swarm",
+   "group_count": 6,
+   "others_count": 3,
+   "z": 5.81
+  },
+  {
+   "phrase": "ceo",
+   "group_count": 5,
+   "others_count": 5,
+   "z": 5.4
+  },
+  {
+   "phrase": "deepmind",
+   "group_count": 5,
+   "others_count": 3,
+   "z": 5.37
+  },
+  {
+   "phrase": "misaligned",
+   "group_count": 5,
+   "others_count": 8,
+   "z": 5.18
+  },
+  {
+   "phrase": "scientist",
+   "group_count": 4,
+   "others_count": 4,
+   "z": 4.83
+  },
+  {
+   "phrase": "mechanisms",
+   "group_count": 4,
+   "others_count": 6,
+   "z": 4.67
+  },
+  {
+   "phrase": "governance",
+   "group_count": 4,
+   "others_count": 9,
+   "z": 4.36
+  },
+  {
+   "phrase": "stop",
+   "group_count": 5,
+   "others_count": 23,
+   "z": 3.93
+  },
+  {
+   "phrase": "china",
+   "group_count": 5,
+   "others_count": 25,
+   "z": 3.8
+  },
+  {
+   "phrase": "control",
+   "group_count": 8,
+   "others_count": 65,
+   "z": 3.78
+  },
+  {
+   "phrase": "progress",
+   "group_count": 3,
+   "others_count": 7,
+   "z": 3.75
+  },
+  {
+   "phrase": "hacking",
+   "group_count": 3,
+   "others_count": 7,
+   "z": 3.75
+  },
+  {
+   "phrase": "dollars",
+   "group_count": 3,
+   "others_count": 7,
+   "z": 3.75
+  },
+  {
+   "phrase": "principles",
+   "group_count": 3,
+   "others_count": 8,
+   "z": 3.63
+  },
+  {
+   "phrase": "reporting",
+   "group_count": 6,
+   "others_count": 41,
+   "z": 3.6
+  },
+  {
+   "phrase": "executives",
+   "group_count": 2,
+   "others_count": 2,
+   "z": 3.41
+  },
+  {
+   "phrase": "seat",
+   "group_count": 2,
+   "others_count": 2,
+   "z": 3.41
+  },
+  {
+   "phrase": "loss of control",
+   "group_count": 2,
+   "others_count": 2,
+   "z": 3.41
+  },
+  {
+   "phrase": "california",
+   "group_count": 3,
+   "others_count": 10,
+   "z": 3.41
+  },
+  {
+   "phrase": "agi",
+   "group_count": 2,
+   "others_count": 1,
+   "z": 3.35
+  },
+  {
+   "phrase": "google deepmind",
+   "group_count": 2,
+   "others_count": 1,
+   "z": 3.35
+  },
+  {
+   "phrase": "deployments",
+   "group_count": 2,
+   "others_count": 1,
+   "z": 3.35
+  },
+  {
+   "phrase": "pentagon",
+   "group_count": 2,
+   "others_count": 1,
+   "z": 3.35
+  },
+  {
+   "phrase": "dollars of damage",
+   "group_count": 2,
+   "others_count": 1,
+   "z": 3.35
+  },
+  {
+   "phrase": "racing",
+   "group_count": 3,
+   "others_count": 11,
+   "z": 3.31
+  },
+  {
+   "phrase": "feedback",
+   "group_count": 2,
+   "others_count": 3,
+   "z": 3.3
+  },
+  {
+   "phrase": "hacks",
+   "group_count": 2,
+   "others_count": 3,
+   "z": 3.3
+  },
+  {
+   "phrase": "signed",
+   "group_count": 4,
+   "others_count": 22,
+   "z": 3.26
+  },
+  {
+   "phrase": "military",
+   "group_count": 2,
+   "others_count": 4,
+   "z": 3.16
+  },
+  {
+   "phrase": "weapons",
+   "group_count": 2,
+   "others_count": 4,
+   "z": 3.16
+  },
+  {
+   "phrase": "treaty",
+   "group_count": 2,
+   "others_count": 4,
+   "z": 3.16
+  },
+  {
+   "phrase": "dangers",
+   "group_count": 2,
+   "others_count": 5,
+   "z": 3.01
+  },
+  {
+   "phrase": "ais",
+   "group_count": 5,
+   "others_count": 42,
+   "z": 2.93
+  },
+  {
+   "phrase": "optimistic",
+   "group_count": 2,
+   "others_count": 6,
+   "z": 2.87
+  },
+  {
+   "phrase": "hugging",
+   "group_count": 3,
+   "others_count": 17,
+   "z": 2.79
+  },
+  {
+   "phrase": "statements",
+   "group_count": 2,
+   "others_count": 8,
+   "z": 2.62
+  },
+  {
+   "phrase": "smarter",
+   "group_count": 2,
+   "others_count": 9,
+   "z": 2.51
+  },
+  {
+   "phrase": "cost",
+   "group_count": 2,
+   "others_count": 9,
+   "z": 2.51
+  },
+  {
+   "phrase": "scientific",
+   "group_count": 2,
+   "others_count": 9,
+   "z": 2.51
+  },
+  {
+   "phrase": "evaluation",
+   "group_count": 2,
+   "others_count": 10,
+   "z": 2.4
+  },
+  {
+   "phrase": "demis",
+   "group_count": 9,
+   "others_count": 0,
+   "z": 2.39
+  },
+  {
+   "phrase": "validators",
+   "group_count": 2,
+   "others_count": 11,
+   "z": 2.31
+  },
+  {
+   "phrase": "recursive self improvement",
+   "group_count": 2,
+   "others_count": 12,
+   "z": 2.22
+  },
+  {
+   "phrase": "billion",
+   "group_count": 2,
+   "others_count": 12,
+   "z": 2.22
+  }
+ ]
+}

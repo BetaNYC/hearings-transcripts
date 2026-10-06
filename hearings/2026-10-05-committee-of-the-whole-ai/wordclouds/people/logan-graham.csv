@@ -1,195 +1,160 @@
 phrase,group_count,others_count,z
-team,23,42,7.09
-reason,16,17,6.81
-claude,13,8,6.49
-anthropic,18,39,5.87
-first,33,124,5.83
-models,33,128,5.69
-release,12,22,5.11
-affected,8,4,5.10
-transparent,9,10,5.06
-threat,8,6,5.03
-number,14,34,4.91
-role,12,25,4.87
-ongoing,8,8,4.86
-detailed,7,4,4.77
-reports,11,22,4.74
-science,9,14,4.67
-user,8,10,4.66
-addition,8,11,4.55
-exactly,8,11,4.55
-tried,7,7,4.54
-disclose,7,8,4.44
-capabilities,11,26,4.41
-independent evaluators,6,4,4.39
-sometimes,6,5,4.31
-incidents,16,58,4.15
-biological,6,7,4.09
-personally,6,7,4.09
-model,20,86,4.07
-understanding,8,16,4.04
-law enforcement,5,3,4.02
-fundamentally,5,2,4.00
-publish,5,2,4.00
-defenders,5,2,4.00
-processes,7,12,3.99
-fast,6,8,3.97
-nuanced,6,1,3.95
-parties,8,17,3.94
-economic,7,13,3.88
-remediate,5,1,3.71
-industry,12,42,3.68
-critical infrastructure,4,3,3.55
-stack,4,3,3.55
-handle,4,3,3.55
-refer,4,3,3.55
-labs,6,12,3.49
-exact,6,12,3.49
-secure,5,8,3.45
-pacing,4,1,3.43
-role of government,4,1,3.43
-first place,4,1,3.43
-candidly,4,1,3.43
-threat intelligence,4,1,3.43
-advance,4,4,3.43
-generate,4,4,3.43
-governments,6,13,3.38
-scaling,6,13,3.38
-teams,8,24,3.32
-glad,4,5,3.29
-publicly,7,19,3.28
-long,7,19,3.28
-safeguards,10,37,3.23
-platform,5,10,3.19
-risks,17,88,3.14
-beginning,4,6,3.14
-published,4,6,3.14
-grew,3,2,3.10
-complex,3,2,3.10
-parts,3,2,3.10
-evaluations,6,16,3.07
-regularly,3,1,3.06
-generate images,3,1,3.06
-urgently,3,1,3.06
-security,13,61,3.03
-otherwise,4,7,3.00
-every day,3,3,2.97
-legally,3,3,2.97
-dna,3,3,2.97
-investigate,3,3,2.97
-prohibited,3,3,2.97
-extremely seriously,3,3,2.97
-safety,31,213,2.93
-committed,8,29,2.93
-disclosure,4,8,2.85
-area,4,8,2.85
-diseases,3,4,2.81
-vulnerabilities,3,4,2.81
-fundamental,3,4,2.81
-properly,3,4,2.81
-tests,3,4,2.81
-view,3,4,2.81
-advanced,6,19,2.78
-supported,7,25,2.77
-testing,5,14,2.73
-cases,5,14,2.73
-misuse,5,14,2.73
-launch,4,9,2.72
-seriously,7,27,2.62
-government,14,78,2.62
-extremely,5,15,2.62
-every,11,55,2.61
-support,11,55,2.61
-needed,4,10,2.59
-advocated,2,1,2.55
-obligated,2,1,2.55
-software vulnerabilities,2,1,2.55
-bigger,2,1,2.55
-outline,2,1,2.55
-disclosing,2,1,2.55
-release a model,2,1,2.55
-involve independent,2,1,2.55
-research team,2,1,2.55
-scenarios,2,1,2.55
-accords,2,1,2.55
-security standards,2,1,2.55
-federal legislation,2,1,2.55
-detecting,2,1,2.55
-possibly,2,1,2.55
-guy,2,1,2.55
-maintaining,2,1,2.55
-influenced,2,1,2.55
-advertisers,2,1,2.55
-cyber defenders,2,1,2.55
-louder,2,1,2.55
-autonomous weapons,2,1,2.55
-outside,6,22,2.52
-leaders,3,6,2.47
-practice,3,6,2.47
-mitigate,3,6,2.47
-alignment,4,11,2.46
-goes,4,11,2.46
-world,10,51,2.44
-cure,2,2,2.43
-corporation,2,2,2.43
-documents,2,2,2.43
-relatively,2,2,2.43
-fairly,2,2,2.43
-collectively,2,2,2.43
-sandboxes,2,2,2.43
-disclosed,2,2,2.43
-urgent,2,2,2.43
-refine,2,2,2.43
-independent evaluation,2,2,2.43
-substantial,2,2,2.43
-safety practices,2,2,2.43
-foundational,2,2,2.43
-involves,2,2,2.43
-enormous,2,2,2.43
-usage policy,2,2,2.43
-component,2,2,2.43
-frontier model,2,2,2.43
-documented,2,2,2.43
-priority,2,2,2.43
-hundred,2,2,2.43
-focuses,2,2,2.43
-biological capabilities,2,2,2.43
-biology,2,2,2.43
-likewise,12,0,2.42
-effort,3,7,2.31
-belief,2,3,2.22
-profit,2,3,2.22
-exploit,2,3,2.22
-local governments,2,3,2.22
-apologies,2,3,2.22
-confirm,2,3,2.22
-releasing,2,3,2.22
-entirely,2,3,2.22
-user privacy,2,3,2.22
-massachusetts,2,3,2.22
-excellent,2,3,2.22
-research,11,64,2.20
-increasingly,3,8,2.17
-early,3,8,2.17
-nature,3,8,2.17
-usage,3,8,2.17
-best,6,27,2.13
-threats,4,14,2.12
-safe,9,50,2.10
-core,5,21,2.07
-training,10,59,2.06
-focused,3,9,2.03
-researcher,3,9,2.03
-hard,3,9,2.03
-finding,2,4,2.02
-learn,4,15,2.02
-multilayered,2,4,2.02
-clear,7,36,2.02
-floor,2,4,2.02
-reasons,2,4,2.02
-investigating,2,4,2.02
-depending,2,4,2.02
-responses,2,4,2.02
-several,4,15,2.02
-predeployment,2,4,2.02
-roles,2,4,2.02
+team,23,42,7.43
+claude,13,8,6.68
+anthropic,18,39,6.17
+models,33,128,6.14
+release,12,22,5.35
+transparent,9,10,5.25
+threat,8,6,5.19
+reports,11,22,4.97
+science,9,14,4.87
+user,8,10,4.84
+capabilities,11,26,4.65
+disclose,7,8,4.60
+independent evaluators,6,4,4.52
+incidents,16,58,4.46
+model,20,86,4.42
+biological,6,7,4.24
+processes,7,12,4.17
+law enforcement,5,3,4.14
+parties,8,17,4.14
+publish,5,2,4.10
+defenders,5,2,4.10
+economic,7,13,4.06
+remediate,5,1,3.79
+critical infrastructure,4,3,3.67
+secure,5,8,3.60
+governments,6,13,3.56
+scaling,6,13,3.56
+teams,8,24,3.53
+pacing,4,1,3.51
+threat intelligence,4,1,3.51
+publicly,7,19,3.48
+risks,17,88,3.47
+safeguards,10,37,3.47
+safety,31,213,3.39
+platform,5,10,3.35
+security,13,61,3.31
+published,4,6,3.27
+evaluations,6,16,3.25
+committed,8,29,3.15
+legally,3,3,3.08
+dna,3,3,3.08
+investigate,3,3,3.08
+prohibited,3,3,3.08
+disclosure,4,8,2.99
+supported,7,25,2.97
+advanced,6,19,2.96
+diseases,3,4,2.92
+vulnerabilities,3,4,2.92
+fundamental,3,4,2.92
+properly,3,4,2.92
+government,14,78,2.92
+tests,3,4,2.92
+view,3,4,2.92
+testing,5,14,2.89
+cases,5,14,2.89
+misuse,5,14,2.89
+every,11,55,2.88
+support,11,55,2.88
+launch,4,9,2.86
+needed,4,10,2.73
+outside,6,22,2.71
+world,10,51,2.69
+advocated,2,1,2.62
+obligated,2,1,2.62
+software vulnerabilities,2,1,2.62
+bigger,2,1,2.62
+outline,2,1,2.62
+disclosing,2,1,2.62
+release a model,2,1,2.62
+involve independent,2,1,2.62
+research team,2,1,2.62
+scenarios,2,1,2.62
+accords,2,1,2.62
+security standards,2,1,2.62
+federal legislation,2,1,2.62
+detecting,2,1,2.62
+possibly,2,1,2.62
+guy,2,1,2.62
+maintaining,2,1,2.62
+influenced,2,1,2.62
+advertisers,2,1,2.62
+cyber defenders,2,1,2.62
+louder,2,1,2.62
+autonomous weapons,2,1,2.62
+alignment,4,11,2.61
+goes,4,11,2.61
+leaders,3,6,2.59
+practice,3,6,2.59
+mitigate,3,6,2.59
+cure,2,2,2.51
+corporation,2,2,2.51
+documents,2,2,2.51
+fairly,2,2,2.51
+collectively,2,2,2.51
+sandboxes,2,2,2.51
+disclosed,2,2,2.51
+urgent,2,2,2.51
+refine,2,2,2.51
+independent evaluation,2,2,2.51
+substantial,2,2,2.51
+safety practices,2,2,2.51
+foundational,2,2,2.51
+involves,2,2,2.51
+enormous,2,2,2.51
+usage policy,2,2,2.51
+component,2,2,2.51
+frontier model,2,2,2.51
+documented,2,2,2.51
+priority,2,2,2.51
+hundred,2,2,2.51
+focuses,2,2,2.51
+biological capabilities,2,2,2.51
+biology,2,2,2.51
+research,11,64,2.47
+likewise,12,0,2.45
+effort,3,7,2.44
+safe,9,50,2.35
+best,6,27,2.33
+training,10,59,2.32
+belief,2,3,2.31
+profit,2,3,2.31
+exploit,2,3,2.31
+local governments,2,3,2.31
+confirm,2,3,2.31
+releasing,2,3,2.31
+entirely,2,3,2.31
+user privacy,2,3,2.31
+massachusetts,2,3,2.31
+excellent,2,3,2.31
+increasingly,3,8,2.29
+early,3,8,2.29
+images,3,8,2.29
+nature,3,8,2.29
+usage,3,8,2.29
+threats,4,14,2.28
+clear,7,36,2.23
+independent,9,53,2.20
+policy,10,62,2.19
+learn,4,15,2.18
+several,4,15,2.18
+focused,3,9,2.16
+researcher,3,9,2.16
+hard,3,9,2.16
+finding,2,4,2.12
+multilayered,2,4,2.12
+floor,2,4,2.12
+investigating,2,4,2.12
+depending,2,4,2.12
+responses,2,4,2.12
+predeployment,2,4,2.12
+roles,2,4,2.12
+improve,5,23,2.08
+ever,4,16,2.08
+entire,4,16,2.08
+wrong,3,10,2.03
+welcome,3,10,2.03
+play,3,10,2.03
+quantify,3,10,2.03
+expertise,5,24,2.01

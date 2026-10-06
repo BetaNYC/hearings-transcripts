@@ -2,9 +2,8 @@
 
 Run from the repository root:  python3 -m unittest discover -s scripts -v
 
-The phrase fixtures in tests/fixtures/wordclouds/ are the output of the approved prototype
-(distinct.py, 2026-10-06), renamed to the group slugs. Each group's top 45 phrases, counts
-and z-scores must match them exactly.
+The phrase fixtures in tests/fixtures/wordclouds/ pin each group's and person's top 45
+phrases, counts and z-scores to scripts/meta/wordclouds.json. See that folder's README.
 """
 
 from __future__ import annotations
@@ -106,14 +105,25 @@ class ScoringTests(unittest.TestCase):
         pub = {t["speaker_name"] for t in self.turns if t["turn_id"] in self.members("public-witnesses")}
         self.assertFalse(wb & pub)
 
-    def test_phrases_match_prototype_fixtures(self):
-        for slug in GROUPS:
-            fx = json.loads((FIXTURES / f"{slug}.json").read_text(encoding="utf-8"))["phrases"][:TOP]
-            got = self.res["groups"][slug][0]["phrases"][:TOP]
-            self.assertEqual([(x["phrase"], x["panel"], x["rest"], x["z"]) for x in fx],
+    def test_phrases_match_fixtures(self):
+        cases = [("groups", g, FIXTURES / f"{g}.json", WC / f"{g}.csv") for g in GROUPS]
+        cases += [("people", p["slug"], FIXTURES / "people" / f"{p['slug']}.json",
+                   WC / "people" / f"{p['slug']}.csv") for p in PEOPLE]
+        for kind, slug, fixture, csv_path in cases:
+            fx = json.loads(fixture.read_text(encoding="utf-8"))["phrases"]
+            got = self.res[kind][slug][0]["phrases"][:TOP]
+            self.assertEqual([(x["phrase"], x["group_count"], x["others_count"], x["z"]) for x in fx],
                              [(x["phrase"], x["group_count"], x["others_count"], x["z"]) for x in got], slug)
-            on_disk = read_rows(WC / f"{slug}.csv")[:TOP]
+            on_disk = read_rows(csv_path)[:TOP]
             self.assertEqual([x["phrase"] for x in fx], [r["phrase"] for r in on_disk], slug)
+
+    def test_raise_act_is_a_phrase(self):
+        phrases = [x["phrase"] for x in self.res["groups"]["other-electeds"][0]["phrases"][:TOP]]
+        self.assertIn("raise act", phrases)
+        self.assertNotIn("raise", phrases)
+        self.assertNotIn("act", phrases)
+        self.assertNotIn("space", phrases)
+        self.assertEqual(bw.display("raise act", CFG["capitalization"]), "RAISE Act")
 
     def test_person_counts_only_their_turns(self):
         for p in PEOPLE:

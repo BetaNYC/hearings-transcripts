@@ -1,0 +1,275 @@
+{
+ "source": "scripts/build_wordclouds.py with scripts/meta/wordclouds.json, 2026-10-06",
+ "phrases": [
+  {
+   "phrase": "team",
+   "group_count": 23,
+   "others_count": 42,
+   "z": 7.43
+  },
+  {
+   "phrase": "claude",
+   "group_count": 13,
+   "others_count": 8,
+   "z": 6.68
+  },
+  {
+   "phrase": "anthropic",
+   "group_count": 18,
+   "others_count": 39,
+   "z": 6.17
+  },
+  {
+   "phrase": "models",
+   "group_count": 33,
+   "others_count": 128,
+   "z": 6.14
+  },
+  {
+   "phrase": "release",
+   "group_count": 12,
+   "others_count": 22,
+   "z": 5.35
+  },
+  {
+   "phrase": "transparent",
+   "group_count": 9,
+   "others_count": 10,
+   "z": 5.25
+  },
+  {
+   "phrase": "threat",
+   "group_count": 8,
+   "others_count": 6,
+   "z": 5.19
+  },
+  {
+   "phrase": "reports",
+   "group_count": 11,
+   "others_count": 22,
+   "z": 4.97
+  },
+  {
+   "phrase": "science",
+   "group_count": 9,
+   "others_count": 14,
+   "z": 4.87
+  },
+  {
+   "phrase": "user",
+   "group_count": 8,
+   "others_count": 10,
+   "z": 4.84
+  },
+  {
+   "phrase": "capabilities",
+   "group_count": 11,
+   "others_count": 26,
+   "z": 4.65
+  },
+  {
+   "phrase": "disclose",
+   "group_count": 7,
+   "others_count": 8,
+   "z": 4.6
+  },
+  {
+   "phrase": "independent evaluators",
+   "group_count": 6,
+   "others_count": 4,
+   "z": 4.52
+  },
+  {
+   "phrase": "incidents",
+   "group_count": 16,
+   "others_count": 58,
+   "z": 4.46
+  },
+  {
+   "phrase": "model",
+   "group_count": 20,
+   "others_count": 86,
+   "z": 4.42
+  },
+  {
+   "phrase": "biological",
+   "group_count": 6,
+   "others_count": 7,
+   "z": 4.24
+  },
+  {
+   "phrase": "processes",
+   "group_count": 7,
+   "others_count": 12,
+   "z": 4.17
+  },
+  {
+   "phrase": "law enforcement",
+   "group_count": 5,
+   "others_count": 3,
+   "z": 4.14
+  },
+  {
+   "phrase": "parties",
+   "group_count": 8,
+   "others_count": 17,
+   "z": 4.14
+  },
+  {
+   "phrase": "publish",
+   "group_count": 5,
+   "others_count": 2,
+   "z": 4.1
+  },
+  {
+   "phrase": "defenders",
+   "group_count": 5,
+   "others_count": 2,
+   "z": 4.1
+  },
+  {
+   "phrase": "economic",
+   "group_count": 7,
+   "others_count": 13,
+   "z": 4.06
+  },
+  {
+   "phrase": "remediate",
+   "group_count": 5,
+   "others_count": 1,
+   "z": 3.79
+  },
+  {
+   "phrase": "critical infrastructure",
+   "group_count": 4,
+   "others_count": 3,
+   "z": 3.67
+  },
+  {
+   "phrase": "secure",
+   "group_count": 5,
+   "others_count": 8,
+   "z": 3.6
+  },
+  {
+   "phrase": "governments",
+   "group_count": 6,
+   "others_count": 13,
+   "z": 3.56
+  },
+  {
+   "phrase": "scaling",
+   "group_count": 6,
+   "others_count": 13,
+   "z": 3.56
+  },
+  {
+   "phrase": "teams",
+   "group_count": 8,
+   "others_count": 24,
+   "z": 3.53
+  },
+  {
+   "phrase": "pacing",
+   "group_count": 4,
+   "others_count": 1,
+   "z": 3.51
+  },
+  {
+   "phrase": "threat intelligence",
+   "group_count": 4,
+   "others_count": 1,
+   "z": 3.51
+  },
+  {
+   "phrase": "publicly",
+   "group_count": 7,
+   "others_count": 19,
+   "z": 3.48
+  },
+  {
+   "phrase": "risks",
+   "group_count": 17,
+   "others_count": 88,
+   "z": 3.47
+  },
+  {
+   "phrase": "safeguards",
+   "group_count": 10,
+   "others_count": 37,
+   "z": 3.47
+  },
+  {
+   "phrase": "safety",
+   "group_count": 31,
+   "others_count": 213,
+   "z": 3.39
+  },
+  {
+   "phrase": "platform",
+   "group_count": 5,
+   "others_count": 10,
+   "z": 3.35
+  },
+  {
+   "phrase": "security",
+   "group_count": 13,
+   "others_count": 61,
+   "z": 3.31
+  },
+  {
+   "phrase": "published",
+   "group_count": 4,
+   "others_count": 6,
+   "z": 3.27
+  },
+  {
+   "phrase": "evaluations",
+   "group_count": 6,
+   "others_count": 16,
+   "z": 3.25
+  },
+  {
+   "phrase": "committed",
+   "group_count": 8,
+   "others_count": 29,
+   "z": 3.15
+  },
+  {
+   "phrase": "legally",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 3.08
+  },
+  {
+   "phrase": "dna",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 3.08
+  },
+  {
+   "phrase": "investigate",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 3.08
+  },
+  {
+   "phrase": "prohibited",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 3.08
+  },
+  {
+   "phrase": "disclosure",
+   "group_count": 4,
+   "others_count": 8,
+   "z": 2.99
+  },
+  {
+   "phrase": "supported",
+   "group_count": 7,
+   "others_count": 25,
+   "z": 2.97
+  }
+ ]
+}

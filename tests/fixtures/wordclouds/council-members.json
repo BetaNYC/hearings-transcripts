@@ -1,598 +1,275 @@
 {
- "nA": 3953,
- "nB": 38069,
+ "source": "scripts/build_wordclouds.py with scripts/meta/wordclouds.json, 2026-10-06",
  "phrases": [
   {
    "phrase": "ice",
-   "panel": 6,
-   "rest": 3,
-   "z": 4.09,
-   "n": 1
+   "group_count": 6,
+   "others_count": 3,
+   "z": 4.05
   },
   {
    "phrase": "strategy",
-   "panel": 5,
-   "rest": 3,
-   "z": 3.71,
-   "n": 1
+   "group_count": 5,
+   "others_count": 3,
+   "z": 3.67
   },
   {
    "phrase": "applications",
-   "panel": 5,
-   "rest": 4,
-   "z": 3.61,
-   "n": 1
+   "group_count": 5,
+   "others_count": 4,
+   "z": 3.56
   },
   {
    "phrase": "clouds",
-   "panel": 5,
-   "rest": 1,
-   "z": 3.5,
-   "n": 1
+   "group_count": 5,
+   "others_count": 1,
+   "z": 3.47
   },
   {
    "phrase": "student",
-   "panel": 6,
-   "rest": 9,
-   "z": 3.41,
-   "n": 1
+   "group_count": 6,
+   "others_count": 9,
+   "z": 3.36
   },
   {
    "phrase": "sell",
-   "panel": 4,
-   "rest": 2,
-   "z": 3.34,
-   "n": 1
+   "group_count": 4,
+   "others_count": 2,
+   "z": 3.3
+  },
+  {
+   "phrase": "raise act",
+   "group_count": 11,
+   "others_count": 31,
+   "z": 3.29
   },
   {
    "phrase": "violations",
-   "panel": 4,
-   "rest": 3,
-   "z": 3.25,
-   "n": 1
+   "group_count": 4,
+   "others_count": 3,
+   "z": 3.21
   },
   {
    "phrase": "contracts",
-   "panel": 5,
-   "rest": 7,
-   "z": 3.19,
-   "n": 1
-  },
-  {
-   "phrase": "anthropic",
-   "panel": 13,
-   "rest": 44,
-   "z": 3.19,
-   "n": 1
+   "group_count": 5,
+   "others_count": 7,
+   "z": 3.14
   },
   {
    "phrase": "self-improvement",
-   "panel": 5,
-   "rest": 7,
-   "z": 3.19,
-   "n": 1
+   "group_count": 5,
+   "others_count": 7,
+   "z": 3.14
+  },
+  {
+   "phrase": "anthropic",
+   "group_count": 13,
+   "others_count": 44,
+   "z": 3.1
   },
   {
    "phrase": "data centers",
-   "panel": 11,
-   "rest": 35,
-   "z": 3.08,
-   "n": 2
+   "group_count": 11,
+   "others_count": 35,
+   "z": 3.0
   },
   {
    "phrase": "challenges",
-   "panel": 5,
-   "rest": 8,
-   "z": 3.04,
-   "n": 1
+   "group_count": 5,
+   "others_count": 8,
+   "z": 2.99
   },
   {
    "phrase": "automated",
-   "panel": 6,
-   "rest": 12,
-   "z": 3.03,
-   "n": 1
+   "group_count": 6,
+   "others_count": 12,
+   "z": 2.98
   },
   {
    "phrase": "stronger",
-   "panel": 4,
-   "rest": 5,
-   "z": 2.95,
-   "n": 1
+   "group_count": 4,
+   "others_count": 5,
+   "z": 2.9
   },
   {
    "phrase": "malicious",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.86,
-   "n": 1
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.83
   },
   {
    "phrase": "city resident",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.86,
-   "n": 2
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.83
   },
   {
    "phrase": "cloning",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.86,
-   "n": 1
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.83
   },
   {
    "phrase": "discourse",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.86,
-   "n": 1
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.83
   },
   {
    "phrase": "vendor clouds",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.86,
-   "n": 2
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.83
   },
   {
    "phrase": "consultants",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.86,
-   "n": 1
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.83
   },
   {
    "phrase": "hack",
-   "panel": 3,
-   "rest": 1,
-   "z": 2.86,
-   "n": 1
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.83
   },
   {
    "phrase": "land",
-   "panel": 3,
-   "rest": 2,
-   "z": 2.85,
-   "n": 1
+   "group_count": 3,
+   "others_count": 2,
+   "z": 2.82
   },
   {
    "phrase": "identifying",
-   "panel": 3,
-   "rest": 2,
-   "z": 2.85,
-   "n": 1
+   "group_count": 3,
+   "others_count": 2,
+   "z": 2.82
   },
   {
    "phrase": "cognitive",
-   "panel": 3,
-   "rest": 2,
-   "z": 2.85,
-   "n": 1
+   "group_count": 3,
+   "others_count": 2,
+   "z": 2.82
   },
   {
    "phrase": "advertising",
-   "panel": 3,
-   "rest": 2,
-   "z": 2.85,
-   "n": 1
+   "group_count": 3,
+   "others_count": 2,
+   "z": 2.82
   },
   {
    "phrase": "guidance",
-   "panel": 3,
-   "rest": 2,
-   "z": 2.85,
-   "n": 1
-  },
-  {
-   "phrase": "tools",
-   "panel": 20,
-   "rest": 93,
-   "z": 2.84,
-   "n": 1
+   "group_count": 3,
+   "others_count": 2,
+   "z": 2.82
   },
   {
    "phrase": "commit",
-   "panel": 6,
-   "rest": 14,
-   "z": 2.8,
-   "n": 1
+   "group_count": 6,
+   "others_count": 14,
+   "z": 2.74
   },
   {
    "phrase": "compute",
-   "panel": 4,
-   "rest": 6,
-   "z": 2.78,
-   "n": 1
+   "group_count": 4,
+   "others_count": 6,
+   "z": 2.74
+  },
+  {
+   "phrase": "tools",
+   "group_count": 20,
+   "others_count": 93,
+   "z": 2.72
   },
   {
    "phrase": "products",
-   "panel": 9,
-   "rest": 29,
-   "z": 2.76,
-   "n": 1
+   "group_count": 9,
+   "others_count": 29,
+   "z": 2.68
   },
   {
    "phrase": "americans",
-   "panel": 3,
-   "rest": 3,
-   "z": 2.69,
-   "n": 1
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.66
   },
   {
    "phrase": "answered",
-   "panel": 3,
-   "rest": 3,
-   "z": 2.69,
-   "n": 1
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.66
   },
   {
    "phrase": "writing",
-   "panel": 3,
-   "rest": 3,
-   "z": 2.69,
-   "n": 1
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.66
   },
   {
    "phrase": "tracking",
-   "panel": 3,
-   "rest": 3,
-   "z": 2.69,
-   "n": 1
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.66
   },
   {
    "phrase": "target",
-   "panel": 3,
-   "rest": 3,
-   "z": 2.69,
-   "n": 1
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.66
   },
   {
    "phrase": "enterprise",
-   "panel": 3,
-   "rest": 3,
-   "z": 2.69,
-   "n": 1
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.66
   },
   {
    "phrase": "australia",
-   "panel": 3,
-   "rest": 3,
-   "z": 2.69,
-   "n": 1
-  },
-  {
-   "phrase": "directly",
-   "panel": 4,
-   "rest": 7,
-   "z": 2.63,
-   "n": 1
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.66
   },
   {
    "phrase": "rogue",
-   "panel": 4,
-   "rest": 7,
-   "z": 2.63,
-   "n": 1
+   "group_count": 4,
+   "others_count": 7,
+   "z": 2.58
   },
   {
    "phrase": "generative",
-   "panel": 4,
-   "rest": 7,
-   "z": 2.63,
-   "n": 1
+   "group_count": 4,
+   "others_count": 7,
+   "z": 2.58
   },
   {
    "phrase": "helpful",
-   "panel": 4,
-   "rest": 7,
-   "z": 2.63,
-   "n": 1
-  },
-  {
-   "phrase": "raise",
-   "panel": 11,
-   "rest": 42,
-   "z": 2.62,
-   "n": 1
-  },
-  {
-   "phrase": "data",
-   "panel": 26,
-   "rest": 141,
-   "z": 2.59,
-   "n": 1
+   "group_count": 4,
+   "others_count": 7,
+   "z": 2.58
   },
   {
    "phrase": "mental health",
-   "panel": 3,
-   "rest": 4,
-   "z": 2.5,
-   "n": 2
+   "group_count": 3,
+   "others_count": 4,
+   "z": 2.47
   },
   {
-   "phrase": "continues",
-   "panel": 3,
-   "rest": 4,
-   "z": 2.5,
-   "n": 1
-  },
-  {
-   "phrase": "importance",
-   "panel": 3,
-   "rest": 4,
-   "z": 2.5,
-   "n": 1
-  },
-  {
-   "phrase": "useful",
-   "panel": 4,
-   "rest": 8,
-   "z": 2.48,
-   "n": 1
+   "phrase": "data",
+   "group_count": 26,
+   "others_count": 141,
+   "z": 2.45
   },
   {
    "phrase": "else",
-   "panel": 4,
-   "rest": 8,
-   "z": 2.48,
-   "n": 1
-  },
-  {
-   "phrase": "bill",
-   "panel": 16,
-   "rest": 76,
-   "z": 2.47,
-   "n": 1
+   "group_count": 4,
+   "others_count": 8,
+   "z": 2.43
   },
   {
    "phrase": "agencies",
-   "panel": 10,
-   "rest": 39,
-   "z": 2.45,
-   "n": 1
-  },
-  {
-   "phrase": "health",
-   "panel": 9,
-   "rest": 34,
-   "z": 2.4,
-   "n": 1
-  },
-  {
-   "phrase": "role",
-   "panel": 8,
-   "rest": 29,
-   "z": 2.35,
-   "n": 1
-  },
-  {
-   "phrase": "second",
-   "panel": 9,
-   "rest": 35,
-   "z": 2.33,
-   "n": 1
-  },
-  {
-   "phrase": "misaligned",
-   "panel": 4,
-   "rest": 9,
-   "z": 2.33,
-   "n": 1
-  },
-  {
-   "phrase": "lastly",
-   "panel": 3,
-   "rest": 5,
-   "z": 2.32,
-   "n": 1
-  },
-  {
-   "phrase": "panelists",
-   "panel": 3,
-   "rest": 5,
-   "z": 2.32,
-   "n": 1
-  },
-  {
-   "phrase": "disclosures",
-   "panel": 3,
-   "rest": 5,
-   "z": 2.32,
-   "n": 1
-  },
-  {
-   "phrase": "sufficient",
-   "panel": 3,
-   "rest": 5,
-   "z": 2.32,
-   "n": 1
-  },
-  {
-   "phrase": "concerned",
-   "panel": 6,
-   "rest": 19,
-   "z": 2.28,
-   "n": 1
-  },
-  {
-   "phrase": "students",
-   "panel": 6,
-   "rest": 19,
-   "z": 2.28,
-   "n": 1
-  },
-  {
-   "phrase": "report",
-   "panel": 9,
-   "rest": 37,
-   "z": 2.2,
-   "n": 1
-  },
-  {
-   "phrase": "agents",
-   "panel": 8,
-   "rest": 31,
-   "z": 2.2,
-   "n": 1
-  },
-  {
-   "phrase": "quickly",
-   "panel": 4,
-   "rest": 10,
-   "z": 2.19,
-   "n": 1
-  },
-  {
-   "phrase": "happens",
-   "panel": 4,
-   "rest": 10,
-   "z": 2.19,
-   "n": 1
-  },
-  {
-   "phrase": "seems",
-   "panel": 4,
-   "rest": 10,
-   "z": 2.19,
-   "n": 1
-  },
-  {
-   "phrase": "went",
-   "panel": 4,
-   "rest": 10,
-   "z": 2.19,
-   "n": 1
-  },
-  {
-   "phrase": "ever",
-   "panel": 5,
-   "rest": 15,
-   "z": 2.17,
-   "n": 1
-  },
-  {
-   "phrase": "money",
-   "panel": 3,
-   "rest": 6,
-   "z": 2.14,
-   "n": 1
-  },
-  {
-   "phrase": "individuals",
-   "panel": 3,
-   "rest": 6,
-   "z": 2.14,
-   "n": 1
-  },
-  {
-   "phrase": "impacting",
-   "panel": 3,
-   "rest": 6,
-   "z": 2.14,
-   "n": 1
-  },
-  {
-   "phrase": "municipal",
-   "panel": 3,
-   "rest": 6,
-   "z": 2.14,
-   "n": 1
-  },
-  {
-   "phrase": "number",
-   "panel": 9,
-   "rest": 39,
-   "z": 2.07,
-   "n": 1
-  },
-  {
-   "phrase": "seen",
-   "panel": 4,
-   "rest": 11,
-   "z": 2.06,
-   "n": 1
-  },
-  {
-   "phrase": "deputy",
-   "panel": 6,
-   "rest": 22,
-   "z": 2.01,
-   "n": 1
-  },
-  {
-   "phrase": "hours",
-   "panel": 3,
-   "rest": 7,
-   "z": 1.98,
-   "n": 1
-  },
-  {
-   "phrase": "whose",
-   "panel": 3,
-   "rest": 7,
-   "z": 1.98,
-   "n": 1
-  },
-  {
-   "phrase": "highlight",
-   "panel": 3,
-   "rest": 7,
-   "z": 1.98,
-   "n": 1
-  },
-  {
-   "phrase": "folks",
-   "panel": 3,
-   "rest": 7,
-   "z": 1.98,
-   "n": 1
-  },
-  {
-   "phrase": "failure",
-   "panel": 3,
-   "rest": 7,
-   "z": 1.98,
-   "n": 1
-  },
-  {
-   "phrase": "push",
-   "panel": 3,
-   "rest": 7,
-   "z": 1.98,
-   "n": 1
+   "group_count": 10,
+   "others_count": 39,
+   "z": 2.37
   }
- ],
- "speakers": {
-  "Chi Oss\u00e9": 12,
-  "Gale Brewer": 14,
-  "Nantasha Williams": 12,
-  "Shekar Krishnan": 4,
-  "Kevin Riley": 6,
-  "Kamillah Hanks": 9,
-  "Eric Dinowitz": 4,
-  "Linda Lee": 2,
-  "Virginia Maloney": 6,
-  "Carl Wilson": 1,
-  "Crystal Hudson": 3,
-  "Lynn Schulman": 2,
-  "Selvena Brooks-Powers": 5,
-  "Frank Morano": 2,
-  "Mercedes Narcisse": 2,
-  "Rita Joseph": 1,
-  "Pierina Ana Sanchez": 2,
-  "Phil Wong": 4,
-  "Susan Zhuang": 3,
-  "Harvey Epstein": 4,
-  "Christopher Marte": 2,
-  "Kayla Santosuosso": 6,
-  "Julie Won": 6,
-  "Shahana Hanif": 11,
-  "Alexa Avil\u00e9s": 2,
-  "Jennifer Guti\u00e9rrez": 6,
-  "Shirley Aldebol": 2
- },
- "turns": 133,
- "minutes": 58.1,
- "words_panel": 9311
+ ]
 }

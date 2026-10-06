@@ -1,0 +1,275 @@
+{
+ "source": "scripts/build_wordclouds.py with scripts/meta/wordclouds.json, 2026-10-06",
+ "phrases": [
+  {
+   "phrase": "meta",
+   "group_count": 31,
+   "others_count": 15,
+   "z": 11.37
+  },
+  {
+   "phrase": "framework",
+   "group_count": 19,
+   "others_count": 41,
+   "z": 7.53
+  },
+  {
+   "phrase": "superintelligence",
+   "group_count": 13,
+   "others_count": 6,
+   "z": 7.33
+  },
+  {
+   "phrase": "safely",
+   "group_count": 10,
+   "others_count": 13,
+   "z": 6.14
+  },
+  {
+   "phrase": "small businesses",
+   "group_count": 9,
+   "others_count": 9,
+   "z": 6.02
+  },
+  {
+   "phrase": "personal",
+   "group_count": 10,
+   "others_count": 18,
+   "z": 5.73
+  },
+  {
+   "phrase": "muse",
+   "group_count": 16,
+   "others_count": 1,
+   "z": 5.68
+  },
+  {
+   "phrase": "accord",
+   "group_count": 9,
+   "others_count": 2,
+   "z": 5.59
+  },
+  {
+   "phrase": "teams",
+   "group_count": 10,
+   "others_count": 22,
+   "z": 5.42
+  },
+  {
+   "phrase": "commitment",
+   "group_count": 8,
+   "others_count": 15,
+   "z": 5.07
+  },
+  {
+   "phrase": "committed",
+   "group_count": 10,
+   "others_count": 27,
+   "z": 5.05
+  },
+  {
+   "phrase": "impact",
+   "group_count": 9,
+   "others_count": 24,
+   "z": 4.81
+  },
+  {
+   "phrase": "preparedness",
+   "group_count": 6,
+   "others_count": 8,
+   "z": 4.73
+  },
+  {
+   "phrase": "experts",
+   "group_count": 8,
+   "others_count": 21,
+   "z": 4.56
+  },
+  {
+   "phrase": "offerings",
+   "group_count": 7,
+   "others_count": 1,
+   "z": 4.54
+  },
+  {
+   "phrase": "interactions",
+   "group_count": 6,
+   "others_count": 1,
+   "z": 4.34
+  },
+  {
+   "phrase": "robust",
+   "group_count": 6,
+   "others_count": 12,
+   "z": 4.32
+  },
+  {
+   "phrase": "minors",
+   "group_count": 4,
+   "others_count": 3,
+   "z": 4.09
+  },
+  {
+   "phrase": "weights",
+   "group_count": 5,
+   "others_count": 1,
+   "z": 4.09
+  },
+  {
+   "phrase": "independent",
+   "group_count": 11,
+   "others_count": 51,
+   "z": 4.06
+  },
+  {
+   "phrase": "teens",
+   "group_count": 5,
+   "others_count": 9,
+   "z": 4.05
+  },
+  {
+   "phrase": "content",
+   "group_count": 8,
+   "others_count": 29,
+   "z": 3.97
+  },
+  {
+   "phrase": "licensed",
+   "group_count": 4,
+   "others_count": 5,
+   "z": 3.9
+  },
+  {
+   "phrase": "evaluators",
+   "group_count": 7,
+   "others_count": 23,
+   "z": 3.89
+  },
+  {
+   "phrase": "external",
+   "group_count": 5,
+   "others_count": 11,
+   "z": 3.83
+  },
+  {
+   "phrase": "recursive self-improvement",
+   "group_count": 3,
+   "others_count": 2,
+   "z": 3.55
+  },
+  {
+   "phrase": "approach",
+   "group_count": 7,
+   "others_count": 28,
+   "z": 3.53
+  },
+  {
+   "phrase": "recursive",
+   "group_count": 5,
+   "others_count": 14,
+   "z": 3.52
+  },
+  {
+   "phrase": "multilayered approach",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 3.42
+  },
+  {
+   "phrase": "uniform",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 3.42
+  },
+  {
+   "phrase": "electricity",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 3.42
+  },
+  {
+   "phrase": "partnering",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 3.42
+  },
+  {
+   "phrase": "partner",
+   "group_count": 4,
+   "others_count": 9,
+   "z": 3.4
+  },
+  {
+   "phrase": "countries",
+   "group_count": 3,
+   "others_count": 4,
+   "z": 3.34
+  },
+  {
+   "phrase": "costs",
+   "group_count": 3,
+   "others_count": 5,
+   "z": 3.2
+  },
+  {
+   "phrase": "democratic",
+   "group_count": 3,
+   "others_count": 5,
+   "z": 3.2
+  },
+  {
+   "phrase": "evaluate",
+   "group_count": 4,
+   "others_count": 12,
+   "z": 3.06
+  },
+  {
+   "phrase": "deploying",
+   "group_count": 3,
+   "others_count": 6,
+   "z": 3.05
+  },
+  {
+   "phrase": "reports",
+   "group_count": 6,
+   "others_count": 27,
+   "z": 3.05
+  },
+  {
+   "phrase": "vision",
+   "group_count": 3,
+   "others_count": 6,
+   "z": 3.05
+  },
+  {
+   "phrase": "information",
+   "group_count": 12,
+   "others_count": 89,
+   "z": 2.95
+  },
+  {
+   "phrase": "compute",
+   "group_count": 3,
+   "others_count": 7,
+   "z": 2.91
+  },
+  {
+   "phrase": "professional",
+   "group_count": 3,
+   "others_count": 7,
+   "z": 2.91
+  },
+  {
+   "phrase": "signed",
+   "group_count": 5,
+   "others_count": 21,
+   "z": 2.9
+  },
+  {
+   "phrase": "adversarial testing",
+   "group_count": 2,
+   "others_count": 1,
+   "z": 2.88
+  }
+ ]
+}

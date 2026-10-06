@@ -1,119 +1,115 @@
 phrase,group_count,others_count,z
-cyber,43,32,10.66
-agencies,24,25,7.53
-oti,22,18,7.52
-cyber command,19,9,7.26
-agency,17,13,6.67
-cybersecurity,17,19,6.23
-dcwp,14,4,6.09
-administration,13,11,5.75
-tools,30,83,5.60
-attack,11,6,5.50
-algorithmic tools,10,5,5.26
-law,24,64,5.13
-city cyber command,10,2,4.94
-artificial intelligence,17,40,4.66
-complaints,7,3,4.40
-local law,8,8,4.38
-software,9,12,4.32
-hiring,7,5,4.31
-employment,6,3,4.07
-breach,6,3,4.07
-microsoft,6,3,4.07
-office,15,40,4.05
-management,6,5,3.91
-duties,5,2,3.71
-city agencies,6,8,3.53
-rider,5,1,3.49
-partners,5,5,3.46
-reporting,12,35,3.41
-service,6,9,3.39
-response,7,13,3.37
-system,12,36,3.34
-nycem,4,2,3.33
-distributed,4,2,3.33
-protocols,6,10,3.26
-cyber attacks,4,3,3.24
-incident response,4,3,3.24
-compliant,4,1,3.21
-impact,9,24,3.14
-technology,25,117,3.10
-coordinate,4,4,3.09
-staff,6,12,3.01
-security,15,59,2.94
-enforcement,8,22,2.90
-mission,5,9,2.88
-city emergency management,3,1,2.85
-functions,3,1,2.85
-office of cyber,3,1,2.85
-city infrastructure,3,1,2.85
-december,3,1,2.85
-determining,3,1,2.85
-risk assessment,3,1,2.85
-function,3,1,2.85
-prices,3,1,2.85
-reviewing,3,1,2.85
-novel,3,1,2.85
-cyber security,3,1,2.85
-risk,20,92,2.84
-complaint,3,2,2.84
-rulemaking,3,2,2.84
-initial,3,2,2.84
-agreements,3,2,2.84
-city workers,3,2,2.84
-civil service,3,2,2.84
-commission,3,2,2.84
-notification,3,2,2.84
-director,7,18,2.83
-regulate,7,18,2.83
-decision making,4,6,2.77
-requirements,5,10,2.75
-roles,3,3,2.68
-piece,3,3,2.68
-evolve,3,3,2.68
-met,3,3,2.68
-mhmm,3,3,2.68
-plans,3,3,2.68
-notify,3,3,2.68
-however,5,11,2.62
-issues,9,31,2.58
-commissioner,6,16,2.56
-cyber defense,3,4,2.49
-supports,3,4,2.49
-establish,3,4,2.49
-computer,3,4,2.49
-last week,3,4,2.49
-runs,3,4,2.49
-though,5,12,2.49
-started,3,4,2.49
-services,6,17,2.46
-defense,4,8,2.46
-decision,6,17,2.46
-week,4,8,2.46
-civil,4,8,2.46
-exact,5,13,2.38
-technical,10,40,2.36
-wide,3,5,2.31
-actively,3,5,2.31
-study,4,9,2.31
-certain,4,9,2.31
-emphasize,3,5,2.31
-attorney,3,5,2.31
-interested,3,5,2.31
-features,3,5,2.31
-whether,10,41,2.30
-address,8,30,2.25
-deputy commissioner,4,10,2.18
-consumers,4,10,2.18
-soon,4,10,2.18
-employees,6,20,2.17
-consumer,3,6,2.13
-assessments,3,6,2.13
-impacting,3,6,2.13
-strongly,3,6,2.13
-false,3,6,2.13
-various,3,6,2.13
-broad,3,6,2.13
-sign,3,6,2.13
+cyber,43,32,10.60
+oti,22,18,7.47
+agencies,24,25,7.47
+cyber command,19,9,7.22
+agency,17,13,6.62
+cybersecurity,17,19,6.18
+dcwp,14,4,6.06
+administration,13,11,5.71
+tools,30,83,5.53
+attack,11,6,5.47
+algorithmic tools,10,5,5.23
+law,24,64,5.07
+city cyber command,10,2,4.92
+artificial intelligence,17,40,4.61
+complaints,7,3,4.38
+local law,8,8,4.34
+hiring,7,5,4.28
+software,9,12,4.28
+employment,6,3,4.05
+breach,6,3,4.05
+microsoft,6,3,4.05
+office,15,40,4.00
+management,6,5,3.88
+duties,5,2,3.69
+city agencies,6,8,3.49
+rider,5,1,3.48
+partners,5,5,3.43
+reporting,12,35,3.36
+service,6,9,3.36
+response,7,13,3.33
+nycem,4,2,3.31
+distributed,4,2,3.31
+system,12,36,3.29
+protocols,6,10,3.23
+cyber attacks,4,3,3.22
+incident response,4,3,3.22
+compliant,4,1,3.20
+impact,9,24,3.10
+coordinate,4,4,3.07
+technology,25,117,3.03
+staff,6,12,2.98
+security,15,59,2.88
+mission,5,9,2.86
+enforcement,8,22,2.86
+city emergency management,3,1,2.84
+functions,3,1,2.84
+office of cyber,3,1,2.84
+city infrastructure,3,1,2.84
+december,3,1,2.84
+determining,3,1,2.84
+risk assessment,3,1,2.84
+function,3,1,2.84
+prices,3,1,2.84
+reviewing,3,1,2.84
+novel,3,1,2.84
+cyber security,3,1,2.84
+complaint,3,2,2.82
+rulemaking,3,2,2.82
+initial,3,2,2.82
+agreements,3,2,2.82
+city workers,3,2,2.82
+civil service,3,2,2.82
+commission,3,2,2.82
+notification,3,2,2.82
+director,7,18,2.79
+regulate,7,18,2.79
+risk,20,92,2.77
+decision making,4,6,2.74
+requirements,5,10,2.72
+roles,3,3,2.66
+piece,3,3,2.66
+evolve,3,3,2.66
+met,3,3,2.66
+mhmm,3,3,2.66
+plans,3,3,2.66
+notify,3,3,2.66
+however,5,11,2.59
+issues,9,31,2.54
+commissioner,6,16,2.53
+cyber defense,3,4,2.47
+supports,3,4,2.47
+establish,3,4,2.47
+computer,3,4,2.47
+last week,3,4,2.47
+runs,3,4,2.47
+started,3,4,2.47
+though,5,12,2.46
+defense,4,8,2.43
+week,4,8,2.43
+civil,4,8,2.43
+services,6,17,2.42
+decision,6,17,2.42
+technical,10,40,2.31
+study,4,9,2.29
+certain,4,9,2.29
+wide,3,5,2.28
+actively,3,5,2.28
+emphasize,3,5,2.28
+attorney,3,5,2.28
+interested,3,5,2.28
+features,3,5,2.28
+whether,10,41,2.25
+address,8,30,2.21
+deputy commissioner,4,10,2.15
+consumers,4,10,2.15
+employees,6,20,2.13
+consumer,3,6,2.11
+assessments,3,6,2.11
+impacting,3,6,2.11
+strongly,3,6,2.11
+various,3,6,2.11
+broad,3,6,2.11
+sign,3,6,2.11
 oaa,9,0,2.02
-deployed,3,7,1.96

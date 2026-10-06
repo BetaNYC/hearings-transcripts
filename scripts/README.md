@@ -117,8 +117,9 @@ python3 -m unittest discover -s scripts -v
 ```
 
 `test_wordclouds.py` checks that the six groups are non-empty and disjoint, that the council group
-excludes the two chairs, that each group's top 45 phrases equal the approved prototype output in
-`tests/fixtures/wordclouds/`, that each person page counts only that person's turns, that every
+excludes the two chairs, that each group's and person's top 45 phrases equal the fixtures in
+`tests/fixtures/wordclouds/` (regenerate them when `wordclouds.json` changes on purpose), that
+"RAISE Act" forms as one phrase, that each person page counts only that person's turns, that every
 page parses with six working group links, that all relative links resolve, and that the build
 is idempotent.
 

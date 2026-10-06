@@ -1,575 +1,275 @@
 {
- "nA": 12088,
- "nB": 29934,
+ "source": "scripts/build_wordclouds.py with scripts/meta/wordclouds.json, 2026-10-06",
  "phrases": [
   {
    "phrase": "safety",
-   "panel": 140,
-   "rest": 104,
-   "z": 9.26,
-   "n": 1
+   "group_count": 140,
+   "others_count": 104,
+   "z": 9.86
   },
   {
    "phrase": "framework",
-   "panel": 51,
-   "rest": 9,
-   "z": 7.32,
-   "n": 1
+   "group_count": 51,
+   "others_count": 9,
+   "z": 7.54
   },
   {
    "phrase": "models",
-   "panel": 85,
-   "rest": 76,
-   "z": 6.4,
-   "n": 1
+   "group_count": 85,
+   "others_count": 76,
+   "z": 6.89
   },
   {
    "phrase": "incidents",
-   "panel": 49,
-   "rest": 25,
-   "z": 6.38,
-   "n": 1
+   "group_count": 49,
+   "others_count": 25,
+   "z": 6.69
   },
   {
    "phrase": "federal",
-   "panel": 47,
-   "rest": 23,
-   "z": 6.32,
-   "n": 1
+   "group_count": 47,
+   "others_count": 23,
+   "z": 6.63
   },
   {
    "phrase": "training",
-   "panel": 43,
-   "rest": 26,
-   "z": 5.63,
-   "n": 1
-  },
-  {
-   "phrase": "committed",
-   "panel": 34,
-   "rest": 3,
-   "z": 5.63,
-   "n": 1
+   "group_count": 43,
+   "others_count": 26,
+   "z": 5.94
   },
   {
    "phrase": "content",
-   "panel": 30,
-   "rest": 7,
-   "z": 5.61,
-   "n": 1
+   "group_count": 30,
+   "others_count": 7,
+   "z": 5.8
   },
   {
    "phrase": "users",
-   "panel": 32,
-   "rest": 12,
-   "z": 5.54,
-   "n": 1
+   "group_count": 32,
+   "others_count": 12,
+   "z": 5.77
+  },
+  {
+   "phrase": "committed",
+   "group_count": 34,
+   "others_count": 3,
+   "z": 5.76
   },
   {
    "phrase": "release",
-   "panel": 28,
-   "rest": 6,
-   "z": 5.43,
-   "n": 1
-  },
-  {
-   "phrase": "meta",
-   "panel": 31,
-   "rest": 15,
-   "z": 5.15,
-   "n": 1
+   "group_count": 28,
+   "others_count": 6,
+   "z": 5.6
   },
   {
    "phrase": "team",
-   "panel": 39,
-   "rest": 26,
-   "z": 5.13,
-   "n": 1
+   "group_count": 39,
+   "others_count": 26,
+   "z": 5.44
   },
   {
-   "phrase": "teams",
-   "panel": 30,
-   "rest": 2,
-   "z": 5.08,
-   "n": 1
+   "phrase": "meta",
+   "group_count": 31,
+   "others_count": 15,
+   "z": 5.39
   },
   {
    "phrase": "approach",
-   "panel": 26,
-   "rest": 9,
-   "z": 5.06,
-   "n": 1
+   "group_count": 26,
+   "others_count": 9,
+   "z": 5.26
+  },
+  {
+   "phrase": "teams",
+   "group_count": 30,
+   "others_count": 2,
+   "z": 5.19
   },
   {
    "phrase": "evaluators",
-   "panel": 24,
-   "rest": 6,
-   "z": 5.01,
-   "n": 1
-  },
-  {
-   "phrase": "policies",
-   "panel": 25,
-   "rest": 10,
-   "z": 4.84,
-   "n": 1
+   "group_count": 24,
+   "others_count": 6,
+   "z": 5.18
   },
   {
    "phrase": "safeguards",
-   "panel": 30,
-   "rest": 17,
-   "z": 4.81,
-   "n": 1
+   "group_count": 30,
+   "others_count": 17,
+   "z": 5.07
   },
   {
-   "phrase": "personal",
-   "panel": 22,
-   "rest": 6,
-   "z": 4.77,
-   "n": 1
-  },
-  {
-   "phrase": "parties",
-   "panel": 22,
-   "rest": 3,
-   "z": 4.74,
-   "n": 1
-  },
-  {
-   "phrase": "seriously",
-   "panel": 24,
-   "rest": 10,
-   "z": 4.7,
-   "n": 1
-  },
-  {
-   "phrase": "supported",
-   "panel": 23,
-   "rest": 9,
-   "z": 4.66,
-   "n": 1
+   "phrase": "policies",
+   "group_count": 25,
+   "others_count": 10,
+   "z": 5.04
   },
   {
    "phrase": "openai",
-   "panel": 48,
-   "rest": 45,
-   "z": 4.63,
-   "n": 1
+   "group_count": 48,
+   "others_count": 45,
+   "z": 5.01
   },
   {
-   "phrase": "security",
-   "panel": 40,
-   "rest": 34,
-   "z": 4.54,
-   "n": 1
+   "phrase": "personal",
+   "group_count": 22,
+   "others_count": 6,
+   "z": 4.94
   },
   {
    "phrase": "risks",
-   "panel": 52,
-   "rest": 53,
-   "z": 4.5,
-   "n": 1
+   "group_count": 52,
+   "others_count": 53,
+   "z": 4.9
   },
   {
-   "phrase": "safely",
-   "panel": 19,
-   "rest": 4,
-   "z": 4.47,
-   "n": 1
+   "phrase": "security",
+   "group_count": 40,
+   "others_count": 34,
+   "z": 4.87
+  },
+  {
+   "phrase": "supported",
+   "group_count": 23,
+   "others_count": 9,
+   "z": 4.86
+  },
+  {
+   "phrase": "parties",
+   "group_count": 22,
+   "others_count": 3,
+   "z": 4.86
   },
   {
    "phrase": "safe",
-   "panel": 33,
-   "rest": 26,
-   "z": 4.32,
-   "n": 1
+   "group_count": 33,
+   "others_count": 26,
+   "z": 4.62
   },
   {
-   "phrase": "transparent",
-   "panel": 16,
-   "rest": 3,
-   "z": 4.1,
-   "n": 1
-  },
-  {
-   "phrase": "commitment",
-   "panel": 17,
-   "rest": 6,
-   "z": 4.07,
-   "n": 1
-  },
-  {
-   "phrase": "improve",
-   "panel": 19,
-   "rest": 9,
-   "z": 4.05,
-   "n": 1
+   "phrase": "safely",
+   "group_count": 19,
+   "others_count": 4,
+   "z": 4.61
   },
   {
    "phrase": "model",
-   "panel": 50,
-   "rest": 56,
-   "z": 4.04,
-   "n": 1
+   "group_count": 50,
+   "others_count": 56,
+   "z": 4.43
   },
   {
    "phrase": "independent",
-   "panel": 33,
-   "rest": 29,
-   "z": 4.03,
-   "n": 1
+   "group_count": 33,
+   "others_count": 29,
+   "z": 4.33
   },
   {
-   "phrase": "evaluations",
-   "panel": 21,
-   "rest": 1,
-   "z": 4.02,
-   "n": 1
+   "phrase": "commitment",
+   "group_count": 17,
+   "others_count": 6,
+   "z": 4.24
   },
   {
-   "phrase": "frameworks",
-   "panel": 14,
-   "rest": 3,
-   "z": 3.84,
-   "n": 1
+   "phrase": "improve",
+   "group_count": 19,
+   "others_count": 9,
+   "z": 4.24
+  },
+  {
+   "phrase": "transparent",
+   "group_count": 16,
+   "others_count": 3,
+   "z": 4.23
   },
   {
    "phrase": "information",
-   "panel": 47,
-   "rest": 54,
-   "z": 3.81,
-   "n": 1
+   "group_count": 47,
+   "others_count": 54,
+   "z": 4.2
+  },
+  {
+   "phrase": "evaluations",
+   "group_count": 21,
+   "others_count": 1,
+   "z": 4.1
+  },
+  {
+   "phrase": "frameworks",
+   "group_count": 14,
+   "others_count": 3,
+   "z": 3.96
   },
   {
    "phrase": "robust",
-   "panel": 14,
-   "rest": 4,
-   "z": 3.79,
-   "n": 1
-  },
-  {
-   "phrase": "third parties",
-   "panel": 14,
-   "rest": 2,
-   "z": 3.79,
-   "n": 2
+   "group_count": 14,
+   "others_count": 4,
+   "z": 3.93
   },
   {
    "phrase": "user",
-   "panel": 14,
-   "rest": 4,
-   "z": 3.79,
-   "n": 1
+   "group_count": 14,
+   "others_count": 4,
+   "z": 3.93
   },
   {
    "phrase": "superintelligence",
-   "panel": 14,
-   "rest": 5,
-   "z": 3.69,
-   "n": 1
+   "group_count": 14,
+   "others_count": 5,
+   "z": 3.84
   },
   {
    "phrase": "processes",
-   "panel": 14,
-   "rest": 5,
-   "z": 3.69,
-   "n": 1
-  },
-  {
-   "phrase": "muse",
-   "panel": 16,
-   "rest": 1,
-   "z": 3.67,
-   "n": 1
+   "group_count": 14,
+   "others_count": 5,
+   "z": 3.84
   },
   {
    "phrase": "practices",
-   "panel": 13,
-   "rest": 4,
-   "z": 3.63,
-   "n": 1
+   "group_count": 13,
+   "others_count": 4,
+   "z": 3.76
   },
   {
-   "phrase": "results",
-   "panel": 13,
-   "rest": 4,
-   "z": 3.63,
-   "n": 1
-  },
-  {
-   "phrase": "includes",
-   "panel": 18,
-   "rest": 11,
-   "z": 3.62,
-   "n": 1
-  },
-  {
-   "phrase": "evaluate",
-   "panel": 15,
-   "rest": 1,
-   "z": 3.59,
-   "n": 1
-  },
-  {
-   "phrase": "ma'am",
-   "panel": 15,
-   "rest": 1,
-   "z": 3.59,
-   "n": 1
-  },
-  {
-   "phrase": "teens",
-   "panel": 12,
-   "rest": 2,
-   "z": 3.54,
-   "n": 1
-  },
-  {
-   "phrase": "external",
-   "panel": 12,
-   "rest": 4,
-   "z": 3.45,
-   "n": 1
-  },
-  {
-   "phrase": "particularly",
-   "panel": 14,
-   "rest": 7,
-   "z": 3.42,
-   "n": 1
-  },
-  {
-   "phrase": "policymakers",
-   "panel": 13,
-   "rest": 1,
-   "z": 3.41,
-   "n": 1
-  },
-  {
-   "phrase": "ensuring",
-   "panel": 11,
-   "rest": 2,
-   "z": 3.4,
-   "n": 1
+   "phrase": "muse",
+   "group_count": 16,
+   "others_count": 1,
+   "z": 3.75
   },
   {
    "phrase": "support",
-   "panel": 32,
-   "rest": 34,
-   "z": 3.4,
-   "n": 1
+   "group_count": 32,
+   "others_count": 34,
+   "z": 3.71
   },
   {
-   "phrase": "launch",
-   "panel": 11,
-   "rest": 2,
-   "z": 3.4,
-   "n": 1
+   "phrase": "evaluate",
+   "group_count": 15,
+   "others_count": 1,
+   "z": 3.67
   },
   {
-   "phrase": "available",
-   "panel": 16,
-   "rest": 10,
-   "z": 3.38,
-   "n": 1
+   "phrase": "teens",
+   "group_count": 12,
+   "others_count": 2,
+   "z": 3.64
   },
   {
-   "phrase": "preparedness",
-   "panel": 11,
-   "rest": 3,
-   "z": 3.37,
-   "n": 1
+   "phrase": "external",
+   "group_count": 12,
+   "others_count": 4,
+   "z": 3.58
   },
   {
    "phrase": "governments",
-   "panel": 13,
-   "rest": 6,
-   "z": 3.37,
-   "n": 1
+   "group_count": 13,
+   "others_count": 6,
+   "z": 3.53
   },
   {
-   "phrase": "levels",
-   "panel": 12,
-   "rest": 5,
-   "z": 3.32,
-   "n": 1
-  },
-  {
-   "phrase": "controls",
-   "panel": 11,
-   "rest": 4,
-   "z": 3.26,
-   "n": 1
-  },
-  {
-   "phrase": "affected",
-   "panel": 10,
-   "rest": 2,
-   "z": 3.24,
-   "n": 1
-  },
-  {
-   "phrase": "area",
-   "panel": 10,
-   "rest": 2,
-   "z": 3.24,
-   "n": 1
-  },
-  {
-   "phrase": "sir",
-   "panel": 10,
-   "rest": 2,
-   "z": 3.24,
-   "n": 1
-  },
-  {
-   "phrase": "national",
-   "panel": 13,
-   "rest": 7,
-   "z": 3.22,
-   "n": 1
-  },
-  {
-   "phrase": "economic",
-   "panel": 13,
-   "rest": 7,
-   "z": 3.22,
-   "n": 1
-  },
-  {
-   "phrase": "personally",
-   "panel": 10,
-   "rest": 3,
-   "z": 3.19,
-   "n": 1
-  },
-  {
-   "phrase": "small businesses",
-   "panel": 12,
-   "rest": 6,
-   "z": 3.17,
-   "n": 2
-  },
-  {
-   "phrase": "technical",
-   "panel": 25,
-   "rest": 25,
-   "z": 3.17,
-   "n": 1
-  },
-  {
-   "phrase": "ensure",
-   "panel": 31,
-   "rest": 35,
-   "z": 3.15,
-   "n": 1
-  },
-  {
-   "phrase": "ongoing",
-   "panel": 11,
-   "rest": 5,
-   "z": 3.12,
-   "n": 1
-  },
-  {
-   "phrase": "national security",
-   "panel": 10,
-   "rest": 1,
-   "z": 3.1,
-   "n": 2
-  },
-  {
-   "phrase": "reports",
-   "panel": 18,
-   "rest": 15,
-   "z": 3.08,
-   "n": 1
-  },
-  {
-   "phrase": "detailed",
-   "panel": 9,
-   "rest": 2,
-   "z": 3.08,
-   "n": 1
-  },
-  {
-   "phrase": "particular",
-   "panel": 18,
-   "rest": 15,
-   "z": 3.08,
-   "n": 1
-  },
-  {
-   "phrase": "mention",
-   "panel": 9,
-   "rest": 2,
-   "z": 3.08,
-   "n": 1
-  },
-  {
-   "phrase": "third-party",
-   "panel": 9,
-   "rest": 2,
-   "z": 3.08,
-   "n": 1
-  },
-  {
-   "phrase": "claude",
-   "panel": 13,
-   "rest": 8,
-   "z": 3.07,
-   "n": 1
-  },
-  {
-   "phrase": "testing",
-   "panel": 12,
-   "rest": 7,
-   "z": 3.01,
-   "n": 1
-  },
-  {
-   "phrase": "exactly",
-   "panel": 12,
-   "rest": 7,
-   "z": 3.01,
-   "n": 1
-  },
-  {
-   "phrase": "energy",
-   "panel": 9,
-   "rest": 3,
-   "z": 2.99,
-   "n": 1
-  },
-  {
-   "phrase": "independent evaluators",
-   "panel": 9,
-   "rest": 1,
-   "z": 2.97,
-   "n": 2
-  },
-  {
-   "phrase": "recently",
-   "panel": 14,
-   "rest": 10,
-   "z": 2.97,
-   "n": 1
-  },
-  {
-   "phrase": "privacy",
-   "panel": 23,
-   "rest": 24,
-   "z": 2.93,
-   "n": 1
+   "phrase": "launch",
+   "group_count": 11,
+   "others_count": 2,
+   "z": 3.5
   }
- ],
- "speakers": {
-  "Morgan Dwyer": 62,
-  "Logan Graham": 55,
-  "Shane Cahill": 54,
-  "Alice Friend": 50
- },
- "turns": 221,
- "minutes": 165.9,
- "words_panel": 23805
+ ]
 }

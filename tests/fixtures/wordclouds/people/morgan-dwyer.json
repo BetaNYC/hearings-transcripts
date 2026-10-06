@@ -1,0 +1,275 @@
+{
+ "source": "scripts/build_wordclouds.py with scripts/meta/wordclouds.json, 2026-10-06",
+ "phrases": [
+  {
+   "phrase": "openai",
+   "group_count": 48,
+   "others_count": 45,
+   "z": 11.83
+  },
+  {
+   "phrase": "safety",
+   "group_count": 58,
+   "others_count": 186,
+   "z": 8.32
+  },
+  {
+   "phrase": "frontier safety",
+   "group_count": 12,
+   "others_count": 5,
+   "z": 6.12
+  },
+  {
+   "phrase": "evaluations",
+   "group_count": 12,
+   "others_count": 10,
+   "z": 5.98
+  },
+  {
+   "phrase": "training",
+   "group_count": 20,
+   "others_count": 49,
+   "z": 5.67
+  },
+  {
+   "phrase": "parties",
+   "group_count": 11,
+   "others_count": 14,
+   "z": 5.32
+  },
+  {
+   "phrase": "committed",
+   "group_count": 13,
+   "others_count": 24,
+   "z": 5.16
+  },
+  {
+   "phrase": "chatgpt",
+   "group_count": 9,
+   "others_count": 9,
+   "z": 5.05
+  },
+  {
+   "phrase": "policymakers",
+   "group_count": 13,
+   "others_count": 1,
+   "z": 4.92
+  },
+  {
+   "phrase": "evaluate",
+   "group_count": 8,
+   "others_count": 8,
+   "z": 4.76
+  },
+  {
+   "phrase": "supported",
+   "group_count": 11,
+   "others_count": 21,
+   "z": 4.69
+  },
+  {
+   "phrase": "community",
+   "group_count": 9,
+   "others_count": 14,
+   "z": 4.55
+  },
+  {
+   "phrase": "federal",
+   "group_count": 17,
+   "others_count": 53,
+   "z": 4.55
+  },
+  {
+   "phrase": "safe",
+   "group_count": 15,
+   "others_count": 44,
+   "z": 4.44
+  },
+  {
+   "phrase": "card",
+   "group_count": 6,
+   "others_count": 3,
+   "z": 4.34
+  },
+  {
+   "phrase": "investigation",
+   "group_count": 6,
+   "others_count": 4,
+   "z": 4.31
+  },
+  {
+   "phrase": "content",
+   "group_count": 11,
+   "others_count": 26,
+   "z": 4.27
+  },
+  {
+   "phrase": "national security",
+   "group_count": 6,
+   "others_count": 5,
+   "z": 4.23
+  },
+  {
+   "phrase": "decisions",
+   "group_count": 8,
+   "others_count": 13,
+   "z": 4.23
+  },
+  {
+   "phrase": "frameworks",
+   "group_count": 7,
+   "others_count": 10,
+   "z": 4.11
+  },
+  {
+   "phrase": "misalignment",
+   "group_count": 7,
+   "others_count": 10,
+   "z": 4.11
+  },
+  {
+   "phrase": "rsi",
+   "group_count": 7,
+   "others_count": 1,
+   "z": 4.1
+  },
+  {
+   "phrase": "safely",
+   "group_count": 8,
+   "others_count": 15,
+   "z": 4.02
+  },
+  {
+   "phrase": "regulation",
+   "group_count": 13,
+   "others_count": 40,
+   "z": 4.01
+  },
+  {
+   "phrase": "safety frameworks",
+   "group_count": 5,
+   "others_count": 2,
+   "z": 3.94
+  },
+  {
+   "phrase": "policy team",
+   "group_count": 5,
+   "others_count": 2,
+   "z": 3.94
+  },
+  {
+   "phrase": "incident",
+   "group_count": 13,
+   "others_count": 42,
+   "z": 3.89
+  },
+  {
+   "phrase": "youth",
+   "group_count": 5,
+   "others_count": 4,
+   "z": 3.88
+  },
+  {
+   "phrase": "teens",
+   "group_count": 6,
+   "others_count": 8,
+   "z": 3.88
+  },
+  {
+   "phrase": "monitor",
+   "group_count": 5,
+   "others_count": 5,
+   "z": 3.76
+  },
+  {
+   "phrase": "voluntary",
+   "group_count": 6,
+   "others_count": 9,
+   "z": 3.76
+  },
+  {
+   "phrase": "endorsed",
+   "group_count": 5,
+   "others_count": 1,
+   "z": 3.67
+  },
+  {
+   "phrase": "teachers",
+   "group_count": 5,
+   "others_count": 6,
+   "z": 3.63
+  },
+  {
+   "phrase": "risks",
+   "group_count": 19,
+   "others_count": 86,
+   "z": 3.59
+  },
+  {
+   "phrase": "release",
+   "group_count": 9,
+   "others_count": 25,
+   "z": 3.55
+  },
+  {
+   "phrase": "safeguards",
+   "group_count": 11,
+   "others_count": 36,
+   "z": 3.54
+  },
+  {
+   "phrase": "website",
+   "group_count": 5,
+   "others_count": 7,
+   "z": 3.5
+  },
+  {
+   "phrase": "illinois",
+   "group_count": 4,
+   "others_count": 3,
+   "z": 3.49
+  },
+  {
+   "phrase": "investigators",
+   "group_count": 4,
+   "others_count": 3,
+   "z": 3.49
+  },
+  {
+   "phrase": "policies",
+   "group_count": 9,
+   "others_count": 26,
+   "z": 3.47
+  },
+  {
+   "phrase": "robust",
+   "group_count": 6,
+   "others_count": 12,
+   "z": 3.4
+  },
+  {
+   "phrase": "usage policies",
+   "group_count": 4,
+   "others_count": 1,
+   "z": 3.38
+  },
+  {
+   "phrase": "federal government",
+   "group_count": 5,
+   "others_count": 8,
+   "z": 3.36
+  },
+  {
+   "phrase": "safety concerns",
+   "group_count": 4,
+   "others_count": 4,
+   "z": 3.36
+  },
+  {
+   "phrase": "users",
+   "group_count": 10,
+   "others_count": 34,
+   "z": 3.29
+  }
+ ]
+}

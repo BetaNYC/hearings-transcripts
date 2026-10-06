@@ -1,0 +1,233 @@
+{
+ "source": "scripts/build_wordclouds.py with scripts/meta/wordclouds.json, 2026-10-06",
+ "phrases": [
+  {
+   "phrase": "ais",
+   "group_count": 27,
+   "others_count": 20,
+   "z": 13.2
+  },
+  {
+   "phrase": "data centers",
+   "group_count": 9,
+   "others_count": 37,
+   "z": 5.95
+  },
+  {
+   "phrase": "chinese",
+   "group_count": 5,
+   "others_count": 2,
+   "z": 5.38
+  },
+  {
+   "phrase": "recursive self improvement",
+   "group_count": 5,
+   "others_count": 9,
+   "z": 5.37
+  },
+  {
+   "phrase": "slow",
+   "group_count": 5,
+   "others_count": 10,
+   "z": 5.29
+  },
+  {
+   "phrase": "china",
+   "group_count": 6,
+   "others_count": 24,
+   "z": 4.9
+  },
+  {
+   "phrase": "field",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 4.37
+  },
+  {
+   "phrase": "united states",
+   "group_count": 3,
+   "others_count": 5,
+   "z": 4.2
+  },
+  {
+   "phrase": "research",
+   "group_count": 8,
+   "others_count": 67,
+   "z": 4.16
+  },
+  {
+   "phrase": "train",
+   "group_count": 4,
+   "others_count": 16,
+   "z": 3.99
+  },
+  {
+   "phrase": "progress",
+   "group_count": 3,
+   "others_count": 7,
+   "z": 3.98
+  },
+  {
+   "phrase": "scientific",
+   "group_count": 3,
+   "others_count": 8,
+   "z": 3.87
+  },
+  {
+   "phrase": "future",
+   "group_count": 6,
+   "others_count": 45,
+   "z": 3.8
+  },
+  {
+   "phrase": "secret",
+   "group_count": 2,
+   "others_count": 2,
+   "z": 3.57
+  },
+  {
+   "phrase": "research and development",
+   "group_count": 2,
+   "others_count": 2,
+   "z": 3.57
+  },
+  {
+   "phrase": "autonomously",
+   "group_count": 2,
+   "others_count": 1,
+   "z": 3.48
+  },
+  {
+   "phrase": "automate",
+   "group_count": 2,
+   "others_count": 1,
+   "z": 3.48
+  },
+  {
+   "phrase": "chips",
+   "group_count": 2,
+   "others_count": 1,
+   "z": 3.48
+  },
+  {
+   "phrase": "extreme",
+   "group_count": 2,
+   "others_count": 3,
+   "z": 3.47
+  },
+  {
+   "phrase": "military",
+   "group_count": 2,
+   "others_count": 4,
+   "z": 3.34
+  },
+  {
+   "phrase": "beneficial",
+   "group_count": 2,
+   "others_count": 4,
+   "z": 3.34
+  },
+  {
+   "phrase": "misalignment",
+   "group_count": 3,
+   "others_count": 14,
+   "z": 3.28
+  },
+  {
+   "phrase": "dangerous",
+   "group_count": 3,
+   "others_count": 14,
+   "z": 3.28
+  },
+  {
+   "phrase": "humans",
+   "group_count": 3,
+   "others_count": 15,
+   "z": 3.2
+  },
+  {
+   "phrase": "industries",
+   "group_count": 2,
+   "others_count": 5,
+   "z": 3.2
+  },
+  {
+   "phrase": "countries",
+   "group_count": 2,
+   "others_count": 5,
+   "z": 3.2
+  },
+  {
+   "phrase": "trained",
+   "group_count": 2,
+   "others_count": 6,
+   "z": 3.07
+  },
+  {
+   "phrase": "chain",
+   "group_count": 2,
+   "others_count": 6,
+   "z": 3.07
+  },
+  {
+   "phrase": "development",
+   "group_count": 5,
+   "others_count": 52,
+   "z": 2.9
+  },
+  {
+   "phrase": "planning",
+   "group_count": 2,
+   "others_count": 8,
+   "z": 2.82
+  },
+  {
+   "phrase": "training",
+   "group_count": 5,
+   "others_count": 64,
+   "z": 2.53
+  },
+  {
+   "phrase": "transparency",
+   "group_count": 3,
+   "others_count": 27,
+   "z": 2.44
+  },
+  {
+   "phrase": "racing",
+   "group_count": 2,
+   "others_count": 12,
+   "z": 2.43
+  },
+  {
+   "phrase": "control",
+   "group_count": 5,
+   "others_count": 68,
+   "z": 2.42
+  },
+  {
+   "phrase": "alignment",
+   "group_count": 2,
+   "others_count": 13,
+   "z": 2.34
+  },
+  {
+   "phrase": "board",
+   "group_count": 2,
+   "others_count": 14,
+   "z": 2.27
+  },
+  {
+   "phrase": "researchers",
+   "group_count": 2,
+   "others_count": 16,
+   "z": 2.12
+  },
+  {
+   "phrase": "hugging",
+   "group_count": 2,
+   "others_count": 18,
+   "z": 1.99
+  }
+ ]
+}
