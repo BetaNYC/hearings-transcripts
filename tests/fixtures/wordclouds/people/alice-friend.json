@@ -1,0 +1,275 @@
+{
+ "source": "scripts/build_wordclouds.py with scripts/meta/wordclouds.json, 2026-10-06",
+ "phrases": [
+  {
+   "phrase": "google",
+   "group_count": 20,
+   "others_count": 34,
+   "z": 6.64
+  },
+  {
+   "phrase": "users",
+   "group_count": 18,
+   "others_count": 26,
+   "z": 6.62
+  },
+  {
+   "phrase": "approach",
+   "group_count": 13,
+   "others_count": 22,
+   "z": 5.36
+  },
+  {
+   "phrase": "safety",
+   "group_count": 39,
+   "others_count": 205,
+   "z": 4.48
+  },
+  {
+   "phrase": "framework",
+   "group_count": 15,
+   "others_count": 45,
+   "z": 4.42
+  },
+  {
+   "phrase": "regulated",
+   "group_count": 6,
+   "others_count": 4,
+   "z": 4.33
+  },
+  {
+   "phrase": "tools",
+   "group_count": 22,
+   "others_count": 91,
+   "z": 4.25
+  },
+  {
+   "phrase": "illegal",
+   "group_count": 6,
+   "others_count": 5,
+   "z": 4.25
+  },
+  {
+   "phrase": "federal",
+   "group_count": 16,
+   "others_count": 54,
+   "z": 4.23
+  },
+  {
+   "phrase": "information",
+   "group_count": 20,
+   "others_count": 81,
+   "z": 4.12
+  },
+  {
+   "phrase": "gemini",
+   "group_count": 7,
+   "others_count": 1,
+   "z": 4.11
+  },
+  {
+   "phrase": "creators",
+   "group_count": 5,
+   "others_count": 3,
+   "z": 3.97
+  },
+  {
+   "phrase": "educators",
+   "group_count": 5,
+   "others_count": 2,
+   "z": 3.96
+  },
+  {
+   "phrase": "content",
+   "group_count": 10,
+   "others_count": 27,
+   "z": 3.83
+  },
+  {
+   "phrase": "safety framework",
+   "group_count": 5,
+   "others_count": 1,
+   "z": 3.68
+  },
+  {
+   "phrase": "incidents",
+   "group_count": 15,
+   "others_count": 59,
+   "z": 3.65
+  },
+  {
+   "phrase": "application",
+   "group_count": 4,
+   "others_count": 2,
+   "z": 3.56
+  },
+  {
+   "phrase": "frameworks",
+   "group_count": 6,
+   "others_count": 11,
+   "z": 3.54
+  },
+  {
+   "phrase": "trust",
+   "group_count": 7,
+   "others_count": 17,
+   "z": 3.39
+  },
+  {
+   "phrase": "federal framework",
+   "group_count": 4,
+   "others_count": 1,
+   "z": 3.39
+  },
+  {
+   "phrase": "tool",
+   "group_count": 7,
+   "others_count": 17,
+   "z": 3.39
+  },
+  {
+   "phrase": "layered",
+   "group_count": 4,
+   "others_count": 1,
+   "z": 3.39
+  },
+  {
+   "phrase": "bio",
+   "group_count": 4,
+   "others_count": 1,
+   "z": 3.39
+  },
+  {
+   "phrase": "challenges",
+   "group_count": 5,
+   "others_count": 8,
+   "z": 3.38
+  },
+  {
+   "phrase": "safety and security",
+   "group_count": 4,
+   "others_count": 4,
+   "z": 3.38
+  },
+  {
+   "phrase": "security",
+   "group_count": 14,
+   "others_count": 60,
+   "z": 3.28
+  },
+  {
+   "phrase": "national",
+   "group_count": 6,
+   "others_count": 14,
+   "z": 3.2
+  },
+  {
+   "phrase": "technologies",
+   "group_count": 6,
+   "others_count": 15,
+   "z": 3.09
+  },
+  {
+   "phrase": "train our models",
+   "group_count": 3,
+   "others_count": 2,
+   "z": 3.06
+  },
+  {
+   "phrase": "interacting",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 3.03
+  },
+  {
+   "phrase": "sources",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 3.03
+  },
+  {
+   "phrase": "layered approach",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 3.03
+  },
+  {
+   "phrase": "supervised",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 3.03
+  },
+  {
+   "phrase": "external",
+   "group_count": 5,
+   "others_count": 11,
+   "z": 3.0
+  },
+  {
+   "phrase": "development",
+   "group_count": 11,
+   "others_count": 46,
+   "z": 2.97
+  },
+  {
+   "phrase": "control",
+   "group_count": 13,
+   "others_count": 60,
+   "z": 2.95
+  },
+  {
+   "phrase": "technical",
+   "group_count": 10,
+   "others_count": 40,
+   "z": 2.94
+  },
+  {
+   "phrase": "national security",
+   "group_count": 4,
+   "others_count": 7,
+   "z": 2.93
+  },
+  {
+   "phrase": "rigorous",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.93
+  },
+  {
+   "phrase": "generative",
+   "group_count": 4,
+   "others_count": 7,
+   "z": 2.93
+  },
+  {
+   "phrase": "web",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.93
+  },
+  {
+   "phrase": "learning",
+   "group_count": 4,
+   "others_count": 7,
+   "z": 2.93
+  },
+  {
+   "phrase": "violation",
+   "group_count": 4,
+   "others_count": 7,
+   "z": 2.93
+  },
+  {
+   "phrase": "search",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.93
+  },
+  {
+   "phrase": "frontier safety",
+   "group_count": 5,
+   "others_count": 12,
+   "z": 2.88
+  }
+ ]
+}

@@ -1,0 +1,275 @@
+{
+ "source": "scripts/build_wordclouds.py with scripts/meta/wordclouds.json, 2026-10-06",
+ "phrases": [
+  {
+   "phrase": "tech",
+   "group_count": 36,
+   "others_count": 31,
+   "z": 3.92
+  },
+  {
+   "phrase": "workers",
+   "group_count": 29,
+   "others_count": 22,
+   "z": 3.84
+  },
+  {
+   "phrase": "young",
+   "group_count": 15,
+   "others_count": 3,
+   "z": 3.84
+  },
+  {
+   "phrase": "media",
+   "group_count": 13,
+   "others_count": 3,
+   "z": 3.56
+  },
+  {
+   "phrase": "harms",
+   "group_count": 25,
+   "others_count": 19,
+   "z": 3.56
+  },
+  {
+   "phrase": "skills",
+   "group_count": 12,
+   "others_count": 2,
+   "z": 3.42
+  },
+  {
+   "phrase": "school",
+   "group_count": 15,
+   "others_count": 8,
+   "z": 3.28
+  },
+  {
+   "phrase": "chatbot",
+   "group_count": 12,
+   "others_count": 5,
+   "z": 3.16
+  },
+  {
+   "phrase": "job",
+   "group_count": 19,
+   "others_count": 14,
+   "z": 3.16
+  },
+  {
+   "phrase": "digital",
+   "group_count": 14,
+   "others_count": 8,
+   "z": 3.08
+  },
+  {
+   "phrase": "power",
+   "group_count": 17,
+   "others_count": 12,
+   "z": 3.07
+  },
+  {
+   "phrase": "developer",
+   "group_count": 10,
+   "others_count": 1,
+   "z": 3.01
+  },
+  {
+   "phrase": "global",
+   "group_count": 12,
+   "others_count": 6,
+   "z": 3.0
+  },
+  {
+   "phrase": "chatbots",
+   "group_count": 15,
+   "others_count": 11,
+   "z": 2.82
+  },
+  {
+   "phrase": "startups",
+   "group_count": 8,
+   "others_count": 2,
+   "z": 2.78
+  },
+  {
+   "phrase": "largest",
+   "group_count": 8,
+   "others_count": 2,
+   "z": 2.78
+  },
+  {
+   "phrase": "funding",
+   "group_count": 8,
+   "others_count": 2,
+   "z": 2.78
+  },
+  {
+   "phrase": "source",
+   "group_count": 8,
+   "others_count": 1,
+   "z": 2.75
+  },
+  {
+   "phrase": "fear",
+   "group_count": 8,
+   "others_count": 1,
+   "z": 2.75
+  },
+  {
+   "phrase": "consequences",
+   "group_count": 10,
+   "others_count": 5,
+   "z": 2.74
+  },
+  {
+   "phrase": "liability",
+   "group_count": 13,
+   "others_count": 9,
+   "z": 2.71
+  },
+  {
+   "phrase": "history",
+   "group_count": 9,
+   "others_count": 4,
+   "z": 2.69
+  },
+  {
+   "phrase": "humanity",
+   "group_count": 12,
+   "others_count": 8,
+   "z": 2.66
+  },
+  {
+   "phrase": "oversight",
+   "group_count": 12,
+   "others_count": 8,
+   "z": 2.66
+  },
+  {
+   "phrase": "researchers",
+   "group_count": 11,
+   "others_count": 7,
+   "z": 2.61
+  },
+  {
+   "phrase": "developers",
+   "group_count": 7,
+   "others_count": 1,
+   "z": 2.6
+  },
+  {
+   "phrase": "president",
+   "group_count": 7,
+   "others_count": 1,
+   "z": 2.6
+  },
+  {
+   "phrase": "physical",
+   "group_count": 7,
+   "others_count": 1,
+   "z": 2.6
+  },
+  {
+   "phrase": "employers",
+   "group_count": 7,
+   "others_count": 1,
+   "z": 2.6
+  },
+  {
+   "phrase": "nonprofit",
+   "group_count": 7,
+   "others_count": 1,
+   "z": 2.6
+  },
+  {
+   "phrase": "architecture",
+   "group_count": 7,
+   "others_count": 1,
+   "z": 2.6
+  },
+  {
+   "phrase": "institute",
+   "group_count": 7,
+   "others_count": 2,
+   "z": 2.57
+  },
+  {
+   "phrase": "audit",
+   "group_count": 7,
+   "others_count": 2,
+   "z": 2.57
+  },
+  {
+   "phrase": "contract",
+   "group_count": 10,
+   "others_count": 6,
+   "z": 2.55
+  },
+  {
+   "phrase": "package",
+   "group_count": 8,
+   "others_count": 4,
+   "z": 2.45
+  },
+  {
+   "phrase": "corporate",
+   "group_count": 6,
+   "others_count": 1,
+   "z": 2.42
+  },
+  {
+   "phrase": "shutdown",
+   "group_count": 6,
+   "others_count": 1,
+   "z": 2.42
+  },
+  {
+   "phrase": "validator",
+   "group_count": 7,
+   "others_count": 3,
+   "z": 2.4
+  },
+  {
+   "phrase": "organization",
+   "group_count": 7,
+   "others_count": 3,
+   "z": 2.4
+  },
+  {
+   "phrase": "accountability",
+   "group_count": 17,
+   "others_count": 17,
+   "z": 2.37
+  },
+  {
+   "phrase": "kill",
+   "group_count": 6,
+   "others_count": 2,
+   "z": 2.34
+  },
+  {
+   "phrase": "leader",
+   "group_count": 6,
+   "others_count": 2,
+   "z": 2.34
+  },
+  {
+   "phrase": "section",
+   "group_count": 6,
+   "others_count": 2,
+   "z": 2.34
+  },
+  {
+   "phrase": "nyc",
+   "group_count": 12,
+   "others_count": 10,
+   "z": 2.32
+  },
+  {
+   "phrase": "scale",
+   "group_count": 8,
+   "others_count": 5,
+   "z": 2.24
+  }
+ ]
+}

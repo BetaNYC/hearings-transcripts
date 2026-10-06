@@ -1,0 +1,275 @@
+{
+ "source": "scripts/build_wordclouds.py with scripts/meta/wordclouds.json, 2026-10-06",
+ "phrases": [
+  {
+   "phrase": "women",
+   "group_count": 9,
+   "others_count": 8,
+   "z": 5.54
+  },
+  {
+   "phrase": "deepfakes",
+   "group_count": 7,
+   "others_count": 4,
+   "z": 5.0
+  },
+  {
+   "phrase": "raise act",
+   "group_count": 12,
+   "others_count": 30,
+   "z": 4.92
+  },
+  {
+   "phrase": "governor",
+   "group_count": 7,
+   "others_count": 6,
+   "z": 4.9
+  },
+  {
+   "phrase": "bills",
+   "group_count": 10,
+   "others_count": 21,
+   "z": 4.81
+  },
+  {
+   "phrase": "passed",
+   "group_count": 6,
+   "others_count": 5,
+   "z": 4.55
+  },
+  {
+   "phrase": "fines",
+   "group_count": 6,
+   "others_count": 2,
+   "z": 4.51
+  },
+  {
+   "phrase": "action",
+   "group_count": 9,
+   "others_count": 22,
+   "z": 4.3
+  },
+  {
+   "phrase": "sexualized",
+   "group_count": 7,
+   "others_count": 1,
+   "z": 4.29
+  },
+  {
+   "phrase": "albany",
+   "group_count": 5,
+   "others_count": 3,
+   "z": 4.22
+  },
+  {
+   "phrase": "grok",
+   "group_count": 6,
+   "others_count": 1,
+   "z": 4.09
+  },
+  {
+   "phrase": "men",
+   "group_count": 5,
+   "others_count": 5,
+   "z": 4.07
+  },
+  {
+   "phrase": "accountable",
+   "group_count": 7,
+   "others_count": 15,
+   "z": 3.99
+  },
+  {
+   "phrase": "protect",
+   "group_count": 9,
+   "others_count": 26,
+   "z": 3.98
+  },
+  {
+   "phrase": "tech",
+   "group_count": 13,
+   "others_count": 54,
+   "z": 3.85
+  },
+  {
+   "phrase": "protection",
+   "group_count": 6,
+   "others_count": 12,
+   "z": 3.79
+  },
+  {
+   "phrase": "pending",
+   "group_count": 4,
+   "others_count": 2,
+   "z": 3.77
+  },
+  {
+   "phrase": "fight",
+   "group_count": 4,
+   "others_count": 3,
+   "z": 3.74
+  },
+  {
+   "phrase": "speech",
+   "group_count": 4,
+   "others_count": 3,
+   "z": 3.74
+  },
+  {
+   "phrase": "catastrophic",
+   "group_count": 10,
+   "others_count": 36,
+   "z": 3.71
+  },
+  {
+   "phrase": "assembly",
+   "group_count": 5,
+   "others_count": 8,
+   "z": 3.7
+  },
+  {
+   "phrase": "data center",
+   "group_count": 4,
+   "others_count": 4,
+   "z": 3.64
+  },
+  {
+   "phrase": "introduced",
+   "group_count": 4,
+   "others_count": 4,
+   "z": 3.64
+  },
+  {
+   "phrase": "international",
+   "group_count": 4,
+   "others_count": 4,
+   "z": 3.64
+  },
+  {
+   "phrase": "guardrail",
+   "group_count": 4,
+   "others_count": 1,
+   "z": 3.56
+  },
+  {
+   "phrase": "freedom",
+   "group_count": 4,
+   "others_count": 1,
+   "z": 3.56
+  },
+  {
+   "phrase": "laws",
+   "group_count": 7,
+   "others_count": 20,
+   "z": 3.53
+  },
+  {
+   "phrase": "pass",
+   "group_count": 7,
+   "others_count": 20,
+   "z": 3.53
+  },
+  {
+   "phrase": "senate",
+   "group_count": 4,
+   "others_count": 6,
+   "z": 3.37
+  },
+  {
+   "phrase": "power",
+   "group_count": 7,
+   "others_count": 22,
+   "z": 3.36
+  },
+  {
+   "phrase": "safety standards",
+   "group_count": 3,
+   "others_count": 2,
+   "z": 3.26
+  },
+  {
+   "phrase": "municipalities",
+   "group_count": 3,
+   "others_count": 2,
+   "z": 3.26
+  },
+  {
+   "phrase": "hyperscale data",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 3.19
+  },
+  {
+   "phrase": "sponsor",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 3.19
+  },
+  {
+   "phrase": "targeted",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 3.19
+  },
+  {
+   "phrase": "water",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 3.15
+  },
+  {
+   "phrase": "spacex",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 3.15
+  },
+  {
+   "phrase": "bill",
+   "group_count": 14,
+   "others_count": 78,
+   "z": 3.13
+  },
+  {
+   "phrase": "communities",
+   "group_count": 6,
+   "others_count": 19,
+   "z": 3.09
+  },
+  {
+   "phrase": "chatbots",
+   "group_count": 6,
+   "others_count": 20,
+   "z": 3.01
+  },
+  {
+   "phrase": "fighting",
+   "group_count": 3,
+   "others_count": 4,
+   "z": 3.0
+  },
+  {
+   "phrase": "elected",
+   "group_count": 3,
+   "others_count": 4,
+   "z": 3.0
+  },
+  {
+   "phrase": "regulating",
+   "group_count": 4,
+   "others_count": 9,
+   "z": 2.96
+  },
+  {
+   "phrase": "wrong",
+   "group_count": 4,
+   "others_count": 9,
+   "z": 2.96
+  },
+  {
+   "phrase": "harms",
+   "group_count": 8,
+   "others_count": 36,
+   "z": 2.84
+  }
+ ]
+}

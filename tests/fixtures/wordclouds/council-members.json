@@ -1,0 +1,275 @@
+{
+ "source": "scripts/build_wordclouds.py with scripts/meta/wordclouds.json, 2026-10-06",
+ "phrases": [
+  {
+   "phrase": "ice",
+   "group_count": 6,
+   "others_count": 3,
+   "z": 4.05
+  },
+  {
+   "phrase": "strategy",
+   "group_count": 5,
+   "others_count": 3,
+   "z": 3.67
+  },
+  {
+   "phrase": "applications",
+   "group_count": 5,
+   "others_count": 4,
+   "z": 3.56
+  },
+  {
+   "phrase": "clouds",
+   "group_count": 5,
+   "others_count": 1,
+   "z": 3.47
+  },
+  {
+   "phrase": "student",
+   "group_count": 6,
+   "others_count": 9,
+   "z": 3.36
+  },
+  {
+   "phrase": "sell",
+   "group_count": 4,
+   "others_count": 2,
+   "z": 3.3
+  },
+  {
+   "phrase": "raise act",
+   "group_count": 11,
+   "others_count": 31,
+   "z": 3.29
+  },
+  {
+   "phrase": "violations",
+   "group_count": 4,
+   "others_count": 3,
+   "z": 3.21
+  },
+  {
+   "phrase": "contracts",
+   "group_count": 5,
+   "others_count": 7,
+   "z": 3.14
+  },
+  {
+   "phrase": "anthropic",
+   "group_count": 13,
+   "others_count": 44,
+   "z": 3.1
+  },
+  {
+   "phrase": "plan",
+   "group_count": 7,
+   "others_count": 16,
+   "z": 3.0
+  },
+  {
+   "phrase": "data centers",
+   "group_count": 11,
+   "others_count": 35,
+   "z": 3.0
+  },
+  {
+   "phrase": "challenges",
+   "group_count": 5,
+   "others_count": 8,
+   "z": 2.99
+  },
+  {
+   "phrase": "automated",
+   "group_count": 6,
+   "others_count": 12,
+   "z": 2.98
+  },
+  {
+   "phrase": "stronger",
+   "group_count": 4,
+   "others_count": 5,
+   "z": 2.91
+  },
+  {
+   "phrase": "malicious",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.84
+  },
+  {
+   "phrase": "city resident",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.84
+  },
+  {
+   "phrase": "cloning",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.84
+  },
+  {
+   "phrase": "discourse",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.84
+  },
+  {
+   "phrase": "vendor clouds",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.84
+  },
+  {
+   "phrase": "consultants",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.84
+  },
+  {
+   "phrase": "hack",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 2.84
+  },
+  {
+   "phrase": "land",
+   "group_count": 3,
+   "others_count": 2,
+   "z": 2.82
+  },
+  {
+   "phrase": "identifying",
+   "group_count": 3,
+   "others_count": 2,
+   "z": 2.82
+  },
+  {
+   "phrase": "cognitive",
+   "group_count": 3,
+   "others_count": 2,
+   "z": 2.82
+  },
+  {
+   "phrase": "advertising",
+   "group_count": 3,
+   "others_count": 2,
+   "z": 2.82
+  },
+  {
+   "phrase": "self improving",
+   "group_count": 3,
+   "others_count": 2,
+   "z": 2.82
+  },
+  {
+   "phrase": "guidance",
+   "group_count": 3,
+   "others_count": 2,
+   "z": 2.82
+  },
+  {
+   "phrase": "commit",
+   "group_count": 6,
+   "others_count": 14,
+   "z": 2.74
+  },
+  {
+   "phrase": "compute",
+   "group_count": 4,
+   "others_count": 6,
+   "z": 2.74
+  },
+  {
+   "phrase": "tools",
+   "group_count": 20,
+   "others_count": 93,
+   "z": 2.72
+  },
+  {
+   "phrase": "products",
+   "group_count": 9,
+   "others_count": 29,
+   "z": 2.69
+  },
+  {
+   "phrase": "americans",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.66
+  },
+  {
+   "phrase": "answered",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.66
+  },
+  {
+   "phrase": "writing",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.66
+  },
+  {
+   "phrase": "tracking",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.66
+  },
+  {
+   "phrase": "target",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.66
+  },
+  {
+   "phrase": "enterprise",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.66
+  },
+  {
+   "phrase": "australia",
+   "group_count": 3,
+   "others_count": 3,
+   "z": 2.66
+  },
+  {
+   "phrase": "rogue",
+   "group_count": 4,
+   "others_count": 7,
+   "z": 2.58
+  },
+  {
+   "phrase": "generative",
+   "group_count": 4,
+   "others_count": 7,
+   "z": 2.58
+  },
+  {
+   "phrase": "helpful",
+   "group_count": 4,
+   "others_count": 7,
+   "z": 2.58
+  },
+  {
+   "phrase": "mental health",
+   "group_count": 3,
+   "others_count": 4,
+   "z": 2.47
+  },
+  {
+   "phrase": "data",
+   "group_count": 26,
+   "others_count": 141,
+   "z": 2.45
+  },
+  {
+   "phrase": "else",
+   "group_count": 4,
+   "others_count": 8,
+   "z": 2.43
+  }
+ ]
+}

@@ -63,6 +63,17 @@ Speaker categories (derived from the role, see the repository README for the rul
 | `witness` | Other witness | 54 |
 | `unidentified` | Unidentified | 5 |
 
+<!-- wordclouds:start -->
+## What each group talked about
+
+[`wordclouds/index.html`](wordclouds/index.html) shows, for each speaker group and for some
+individual speakers, the phrases they used far more than everyone else at the hearing, as a
+word cloud, a bar chart and a table. Each `wordclouds/<group>.csv` (and
+`wordclouds/people/<person>.csv`) lists every phrase that passed: `phrase, group_count,
+others_count, z`. Built by `scripts/build_wordclouds.py`; groups and word lists are in
+`scripts/meta/wordclouds.json`.
+<!-- wordclouds:end -->
+
 ## Known gaps
 
 - Speaker names were assigned after transcription. A low-confidence name shows `[?]` in the

@@ -1,0 +1,275 @@
+{
+ "source": "scripts/build_wordclouds.py with scripts/meta/wordclouds.json, 2026-10-06",
+ "phrases": [
+  {
+   "phrase": "safety",
+   "group_count": 140,
+   "others_count": 104,
+   "z": 9.79
+  },
+  {
+   "phrase": "framework",
+   "group_count": 51,
+   "others_count": 9,
+   "z": 7.51
+  },
+  {
+   "phrase": "models",
+   "group_count": 85,
+   "others_count": 76,
+   "z": 6.84
+  },
+  {
+   "phrase": "incidents",
+   "group_count": 49,
+   "others_count": 25,
+   "z": 6.66
+  },
+  {
+   "phrase": "federal",
+   "group_count": 47,
+   "others_count": 23,
+   "z": 6.59
+  },
+  {
+   "phrase": "training",
+   "group_count": 45,
+   "others_count": 26,
+   "z": 6.14
+  },
+  {
+   "phrase": "content",
+   "group_count": 30,
+   "others_count": 7,
+   "z": 5.78
+  },
+  {
+   "phrase": "committed",
+   "group_count": 34,
+   "others_count": 3,
+   "z": 5.74
+  },
+  {
+   "phrase": "users",
+   "group_count": 32,
+   "others_count": 12,
+   "z": 5.74
+  },
+  {
+   "phrase": "release",
+   "group_count": 28,
+   "others_count": 6,
+   "z": 5.58
+  },
+  {
+   "phrase": "team",
+   "group_count": 39,
+   "others_count": 26,
+   "z": 5.4
+  },
+  {
+   "phrase": "meta",
+   "group_count": 31,
+   "others_count": 15,
+   "z": 5.37
+  },
+  {
+   "phrase": "approach",
+   "group_count": 26,
+   "others_count": 9,
+   "z": 5.23
+  },
+  {
+   "phrase": "teams",
+   "group_count": 30,
+   "others_count": 2,
+   "z": 5.18
+  },
+  {
+   "phrase": "evaluators",
+   "group_count": 24,
+   "others_count": 6,
+   "z": 5.16
+  },
+  {
+   "phrase": "safeguards",
+   "group_count": 30,
+   "others_count": 17,
+   "z": 5.04
+  },
+  {
+   "phrase": "policies",
+   "group_count": 25,
+   "others_count": 10,
+   "z": 5.02
+  },
+  {
+   "phrase": "openai",
+   "group_count": 48,
+   "others_count": 45,
+   "z": 4.96
+  },
+  {
+   "phrase": "personal",
+   "group_count": 22,
+   "others_count": 6,
+   "z": 4.92
+  },
+  {
+   "phrase": "risks",
+   "group_count": 52,
+   "others_count": 53,
+   "z": 4.85
+  },
+  {
+   "phrase": "security",
+   "group_count": 40,
+   "others_count": 34,
+   "z": 4.83
+  },
+  {
+   "phrase": "supported",
+   "group_count": 23,
+   "others_count": 9,
+   "z": 4.83
+  },
+  {
+   "phrase": "safely",
+   "group_count": 19,
+   "others_count": 4,
+   "z": 4.6
+  },
+  {
+   "phrase": "safe",
+   "group_count": 33,
+   "others_count": 26,
+   "z": 4.58
+  },
+  {
+   "phrase": "model",
+   "group_count": 50,
+   "others_count": 56,
+   "z": 4.39
+  },
+  {
+   "phrase": "independent",
+   "group_count": 33,
+   "others_count": 29,
+   "z": 4.3
+  },
+  {
+   "phrase": "commitment",
+   "group_count": 17,
+   "others_count": 6,
+   "z": 4.22
+  },
+  {
+   "phrase": "transparent",
+   "group_count": 16,
+   "others_count": 3,
+   "z": 4.21
+  },
+  {
+   "phrase": "information",
+   "group_count": 47,
+   "others_count": 54,
+   "z": 4.15
+  },
+  {
+   "phrase": "improve",
+   "group_count": 19,
+   "others_count": 10,
+   "z": 4.1
+  },
+  {
+   "phrase": "evaluations",
+   "group_count": 21,
+   "others_count": 1,
+   "z": 4.09
+  },
+  {
+   "phrase": "frameworks",
+   "group_count": 14,
+   "others_count": 3,
+   "z": 3.95
+  },
+  {
+   "phrase": "robust",
+   "group_count": 14,
+   "others_count": 4,
+   "z": 3.91
+  },
+  {
+   "phrase": "user",
+   "group_count": 14,
+   "others_count": 4,
+   "z": 3.91
+  },
+  {
+   "phrase": "third parties",
+   "group_count": 14,
+   "others_count": 2,
+   "z": 3.88
+  },
+  {
+   "phrase": "privacy",
+   "group_count": 27,
+   "others_count": 24,
+   "z": 3.86
+  },
+  {
+   "phrase": "processes",
+   "group_count": 14,
+   "others_count": 5,
+   "z": 3.82
+  },
+  {
+   "phrase": "practices",
+   "group_count": 13,
+   "others_count": 4,
+   "z": 3.75
+  },
+  {
+   "phrase": "results",
+   "group_count": 13,
+   "others_count": 4,
+   "z": 3.75
+  },
+  {
+   "phrase": "muse",
+   "group_count": 16,
+   "others_count": 1,
+   "z": 3.74
+  },
+  {
+   "phrase": "superintelligence",
+   "group_count": 14,
+   "others_count": 6,
+   "z": 3.71
+  },
+  {
+   "phrase": "support",
+   "group_count": 32,
+   "others_count": 34,
+   "z": 3.67
+  },
+  {
+   "phrase": "evaluate",
+   "group_count": 15,
+   "others_count": 1,
+   "z": 3.66
+  },
+  {
+   "phrase": "teens",
+   "group_count": 12,
+   "others_count": 2,
+   "z": 3.63
+  },
+  {
+   "phrase": "external",
+   "group_count": 12,
+   "others_count": 4,
+   "z": 3.57
+  }
+ ]
+}

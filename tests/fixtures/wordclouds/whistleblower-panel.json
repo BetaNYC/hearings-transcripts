@@ -1,0 +1,275 @@
+{
+ "source": "scripts/build_wordclouds.py with scripts/meta/wordclouds.json, 2026-10-06",
+ "phrases": [
+  {
+   "phrase": "ais",
+   "group_count": 41,
+   "others_count": 6,
+   "z": 10.83
+  },
+  {
+   "phrase": "google",
+   "group_count": 17,
+   "others_count": 37,
+   "z": 6.74
+  },
+  {
+   "phrase": "china",
+   "group_count": 12,
+   "others_count": 18,
+   "z": 6.27
+  },
+  {
+   "phrase": "recursive self improvement",
+   "group_count": 10,
+   "others_count": 9,
+   "z": 6.18
+  },
+  {
+   "phrase": "control",
+   "group_count": 18,
+   "others_count": 55,
+   "z": 6.06
+  },
+  {
+   "phrase": "humans",
+   "group_count": 8,
+   "others_count": 10,
+   "z": 5.3
+  },
+  {
+   "phrase": "progress",
+   "group_count": 7,
+   "others_count": 3,
+   "z": 5.19
+  },
+  {
+   "phrase": "slow",
+   "group_count": 7,
+   "others_count": 8,
+   "z": 5.02
+  },
+  {
+   "phrase": "research",
+   "group_count": 15,
+   "others_count": 60,
+   "z": 4.8
+  },
+  {
+   "phrase": "misaligned",
+   "group_count": 6,
+   "others_count": 7,
+   "z": 4.64
+  },
+  {
+   "phrase": "swarm",
+   "group_count": 8,
+   "others_count": 1,
+   "z": 4.62
+  },
+  {
+   "phrase": "racing",
+   "group_count": 6,
+   "others_count": 8,
+   "z": 4.53
+  },
+  {
+   "phrase": "deepmind",
+   "group_count": 5,
+   "others_count": 3,
+   "z": 4.44
+  },
+  {
+   "phrase": "chinese",
+   "group_count": 5,
+   "others_count": 2,
+   "z": 4.37
+  },
+  {
+   "phrase": "mechanisms",
+   "group_count": 5,
+   "others_count": 5,
+   "z": 4.32
+  },
+  {
+   "phrase": "ceo",
+   "group_count": 5,
+   "others_count": 5,
+   "z": 4.32
+  },
+  {
+   "phrase": "scientific",
+   "group_count": 5,
+   "others_count": 6,
+   "z": 4.21
+  },
+  {
+   "phrase": "field",
+   "group_count": 5,
+   "others_count": 1,
+   "z": 4.0
+  },
+  {
+   "phrase": "military",
+   "group_count": 4,
+   "others_count": 2,
+   "z": 3.95
+  },
+  {
+   "phrase": "hugging",
+   "group_count": 6,
+   "others_count": 14,
+   "z": 3.9
+  },
+  {
+   "phrase": "faster",
+   "group_count": 4,
+   "others_count": 4,
+   "z": 3.86
+  },
+  {
+   "phrase": "scientist",
+   "group_count": 4,
+   "others_count": 4,
+   "z": 3.86
+  },
+  {
+   "phrase": "stop",
+   "group_count": 7,
+   "others_count": 21,
+   "z": 3.8
+  },
+  {
+   "phrase": "improving",
+   "group_count": 5,
+   "others_count": 10,
+   "z": 3.75
+  },
+  {
+   "phrase": "maintain",
+   "group_count": 4,
+   "others_count": 5,
+   "z": 3.74
+  },
+  {
+   "phrase": "deal",
+   "group_count": 4,
+   "others_count": 5,
+   "z": 3.74
+  },
+  {
+   "phrase": "data centers",
+   "group_count": 9,
+   "others_count": 37,
+   "z": 3.65
+  },
+  {
+   "phrase": "hacking",
+   "group_count": 4,
+   "others_count": 6,
+   "z": 3.61
+  },
+  {
+   "phrase": "misalignment",
+   "group_count": 5,
+   "others_count": 12,
+   "z": 3.52
+  },
+  {
+   "phrase": "smarter",
+   "group_count": 4,
+   "others_count": 7,
+   "z": 3.48
+  },
+  {
+   "phrase": "race",
+   "group_count": 4,
+   "others_count": 8,
+   "z": 3.35
+  },
+  {
+   "phrase": "bet",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 3.32
+  },
+  {
+   "phrase": "governance",
+   "group_count": 4,
+   "others_count": 9,
+   "z": 3.22
+  },
+  {
+   "phrase": "development",
+   "group_count": 9,
+   "others_count": 48,
+   "z": 3.06
+  },
+  {
+   "phrase": "united states",
+   "group_count": 3,
+   "others_count": 5,
+   "z": 3.05
+  },
+  {
+   "phrase": "plan",
+   "group_count": 5,
+   "others_count": 18,
+   "z": 2.94
+  },
+  {
+   "phrase": "goals",
+   "group_count": 3,
+   "others_count": 6,
+   "z": 2.9
+  },
+  {
+   "phrase": "dollars",
+   "group_count": 3,
+   "others_count": 7,
+   "z": 2.75
+  },
+  {
+   "phrase": "principles",
+   "group_count": 3,
+   "others_count": 8,
+   "z": 2.62
+  },
+  {
+   "phrase": "researcher",
+   "group_count": 3,
+   "others_count": 9,
+   "z": 2.49
+  },
+  {
+   "phrase": "evaluation",
+   "group_count": 3,
+   "others_count": 9,
+   "z": 2.49
+  },
+  {
+   "phrase": "train",
+   "group_count": 4,
+   "others_count": 16,
+   "z": 2.47
+  },
+  {
+   "phrase": "california",
+   "group_count": 3,
+   "others_count": 10,
+   "z": 2.37
+  },
+  {
+   "phrase": "science",
+   "group_count": 4,
+   "others_count": 19,
+   "z": 2.22
+  },
+  {
+   "phrase": "demis",
+   "group_count": 9,
+   "others_count": 0,
+   "z": 2.19
+  }
+ ]
+}
