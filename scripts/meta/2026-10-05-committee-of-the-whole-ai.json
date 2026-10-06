@@ -84,7 +84,7 @@
       "asset_name": "hearing-audio-64k.mp3",
       "bytes": 291940275,
       "format": "MP3 audio, 64 kbps mono, 16 kHz",
-      "release_published": false
+      "release_published": true
     }
   },
   "transcription": {

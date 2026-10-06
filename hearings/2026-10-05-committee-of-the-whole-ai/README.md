@@ -78,4 +78,3 @@ Speaker categories (derived from the role, see the repository README for the rul
   export.
 - Talk time is approximate: a few turns contain two voices.
 - The Internet Archive upload is still in progress; the item may not be playable yet.
-- The GitHub Release may not exist yet.
