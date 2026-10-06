@@ -101,11 +101,11 @@
     "words": 89181,
     "duration_sec": 36492.48,
     "confidence_counts": {
-      "high": 608,
-      "medium": 186,
+      "high": 611,
+      "medium": 183,
       "low": 36
     },
-    "unidentified_turns": 22,
+    "unidentified_turns": 19,
     "legistar_documents": 45
   },
   "license": {

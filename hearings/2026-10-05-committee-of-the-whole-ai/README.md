@@ -48,8 +48,8 @@ Oversight topic: T2026-2573, Oversight - Examining the Risks Posed by Artificial
 ## Counts
 
 - Turns: 830; speakers (name and role pairs): 106; words: 89181
-- Speaker-name confidence by turn: high 608, medium 186, low 36
-- Turns with no identified speaker (category `unidentified`): 22
+- Speaker-name confidence by turn: high 611, medium 183, low 36
+- Turns with no identified speaker (category `unidentified`): 19
 
 Speaker categories (derived from the role, see the repository README for the rule):
 
@@ -60,15 +60,15 @@ Speaker categories (derived from the role, see the repository README for the rul
 | `city-official` | City official | 5 |
 | `state-or-other-elected` | State or other elected | 7 |
 | `ai-company` | AI company | 4 |
-| `witness` | Other witness | 53 |
-| `unidentified` | Unidentified | 6 |
+| `witness` | Other witness | 54 |
+| `unidentified` | Unidentified | 5 |
 
 ## Known gaps
 
 - Speaker names were assigned after transcription. A low-confidence name shows `[?]` in the
   transcripts and `low` in `turns.csv`. Some turns contain two voices (for example a question
   and the start of an answer) because the diarization did not split them.
-- 22 turns are labeled Unidentified: short interjections, audience
+- 19 turns are labeled Unidentified: short interjections, audience
   remarks, off-mic presiding remarks, and a few witnesses whose names were not audible.
 - Speaker names come from self-introductions, the chair calling on people, the on-screen name
   banner (shown only for the Speaker), and voice clusters. Names were assigned by AI agents working from these sources, at BetaNYC's direction. Elected officials were checked against Legistar and NYS Open Legislation. Other names were not individually verified by a person.
