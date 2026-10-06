@@ -1,0 +1,98 @@
+{
+  "slug": "2026-10-05-committee-of-the-whole-ai",
+  "title": "Oversight - Examining the Risks Posed by Artificial Intelligence",
+  "body": "NYC Council Committee of the Whole",
+  "date": "2026-10-05",
+  "start_time_local": "11:00",
+  "timezone": "America/New_York",
+  "location": "City Hall, New York, NY",
+  "legistar": {
+    "event_id": 22752,
+    "url": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22752&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+    "agenda_url": "https://nyc.legistar1.com/nyc/meetings/2026/10/22752_A_Committee_of_the_Whole_26-10-05_Committee_Agenda.pdf"
+  },
+  "video": {
+    "duration_hms": "10:08:12",
+    "council_source_url": "https://councilnyc.viebit.com/vod/?s=true&v=NYCC-PV-CH-CHA_261005-110828.mp4",
+    "internet_archive_url": "https://archive.org/details/nyc-council-committee-of-the-whole-ai-2026-10-05",
+    "archive_playable": false
+  },
+  "oversight_topic": {
+    "file": "T2026-2573",
+    "name": "Oversight - Examining the Risks Posed by Artificial Intelligence"
+  },
+  "bills": [
+    {
+      "file": "Int 0161-2026",
+      "name": "Algorithmic tools and their impact on city employees",
+      "lead_sponsor": "Carmen De La Rosa"
+    },
+    {
+      "file": "Int 0504-2026",
+      "name": "Unauthorized depiction of public officials by artificial intelligence",
+      "lead_sponsor": "Nantasha Williams"
+    },
+    {
+      "file": "T2026-2599",
+      "name": "Chatbot data privacy, security, and transparency",
+      "lead_sponsor": "Frank Morano"
+    },
+    {
+      "file": "T2026-2600",
+      "name": "Private cause of action for harms from third-party misuse of AI models",
+      "lead_sponsor": "Virginia Maloney"
+    },
+    {
+      "file": "T2026-2601",
+      "name": "Reporting and public disclosure of AI safety incidents concerning city contracts",
+      "lead_sponsor": "Kamillah Hanks"
+    },
+    {
+      "file": "T2026-2602",
+      "name": "Third-party validation and shut-down capability of AI models",
+      "lead_sponsor": "Julie Menin"
+    },
+    {
+      "file": "T2026-2603",
+      "name": "Disclosures and prohibiting deceptive representations in the promotion of AI models",
+      "lead_sponsor": "Carl Wilson"
+    },
+    {
+      "file": "T2026-2604",
+      "name": "Contractor whistleblower postings and protections related to AI",
+      "lead_sponsor": "Kevin Riley"
+    },
+    {
+      "file": "T2026-2605",
+      "name": "Civilian enforcement of AI violations",
+      "lead_sponsor": "Julie Menin"
+    },
+    {
+      "file": "T2026-2606",
+      "name": "AI model emergency response plan",
+      "lead_sponsor": "Chi Ossé"
+    }
+  ],
+  "media": {
+    "audio_opus": {
+      "path": "media/hearing-audio-16k.opus",
+      "format": "Opus audio, 16 kbps mono"
+    },
+    "audio_mp3": {
+      "release_tag": "2026-10-05-committee-of-the-whole-ai",
+      "release_url": "https://github.com/BetaNYC/hearings-transcripts/releases/tag/2026-10-05-committee-of-the-whole-ai",
+      "asset_name": "hearing-audio-64k.mp3",
+      "bytes": 291940275,
+      "format": "MP3 audio, 64 kbps mono, 16 kHz",
+      "release_published": false
+    }
+  },
+  "transcription": {
+    "engine": "Deepgram",
+    "model": "nova-3",
+    "diarized": true,
+    "generated": "2026-10-06",
+    "turn_merge_rule": "Consecutive Deepgram segments merged into one turn when they share a speaker cluster and the gap between them is under 5 seconds."
+  },
+  "disclosure": "BetaNYC's executive director, Noel Hidalgo, testified at this hearing; his testimony is transcribed and labeled the same way as everyone else's."
+}

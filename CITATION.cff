@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use these transcripts or data, please cite them as below. This is a machine transcript, not an official record of the New York City Council."
+type: dataset
+title: "NYC Council hearing transcripts"
+authors:
+  - name: BetaNYC
+    website: "https://beta.nyc/"
+repository-code: "https://github.com/BetaNYC/hearings-transcripts"
+url: "https://betanyc.github.io/hearings-transcripts/"
+license: CC-BY-4.0
+date-released: "2026-10-06"
+keywords:
+  - New York City Council
+  - public hearings
+  - transcripts
+  - artificial intelligence
+  - civic technology
+  - open data
+abstract: >-
+  Speaker-labeled transcripts, word-level timings, captions and speaker lists
+  for New York City Council hearings. BetaNYC produced the transcripts, speaker
+  labels and exports; the hearing video and the Legistar documents included for
+  reference are records of the New York City Council, not BetaNYC's work.
+  First hearing: Committee of the Whole, "Oversight - Examining the Risks Posed
+  by Artificial Intelligence," 2026-10-05 (Legistar event 22752). Code is MIT;
+  data is CC BY 4.0. Council video and documents are public records.
