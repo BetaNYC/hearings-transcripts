@@ -11,5 +11,13 @@ The same day, filler words were added to the stopwords (for example "first", "ex
 forms as a phrase while a bare "act" is still skipped; and "space" was dropped as filler.
 The fixtures were then regenerated from the new build.
 
+After QA the same evening: topical words cut too eagerly were restored ("third", "deal",
+"bet", "seat", "plan", "goals", "maintain", "industry", "labs", "results", "intelligent").
+Hyphenated words are now split ("self-improvement" counts as "self improvement"), and
+`method.join_terms` counts a few variant spellings as one term ("super intelligent" as
+"superintelligent", "kill switch(es)", "open-weight", "affected parties"). A bare "third", "party" or "parties" is skipped like "act" (the multi-word forms still count).
+Then "standing", "hundred", "spent" and "gets" were added as filler that the changes
+surfaced. Fixtures were regenerated again.
+
 When you change `wordclouds.json` on purpose, review the new phrase lists, then regenerate
 these fixtures and say so in the commit.

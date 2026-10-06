@@ -5,73 +5,73 @@
    "phrase": "cyber",
    "group_count": 43,
    "others_count": 32,
-   "z": 10.6
-  },
-  {
-   "phrase": "oti",
-   "group_count": 22,
-   "others_count": 18,
-   "z": 7.47
+   "z": 10.61
   },
   {
    "phrase": "agencies",
    "group_count": 24,
    "others_count": 25,
-   "z": 7.47
+   "z": 7.49
+  },
+  {
+   "phrase": "oti",
+   "group_count": 22,
+   "others_count": 18,
+   "z": 7.48
   },
   {
    "phrase": "cyber command",
    "group_count": 19,
    "others_count": 9,
-   "z": 7.22
+   "z": 7.23
   },
   {
    "phrase": "agency",
    "group_count": 17,
    "others_count": 13,
-   "z": 6.62
+   "z": 6.64
   },
   {
    "phrase": "cybersecurity",
    "group_count": 17,
    "others_count": 19,
-   "z": 6.18
+   "z": 6.19
   },
   {
    "phrase": "dcwp",
    "group_count": 14,
    "others_count": 4,
-   "z": 6.06
+   "z": 6.07
   },
   {
    "phrase": "administration",
    "group_count": 13,
    "others_count": 11,
-   "z": 5.71
+   "z": 5.72
   },
   {
    "phrase": "tools",
    "group_count": 30,
    "others_count": 83,
-   "z": 5.53
+   "z": 5.55
   },
   {
    "phrase": "attack",
    "group_count": 11,
    "others_count": 6,
-   "z": 5.47
+   "z": 5.48
   },
   {
    "phrase": "algorithmic tools",
    "group_count": 10,
    "others_count": 5,
-   "z": 5.23
+   "z": 5.24
   },
   {
    "phrase": "law",
    "group_count": 24,
    "others_count": 64,
-   "z": 5.07
+   "z": 5.08
   },
   {
    "phrase": "city cyber command",
@@ -83,7 +83,7 @@
    "phrase": "artificial intelligence",
    "group_count": 17,
    "others_count": 40,
-   "z": 4.61
+   "z": 4.62
   },
   {
    "phrase": "complaints",
@@ -95,61 +95,61 @@
    "phrase": "local law",
    "group_count": 8,
    "others_count": 8,
-   "z": 4.34
+   "z": 4.35
   },
   {
    "phrase": "hiring",
    "group_count": 7,
    "others_count": 5,
-   "z": 4.28
+   "z": 4.29
   },
   {
    "phrase": "software",
    "group_count": 9,
    "others_count": 12,
-   "z": 4.28
+   "z": 4.29
   },
   {
    "phrase": "employment",
    "group_count": 6,
    "others_count": 3,
-   "z": 4.05
+   "z": 4.06
   },
   {
    "phrase": "breach",
    "group_count": 6,
    "others_count": 3,
-   "z": 4.05
+   "z": 4.06
   },
   {
    "phrase": "microsoft",
    "group_count": 6,
    "others_count": 3,
-   "z": 4.05
+   "z": 4.06
   },
   {
    "phrase": "office",
    "group_count": 15,
    "others_count": 40,
-   "z": 4.0
+   "z": 4.01
   },
   {
    "phrase": "management",
    "group_count": 6,
    "others_count": 5,
-   "z": 3.88
+   "z": 3.89
   },
   {
    "phrase": "duties",
    "group_count": 5,
    "others_count": 2,
-   "z": 3.69
+   "z": 3.7
   },
   {
    "phrase": "city agencies",
    "group_count": 6,
    "others_count": 8,
-   "z": 3.49
+   "z": 3.5
   },
   {
    "phrase": "rider",
@@ -161,25 +161,25 @@
    "phrase": "partners",
    "group_count": 5,
    "others_count": 5,
-   "z": 3.43
+   "z": 3.44
   },
   {
    "phrase": "reporting",
    "group_count": 12,
    "others_count": 35,
-   "z": 3.36
+   "z": 3.37
   },
   {
    "phrase": "service",
    "group_count": 6,
    "others_count": 9,
-   "z": 3.36
+   "z": 3.37
   },
   {
    "phrase": "response",
    "group_count": 7,
    "others_count": 13,
-   "z": 3.33
+   "z": 3.34
   },
   {
    "phrase": "nycem",
@@ -197,13 +197,13 @@
    "phrase": "system",
    "group_count": 12,
    "others_count": 36,
-   "z": 3.29
+   "z": 3.3
   },
   {
    "phrase": "protocols",
    "group_count": 6,
    "others_count": 10,
-   "z": 3.23
+   "z": 3.24
   },
   {
    "phrase": "cyber attacks",
@@ -227,42 +227,42 @@
    "phrase": "impact",
    "group_count": 9,
    "others_count": 24,
-   "z": 3.1
+   "z": 3.11
   },
   {
    "phrase": "coordinate",
    "group_count": 4,
    "others_count": 4,
-   "z": 3.07
+   "z": 3.08
   },
   {
    "phrase": "technology",
    "group_count": 25,
    "others_count": 117,
-   "z": 3.03
+   "z": 3.05
   },
   {
    "phrase": "staff",
    "group_count": 6,
    "others_count": 12,
-   "z": 2.98
+   "z": 2.99
   },
   {
    "phrase": "security",
    "group_count": 15,
    "others_count": 59,
-   "z": 2.88
-  },
-  {
-   "phrase": "mission",
-   "group_count": 5,
-   "others_count": 9,
-   "z": 2.86
+   "z": 2.9
   },
   {
    "phrase": "enforcement",
    "group_count": 8,
    "others_count": 22,
+   "z": 2.87
+  },
+  {
+   "phrase": "mission",
+   "group_count": 5,
+   "others_count": 9,
    "z": 2.86
   },
   {

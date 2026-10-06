@@ -56,16 +56,16 @@
    "z": 3.14
   },
   {
-   "phrase": "self-improvement",
-   "group_count": 5,
-   "others_count": 7,
-   "z": 3.14
-  },
-  {
    "phrase": "anthropic",
    "group_count": 13,
    "others_count": 44,
    "z": 3.1
+  },
+  {
+   "phrase": "plan",
+   "group_count": 7,
+   "others_count": 16,
+   "z": 3.0
   },
   {
    "phrase": "data centers",
@@ -89,49 +89,49 @@
    "phrase": "stronger",
    "group_count": 4,
    "others_count": 5,
-   "z": 2.9
+   "z": 2.91
   },
   {
    "phrase": "malicious",
    "group_count": 3,
    "others_count": 1,
-   "z": 2.83
+   "z": 2.84
   },
   {
    "phrase": "city resident",
    "group_count": 3,
    "others_count": 1,
-   "z": 2.83
+   "z": 2.84
   },
   {
    "phrase": "cloning",
    "group_count": 3,
    "others_count": 1,
-   "z": 2.83
+   "z": 2.84
   },
   {
    "phrase": "discourse",
    "group_count": 3,
    "others_count": 1,
-   "z": 2.83
+   "z": 2.84
   },
   {
    "phrase": "vendor clouds",
    "group_count": 3,
    "others_count": 1,
-   "z": 2.83
+   "z": 2.84
   },
   {
    "phrase": "consultants",
    "group_count": 3,
    "others_count": 1,
-   "z": 2.83
+   "z": 2.84
   },
   {
    "phrase": "hack",
    "group_count": 3,
    "others_count": 1,
-   "z": 2.83
+   "z": 2.84
   },
   {
    "phrase": "land",
@@ -153,6 +153,12 @@
   },
   {
    "phrase": "advertising",
+   "group_count": 3,
+   "others_count": 2,
+   "z": 2.82
+  },
+  {
+   "phrase": "self improving",
    "group_count": 3,
    "others_count": 2,
    "z": 2.82
@@ -185,7 +191,7 @@
    "phrase": "products",
    "group_count": 9,
    "others_count": 29,
-   "z": 2.68
+   "z": 2.69
   },
   {
    "phrase": "americans",
@@ -264,12 +270,6 @@
    "group_count": 4,
    "others_count": 8,
    "z": 2.43
-  },
-  {
-   "phrase": "agencies",
-   "group_count": 10,
-   "others_count": 39,
-   "z": 2.37
   }
  ]
 }

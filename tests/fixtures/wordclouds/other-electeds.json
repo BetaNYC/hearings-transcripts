@@ -17,7 +17,7 @@
    "phrase": "raise act",
    "group_count": 12,
    "others_count": 30,
-   "z": 4.91
+   "z": 4.92
   },
   {
    "phrase": "governor",
@@ -47,7 +47,7 @@
    "phrase": "action",
    "group_count": 9,
    "others_count": 22,
-   "z": 4.29
+   "z": 4.3
   },
   {
    "phrase": "sexualized",
@@ -161,13 +161,13 @@
    "phrase": "laws",
    "group_count": 7,
    "others_count": 20,
-   "z": 3.52
+   "z": 3.53
   },
   {
    "phrase": "pass",
    "group_count": 7,
    "others_count": 20,
-   "z": 3.52
+   "z": 3.53
   },
   {
    "phrase": "senate",
@@ -179,7 +179,7 @@
    "phrase": "power",
    "group_count": 7,
    "others_count": 22,
-   "z": 3.35
+   "z": 3.36
   },
   {
    "phrase": "safety standards",
@@ -239,7 +239,7 @@
    "phrase": "chatbots",
    "group_count": 6,
    "others_count": 20,
-   "z": 3.0
+   "z": 3.01
   },
   {
    "phrase": "fighting",

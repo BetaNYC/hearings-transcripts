@@ -8,28 +8,29 @@ sell,4,2,3.30
 raise act,11,31,3.29
 violations,4,3,3.21
 contracts,5,7,3.14
-self-improvement,5,7,3.14
 anthropic,13,44,3.10
+plan,7,16,3.00
 data centers,11,35,3.00
 challenges,5,8,2.99
 automated,6,12,2.98
-stronger,4,5,2.90
-malicious,3,1,2.83
-city resident,3,1,2.83
-cloning,3,1,2.83
-discourse,3,1,2.83
-vendor clouds,3,1,2.83
-consultants,3,1,2.83
-hack,3,1,2.83
+stronger,4,5,2.91
+malicious,3,1,2.84
+city resident,3,1,2.84
+cloning,3,1,2.84
+discourse,3,1,2.84
+vendor clouds,3,1,2.84
+consultants,3,1,2.84
+hack,3,1,2.84
 land,3,2,2.82
 identifying,3,2,2.82
 cognitive,3,2,2.82
 advertising,3,2,2.82
+self improving,3,2,2.82
 guidance,3,2,2.82
 commit,6,14,2.74
 compute,4,6,2.74
 tools,20,93,2.72
-products,9,29,2.68
+products,9,29,2.69
 americans,3,3,2.66
 answered,3,3,2.66
 writing,3,3,2.66
@@ -65,3 +66,4 @@ individuals,3,6,2.10
 impacting,3,6,2.10
 municipal,3,6,2.10
 seen,4,11,2.02
+improving,4,11,2.02

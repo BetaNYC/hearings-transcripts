@@ -5,145 +5,151 @@
    "phrase": "ais",
    "group_count": 9,
    "others_count": 38,
-   "z": 6.89
-  },
-  {
-   "phrase": "improvement",
-   "group_count": 4,
-   "others_count": 14,
-   "z": 4.8
+   "z": 6.87
   },
   {
    "phrase": "humans",
    "group_count": 4,
    "others_count": 14,
-   "z": 4.8
+   "z": 4.79
   },
   {
    "phrase": "faster",
    "group_count": 3,
    "others_count": 5,
-   "z": 4.7
+   "z": 4.69
+  },
+  {
+   "phrase": "goals",
+   "group_count": 3,
+   "others_count": 6,
+   "z": 4.59
   },
   {
    "phrase": "improving",
    "group_count": 3,
-   "others_count": 9,
-   "z": 4.3
+   "others_count": 12,
+   "z": 4.01
   },
   {
-   "phrase": "recursive self improvement",
-   "group_count": 3,
-   "others_count": 11,
-   "z": 4.11
+   "phrase": "improvement",
+   "group_count": 4,
+   "others_count": 26,
+   "z": 3.99
   },
   {
    "phrase": "incentives",
    "group_count": 2,
    "others_count": 2,
-   "z": 3.93
+   "z": 3.92
   },
   {
    "phrase": "expectation",
    "group_count": 2,
    "others_count": 1,
-   "z": 3.78
+   "z": 3.77
+  },
+  {
+   "phrase": "recursive self improvement",
+   "group_count": 3,
+   "others_count": 16,
+   "z": 3.69
   },
   {
    "phrase": "generation",
    "group_count": 2,
    "others_count": 6,
-   "z": 3.51
+   "z": 3.5
   },
   {
    "phrase": "fix",
    "group_count": 2,
    "others_count": 7,
-   "z": 3.39
+   "z": 3.38
   },
   {
    "phrase": "dedicated",
    "group_count": 2,
    "others_count": 7,
-   "z": 3.39
+   "z": 3.38
   },
   {
    "phrase": "control",
    "group_count": 5,
    "others_count": 68,
-   "z": 3.24
+   "z": 3.23
   },
   {
    "phrase": "research",
    "group_count": 5,
    "others_count": 70,
-   "z": 3.19
+   "z": 3.18
   },
   {
    "phrase": "smarter",
    "group_count": 2,
    "others_count": 9,
-   "z": 3.18
+   "z": 3.17
   },
   {
    "phrase": "researcher",
    "group_count": 2,
    "others_count": 10,
-   "z": 3.08
+   "z": 3.07
   },
   {
    "phrase": "race",
    "group_count": 2,
    "others_count": 10,
-   "z": 3.08
+   "z": 3.07
   },
   {
    "phrase": "prevent",
    "group_count": 2,
    "others_count": 14,
-   "z": 2.75
+   "z": 2.74
   },
   {
    "phrase": "automated",
    "group_count": 2,
    "others_count": 16,
-   "z": 2.62
+   "z": 2.61
   },
   {
    "phrase": "capability",
    "group_count": 2,
    "others_count": 17,
-   "z": 2.55
+   "z": 2.54
   },
   {
    "phrase": "months",
    "group_count": 2,
    "others_count": 17,
-   "z": 2.55
+   "z": 2.54
   },
   {
    "phrase": "economic",
    "group_count": 2,
    "others_count": 18,
-   "z": 2.49
+   "z": 2.48
   },
   {
    "phrase": "science",
    "group_count": 2,
    "others_count": 21,
-   "z": 2.33
+   "z": 2.32
   },
   {
    "phrase": "openai",
    "group_count": 4,
    "others_count": 89,
-   "z": 2.14
+   "z": 2.12
   },
   {
    "phrase": "development",
    "group_count": 3,
    "others_count": 54,
-   "z": 2.13
+   "z": 2.12
   }
  ]
 }

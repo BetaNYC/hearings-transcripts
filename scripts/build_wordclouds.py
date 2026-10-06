@@ -27,6 +27,7 @@ import argparse
 import collections
 import csv
 import datetime as dt
+import functools
 import html
 import json
 import math
@@ -40,8 +41,9 @@ DEFAULT_CONFIG = REPO / "scripts" / "meta" / "wordclouds.json"
 MAX_FILE_BYTES = 100 * 1024 * 1024
 CSV_FIELDS = ["phrase", "group_count", "others_count", "z"]
 SENTENCE_SPLIT = re.compile(r"[.?!;:,()\n]+")
-TOKEN = re.compile(r"[a-z][a-z0-9'\-]*")
+TOKEN = re.compile(r"[a-z][a-z0-9']*")
 POSSESSIVE = re.compile(r"'s\b")
+HYPHEN = re.compile(r"(?<=[a-z0-9])-(?=[a-z0-9])")
 
 
 def log(event: str, **kw) -> None:
@@ -116,8 +118,19 @@ def person_matcher(name: str):
 
 
 # ---- text -----------------------------------------------------------------------------------
-def tokens(text: str) -> list[str]:
-    return TOKEN.findall(POSSESSIVE.sub("", text.lower().replace("’", "'")))
+@functools.lru_cache(maxsize=8)
+def _join_patterns(joins: tuple[tuple[str, str], ...]) -> tuple[tuple[re.Pattern, str], ...]:
+    ordered = sorted(joins, key=lambda kv: -len(kv[0]))
+    return tuple((re.compile(r"\b" + re.escape(k) + r"\b"), v) for k, v in ordered)
+
+
+def tokens(text: str, joins: tuple[tuple[str, str], ...] = ()) -> list[str]:
+    """Lowercase words. Drops possessive 's, splits hyphenated words ("self-improvement" ->
+    "self improvement"), then rewrites each multi-word term in joins to one token."""
+    s = HYPHEN.sub(" ", POSSESSIVE.sub("", text.lower().replace("’", "'")))
+    for pattern, token in _join_patterns(joins):
+        s = pattern.sub(token, s)
+    return TOKEN.findall(s)
 
 
 def build_stopwords(cfg: dict, speakers: list[dict]) -> set[str]:
@@ -130,9 +143,10 @@ def grams(text: str, stop: set[str], method: dict) -> list[str]:
     skip_any = set(method["skip_tokens_in_any_gram"])
     skip_exact = {tuple(g.split()) for g in method["skip_exact_grams"]}
     short_ok = set(method["short_tokens_allowed"])
+    joins = tuple(sorted(method.get("join_terms", {}).items()))
     out = []
     for sentence in SENTENCE_SPLIT.split(text):
-        w = tokens(sentence)
+        w = tokens(sentence, joins)
         for n in range(1, method["max_ngram"] + 1):
             for i in range(len(w) - n + 1):
                 g = w[i:i + n]
@@ -326,6 +340,16 @@ def json_for_script(obj) -> str:
     return json.dumps(obj, ensure_ascii=False).replace("</", "<\\/")
 
 
+CONFIG_URL = "https://github.com/BetaNYC/hearings-transcripts/blob/main/scripts/meta/wordclouds.json"
+REMOVED = ("Common words, speakers&#x27; names, &ldquo;New York&rdquo;, &ldquo;city&rdquo;, &ldquo;AI&rdquo; and "
+           "hearing boilerplate are left out. Beyond a standard list of common words, filler (polite forms, "
+           "connecting words, generic verbs) was removed by hand: an AI assistant, working at BetaNYC&#x27;s "
+           "direction, reviewed each group&#x27;s and each person&#x27;s list and proposed the cuts. The full "
+           f'list of removed words is in <a href="{CONFIG_URL}">scripts/meta/wordclouds.json</a>.')
+JOINED = ("&ldquo;super intelligent&rdquo; as &ldquo;superintelligent&rdquo;, &ldquo;kill switches&rdquo; as "
+          "&ldquo;kill switch&rdquo;, &ldquo;open-weight&rdquo; and &ldquo;affected parties&rdquo; as one term")
+
+
 def how_made(subject_kind: str, min_count: int, csv_name: str, root: str) -> str:
     if subject_kind == "person":
         base = ("this speaker said much more often than everyone else at the hearing, including the "
@@ -343,8 +367,9 @@ def how_made(subject_kind: str, min_count: int, csv_name: str, root: str) -> str
 <h2 id="how">How this was made</h2>
 <ul>
 <li><strong>&ldquo;Distinctive&rdquo;</strong> means a phrase {base}, after allowing for how much each side talked. A phrase someone says often but everyone else also says often is not distinctive.</li>
-<li>Each phrase gets a score from the &ldquo;weighted log-odds&rdquo; test in {PAPER}. We keep phrases said at least {min_count} times with a score above 1.96, a common cutoff for a difference that is unlikely to be chance. When a short phrase almost always appears inside a longer one, only the longer one is shown.</li>
-<li>Counts are how many times each 1- to 3-word phrase occurs in the clean verbatim transcript. Common words, speakers&#x27; names, &ldquo;New York&rdquo;, &ldquo;city&rdquo; and hearing boilerplate (&ldquo;thank you, chair&rdquo;) are left out.</li>
+<li>Each phrase gets a score from the &ldquo;weighted log-odds&rdquo; test in {PAPER}. We keep phrases said at least {min_count} times with a score above 1.96, a common cutoff; with thousands of phrases tested, a few may pass by chance, so read the list as a guide, not proof. When a short phrase almost always appears inside a longer one, only the longer one is shown.</li>
+<li>Counts are how many times each 1- to 3-word phrase occurs in the clean verbatim transcript. Hyphenated words are counted as separate words (&ldquo;self-improvement&rdquo; is &ldquo;self improvement&rdquo;), and a few terms the transcript spells more than one way are counted as one ({JOINED}).</li>
+<li>{REMOVED}</li>
 <li>{who_rule}</li>
 <li>This is a machine transcript, not an official record. Check the video before quoting anyone; search <a href="{root}transcript/transcript-clean.txt">the clean transcript</a> to find where a phrase was said.</li>
 <li>Data: <a href="{esc(csv_name)}" download>{esc(csv_name)}</a> (every phrase that passed). Code: <code>scripts/build_wordclouds.py</code>.</li>
@@ -423,7 +448,9 @@ const BARS={json_for_script(js_bars)};
 def speaker_line(speakers: collections.Counter) -> str:
     sp = [f"{k} ({plural(v, 'turn')})" for k, v in sorted(speakers.items(), key=lambda kv: -kv[1])
           if not k.startswith("Unidentified")]
-    return ", ".join(sp) if len(sp) <= 8 else ", ".join(sp[:6]) + f" and {len(sp) - 6} others"
+    unid = sum(v for k, v in speakers.items() if k.startswith("Unidentified"))
+    line = ", ".join(sp) if len(sp) <= 8 else ", ".join(sp[:6]) + f" and {len(sp) - 6} others"
+    return line + (f", plus {plural(unid, 'unidentified turn')}" if unid else "")
 
 
 def stats_line(stats: dict) -> str:
@@ -461,10 +488,12 @@ def render_gallery(hearing: dict, group_cards: list[str], person_cards: list[str
 <p class="sub">{esc(hearing['title'])}. For each group of speakers, the phrases they used far more often than everyone else at the hearing. Each page has a word cloud, a bar chart of counts, and the data as a table.</p>
 <section aria-labelledby="groups-h"><h2 id="groups-h">Speaker groups</h2>
 <div class="grid">{"".join(group_cards)}</div></section>
-{('<section aria-labelledby="people-h" style="margin-top:36px"><h2 id="people-h">Individual speakers</h2><p class="note">Each person is compared with everyone else at the hearing, including the rest of their own group. Phrases said at least ' + str(cfg["people_method"]["min_person_count"]) + ' times count, because some spoke only briefly.</p><div class="grid">' + "".join(person_cards) + '</div></section>') if person_cards else ''}
+{('<section aria-labelledby="people-h" style="margin-top:36px"><h2 id="people-h">Individual speakers</h2><p>' + esc(cfg["people_method"].get("intro", "")) + '</p><p class="note">Each person is compared with everyone else at the hearing, including the rest of their own group. Phrases said at least ' + str(cfg["people_method"]["min_person_count"]) + ' times count, because some spoke only briefly.</p><div class="grid">' + "".join(person_cards) + '</div></section>') if person_cards else ''}
 <section class="how" aria-labelledby="how" style="margin-top:36px">
 <h2 id="how">How this was made</h2>
 <p>&ldquo;Distinctive&rdquo; means a phrase a group said much more often than all other speakers, after allowing for how much each side talked, scored with the weighted log-odds test in {PAPER}. Counts come from the clean verbatim transcript. Groups come from AI-assigned speaker labels. This is a machine transcript; check the video before quoting anyone. Each page explains the details. Code: <code>scripts/build_wordclouds.py</code>.</p>
+<p>{REMOVED}</p>
+{('<p><strong>' + esc(cfg["gallery_disclosure"]) + '</strong></p>') if cfg.get("gallery_disclosure") else ''}
 </section>
 </main>
 {footer(root)}
@@ -526,7 +555,7 @@ def build(slug: str, cfg: dict) -> None:
     gcards, pcards = [], []
     for g in cfg["groups"]:
         result, st = res["groups"][g["slug"]]
-        bits = [esc(x) for x in (speaker_line(st["speakers"]), g["note"], stats_line(st)) if x]
+        bits = [esc(x) for x in (speaker_line(st["speakers"]), g["note"], stats_line(st), g.get("disclosure", "")) if x]
         sub = " · ".join(bits)
         ppl = people_by_group.get(g["slug"], [])
         extra = ""

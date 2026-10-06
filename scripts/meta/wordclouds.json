@@ -12,7 +12,10 @@
   ],
   "skip_exact_grams": [
    "city",
-   "act"
+   "act",
+   "third",
+   "parties",
+   "party"
   ],
   "short_tokens_allowed": [
    "ai",
@@ -24,12 +27,21 @@
    "york",
    "city",
    "data"
-  ]
+  ],
+  "join_terms": {
+   "super intelligent": "superintelligent",
+   "super intelligence": "superintelligence",
+   "kill switches": "killswitch",
+   "kill switch": "killswitch",
+   "open weight": "openweight",
+   "affected parties": "affectedparties"
+  }
  },
  "people_method": {
   "min_person_count": 2,
   "brief_threshold": 10,
-  "_comment": "Each person is compared with every other speaker at the hearing, including the rest of their own group."
+  "_comment": "Each person is compared with every other speaker at the hearing, including the rest of their own group.",
+  "intro": "Individual pages are for the two invited panels: the four AI company representatives and the three former AI-company employees on the whistleblower panel."
  },
  "display": {
   "cloud_phrases": 45,
@@ -68,7 +80,7 @@
   {
    "slug": "council-members",
    "nav": "Council Members",
-   "who": "council members",
+   "who": "Council Members",
    "note": "Not counting the two chairs, Speaker Menin and Chair De La Rosa, who mostly ran the hearing",
    "match": {
     "category": "council",
@@ -88,7 +100,8 @@
     "exclude_role_contains": [
      "whistleblower panel"
     ]
-   }
+   },
+   "disclosure": "BetaNYC, which built these pages, testified at this hearing and is counted among the public witnesses."
   },
   {
    "slug": "other-electeds",
@@ -144,6 +157,7 @@
    "group": "whistleblower-panel"
   }
  ],
+ "gallery_disclosure": "BetaNYC, which built these pages, testified at this hearing and is counted among the public witnesses.",
  "stopwords": [
   "a",
   "about",
@@ -438,8 +452,6 @@
   "done",
   "later",
   "set",
-  "deal",
-  "bet",
   "break",
   "involved",
   "situation",
@@ -452,7 +464,6 @@
   "grow",
   "manage",
   "succeed",
-  "maintain",
   "code",
   "priorities",
   "company",
@@ -471,12 +482,10 @@
   "agree",
   "possible",
   "better",
-  "plan",
   "build",
   "resources",
   "relationship",
   "rules",
-  "goals",
   "systems",
   "chief",
   "simply",
@@ -626,27 +635,22 @@
   "ma'am",
   "maam",
   "whoever",
-  "results",
   "includes",
-  "third",
   "terms",
   "absolutely",
   "particular",
   "levels",
-  "intelligent",
   "refer",
   "fundamentally",
   "personally",
   "handle",
   "stack",
-  "labs",
   "nuanced",
   "ongoing",
   "detailed",
   "affected",
   "role",
   "fast",
-  "industry",
   "understanding",
   "space",
   "suppose",
@@ -758,7 +762,11 @@
   "continues",
   "importance",
   "twenty",
-  "available"
+  "available",
+  "standing",
+  "hundred",
+  "spent",
+  "gets"
  ],
  "capitalization": {
   "spacex": "SpaceX",
@@ -807,6 +815,11 @@
   "pentagon": "Pentagon",
   "rsi": "RSI",
   "dan": "Dan",
-  "hugging": "Hugging Face"
+  "hugging": "Hugging Face",
+  "illegal": "illegal (with or without AI)",
+  "dna": "DNA",
+  "killswitch": "kill switch",
+  "openweight": "open-weight",
+  "affectedparties": "affected parties"
  }
 }

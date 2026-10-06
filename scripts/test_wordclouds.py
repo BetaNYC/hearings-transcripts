@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 import sys
 import unittest
 from html.parser import HTMLParser
@@ -142,11 +143,44 @@ class ScoringTests(unittest.TestCase):
 
     def test_tokenizer_and_filters(self):
         self.assertEqual(bw.tokens("OpenAI’s model's risks"), ["openai", "model", "risks"])
+        self.assertEqual(bw.tokens("recursive self-improvement"), ["recursive", "self", "improvement"])
+        joins = tuple(sorted(CFG["method"]["join_terms"].items()))
+        self.assertEqual(bw.tokens("a super-intelligent AI", joins), ["a", "superintelligent", "ai"])
+        self.assertEqual(bw.tokens("super intelligent kill switches", joins), ["superintelligent", "killswitch"])
+        self.assertEqual(bw.tokens("superintelligence", joins), ["superintelligence"])
+        self.assertEqual(bw.display("killswitch", CFG["capitalization"]), "kill switch")
         stop = {"the"}
         g = bw.grams("the city. New York safety rules", stop, CFG["method"])
         self.assertNotIn("city", g)
         self.assertFalse(any("york" in x for x in g))
         self.assertIn("safety rules", g)
+
+    def test_qa_restored_and_display(self):
+        res = self.res
+        turner = [x["phrase"] for x in res["people"]["alex-turner"][0]["phrases"][:TOP]]
+        self.assertIn("deal", turner)
+        self.assertIn("superintelligent", turner)
+        dwyer = [x["phrase"] for x in res["people"]["morgan-dwyer"][0]["phrases"][:TOP]]
+        self.assertIn("third parties", dwyer)
+        self.assertNotIn("parties", dwyer)
+        self.assertNotIn("third", dwyer)
+        cap = CFG["capitalization"]
+        self.assertEqual(bw.display("illegal", cap), "illegal (with or without AI)")
+        self.assertEqual(bw.display("dna", cap), "DNA")
+        for kind in ("groups", "people"):
+            for slug, (r, _) in res[kind].items():
+                self.assertFalse(any("-" in x["phrase"] for x in r["phrases"]), slug)
+
+    def test_illegal_uses_are_one_line(self):
+        """The 'illegal (with or without AI)' display is only honest while every use is that line."""
+        n = 0
+        for t in self.turns:
+            if t["speaker_name"] == "Alice Friend":
+                for m in re.finditer(r"illegal", t["text_clean"], re.IGNORECASE):
+                    n += 1
+                    window = t["text_clean"][max(0, m.start() - 40):m.end() + 40].lower()
+                    self.assertIn("without ai", window)
+        self.assertEqual(n, 6)
 
     def test_plural(self):
         self.assertEqual(bw.plural(1, "turn"), "1 turn")
@@ -169,6 +203,22 @@ class PageTests(unittest.TestCase):
             for href in p.nav_links:
                 self.assertTrue((page.parent / href).resolve().is_file(), f"{page.name}: {href}")
             self.assertEqual(len(p.ids), len(set(p.ids)), f"duplicate id in {page}")
+
+    def test_disclosures_and_whistleblower_count(self):
+        disc = "BetaNYC, which built these pages, testified at this hearing and is counted among the public witnesses."
+        self.assertIn(disc, (WC / "index.html").read_text(encoding="utf-8"))
+        self.assertIn(disc, (WC / "public-witnesses.html").read_text(encoding="utf-8"))
+        wb = (WC / "whistleblower-panel.html").read_text(encoding="utf-8")
+        self.assertIn("plus 1 unidentified turn", wb)
+        self.assertIn("25 turns", wb)
+        gallery = (WC / "index.html").read_text(encoding="utf-8")
+        self.assertIn("two invited panels", gallery)
+        self.assertNotIn("under oath", gallery)
+        for page in self.all_pages():
+            text = page.read_text(encoding="utf-8")
+            self.assertIn("wordclouds.json</a>", text, page)
+            self.assertNotIn("council members", text, page)
+            self.assertNotIn("Council members", text, page)
 
     def test_group_page_marks_current(self):
         for g in GROUPS:

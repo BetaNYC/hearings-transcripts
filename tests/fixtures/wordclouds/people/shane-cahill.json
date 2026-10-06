@@ -5,37 +5,37 @@
    "phrase": "meta",
    "group_count": 31,
    "others_count": 15,
-   "z": 11.37
+   "z": 11.35
   },
   {
    "phrase": "framework",
    "group_count": 19,
    "others_count": 41,
-   "z": 7.53
+   "z": 7.51
   },
   {
    "phrase": "superintelligence",
    "group_count": 13,
-   "others_count": 6,
-   "z": 7.33
+   "others_count": 7,
+   "z": 7.37
   },
   {
    "phrase": "safely",
    "group_count": 10,
    "others_count": 13,
-   "z": 6.14
+   "z": 6.12
   },
   {
    "phrase": "small businesses",
    "group_count": 9,
    "others_count": 9,
-   "z": 6.02
+   "z": 6.01
   },
   {
    "phrase": "personal",
    "group_count": 10,
    "others_count": 18,
-   "z": 5.73
+   "z": 5.72
   },
   {
    "phrase": "muse",
@@ -53,61 +53,55 @@
    "phrase": "teams",
    "group_count": 10,
    "others_count": 22,
-   "z": 5.42
+   "z": 5.4
   },
   {
    "phrase": "commitment",
    "group_count": 8,
    "others_count": 15,
-   "z": 5.07
+   "z": 5.06
   },
   {
    "phrase": "committed",
    "group_count": 10,
    "others_count": 27,
-   "z": 5.05
+   "z": 5.03
   },
   {
    "phrase": "impact",
    "group_count": 9,
    "others_count": 24,
-   "z": 4.81
+   "z": 4.79
   },
   {
    "phrase": "preparedness",
    "group_count": 6,
    "others_count": 8,
-   "z": 4.73
+   "z": 4.72
   },
   {
    "phrase": "experts",
    "group_count": 8,
    "others_count": 21,
-   "z": 4.56
+   "z": 4.55
   },
   {
    "phrase": "offerings",
    "group_count": 7,
    "others_count": 1,
-   "z": 4.54
+   "z": 4.53
   },
   {
    "phrase": "interactions",
    "group_count": 6,
    "others_count": 1,
-   "z": 4.34
+   "z": 4.33
   },
   {
    "phrase": "robust",
    "group_count": 6,
    "others_count": 12,
-   "z": 4.32
-  },
-  {
-   "phrase": "minors",
-   "group_count": 4,
-   "others_count": 3,
-   "z": 4.09
+   "z": 4.3
   },
   {
    "phrase": "weights",
@@ -116,154 +110,160 @@
    "z": 4.09
   },
   {
+   "phrase": "minors",
+   "group_count": 4,
+   "others_count": 3,
+   "z": 4.08
+  },
+  {
+   "phrase": "openweight models",
+   "group_count": 4,
+   "others_count": 3,
+   "z": 4.08
+  },
+  {
    "phrase": "independent",
    "group_count": 11,
    "others_count": 51,
-   "z": 4.06
+   "z": 4.05
   },
   {
    "phrase": "teens",
    "group_count": 5,
    "others_count": 9,
-   "z": 4.05
+   "z": 4.04
   },
   {
    "phrase": "content",
    "group_count": 8,
    "others_count": 29,
-   "z": 3.97
+   "z": 3.95
   },
   {
    "phrase": "licensed",
    "group_count": 4,
    "others_count": 5,
-   "z": 3.9
+   "z": 3.89
   },
   {
    "phrase": "evaluators",
    "group_count": 7,
    "others_count": 23,
-   "z": 3.89
+   "z": 3.87
   },
   {
    "phrase": "external",
    "group_count": 5,
    "others_count": 11,
-   "z": 3.83
-  },
-  {
-   "phrase": "recursive self-improvement",
-   "group_count": 3,
-   "others_count": 2,
-   "z": 3.55
+   "z": 3.82
   },
   {
    "phrase": "approach",
    "group_count": 7,
    "others_count": 28,
-   "z": 3.53
+   "z": 3.51
   },
   {
-   "phrase": "recursive",
+   "phrase": "recursive self improvement",
    "group_count": 5,
    "others_count": 14,
-   "z": 3.52
+   "z": 3.5
   },
   {
    "phrase": "multilayered approach",
    "group_count": 3,
    "others_count": 1,
-   "z": 3.42
+   "z": 3.41
   },
   {
    "phrase": "uniform",
    "group_count": 3,
    "others_count": 1,
-   "z": 3.42
+   "z": 3.41
   },
   {
    "phrase": "electricity",
    "group_count": 3,
    "others_count": 1,
-   "z": 3.42
+   "z": 3.41
   },
   {
    "phrase": "partnering",
    "group_count": 3,
    "others_count": 1,
-   "z": 3.42
+   "z": 3.41
   },
   {
    "phrase": "partner",
    "group_count": 4,
    "others_count": 9,
-   "z": 3.4
+   "z": 3.39
   },
   {
    "phrase": "countries",
    "group_count": 3,
    "others_count": 4,
-   "z": 3.34
+   "z": 3.33
   },
   {
    "phrase": "costs",
    "group_count": 3,
    "others_count": 5,
-   "z": 3.2
+   "z": 3.19
   },
   {
    "phrase": "democratic",
    "group_count": 3,
    "others_count": 5,
-   "z": 3.2
+   "z": 3.19
   },
   {
    "phrase": "evaluate",
    "group_count": 4,
    "others_count": 12,
-   "z": 3.06
+   "z": 3.05
   },
   {
    "phrase": "deploying",
    "group_count": 3,
    "others_count": 6,
-   "z": 3.05
+   "z": 3.04
   },
   {
    "phrase": "reports",
    "group_count": 6,
    "others_count": 27,
-   "z": 3.05
+   "z": 3.04
   },
   {
    "phrase": "vision",
    "group_count": 3,
    "others_count": 6,
-   "z": 3.05
+   "z": 3.04
   },
   {
    "phrase": "information",
    "group_count": 12,
    "others_count": 89,
-   "z": 2.95
+   "z": 2.93
   },
   {
    "phrase": "compute",
    "group_count": 3,
    "others_count": 7,
-   "z": 2.91
+   "z": 2.9
   },
   {
    "phrase": "professional",
    "group_count": 3,
    "others_count": 7,
-   "z": 2.91
+   "z": 2.9
   },
   {
    "phrase": "signed",
    "group_count": 5,
    "others_count": 21,
-   "z": 2.9
+   "z": 2.89
   },
   {
    "phrase": "adversarial testing",

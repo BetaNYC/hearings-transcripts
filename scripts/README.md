@@ -93,7 +93,8 @@ python3 scripts/build_hearing.py --index-only  # adds the gallery link to index.
 Method, all parameters in `wordclouds.json`:
 
 - phrases are 1 to 3 words from `text_clean`, never crossing `. ? ! ; : , ( )`; possessive `'s`
-  is dropped; a phrase may not start or end with a stopword (generic words, hearing boilerplate,
+  is dropped; hyphenated words are split; `join_terms` rewrites a few multi-word or variant
+  spellings to one term before counting ("super intelligent" as "superintelligent"); a phrase may not start or end with a stopword (generic words, hearing boilerplate,
   and every token of every speaker name); grams containing "york"/"yorkers" and the bare word
   "city" are skipped;
 - each group is scored against every other speaker with the weighted log-odds ratio and
@@ -102,7 +103,9 @@ Method, all parameters in `wordclouds.json`:
   z > 1.96;
 - a shorter phrase is dropped when a longer kept phrase contains it and has at least 80% of its
   count;
-- a person is compared with everyone else at the hearing, including the rest of their group.
+- a person is compared with everyone else at the hearing, including the rest of their group;
+- beyond generic stopwords, filler was removed by hand after an AI assistant, at BetaNYC's
+  direction, reviewed each group's and person's list. The pages say so, and link the list.
 
 Groups are defined by `match` rules on `speakers.csv`: `category`, `role_contains`,
 `exclude_names`, `exclude_role_contains`. Pages lay the word cloud out in the browser (an

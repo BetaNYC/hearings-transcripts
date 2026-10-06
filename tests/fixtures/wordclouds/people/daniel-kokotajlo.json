@@ -5,229 +5,241 @@
    "phrase": "ais",
    "group_count": 27,
    "others_count": 20,
-   "z": 13.2
+   "z": 13.16
   },
   {
    "phrase": "data centers",
    "group_count": 9,
    "others_count": 37,
-   "z": 5.95
+   "z": 5.92
   },
   {
    "phrase": "chinese",
    "group_count": 5,
    "others_count": 2,
-   "z": 5.38
-  },
-  {
-   "phrase": "recursive self improvement",
-   "group_count": 5,
-   "others_count": 9,
-   "z": 5.37
+   "z": 5.36
   },
   {
    "phrase": "slow",
    "group_count": 5,
    "others_count": 10,
-   "z": 5.29
+   "z": 5.27
+  },
+  {
+   "phrase": "maintain",
+   "group_count": 4,
+   "others_count": 5,
+   "z": 4.98
+  },
+  {
+   "phrase": "recursive self improvement",
+   "group_count": 5,
+   "others_count": 14,
+   "z": 4.91
   },
   {
    "phrase": "china",
    "group_count": 6,
    "others_count": 24,
-   "z": 4.9
+   "z": 4.87
+  },
+  {
+   "phrase": "plan",
+   "group_count": 5,
+   "others_count": 18,
+   "z": 4.59
   },
   {
    "phrase": "field",
    "group_count": 3,
    "others_count": 3,
-   "z": 4.37
+   "z": 4.36
   },
   {
    "phrase": "united states",
    "group_count": 3,
    "others_count": 5,
-   "z": 4.2
+   "z": 4.19
   },
   {
    "phrase": "research",
    "group_count": 8,
    "others_count": 67,
-   "z": 4.16
+   "z": 4.13
   },
   {
    "phrase": "train",
    "group_count": 4,
    "others_count": 16,
-   "z": 3.99
+   "z": 3.97
   },
   {
    "phrase": "progress",
    "group_count": 3,
    "others_count": 7,
-   "z": 3.98
+   "z": 3.96
   },
   {
    "phrase": "scientific",
    "group_count": 3,
    "others_count": 8,
-   "z": 3.87
+   "z": 3.85
   },
   {
    "phrase": "future",
    "group_count": 6,
    "others_count": 45,
-   "z": 3.8
+   "z": 3.78
   },
   {
    "phrase": "secret",
    "group_count": 2,
    "others_count": 2,
-   "z": 3.57
+   "z": 3.56
   },
   {
    "phrase": "research and development",
    "group_count": 2,
    "others_count": 2,
-   "z": 3.57
+   "z": 3.56
   },
   {
    "phrase": "autonomously",
    "group_count": 2,
    "others_count": 1,
-   "z": 3.48
+   "z": 3.47
   },
   {
    "phrase": "automate",
    "group_count": 2,
    "others_count": 1,
-   "z": 3.48
+   "z": 3.47
   },
   {
    "phrase": "chips",
    "group_count": 2,
    "others_count": 1,
-   "z": 3.48
+   "z": 3.47
   },
   {
    "phrase": "extreme",
    "group_count": 2,
    "others_count": 3,
-   "z": 3.47
+   "z": 3.46
   },
   {
    "phrase": "military",
    "group_count": 2,
    "others_count": 4,
-   "z": 3.34
+   "z": 3.33
   },
   {
    "phrase": "beneficial",
    "group_count": 2,
    "others_count": 4,
-   "z": 3.34
+   "z": 3.33
   },
   {
    "phrase": "misalignment",
    "group_count": 3,
    "others_count": 14,
-   "z": 3.28
+   "z": 3.26
   },
   {
    "phrase": "dangerous",
    "group_count": 3,
    "others_count": 14,
-   "z": 3.28
-  },
-  {
-   "phrase": "humans",
-   "group_count": 3,
-   "others_count": 15,
-   "z": 3.2
+   "z": 3.26
   },
   {
    "phrase": "industries",
    "group_count": 2,
    "others_count": 5,
-   "z": 3.2
+   "z": 3.19
   },
   {
    "phrase": "countries",
    "group_count": 2,
    "others_count": 5,
-   "z": 3.2
+   "z": 3.19
+  },
+  {
+   "phrase": "humans",
+   "group_count": 3,
+   "others_count": 15,
+   "z": 3.18
   },
   {
    "phrase": "trained",
    "group_count": 2,
    "others_count": 6,
-   "z": 3.07
+   "z": 3.05
   },
   {
    "phrase": "chain",
    "group_count": 2,
    "others_count": 6,
-   "z": 3.07
+   "z": 3.05
   },
   {
    "phrase": "development",
    "group_count": 5,
    "others_count": 52,
-   "z": 2.9
+   "z": 2.88
   },
   {
    "phrase": "planning",
    "group_count": 2,
    "others_count": 8,
-   "z": 2.82
+   "z": 2.81
   },
   {
    "phrase": "training",
    "group_count": 5,
-   "others_count": 64,
-   "z": 2.53
+   "others_count": 66,
+   "z": 2.45
   },
   {
    "phrase": "transparency",
    "group_count": 3,
    "others_count": 27,
-   "z": 2.44
+   "z": 2.42
   },
   {
    "phrase": "racing",
    "group_count": 2,
    "others_count": 12,
-   "z": 2.43
+   "z": 2.41
   },
   {
    "phrase": "control",
    "group_count": 5,
    "others_count": 68,
-   "z": 2.42
+   "z": 2.4
   },
   {
    "phrase": "alignment",
    "group_count": 2,
    "others_count": 13,
-   "z": 2.34
+   "z": 2.33
   },
   {
    "phrase": "board",
    "group_count": 2,
    "others_count": 14,
-   "z": 2.27
+   "z": 2.25
   },
   {
    "phrase": "researchers",
    "group_count": 2,
    "others_count": 16,
-   "z": 2.12
+   "z": 2.11
   },
   {
    "phrase": "hugging",
    "group_count": 2,
    "others_count": 18,
-   "z": 1.99
+   "z": 1.98
   }
  ]
 }

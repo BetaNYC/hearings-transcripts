@@ -4,272 +4,272 @@
   {
    "phrase": "google",
    "group_count": 17,
-   "others_count": 36,
-   "z": 9.14
+   "others_count": 37,
+   "z": 9.03
   },
   {
    "phrase": "swarm",
    "group_count": 6,
    "others_count": 3,
-   "z": 5.81
+   "z": 5.79
   },
   {
    "phrase": "ceo",
    "group_count": 5,
    "others_count": 5,
-   "z": 5.4
+   "z": 5.37
   },
   {
    "phrase": "deepmind",
    "group_count": 5,
    "others_count": 3,
-   "z": 5.37
+   "z": 5.35
   },
   {
    "phrase": "misaligned",
    "group_count": 5,
    "others_count": 8,
-   "z": 5.18
+   "z": 5.15
   },
   {
    "phrase": "scientist",
    "group_count": 4,
    "others_count": 4,
-   "z": 4.83
+   "z": 4.8
+  },
+  {
+   "phrase": "deal",
+   "group_count": 4,
+   "others_count": 5,
+   "z": 4.74
   },
   {
    "phrase": "mechanisms",
    "group_count": 4,
    "others_count": 6,
-   "z": 4.67
+   "z": 4.65
   },
   {
    "phrase": "governance",
    "group_count": 4,
    "others_count": 9,
-   "z": 4.36
+   "z": 4.33
+  },
+  {
+   "phrase": "superintelligent",
+   "group_count": 3,
+   "others_count": 2,
+   "z": 4.16
   },
   {
    "phrase": "stop",
    "group_count": 5,
    "others_count": 23,
-   "z": 3.93
+   "z": 3.9
+  },
+  {
+   "phrase": "bet",
+   "group_count": 3,
+   "others_count": 1,
+   "z": 3.9
   },
   {
    "phrase": "china",
    "group_count": 5,
    "others_count": 25,
-   "z": 3.8
+   "z": 3.77
   },
   {
    "phrase": "control",
    "group_count": 8,
    "others_count": 65,
-   "z": 3.78
+   "z": 3.74
   },
   {
    "phrase": "progress",
    "group_count": 3,
    "others_count": 7,
-   "z": 3.75
+   "z": 3.72
   },
   {
    "phrase": "hacking",
    "group_count": 3,
    "others_count": 7,
-   "z": 3.75
+   "z": 3.72
   },
   {
    "phrase": "dollars",
    "group_count": 3,
    "others_count": 7,
-   "z": 3.75
+   "z": 3.72
   },
   {
    "phrase": "principles",
    "group_count": 3,
    "others_count": 8,
-   "z": 3.63
+   "z": 3.61
   },
   {
    "phrase": "reporting",
    "group_count": 6,
    "others_count": 41,
-   "z": 3.6
+   "z": 3.57
   },
   {
    "phrase": "executives",
    "group_count": 2,
    "others_count": 2,
-   "z": 3.41
+   "z": 3.4
   },
   {
    "phrase": "seat",
    "group_count": 2,
    "others_count": 2,
-   "z": 3.41
+   "z": 3.4
   },
   {
    "phrase": "loss of control",
    "group_count": 2,
    "others_count": 2,
-   "z": 3.41
+   "z": 3.4
   },
   {
    "phrase": "california",
    "group_count": 3,
    "others_count": 10,
-   "z": 3.41
+   "z": 3.38
   },
   {
    "phrase": "agi",
    "group_count": 2,
    "others_count": 1,
-   "z": 3.35
+   "z": 3.34
   },
   {
    "phrase": "google deepmind",
    "group_count": 2,
    "others_count": 1,
-   "z": 3.35
+   "z": 3.34
   },
   {
    "phrase": "deployments",
    "group_count": 2,
    "others_count": 1,
-   "z": 3.35
+   "z": 3.34
   },
   {
    "phrase": "pentagon",
    "group_count": 2,
    "others_count": 1,
-   "z": 3.35
+   "z": 3.34
   },
   {
    "phrase": "dollars of damage",
    "group_count": 2,
    "others_count": 1,
-   "z": 3.35
+   "z": 3.34
   },
   {
    "phrase": "racing",
    "group_count": 3,
    "others_count": 11,
-   "z": 3.31
+   "z": 3.28
   },
   {
    "phrase": "feedback",
    "group_count": 2,
    "others_count": 3,
-   "z": 3.3
+   "z": 3.28
   },
   {
    "phrase": "hacks",
    "group_count": 2,
    "others_count": 3,
-   "z": 3.3
+   "z": 3.28
   },
   {
    "phrase": "signed",
    "group_count": 4,
    "others_count": 22,
-   "z": 3.26
+   "z": 3.23
   },
   {
    "phrase": "military",
    "group_count": 2,
    "others_count": 4,
-   "z": 3.16
+   "z": 3.14
   },
   {
    "phrase": "weapons",
    "group_count": 2,
    "others_count": 4,
-   "z": 3.16
+   "z": 3.14
   },
   {
    "phrase": "treaty",
    "group_count": 2,
    "others_count": 4,
-   "z": 3.16
+   "z": 3.14
   },
   {
    "phrase": "dangers",
    "group_count": 2,
    "others_count": 5,
-   "z": 3.01
+   "z": 2.99
   },
   {
    "phrase": "ais",
    "group_count": 5,
    "others_count": 42,
-   "z": 2.93
+   "z": 2.89
   },
   {
    "phrase": "optimistic",
    "group_count": 2,
    "others_count": 6,
-   "z": 2.87
+   "z": 2.85
   },
   {
    "phrase": "hugging",
    "group_count": 3,
    "others_count": 17,
-   "z": 2.79
+   "z": 2.76
   },
   {
    "phrase": "statements",
    "group_count": 2,
    "others_count": 8,
-   "z": 2.62
+   "z": 2.6
   },
   {
    "phrase": "smarter",
    "group_count": 2,
    "others_count": 9,
-   "z": 2.51
+   "z": 2.49
   },
   {
    "phrase": "cost",
    "group_count": 2,
    "others_count": 9,
-   "z": 2.51
+   "z": 2.49
   },
   {
    "phrase": "scientific",
    "group_count": 2,
    "others_count": 9,
-   "z": 2.51
-  },
-  {
-   "phrase": "evaluation",
-   "group_count": 2,
-   "others_count": 10,
-   "z": 2.4
+   "z": 2.49
   },
   {
    "phrase": "demis",
    "group_count": 9,
    "others_count": 0,
-   "z": 2.39
+   "z": 2.38
   },
   {
-   "phrase": "validators",
+   "phrase": "evaluation",
    "group_count": 2,
-   "others_count": 11,
-   "z": 2.31
-  },
-  {
-   "phrase": "recursive self improvement",
-   "group_count": 2,
-   "others_count": 12,
-   "z": 2.22
-  },
-  {
-   "phrase": "billion",
-   "group_count": 2,
-   "others_count": 12,
-   "z": 2.22
+   "others_count": 10,
+   "z": 2.38
   }
  ]
 }
