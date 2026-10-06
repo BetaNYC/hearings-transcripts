@@ -33,6 +33,7 @@ what, jump to the moment in the video, and count who got the floor.
 | `speakers.csv` | CSV | `speaker_name, speaker_role, category, turns, talk_seconds, first_heard_hms` |
 | `legistar/` | PDF, DOCX, CSV | The Council's documents for the hearing, plus `manifest.csv` (source URL and last-modified time for each) |
 | `media/` | Opus, README | Small audio file; links to the video and the full-quality MP3 |
+| `wordclouds/` | HTML, CSV | "What each group talked about": a gallery (`index.html`), one page and CSV per speaker group, and `people/` pages for some individual speakers. Each CSV is `phrase, group_count, others_count, z` |
 
 All times are seconds from the start of the Council's recording. Text is UTF-8.
 
@@ -70,6 +71,11 @@ are `witness`, not `ai-company`; `ai-company` means the four companies on the in
    timestamp and speaker label match the unedited transcript exactly.
 6. **Exports.** `scripts/build_hearing.py` (Python standard library only) writes every file
    above and `index.html`. See [`scripts/README.md`](scripts/README.md).
+7. **Word clouds.** `scripts/build_wordclouds.py` scores the 1- to 3-word phrases in the clean
+   transcript with a weighted log-odds test (Monroe, Colaresi and Quinn 2008, "Fightin' Words")
+   to find what each speaker group, and some individual speakers, said far more than everyone
+   else. Groups, people and word lists are in `scripts/meta/wordclouds.json`. Groups come from
+   the AI-assigned speaker labels, so a mislabeled turn counts toward the wrong group.
 
 ## Known limits
 
@@ -103,5 +109,7 @@ See [`CITATION.cff`](CITATION.cff). Short form:
 ## Adding a hearing
 
 Write `scripts/meta/<slug>.json` (copy the existing one), run the pipeline in
-`scripts/README.md`, then run `python3 scripts/build_hearing.py …` and
+`scripts/README.md`, then run `python3 scripts/build_hearing.py …`,
+`python3 scripts/build_wordclouds.py` (edit the groups and people in
+`scripts/meta/wordclouds.json` first), `python3 scripts/build_hearing.py --index-only`, and
 `python3 -m unittest discover -s scripts`. Files over 100 MB go to a GitHub Release, not git.

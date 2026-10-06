@@ -1,0 +1,578 @@
+{
+ "nA": 2631,
+ "nB": 39391,
+ "phrases": [
+  {
+   "phrase": "women",
+   "panel": 9,
+   "rest": 8,
+   "z": 5.58,
+   "n": 1
+  },
+  {
+   "phrase": "raise",
+   "panel": 14,
+   "rest": 39,
+   "z": 5.12,
+   "n": 1
+  },
+  {
+   "phrase": "deepfakes",
+   "panel": 7,
+   "rest": 4,
+   "z": 5.03,
+   "n": 1
+  },
+  {
+   "phrase": "space",
+   "panel": 7,
+   "rest": 6,
+   "z": 4.94,
+   "n": 1
+  },
+  {
+   "phrase": "governor",
+   "panel": 7,
+   "rest": 6,
+   "z": 4.94,
+   "n": 1
+  },
+  {
+   "phrase": "bills",
+   "panel": 10,
+   "rest": 21,
+   "z": 4.86,
+   "n": 1
+  },
+  {
+   "phrase": "passed",
+   "panel": 6,
+   "rest": 5,
+   "z": 4.59,
+   "n": 1
+  },
+  {
+   "phrase": "fines",
+   "panel": 6,
+   "rest": 2,
+   "z": 4.54,
+   "n": 1
+  },
+  {
+   "phrase": "action",
+   "panel": 9,
+   "rest": 22,
+   "z": 4.35,
+   "n": 1
+  },
+  {
+   "phrase": "sexualized",
+   "panel": 7,
+   "rest": 1,
+   "z": 4.31,
+   "n": 1
+  },
+  {
+   "phrase": "albany",
+   "panel": 5,
+   "rest": 3,
+   "z": 4.25,
+   "n": 1
+  },
+  {
+   "phrase": "grok",
+   "panel": 6,
+   "rest": 1,
+   "z": 4.11,
+   "n": 1
+  },
+  {
+   "phrase": "men",
+   "panel": 5,
+   "rest": 5,
+   "z": 4.1,
+   "n": 1
+  },
+  {
+   "phrase": "accountable",
+   "panel": 7,
+   "rest": 15,
+   "z": 4.04,
+   "n": 1
+  },
+  {
+   "phrase": "protect",
+   "panel": 9,
+   "rest": 26,
+   "z": 4.03,
+   "n": 1
+  },
+  {
+   "phrase": "tech",
+   "panel": 13,
+   "rest": 54,
+   "z": 3.92,
+   "n": 1
+  },
+  {
+   "phrase": "protection",
+   "panel": 6,
+   "rest": 12,
+   "z": 3.83,
+   "n": 1
+  },
+  {
+   "phrase": "pending",
+   "panel": 4,
+   "rest": 2,
+   "z": 3.8,
+   "n": 1
+  },
+  {
+   "phrase": "catastrophic",
+   "panel": 10,
+   "rest": 36,
+   "z": 3.77,
+   "n": 1
+  },
+  {
+   "phrase": "fight",
+   "panel": 4,
+   "rest": 3,
+   "z": 3.77,
+   "n": 1
+  },
+  {
+   "phrase": "speech",
+   "panel": 4,
+   "rest": 3,
+   "z": 3.77,
+   "n": 1
+  },
+  {
+   "phrase": "assembly",
+   "panel": 5,
+   "rest": 8,
+   "z": 3.74,
+   "n": 1
+  },
+  {
+   "phrase": "data center",
+   "panel": 4,
+   "rest": 4,
+   "z": 3.67,
+   "n": 2
+  },
+  {
+   "phrase": "introduced",
+   "panel": 4,
+   "rest": 4,
+   "z": 3.67,
+   "n": 1
+  },
+  {
+   "phrase": "international",
+   "panel": 4,
+   "rest": 4,
+   "z": 3.67,
+   "n": 1
+  },
+  {
+   "phrase": "guardrail",
+   "panel": 4,
+   "rest": 1,
+   "z": 3.58,
+   "n": 1
+  },
+  {
+   "phrase": "freedom",
+   "panel": 4,
+   "rest": 1,
+   "z": 3.58,
+   "n": 1
+  },
+  {
+   "phrase": "laws",
+   "panel": 7,
+   "rest": 20,
+   "z": 3.57,
+   "n": 1
+  },
+  {
+   "phrase": "pass",
+   "panel": 7,
+   "rest": 20,
+   "z": 3.57,
+   "n": 1
+  },
+  {
+   "phrase": "power",
+   "panel": 7,
+   "rest": 22,
+   "z": 3.41,
+   "n": 1
+  },
+  {
+   "phrase": "senate",
+   "panel": 4,
+   "rest": 6,
+   "z": 3.4,
+   "n": 1
+  },
+  {
+   "phrase": "safety standards",
+   "panel": 3,
+   "rest": 2,
+   "z": 3.29,
+   "n": 2
+  },
+  {
+   "phrase": "municipalities",
+   "panel": 3,
+   "rest": 2,
+   "z": 3.29,
+   "n": 1
+  },
+  {
+   "phrase": "bill",
+   "panel": 14,
+   "rest": 78,
+   "z": 3.21,
+   "n": 1
+  },
+  {
+   "phrase": "hyperscale data",
+   "panel": 3,
+   "rest": 1,
+   "z": 3.21,
+   "n": 2
+  },
+  {
+   "phrase": "sponsor",
+   "panel": 3,
+   "rest": 1,
+   "z": 3.21,
+   "n": 1
+  },
+  {
+   "phrase": "targeted",
+   "panel": 3,
+   "rest": 1,
+   "z": 3.21,
+   "n": 1
+  },
+  {
+   "phrase": "water",
+   "panel": 3,
+   "rest": 3,
+   "z": 3.18,
+   "n": 1
+  },
+  {
+   "phrase": "spacex",
+   "panel": 3,
+   "rest": 3,
+   "z": 3.18,
+   "n": 1
+  },
+  {
+   "phrase": "communities",
+   "panel": 6,
+   "rest": 19,
+   "z": 3.14,
+   "n": 1
+  },
+  {
+   "phrase": "chatbots",
+   "panel": 6,
+   "rest": 20,
+   "z": 3.05,
+   "n": 1
+  },
+  {
+   "phrase": "fighting",
+   "panel": 3,
+   "rest": 4,
+   "z": 3.03,
+   "n": 1
+  },
+  {
+   "phrase": "elected",
+   "panel": 3,
+   "rest": 4,
+   "z": 3.03,
+   "n": 1
+  },
+  {
+   "phrase": "regulating",
+   "panel": 4,
+   "rest": 9,
+   "z": 3.0,
+   "n": 1
+  },
+  {
+   "phrase": "wrong",
+   "panel": 4,
+   "rest": 9,
+   "z": 3.0,
+   "n": 1
+  },
+  {
+   "phrase": "must",
+   "panel": 6,
+   "rest": 21,
+   "z": 2.97,
+   "n": 1
+  },
+  {
+   "phrase": "harms",
+   "panel": 8,
+   "rest": 36,
+   "z": 2.9,
+   "n": 1
+  },
+  {
+   "phrase": "likeness",
+   "panel": 3,
+   "rest": 5,
+   "z": 2.87,
+   "n": 1
+  },
+  {
+   "phrase": "catastrophic risks",
+   "panel": 4,
+   "rest": 10,
+   "z": 2.87,
+   "n": 2
+  },
+  {
+   "phrase": "clearly",
+   "panel": 3,
+   "rest": 5,
+   "z": 2.87,
+   "n": 1
+  },
+  {
+   "phrase": "states",
+   "panel": 5,
+   "rest": 17,
+   "z": 2.75,
+   "n": 1
+  },
+  {
+   "phrase": "pay",
+   "panel": 3,
+   "rest": 6,
+   "z": 2.71,
+   "n": 1
+  },
+  {
+   "phrase": "helps",
+   "panel": 3,
+   "rest": 6,
+   "z": 2.71,
+   "n": 1
+  },
+  {
+   "phrase": "claim",
+   "panel": 3,
+   "rest": 6,
+   "z": 2.71,
+   "n": 1
+  },
+  {
+   "phrase": "budget",
+   "panel": 3,
+   "rest": 6,
+   "z": 2.71,
+   "n": 1
+  },
+  {
+   "phrase": "every",
+   "panel": 10,
+   "rest": 56,
+   "z": 2.7,
+   "n": 1
+  },
+  {
+   "phrase": "rights",
+   "panel": 4,
+   "rest": 12,
+   "z": 2.64,
+   "n": 1
+  },
+  {
+   "phrase": "design",
+   "panel": 4,
+   "rest": 12,
+   "z": 2.64,
+   "n": 1
+  },
+  {
+   "phrase": "push",
+   "panel": 3,
+   "rest": 7,
+   "z": 2.56,
+   "n": 1
+  },
+  {
+   "phrase": "protecting",
+   "panel": 3,
+   "rest": 7,
+   "z": 2.56,
+   "n": 1
+  },
+  {
+   "phrase": "driven",
+   "panel": 3,
+   "rest": 7,
+   "z": 2.56,
+   "n": 1
+  },
+  {
+   "phrase": "children",
+   "panel": 4,
+   "rest": 13,
+   "z": 2.53,
+   "n": 1
+  },
+  {
+   "phrase": "step",
+   "panel": 4,
+   "rest": 13,
+   "z": 2.53,
+   "n": 1
+  },
+  {
+   "phrase": "consent",
+   "panel": 3,
+   "rest": 8,
+   "z": 2.42,
+   "n": 1
+  },
+  {
+   "phrase": "respect",
+   "panel": 3,
+   "rest": 8,
+   "z": 2.42,
+   "n": 1
+  },
+  {
+   "phrase": "violation",
+   "panel": 3,
+   "rest": 8,
+   "z": 2.42,
+   "n": 1
+  },
+  {
+   "phrase": "paying",
+   "panel": 3,
+   "rest": 8,
+   "z": 2.42,
+   "n": 1
+  },
+  {
+   "phrase": "worked",
+   "panel": 5,
+   "rest": 21,
+   "z": 2.41,
+   "n": 1
+  },
+  {
+   "phrase": "america",
+   "panel": 3,
+   "rest": 9,
+   "z": 2.28,
+   "n": 1
+  },
+  {
+   "phrase": "hope",
+   "panel": 5,
+   "rest": 23,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "guardrails",
+   "panel": 5,
+   "rest": 23,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "online",
+   "panel": 5,
+   "rest": 24,
+   "z": 2.18,
+   "n": 1
+  },
+  {
+   "phrase": "fact",
+   "panel": 5,
+   "rest": 24,
+   "z": 2.18,
+   "n": 1
+  },
+  {
+   "phrase": "major",
+   "panel": 3,
+   "rest": 10,
+   "z": 2.16,
+   "n": 1
+  },
+  {
+   "phrase": "amount",
+   "panel": 3,
+   "rest": 10,
+   "z": 2.16,
+   "n": 1
+  },
+  {
+   "phrase": "moment",
+   "panel": 4,
+   "rest": 17,
+   "z": 2.14,
+   "n": 1
+  },
+  {
+   "phrase": "looking",
+   "panel": 4,
+   "rest": 17,
+   "z": 2.14,
+   "n": 1
+  },
+  {
+   "phrase": "harm",
+   "panel": 6,
+   "rest": 33,
+   "z": 2.12,
+   "n": 1
+  },
+  {
+   "phrase": "kids",
+   "panel": 4,
+   "rest": 18,
+   "z": 2.05,
+   "n": 1
+  },
+  {
+   "phrase": "standards",
+   "panel": 5,
+   "rest": 26,
+   "z": 2.04,
+   "n": 1
+  }
+ ],
+ "speakers": {
+  "Jumaane Williams": 4,
+  "Kristen Gonzalez": 3,
+  "Clyde Vanel": 3,
+  "Jordan Wright": 2,
+  "Jess Asato": 5,
+  "Alex Bores": 5,
+  "Andrew Gounardes": 2
+ },
+ "turns": 24,
+ "minutes": 36.5,
+ "words_panel": 6246
+}

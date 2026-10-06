@@ -441,7 +441,7 @@ Speaker categories (derived from the role, see the repository README for the rul
 |---|---|---|
 {cat_lines}
 
-## Known gaps
+{wordclouds_readme_section(meta['slug'])}## Known gaps
 
 - Speaker names were assigned after transcription. A low-confidence name shows `[?]` in the
   transcripts and `low` in `turns.csv`. Some turns contain two voices (for example a question
@@ -511,6 +511,50 @@ def chart_svg(speakers: list[dict], slug: str, top: int = 25) -> str:
             f'<text x="{label_w + w + 6:.1f}" y="{y + 17}" class="val">{human_dur(r["talk_seconds"])}</text></g>')
     parts.append("</svg>")
     return "".join(parts)
+
+
+WC_START, WC_END = "<!-- wordclouds:start -->", "<!-- wordclouds:end -->"
+
+
+def wordclouds_card_section(slug: str) -> str:
+    """Landing-page link to the word cloud gallery, if build_wordclouds.py has made one."""
+    if not (REPO / "hearings" / slug / "wordclouds" / "index.html").is_file():
+        return ""
+    return (f'<h4>What each group talked about</h4>\n  <p>For each group of speakers, and for some '
+            f'individual speakers, the phrases they used far more than everyone else at the hearing. '
+            f'<a href="hearings/{esc(slug)}/wordclouds/index.html">See what each group talked about</a>.</p>')
+
+
+def wordclouds_readme_section(slug: str) -> str:
+    """Hearing README section (between markers), if the word cloud gallery exists."""
+    if not (REPO / "hearings" / slug / "wordclouds" / "index.html").is_file():
+        return ""
+    return (f"{WC_START}\n## What each group talked about\n\n"
+            "[`wordclouds/index.html`](wordclouds/index.html) shows, for each speaker group and for some\n"
+            "individual speakers, the phrases they used far more than everyone else at the hearing, as a\n"
+            "word cloud, a bar chart and a table. Each `wordclouds/<group>.csv` (and\n"
+            "`wordclouds/people/<person>.csv`) lists every phrase that passed: `phrase, group_count,\n"
+            "others_count, z`. Built by `scripts/build_wordclouds.py`; groups and word lists are in\n"
+            f"`scripts/meta/wordclouds.json`.\n{WC_END}\n\n")
+
+
+def sync_readme_wordclouds(slug: str) -> None:
+    """Insert or refresh the word cloud section in an existing hearing README. Idempotent."""
+    path = REPO / "hearings" / slug / "README.md"
+    if not path.is_file():
+        return
+    text = path.read_text(encoding="utf-8")
+    section = wordclouds_readme_section(slug)
+    if WC_START in text:
+        head, rest = text.split(WC_START, 1)
+        new = head + section + rest.split(WC_END, 1)[1].lstrip("\n")
+    elif section and "## Known gaps" in text:
+        new = text.replace("## Known gaps", section + "## Known gaps", 1)
+    else:
+        new = text
+    if new != text:
+        write_text(path, new)
+        log("readme_wordclouds_synced", slug=slug)
 
 
 def file_row(base: Path, rel: str, label: str, fmt: str) -> str:
@@ -586,6 +630,7 @@ def hearing_card(slug: str) -> str:
     <p>Oversight topic {esc(meta['oversight_topic']['file'])}: {esc(meta['oversight_topic']['name'])}.</p>
     <ul>{bills}</ul>
   </details>
+  {wordclouds_card_section(slug)}
   <h4>Who spoke the longest</h4>
   <p>Top 25 speakers by total talk time. Colors show the speaker category; the role is also written next to each name.</p>
   <ul class="legend" aria-label="Chart legend">{legend}</ul>
@@ -602,6 +647,8 @@ def hearing_card(slug: str) -> str:
 
 def build_index() -> None:
     slugs = sorted((p.parent.name for p in (REPO / "hearings").glob("*/hearing.json")), reverse=True)
+    for s in slugs:
+        sync_readme_wordclouds(s)
     cards = "\n".join(hearing_card(s) for s in slugs)
     page = f"""<!doctype html>
 <html lang="en">

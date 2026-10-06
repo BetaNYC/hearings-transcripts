@@ -1,0 +1,302 @@
+{
+ "nA": 2327,
+ "nB": 39695,
+ "phrases": [
+  {
+   "phrase": "ais",
+   "panel": 41,
+   "rest": 6,
+   "z": 10.77,
+   "n": 1
+  },
+  {
+   "phrase": "google",
+   "panel": 17,
+   "rest": 36,
+   "z": 6.72,
+   "n": 1
+  },
+  {
+   "phrase": "china",
+   "panel": 12,
+   "rest": 18,
+   "z": 6.21,
+   "n": 1
+  },
+  {
+   "phrase": "recursive self improvement",
+   "panel": 10,
+   "rest": 4,
+   "z": 6.14,
+   "n": 3
+  },
+  {
+   "phrase": "control",
+   "panel": 18,
+   "rest": 55,
+   "z": 5.98,
+   "n": 1
+  },
+  {
+   "phrase": "humans",
+   "panel": 8,
+   "rest": 10,
+   "z": 5.25,
+   "n": 1
+  },
+  {
+   "phrase": "progress",
+   "panel": 7,
+   "rest": 3,
+   "z": 5.16,
+   "n": 1
+  },
+  {
+   "phrase": "slow",
+   "panel": 7,
+   "rest": 8,
+   "z": 4.98,
+   "n": 1
+  },
+  {
+   "phrase": "research",
+   "panel": 15,
+   "rest": 60,
+   "z": 4.72,
+   "n": 1
+  },
+  {
+   "phrase": "swarm",
+   "panel": 8,
+   "rest": 1,
+   "z": 4.6,
+   "n": 1
+  },
+  {
+   "phrase": "misaligned",
+   "panel": 6,
+   "rest": 7,
+   "z": 4.6,
+   "n": 1
+  },
+  {
+   "phrase": "racing",
+   "panel": 6,
+   "rest": 8,
+   "z": 4.49,
+   "n": 1
+  },
+  {
+   "phrase": "deepmind",
+   "panel": 5,
+   "rest": 3,
+   "z": 4.41,
+   "n": 1
+  },
+  {
+   "phrase": "chinese",
+   "panel": 5,
+   "rest": 2,
+   "z": 4.34,
+   "n": 1
+  },
+  {
+   "phrase": "mechanisms",
+   "panel": 5,
+   "rest": 5,
+   "z": 4.28,
+   "n": 1
+  },
+  {
+   "phrase": "ceo",
+   "panel": 5,
+   "rest": 5,
+   "z": 4.28,
+   "n": 1
+  },
+  {
+   "phrase": "scientific",
+   "panel": 5,
+   "rest": 6,
+   "z": 4.18,
+   "n": 1
+  },
+  {
+   "phrase": "improving",
+   "panel": 5,
+   "rest": 7,
+   "z": 4.06,
+   "n": 1
+  },
+  {
+   "phrase": "field",
+   "panel": 5,
+   "rest": 1,
+   "z": 3.98,
+   "n": 1
+  },
+  {
+   "phrase": "military",
+   "panel": 4,
+   "rest": 2,
+   "z": 3.93,
+   "n": 1
+  },
+  {
+   "phrase": "hugging",
+   "panel": 6,
+   "rest": 14,
+   "z": 3.85,
+   "n": 1
+  },
+  {
+   "phrase": "faster",
+   "panel": 4,
+   "rest": 4,
+   "z": 3.83,
+   "n": 1
+  },
+  {
+   "phrase": "scientist",
+   "panel": 4,
+   "rest": 4,
+   "z": 3.83,
+   "n": 1
+  },
+  {
+   "phrase": "fast",
+   "panel": 5,
+   "rest": 9,
+   "z": 3.82,
+   "n": 1
+  },
+  {
+   "phrase": "stop",
+   "panel": 7,
+   "rest": 21,
+   "z": 3.75,
+   "n": 1
+  },
+  {
+   "phrase": "data centers",
+   "panel": 9,
+   "rest": 37,
+   "z": 3.59,
+   "n": 2
+  },
+  {
+   "phrase": "hacking",
+   "panel": 4,
+   "rest": 6,
+   "z": 3.58,
+   "n": 1
+  },
+  {
+   "phrase": "misalignment",
+   "panel": 5,
+   "rest": 12,
+   "z": 3.48,
+   "n": 1
+  },
+  {
+   "phrase": "smarter",
+   "panel": 4,
+   "rest": 7,
+   "z": 3.44,
+   "n": 1
+  },
+  {
+   "phrase": "race",
+   "panel": 4,
+   "rest": 8,
+   "z": 3.31,
+   "n": 1
+  },
+  {
+   "phrase": "governance",
+   "panel": 4,
+   "rest": 9,
+   "z": 3.19,
+   "n": 1
+  },
+  {
+   "phrase": "united states",
+   "panel": 3,
+   "rest": 5,
+   "z": 3.02,
+   "n": 2
+  },
+  {
+   "phrase": "development",
+   "panel": 9,
+   "rest": 48,
+   "z": 2.99,
+   "n": 1
+  },
+  {
+   "phrase": "dollars",
+   "panel": 3,
+   "rest": 7,
+   "z": 2.72,
+   "n": 1
+  },
+  {
+   "phrase": "principles",
+   "panel": 3,
+   "rest": 8,
+   "z": 2.58,
+   "n": 1
+  },
+  {
+   "phrase": "researcher",
+   "panel": 3,
+   "rest": 9,
+   "z": 2.45,
+   "n": 1
+  },
+  {
+   "phrase": "evaluation",
+   "panel": 3,
+   "rest": 9,
+   "z": 2.45,
+   "n": 1
+  },
+  {
+   "phrase": "train",
+   "panel": 4,
+   "rest": 16,
+   "z": 2.43,
+   "n": 1
+  },
+  {
+   "phrase": "california",
+   "panel": 3,
+   "rest": 10,
+   "z": 2.33,
+   "n": 1
+  },
+  {
+   "phrase": "demis",
+   "panel": 9,
+   "rest": 0,
+   "z": 2.18,
+   "n": 1
+  },
+  {
+   "phrase": "science",
+   "panel": 4,
+   "rest": 19,
+   "z": 2.17,
+   "n": 1
+  }
+ ],
+ "speakers": {
+  "Unidentified Witness": 1,
+  "Jacob Coxon": 8,
+  "Daniel Kokotajlo": 9,
+  "Alex Turner": 7
+ },
+ "turns": 25,
+ "minutes": 32.3,
+ "words_panel": 5123
+}

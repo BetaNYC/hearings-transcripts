@@ -1,0 +1,622 @@
+{
+ "nA": 12468,
+ "nB": 29554,
+ "phrases": [
+  {
+   "phrase": "tech",
+   "panel": 36,
+   "rest": 31,
+   "z": 4.09,
+   "n": 1
+  },
+  {
+   "phrase": "workers",
+   "panel": 29,
+   "rest": 22,
+   "z": 3.99,
+   "n": 1
+  },
+  {
+   "phrase": "young",
+   "panel": 15,
+   "rest": 3,
+   "z": 3.9,
+   "n": 1
+  },
+  {
+   "phrase": "harms",
+   "panel": 25,
+   "rest": 19,
+   "z": 3.7,
+   "n": 1
+  },
+  {
+   "phrase": "media",
+   "panel": 13,
+   "rest": 3,
+   "z": 3.63,
+   "n": 1
+  },
+  {
+   "phrase": "skills",
+   "panel": 12,
+   "rest": 2,
+   "z": 3.48,
+   "n": 1
+  },
+  {
+   "phrase": "school",
+   "panel": 15,
+   "rest": 8,
+   "z": 3.38,
+   "n": 1
+  },
+  {
+   "phrase": "job",
+   "panel": 19,
+   "rest": 14,
+   "z": 3.28,
+   "n": 1
+  },
+  {
+   "phrase": "chatbot",
+   "panel": 12,
+   "rest": 5,
+   "z": 3.24,
+   "n": 1
+  },
+  {
+   "phrase": "digital",
+   "panel": 14,
+   "rest": 8,
+   "z": 3.18,
+   "n": 1
+  },
+  {
+   "phrase": "power",
+   "panel": 17,
+   "rest": 12,
+   "z": 3.18,
+   "n": 1
+  },
+  {
+   "phrase": "global",
+   "panel": 12,
+   "rest": 6,
+   "z": 3.08,
+   "n": 1
+  },
+  {
+   "phrase": "developer",
+   "panel": 10,
+   "rest": 1,
+   "z": 3.05,
+   "n": 1
+  },
+  {
+   "phrase": "kill",
+   "panel": 16,
+   "rest": 12,
+   "z": 2.98,
+   "n": 1
+  },
+  {
+   "phrase": "chatbots",
+   "panel": 15,
+   "rest": 11,
+   "z": 2.92,
+   "n": 1
+  },
+  {
+   "phrase": "startups",
+   "panel": 8,
+   "rest": 2,
+   "z": 2.83,
+   "n": 1
+  },
+  {
+   "phrase": "largest",
+   "panel": 8,
+   "rest": 2,
+   "z": 2.83,
+   "n": 1
+  },
+  {
+   "phrase": "funding",
+   "panel": 8,
+   "rest": 2,
+   "z": 2.83,
+   "n": 1
+  },
+  {
+   "phrase": "consequences",
+   "panel": 10,
+   "rest": 5,
+   "z": 2.82,
+   "n": 1
+  },
+  {
+   "phrase": "liability",
+   "panel": 13,
+   "rest": 9,
+   "z": 2.81,
+   "n": 1
+  },
+  {
+   "phrase": "source",
+   "panel": 8,
+   "rest": 1,
+   "z": 2.79,
+   "n": 1
+  },
+  {
+   "phrase": "fear",
+   "panel": 8,
+   "rest": 1,
+   "z": 2.79,
+   "n": 1
+  },
+  {
+   "phrase": "history",
+   "panel": 9,
+   "rest": 4,
+   "z": 2.76,
+   "n": 1
+  },
+  {
+   "phrase": "humanity",
+   "panel": 12,
+   "rest": 8,
+   "z": 2.75,
+   "n": 1
+  },
+  {
+   "phrase": "oversight",
+   "panel": 12,
+   "rest": 8,
+   "z": 2.75,
+   "n": 1
+  },
+  {
+   "phrase": "researchers",
+   "panel": 11,
+   "rest": 7,
+   "z": 2.69,
+   "n": 1
+  },
+  {
+   "phrase": "developers",
+   "panel": 7,
+   "rest": 1,
+   "z": 2.64,
+   "n": 1
+  },
+  {
+   "phrase": "president",
+   "panel": 7,
+   "rest": 1,
+   "z": 2.64,
+   "n": 1
+  },
+  {
+   "phrase": "physical",
+   "panel": 7,
+   "rest": 1,
+   "z": 2.64,
+   "n": 1
+  },
+  {
+   "phrase": "employers",
+   "panel": 7,
+   "rest": 1,
+   "z": 2.64,
+   "n": 1
+  },
+  {
+   "phrase": "nonprofit",
+   "panel": 7,
+   "rest": 1,
+   "z": 2.64,
+   "n": 1
+  },
+  {
+   "phrase": "architecture",
+   "panel": 7,
+   "rest": 1,
+   "z": 2.64,
+   "n": 1
+  },
+  {
+   "phrase": "contract",
+   "panel": 10,
+   "rest": 6,
+   "z": 2.63,
+   "n": 1
+  },
+  {
+   "phrase": "institute",
+   "panel": 7,
+   "rest": 2,
+   "z": 2.62,
+   "n": 1
+  },
+  {
+   "phrase": "audit",
+   "panel": 7,
+   "rest": 2,
+   "z": 2.62,
+   "n": 1
+  },
+  {
+   "phrase": "package",
+   "panel": 8,
+   "rest": 4,
+   "z": 2.52,
+   "n": 1
+  },
+  {
+   "phrase": "accountability",
+   "panel": 17,
+   "rest": 17,
+   "z": 2.49,
+   "n": 1
+  },
+  {
+   "phrase": "validator",
+   "panel": 7,
+   "rest": 3,
+   "z": 2.46,
+   "n": 1
+  },
+  {
+   "phrase": "organization",
+   "panel": 7,
+   "rest": 3,
+   "z": 2.46,
+   "n": 1
+  },
+  {
+   "phrase": "corporate",
+   "panel": 6,
+   "rest": 1,
+   "z": 2.46,
+   "n": 1
+  },
+  {
+   "phrase": "shutdown",
+   "panel": 6,
+   "rest": 1,
+   "z": 2.46,
+   "n": 1
+  },
+  {
+   "phrase": "nyc",
+   "panel": 12,
+   "rest": 10,
+   "z": 2.41,
+   "n": 1
+  },
+  {
+   "phrase": "leader",
+   "panel": 6,
+   "rest": 2,
+   "z": 2.39,
+   "n": 1
+  },
+  {
+   "phrase": "twenty",
+   "panel": 6,
+   "rest": 2,
+   "z": 2.39,
+   "n": 1
+  },
+  {
+   "phrase": "section",
+   "panel": 6,
+   "rest": 2,
+   "z": 2.39,
+   "n": 1
+  },
+  {
+   "phrase": "switch",
+   "panel": 11,
+   "rest": 9,
+   "z": 2.34,
+   "n": 1
+  },
+  {
+   "phrase": "director",
+   "panel": 13,
+   "rest": 12,
+   "z": 2.33,
+   "n": 1
+  },
+  {
+   "phrase": "spent",
+   "panel": 8,
+   "rest": 5,
+   "z": 2.31,
+   "n": 1
+  },
+  {
+   "phrase": "gets",
+   "panel": 8,
+   "rest": 5,
+   "z": 2.31,
+   "n": 1
+  },
+  {
+   "phrase": "scale",
+   "panel": 8,
+   "rest": 5,
+   "z": 2.31,
+   "n": 1
+  },
+  {
+   "phrase": "labs",
+   "panel": 10,
+   "rest": 8,
+   "z": 2.26,
+   "n": 1
+  },
+  {
+   "phrase": "stop",
+   "panel": 14,
+   "rest": 14,
+   "z": 2.26,
+   "n": 1
+  },
+  {
+   "phrase": "subject",
+   "panel": 7,
+   "rest": 4,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "recognition",
+   "panel": 5,
+   "rest": 1,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "losing",
+   "panel": 5,
+   "rest": 1,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "per",
+   "panel": 5,
+   "rest": 1,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "unique",
+   "panel": 5,
+   "rest": 1,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "common sense",
+   "panel": 5,
+   "rest": 1,
+   "z": 2.25,
+   "n": 2
+  },
+  {
+   "phrase": "speaking",
+   "panel": 7,
+   "rest": 4,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "mayor",
+   "panel": 5,
+   "rest": 1,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "founded",
+   "panel": 5,
+   "rest": 1,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "copic",
+   "panel": 5,
+   "rest": 1,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "behalf",
+   "panel": 7,
+   "rest": 4,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "changing",
+   "panel": 7,
+   "rest": 4,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "messages",
+   "panel": 5,
+   "rest": 1,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "palantir",
+   "panel": 5,
+   "rest": 1,
+   "z": 2.25,
+   "n": 1
+  },
+  {
+   "phrase": "urge",
+   "panel": 17,
+   "rest": 0,
+   "z": 2.24,
+   "n": 1
+  },
+  {
+   "phrase": "speed",
+   "panel": 9,
+   "rest": 7,
+   "z": 2.19,
+   "n": 1
+  },
+  {
+   "phrase": "literacy",
+   "panel": 9,
+   "rest": 7,
+   "z": 2.19,
+   "n": 1
+  },
+  {
+   "phrase": "decade",
+   "panel": 6,
+   "rest": 3,
+   "z": 2.18,
+   "n": 1
+  },
+  {
+   "phrase": "project",
+   "panel": 6,
+   "rest": 3,
+   "z": 2.18,
+   "n": 1
+  },
+  {
+   "phrase": "written",
+   "panel": 13,
+   "rest": 13,
+   "z": 2.17,
+   "n": 1
+  },
+  {
+   "phrase": "human",
+   "panel": 19,
+   "rest": 23,
+   "z": 2.14,
+   "n": 1
+  },
+  {
+   "phrase": "foundation",
+   "panel": 5,
+   "rest": 2,
+   "z": 2.11,
+   "n": 1
+  },
+  {
+   "phrase": "society",
+   "panel": 8,
+   "rest": 6,
+   "z": 2.11,
+   "n": 1
+  },
+  {
+   "phrase": "capacity",
+   "panel": 8,
+   "rest": 6,
+   "z": 2.11,
+   "n": 1
+  },
+  {
+   "phrase": "market",
+   "panel": 8,
+   "rest": 6,
+   "z": 2.11,
+   "n": 1
+  },
+  {
+   "phrase": "jobs",
+   "panel": 14,
+   "rest": 15,
+   "z": 2.11,
+   "n": 1
+  },
+  {
+   "phrase": "bold",
+   "panel": 5,
+   "rest": 2,
+   "z": 2.11,
+   "n": 1
+  },
+  {
+   "phrase": "teach",
+   "panel": 5,
+   "rest": 2,
+   "z": 2.11,
+   "n": 1
+  }
+ ],
+ "speakers": {
+  "Imran Ahmed": 3,
+  "Nathan Sheard": 4,
+  "Anna Myers": 4,
+  "Julia Stoyanovich": 5,
+  "Nate Soares": 2,
+  "Jukay Hsu": 3,
+  "Mackenzie Arnold": 2,
+  "Matt Henning": 1,
+  "Andrew Rasiej": 1,
+  "Neil Getnick": 4,
+  "Gabriel Weil": 1,
+  "Noel Hidalgo": 3,
+  "David S. Rose": 1,
+  "Zach Price": 1,
+  "Scott Weiser": 1,
+  "Shay Brown": 2,
+  "David Krueger": 1,
+  "Carrie Fallhaber": 1,
+  "Nicholas Artur": 1,
+  "Jessica Timo": 3,
+  "Sam Wheeler": 1,
+  "Gary Marcus": 1,
+  "Mayu Toviniagi": 1,
+  "Bryce Rogers": 1,
+  "Sophie Cody": 2,
+  "David Carter": 1,
+  "Brenna Lieser": 1,
+  "Brian Romero": 1,
+  "Wes Rizen": 4,
+  "Nasya Fiazi": 1,
+  "Ambrin Qureshi": 1,
+  "Nicholas Pearson": 1,
+  "Matthew Tromp": 2,
+  "Justin Meredith": 1,
+  "James Hunter": 1,
+  "Kelly Anderson": 1,
+  "Martina Crane": 1,
+  "William Lawrence": 3,
+  "Edmund": 1,
+  "Mel Wymore": 1,
+  "Rachel Levinson Waldman": 1,
+  "Brian DeGotti": 1,
+  "Ashna Agarwal": 1,
+  "Tony Tye Serrat": 2,
+  "Travis Hall": 1,
+  "Michelle Barnaby": 1,
+  "Tony Jones": 1,
+  "Isata Kamara": 2,
+  "Ashley Youssef": 1,
+  "Naveed Hassan": 1,
+  "Nadira Pittman": 2
+ },
+ "turns": 85,
+ "minutes": 139.9,
+ "words_panel": 22917
+}

@@ -24,9 +24,11 @@ Clean verbatim copy edit            → transcript-clean.txt
   │  corrected. Speaker labels and timestamps unchanged (build_hearing.py enforces this).
   ▼
 build_hearing.py                    → hearings/<slug>/… exports + index.html
+  ▼
+build_wordclouds.py                 → hearings/<slug>/wordclouds/… (then build_hearing.py --index-only)
 ```
 
-Only the last step lives in this repository. The steps above it produced the input files and
+Only the last two steps live in this repository. The steps above it produced the input files and
 are described here so the outputs can be understood and reproduced.
 
 Commands equivalent to the audio step (the exact invocation was not recorded; output formats
@@ -73,11 +75,52 @@ the post-hearing copy wins. Leave the options off to keep the existing `legistar
 Re-running is safe: every output is rewritten in full, and the Opus file is copied only when
 missing or a different size.
 
+## build_wordclouds.py
+
+Python 3.11 to 3.14, standard library only. No network access. Reads
+`hearings/<slug>/transcript/turns.csv`, `speakers.csv` and `hearing.json`, plus
+`scripts/meta/wordclouds.json`, and writes `hearings/<slug>/wordclouds/`:
+
+- `<group>.html` and `<group>.csv` for each group in the config;
+- `people/<person>.html` and `.csv` for each person in the config;
+- `index.html`, a gallery with each group's and person's top phrases.
+
+```sh
+python3 scripts/build_wordclouds.py            # every hearing with a turns.csv
+python3 scripts/build_hearing.py --index-only  # adds the gallery link to index.html and the hearing README
+```
+
+Method, all parameters in `wordclouds.json`:
+
+- phrases are 1 to 3 words from `text_clean`, never crossing `. ? ! ; : , ( )`; possessive `'s`
+  is dropped; a phrase may not start or end with a stopword (generic words, hearing boilerplate,
+  and every token of every speaker name); grams containing "york"/"yorkers" and the bare word
+  "city" are skipped;
+- each group is scored against every other speaker with the weighted log-odds ratio and
+  informative Dirichlet prior of Monroe, Colaresi and Quinn (2008), prior mass 1% of all phrase
+  tokens; a phrase is kept when the group said it at least 3 times (2 for one person) with
+  z > 1.96;
+- a shorter phrase is dropped when a longer kept phrase contains it and has at least 80% of its
+  count;
+- a person is compared with everyone else at the hearing, including the rest of their group.
+
+Groups are defined by `match` rules on `speakers.csv`: `category`, `role_contains`,
+`exclude_names`, `exclude_role_contains`. Pages lay the word cloud out in the browser (an
+Archimedean spiral with bounding-box collision, measured with the page font after it loads,
+shrinking all words together until every phrase fits). Re-running rewrites every output and
+produces identical files.
+
 ## Tests
 
 ```sh
 python3 -m unittest discover -s scripts -v
 ```
+
+`test_wordclouds.py` checks that the six groups are non-empty and disjoint, that the council group
+excludes the two chairs, that each group's top 45 phrases equal the approved prototype output in
+`tests/fixtures/wordclouds/`, that each person page counts only that person's turns, that every
+page parses with six working group links, that all relative links resolve, and that the build
+is idempotent.
 
 `test_build.py` checks the built files: 830 turns, transcript prefixes, word timings inside
 their turns, CSV columns and confidence values, WebVTT header and ordering, file sizes,
