@@ -466,6 +466,14 @@ def gallery_card(title: str, note: str, href: str, phrases: list[dict], cap: dic
             f'<p><a href="{esc(href)}">See the word cloud and counts for {esc(title)}</a></p></article>')
 
 
+def qa_link(slug: str, prefix: str) -> str:
+    """Pointer to the City Q&A page, if build_qa.py has made one."""
+    if not (REPO / "hearings" / slug / "city-qa.html").is_file():
+        return ""
+    return (f'<p class="brief"><a href="{prefix}city-qa.html">Read every '
+            f'question Council Members asked the City, and the administration&#x27;s answers</a>.</p>')
+
+
 def render_gallery(hearing: dict, group_cards: list[str], person_cards: list[str], cfg: dict) -> str:
     hearing_name = f"{hearing['body']}, {long_date(hearing['date'])}"
     root = "../../../"
@@ -486,6 +494,7 @@ def render_gallery(hearing: dict, group_cards: list[str], person_cards: list[str
 {group_nav(cfg["groups"], None, "")}
 <h1>What each group talked about</h1>
 <p class="sub">{esc(hearing['title'])}. For each group of speakers, the phrases they used far more often than everyone else at the hearing. Each page has a word cloud, a bar chart of counts, and the data as a table.</p>
+{qa_link(hearing["slug"], "../")}
 <section aria-labelledby="groups-h"><h2 id="groups-h">Speaker groups</h2>
 <div class="grid">{"".join(group_cards)}</div></section>
 {('<section aria-labelledby="people-h" style="margin-top:36px"><h2 id="people-h">Individual speakers</h2><p>' + esc(cfg["people_method"].get("intro", "")) + '</p><p class="note">Each person is compared with everyone else at the hearing, including the rest of their own group. Phrases said at least ' + str(cfg["people_method"]["min_person_count"]) + ' times count, because some spoke only briefly.</p><div class="grid">' + "".join(person_cards) + '</div></section>') if person_cards else ''}
@@ -564,6 +573,8 @@ def build(slug: str, cfg: dict) -> None:
                               if p["affiliation"] != "Whistleblower panel" else
                               f'<a href="people/{esc(p["slug"])}.html">{esc(p["name"])}</a>' for p in ppl)
             extra = f'<p>Each speaker in this group on their own: {links}.</p>'
+        if g["slug"] == "city-officials":
+            extra += qa_link(slug, "../")
         page = render_page(hearing=hearing, groups=cfg["groups"], current_group=g["slug"], title_who=g["who"],
                            subline=sub, extra=extra, result=result, stats=st, display_cfg=disp, cap=cap,
                            subject="This group", subject_kind="group",

@@ -33,6 +33,7 @@ what, jump to the moment in the video, and count who got the floor.
 | `speakers.csv` | CSV | `speaker_name, speaker_role, category, turns, talk_seconds, first_heard_hms` |
 | `legistar/` | PDF, DOCX, CSV | The Council's documents for the hearing, plus `manifest.csv` (source URL and last-modified time for each) |
 | `media/` | Opus, README | Small audio file; links to the video and the full-quality MP3 |
+| `city-qa.html` | HTML | "What the City said": every question Council Members asked the administration's panel, with the full exchange from the transcript, the follow-ups the City promised and its position on each bill. Built by `scripts/build_qa.py` from `scripts/meta/<slug>-city-qa.json` |
 | `wordclouds/` | HTML, CSV | "What each group talked about": a gallery (`index.html`), one page and CSV per speaker group, and `people/` pages for some individual speakers. Each CSV is `phrase, group_count, others_count, z` |
 
 All times are seconds from the start of the Council's recording. Text is UTF-8.
