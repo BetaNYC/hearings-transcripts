@@ -525,6 +525,15 @@ def wordclouds_card_section(slug: str) -> str:
             f'<a href="hearings/{esc(slug)}/wordclouds/index.html">See what each group talked about</a>.</p>')
 
 
+def qa_card_section(slug: str) -> str:
+    """Landing-page link to the City Q&A page, if build_qa.py has made one."""
+    if not (REPO / "hearings" / slug / "city-qa.html").is_file():
+        return ""
+    return (f'<h4>What the City said</h4>\n  <p>Every question Council Members asked the City\'s panel, '
+            f'and the administration\'s answers, from the transcript. '
+            f'<a href="hearings/{esc(slug)}/city-qa.html">Read the questions and answers</a>.</p>')
+
+
 def wordclouds_readme_section(slug: str) -> str:
     """Hearing README section (between markers), if the word cloud gallery exists."""
     if not (REPO / "hearings" / slug / "wordclouds" / "index.html").is_file():
@@ -535,7 +544,13 @@ def wordclouds_readme_section(slug: str) -> str:
             "word cloud, a bar chart and a table. Each `wordclouds/<group>.csv` (and\n"
             "`wordclouds/people/<person>.csv`) lists every phrase that passed: `phrase, group_count,\n"
             "others_count, z`. Built by `scripts/build_wordclouds.py`; groups and word lists are in\n"
-            f"`scripts/meta/wordclouds.json`.\n{WC_END}\n\n")
+            "`scripts/meta/wordclouds.json`.\n"
+            + ("\n[`city-qa.html`](city-qa.html) lists every question Council Members asked the City's panel,\n"
+               "with the administration's answers from the transcript. Built by\n"
+               "`scripts/build_qa.py`; question headlines and follow-ups are in\n"
+               f"`scripts/meta/{slug}-city-qa.json`.\n"
+               if (REPO / "hearings" / slug / "city-qa.html").is_file() else "")
+            + f"{WC_END}\n\n")
 
 
 def sync_readme_wordclouds(slug: str) -> None:
@@ -631,6 +646,7 @@ def hearing_card(slug: str) -> str:
     <ul>{bills}</ul>
   </details>
   {wordclouds_card_section(slug)}
+  {qa_card_section(slug)}
   <h4>Who spoke the longest</h4>
   <p>Top 25 speakers by total talk time. Colors show the speaker category; the role is also written next to each name.</p>
   <ul class="legend" aria-label="Chart legend">{legend}</ul>

@@ -72,6 +72,11 @@ word cloud, a bar chart and a table. Each `wordclouds/<group>.csv` (and
 `wordclouds/people/<person>.csv`) lists every phrase that passed: `phrase, group_count,
 others_count, z`. Built by `scripts/build_wordclouds.py`; groups and word lists are in
 `scripts/meta/wordclouds.json`.
+
+[`city-qa.html`](city-qa.html) lists every question Council Members asked the City's panel,
+with the administration's answers from the transcript. Built by
+`scripts/build_qa.py`; question headlines and follow-ups are in
+`scripts/meta/2026-10-05-committee-of-the-whole-ai-city-qa.json`.
 <!-- wordclouds:end -->
 
 ## Known gaps

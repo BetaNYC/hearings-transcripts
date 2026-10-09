@@ -1,0 +1,398 @@
+{
+  "slug": "2026-10-05-committee-of-the-whole-ai",
+  "page": "city-qa.html",
+  "title": "What the City said: Council questions to the administration",
+  "panel": {
+    "start_hms": "05:18:48",
+    "end_hms": "06:30:13",
+    "summary": "The administration's panel came after the AI companies and before public testimony. It ran about 1 hour 11 minutes. Sarah Milstein read the opening statement for OTI and DCWP, then Council Members asked questions."
+  },
+  "officials": [
+    {
+      "name": "Sarah Milstein",
+      "title": "Deputy Commissioner for Strategic Advisory Services, Office of Technology and Innovation (OTI). Oversees the Office of Algorithmic Accountability and NYC Cyber Command."
+    },
+    {
+      "name": "CJ Dixon",
+      "title": "Deputy Commissioner, NYC Cyber Command (OTI), and the City's Chief Information Security Officer."
+    },
+    {
+      "name": "Samuel Levine",
+      "title": "Commissioner, Department of Consumer and Worker Protection (DCWP)."
+    },
+    {
+      "name": "Benjamin Krakauer",
+      "title": "First Deputy Commissioner, NYC Emergency Management (NYCEM)."
+    },
+    {
+      "name": "Carlos Ortiz",
+      "title": "Chief of Staff and Deputy Commissioner for External Affairs, DCWP. Sworn in; we could not tell whether he spoke."
+    }
+  ],
+  "titles_note": "Titles as introduced at the hearing.",
+  "opening": {
+    "turns": [
+      501
+    ],
+    "speaker": "Sarah Milstein",
+    "start_hms": "05:19:42"
+  },
+  "positions": [
+    [
+      "Int 161 (De La Rosa)",
+      "Adds workforce impact to yearly reporting on City algorithmic tools",
+      "Agrees the issue matters, but says the bill would add nothing beyond the larger Local Law 25 workforce study."
+    ],
+    [
+      "T2026-2602 (Menin)",
+      "No AI model marketed, sold or deployed in NYC without third-party validation and a human shut-off",
+      "Neither OTI nor Cyber Command is the best choice to lead it. DCWP supports the intent and is unsure third-party validators exist yet."
+    ],
+    [
+      "T2026-2601 (Hanks)",
+      "City contractors report AI safety incidents, with public notice in 24 hours",
+      "Not all AI threats are cyberattacks, and the bill does not address that. Existing breach law applies. 24-hour public notice would compromise an investigation and is inconsistent with current law."
+    ],
+    [
+      "T2026-2606 (Ossé)",
+      "Cyber Command and NYCEM write an AI emergency response plan",
+      "Laws, policies and protocols for breaches already apply, whatever the actor. Happy to discuss how it already coordinates with NYCEM."
+    ],
+    [
+      "T2026-2605 (Menin)",
+      "Anyone can file AI complaints with DCWP",
+      "DCWP strongly supports the intent; concerned about volume, cost and expertise."
+    ],
+    [
+      "T2026-2599 (Morano)",
+      "Data security, privacy and access rules for chatbot companies",
+      "DCWP has concerns: the approach is sound, but enforcing its data security and privacy rules would need technical and investigative capacity outside DCWP's scope."
+    ],
+    [
+      "T2026-2603 (Wilson)",
+      "AI ads must disclose third-party validation; no false safety claims",
+      "DCWP supports the disclosure. Unsure third-party validators exist yet. False ads are already illegal under City law."
+    ]
+  ],
+  "sections": [
+    {
+      "id": "menin",
+      "who": "Speaker Julie Menin",
+      "turns": [
+        502,
+        521
+      ],
+      "extra_turns": [
+        537,
+        539
+      ],
+      "questions": [
+        [
+          "05:33:03",
+          "Has the City met with OpenAI, Anthropic or other frontier AI companies about how they would coordinate in a serious AI incident?"
+        ],
+        [
+          "05:35:55",
+          "Press reports say the City's AI director resigned. The office was due to be running in June; why isn't it?"
+        ],
+        [
+          "05:37:55",
+          "The Speaker says OTI issued guidance instead of the rulemaking her law requires. When will rules come?"
+        ],
+        [
+          "05:40:27",
+          "What stops City staff from putting confidential data into AI tools?"
+        ],
+        [
+          "05:41:46",
+          "Is OTI measuring AI's effect on the City workforce?"
+        ],
+        [
+          "05:54:02",
+          "How many people work at Cyber Command, and how many jobs are open?"
+        ]
+      ]
+    },
+    {
+      "id": "de-la-rosa",
+      "who": "Chair Carmen De La Rosa",
+      "turns": [
+        522,
+        536
+      ],
+      "extra_turns": [
+        540,
+        544
+      ],
+      "questions": [
+        [
+          "05:42:25",
+          "Her Int 161 would make the workforce report yearly. What do you know now?"
+        ],
+        [
+          "05:44:15",
+          "What protects City workers from being replaced by AI?"
+        ],
+        [
+          "05:47:01",
+          "Where are City agencies on using AI internally?"
+        ],
+        [
+          "05:48:17",
+          "Agencies report their own AI use. What tools will the new office have to check, including for NYPD?"
+        ],
+        [
+          "05:50:15",
+          "How ready is the City for AI-driven cyberattacks?"
+        ],
+        [
+          "05:51:24",
+          "Should a kill switch live in Cyber Command?"
+        ],
+        [
+          "05:53:09",
+          "Should \"AI control\" be a cybersecurity specialty?"
+        ],
+        [
+          "05:54:20",
+          "To DCWP: what AI misuse worries you most?"
+        ],
+        [
+          "05:55:50",
+          "To DCWP: are you staffed for this? Would a private right of action help?"
+        ]
+      ]
+    },
+    {
+      "id": "gutierrez",
+      "who": "Council Member Jennifer Gutiérrez",
+      "turns": [
+        545,
+        552
+      ],
+      "questions": [
+        [
+          "05:57:22",
+          "Will the new AI reporting be on time? How many staff, and at what stage?"
+        ],
+        [
+          "05:57:22",
+          "To DCWP: how is Local Law 144 on AI hiring tools working?"
+        ],
+        [
+          "06:02:20",
+          "Do you have someone for the director role?"
+        ]
+      ]
+    },
+    {
+      "id": "aldebol",
+      "who": "Council Member Shirley Aldebol",
+      "turns": [
+        553,
+        557
+      ],
+      "questions": [
+        [
+          "06:02:38",
+          "Where is hiring for the six new positions, and what is slowing it?"
+        ],
+        [
+          "06:03:50",
+          "How is the office protecting City workers as AI changes?"
+        ]
+      ]
+    },
+    {
+      "id": "maloney",
+      "who": "Council Member Virginia Maloney",
+      "turns": [
+        559,
+        560
+      ],
+      "questions": [
+        [
+          "06:05:12",
+          "What is New York's AI \"win\"? Is OTI's AI guidance binding? Is there an approved tool list? How should buying AI work?"
+        ]
+      ]
+    },
+    {
+      "id": "won",
+      "who": "Council Member Julie Won",
+      "turns": [
+        562,
+        565
+      ],
+      "questions": [
+        [
+          "06:09:00",
+          "She says agencies are using ChatGPT, Claude and other tools. What is the policy? Do contracts protect constituent data?"
+        ],
+        [
+          "06:10:56",
+          "Who is responsible for staff using tools that are not approved?"
+        ]
+      ]
+    },
+    {
+      "id": "hanks",
+      "who": "Majority Whip Kamillah Hanks",
+      "turns": [
+        567,
+        569
+      ],
+      "questions": [
+        [
+          "06:12:50",
+          "You said not all threats to AI systems are cyberattacks. What do you mean?"
+        ]
+      ]
+    },
+    {
+      "id": "brewer",
+      "who": "Council Member Gale Brewer",
+      "turns": [
+        570,
+        583
+      ],
+      "questions": [
+        [
+          "06:14:58",
+          "How does an agency start using a new AI model?"
+        ],
+        [
+          "06:16:33",
+          "Does the City run models in its own data centers or on vendor clouds?"
+        ],
+        [
+          "06:17:18",
+          "What do you do about an AI product that misbehaves?"
+        ],
+        [
+          "06:18:16",
+          "How much does the City spend on outside AI consultants?"
+        ]
+      ]
+    },
+    {
+      "id": "osse",
+      "who": "Council Member Chi Ossé",
+      "turns": [
+        585,
+        588
+      ],
+      "questions": [
+        [
+          "06:19:14",
+          "If an AI agent hacked a City system, is the City ready? Do AI companies have a contact for incidents?"
+        ],
+        [
+          "06:21:16",
+          "Does an AI emergency plan already exist?"
+        ]
+      ]
+    },
+    {
+      "id": "hanif",
+      "who": "Council Member Shahana Hanif",
+      "turns": [
+        590,
+        595
+      ],
+      "questions": [
+        [
+          "06:22:10",
+          "How does OTI keep HRA's automated screening tools from being biased against low-income New Yorkers?"
+        ],
+        [
+          "06:22:10",
+          "To DCWP: what would you need to handle AI complaints?"
+        ]
+      ]
+    },
+    {
+      "id": "williams",
+      "who": "Deputy Speaker Nantasha Williams",
+      "turns": [
+        597,
+        598
+      ],
+      "questions": [
+        [
+          "06:25:44",
+          "What is the timeline for the Local Law 25 workforce study?"
+        ]
+      ]
+    },
+    {
+      "id": "brooks-powers",
+      "who": "Council Member Selvena Brooks-Powers (read by the chair)",
+      "turns": [
+        599,
+        603
+      ],
+      "questions": [
+        [
+          "06:26:58",
+          "What would an AI attack on emergency systems look like, and is there a plan? How does NYCEM keep its alerts trusted?"
+        ]
+      ]
+    }
+  ],
+  "speaker_notes": {
+    "552": "The transcript labels this turn as the chair, but the first sentence sounds like Sarah Milstein's answer.",
+    "595": "An unidentified member of the administration. Possibly DCWP; not named in the transcript.",
+    "504": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+    "541": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+    "546": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+    "565": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+    "578": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+    "588": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+    "591": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video."
+  },
+  "followups": [
+    [
+      "CJ Dixon",
+      "Speaker Menin",
+      "How many jobs are open at Cyber Command",
+      "05:54:12"
+    ],
+    [
+      "Sarah Milstein",
+      "Council Member Maloney",
+      "Examples of City AI \"wins\"",
+      "06:06:58"
+    ],
+    [
+      "Sarah Milstein",
+      "Council Member Won",
+      "Who is responsible for staff using unapproved AI tools",
+      "06:10:56"
+    ],
+    [
+      "Sarah Milstein",
+      "Council Member Brewer",
+      "Confirm where City AI models run",
+      "06:17:01"
+    ],
+    [
+      "Sarah Milstein",
+      "Council Member Brewer",
+      "City spending on outside AI consultants",
+      "06:18:55"
+    ],
+    [
+      "Sarah Milstein",
+      "Council Member Hanif",
+      "Bias safeguards on HRA's automated tools",
+      "06:24:56"
+    ],
+    [
+      "Sarah Milstein",
+      "Deputy Speaker Williams",
+      "Updates on the Local Law 25 workforce study as pieces are ready during 2027",
+      "06:26:33"
+    ]
+  ]
+}
