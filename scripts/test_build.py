@@ -89,6 +89,8 @@ class UnitTests(unittest.TestCase):
         self.assertEqual(c("Julie Menin", "Speaker"), "council")
         self.assertEqual(c("Committee Counsel", "Committee Counsel"), "council-staff")
         self.assertEqual(c("Morgan Dwyer", "Witness — OpenAI"), "ai-company")
+        self.assertEqual(c("Gabriela Castillo Madrid", "Witness — SpaceXAI"), "ai-company")
+        self.assertEqual(c("Devin Kim", "Witness — former xAI employee"), "witness")
         self.assertEqual(c("Sarah Milstein", "Witness — OTI"), "city-official")
         self.assertEqual(c("Kristen Gonzalez", "NY State Senator, SD 59"), "state-or-other-elected")
         self.assertEqual(c("Jumaane Williams", "NYC Public Advocate"), "state-or-other-elected")

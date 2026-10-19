@@ -65,8 +65,22 @@ def plural(n: int, word: str, words: str | None = None) -> str:
 
 
 # ---- data -----------------------------------------------------------------------------------
+def config_for(slug: str, default: Path) -> Path:
+    """A hearing's own config, scripts/meta/<slug>-wordclouds.json, if it has one; else the default."""
+    own = REPO / "scripts" / "meta" / f"{slug}-wordclouds.json"
+    return own if own.is_file() else default
+
+
 def load_config(path: Path) -> dict:
+    """Read a config. `"extends": "<file>"` (same folder) starts from that file's keys and lets
+    this file replace whole top-level keys: a hearing's config usually replaces groups, people
+    and the disclosure, and inherits the method, stopwords and capitalization."""
     cfg = json.loads(path.read_text(encoding="utf-8"))
+    if "extends" in cfg:
+        base = json.loads((path.parent / cfg["extends"]).read_text(encoding="utf-8"))
+        base.pop("gallery_disclosure", None)
+        cfg = {**base, **{k: v for k, v in cfg.items() if k != "extends"}}
+    cfg["_path"] = path
     for key in ("method", "people_method", "display", "groups", "people", "stopwords", "capitalization"):
         if key not in cfg:
             die(f"{path}: missing key {key!r}")
@@ -337,10 +351,12 @@ def group_nav(groups: list[dict], current: str | None, prefix: str) -> str:
 
 
 def json_for_script(obj) -> str:
-    return json.dumps(obj, ensure_ascii=False).replace("</", "<\\/")
+    """JSON safe inside <script>: every "<" becomes \\u003c (same rule as build_panels.py)."""
+    return json.dumps(obj, ensure_ascii=False).replace("<", "\\u003c")
 
 
-CONFIG_URL = "https://github.com/BetaNYC/hearings-transcripts/blob/main/scripts/meta/wordclouds.json"
+CONFIG_BASE = "https://github.com/BetaNYC/hearings-transcripts/blob/main/scripts/meta/"
+CONFIG_URL = CONFIG_BASE + "wordclouds.json"
 REMOVED = ("Common words, speakers&#x27; names, &ldquo;New York&rdquo;, &ldquo;city&rdquo;, &ldquo;AI&rdquo; and "
            "hearing boilerplate are left out. Beyond a standard list of common words, filler (polite forms, "
            "connecting words, generic verbs) was removed by hand: an AI assistant, working at BetaNYC&#x27;s "
@@ -350,7 +366,15 @@ JOINED = ("&ldquo;super intelligent&rdquo; as &ldquo;superintelligent&rdquo;, &l
           "&ldquo;kill switch&rdquo;, &ldquo;open-weight&rdquo; and &ldquo;affected parties&rdquo; as one term")
 
 
-def how_made(subject_kind: str, min_count: int, csv_name: str, root: str) -> str:
+def method_notes(cfg: dict | None) -> tuple[str, str]:
+    """(removed-words note, joined-terms note) as HTML. A hearing config may replace either with
+    `removed_note_html` / `joined_note_html` when the default text does not describe it."""
+    cfg = cfg or {}
+    return cfg.get("removed_note_html", REMOVED), cfg.get("joined_note_html", JOINED)
+
+
+def how_made(subject_kind: str, min_count: int, csv_name: str, root: str, notes: dict | None = None) -> str:
+    removed, joined = method_notes(notes)
     if subject_kind == "person":
         base = ("this speaker said much more often than everyone else at the hearing, including the "
                 "rest of their own group")
@@ -368,8 +392,8 @@ def how_made(subject_kind: str, min_count: int, csv_name: str, root: str) -> str
 <ul>
 <li><strong>&ldquo;Distinctive&rdquo;</strong> means a phrase {base}, after allowing for how much each side talked. A phrase someone says often but everyone else also says often is not distinctive.</li>
 <li>Each phrase gets a score from the &ldquo;weighted log-odds&rdquo; test in {PAPER}. We keep phrases said at least {min_count} times with a score above 1.96, a common cutoff; with thousands of phrases tested, a few may pass by chance, so read the list as a guide, not proof. When a short phrase almost always appears inside a longer one, only the longer one is shown.</li>
-<li>Counts are how many times each 1- to 3-word phrase occurs in the clean verbatim transcript. Hyphenated words are counted as separate words (&ldquo;self-improvement&rdquo; is &ldquo;self improvement&rdquo;), and a few terms the transcript spells more than one way are counted as one ({JOINED}).</li>
-<li>{REMOVED}</li>
+<li>Counts are how many times each 1- to 3-word phrase occurs in the clean verbatim transcript. Hyphenated words are counted as separate words (&ldquo;self-improvement&rdquo; is &ldquo;self improvement&rdquo;), and a few terms the transcript spells more than one way are counted as one ({joined}).</li>
+<li>{removed}</li>
 <li>{who_rule}</li>
 <li>This is a machine transcript, not an official record. Check the video before quoting anyone; search <a href="{root}transcript/transcript-clean.txt">the clean transcript</a> to find where a phrase was said.</li>
 <li>Data: <a href="{esc(csv_name)}" download>{esc(csv_name)}</a> (every phrase that passed). Code: <code>scripts/build_wordclouds.py</code>.</li>
@@ -380,7 +404,7 @@ def how_made(subject_kind: str, min_count: int, csv_name: str, root: str) -> str
 def render_page(*, hearing: dict, groups: list[dict], current_group: str | None, title_who: str, subline: str,
                 extra: str, result: dict, stats: dict, display_cfg: dict, cap: dict, subject: str,
                 subject_kind: str, min_count: int, csv_name: str, root: str, hearing_root: str,
-                nav_prefix: str, gallery_href: str) -> str:
+                nav_prefix: str, gallery_href: str, notes: dict | None = None) -> str:
     phrases = result["phrases"]
     ph = phrases[:display_cfg["cloud_phrases"]]
     for x in ph:
@@ -431,7 +455,7 @@ def render_page(*, hearing: dict, groups: list[dict], current_group: str | None,
 <p class="sub">{subline}</p>
 {extra}
 {charts}
-{how_made(subject_kind, min_count, csv_name, hearing_root)}
+{how_made(subject_kind, min_count, csv_name, hearing_root, notes)}
 </main>
 {footer(root)}
 <div class="tip" id="tip" aria-hidden="true"></div>
@@ -501,7 +525,7 @@ def render_gallery(hearing: dict, group_cards: list[str], person_cards: list[str
 <section class="how" aria-labelledby="how" style="margin-top:36px">
 <h2 id="how">How this was made</h2>
 <p>&ldquo;Distinctive&rdquo; means a phrase a group said much more often than all other speakers, after allowing for how much each side talked, scored with the weighted log-odds test in {PAPER}. Counts come from the clean verbatim transcript. Groups come from AI-assigned speaker labels. This is a machine transcript; check the video before quoting anyone. Each page explains the details. Code: <code>scripts/build_wordclouds.py</code>.</p>
-<p>{REMOVED}</p>
+<p>{method_notes(cfg)[0]}</p>
 {('<p><strong>' + esc(cfg["gallery_disclosure"]) + '</strong></p>') if cfg.get("gallery_disclosure") else ''}
 </section>
 </main>
@@ -579,7 +603,7 @@ def build(slug: str, cfg: dict) -> None:
                            subline=sub, extra=extra, result=result, stats=st, display_cfg=disp, cap=cap,
                            subject="This group", subject_kind="group",
                            min_count=cfg["method"]["min_group_count"], csv_name=f"{g['slug']}.csv",
-                           root="../../../", hearing_root="../", nav_prefix="", gallery_href="index.html")
+                           root="../../../", hearing_root="../", nav_prefix="", gallery_href="index.html", notes=cfg)
         write_text(wdir / f"{g['slug']}.html", page)
         write_phrase_csv(wdir / f"{g['slug']}.csv", result["phrases"])
         title = g["who"][0].upper() + g["who"][1:]
@@ -602,7 +626,7 @@ def build(slug: str, cfg: dict) -> None:
                            subline=sub, extra=extra, result=result, stats=st, display_cfg=disp, cap=cap,
                            subject=p["name"], subject_kind="person", min_count=pm["min_person_count"],
                            csv_name=f"{p['slug']}.csv", root="../../../../", hearing_root="../../",
-                           nav_prefix="../", gallery_href="../index.html")
+                           nav_prefix="../", gallery_href="../index.html", notes=cfg)
         write_text(wdir / "people" / f"{p['slug']}.html", page)
         write_phrase_csv(wdir / "people" / f"{p['slug']}.csv", result["phrases"])
         pcards.append(gallery_card(f"{p['name']} ({p['affiliation']})", "", f"people/{p['slug']}.html",
@@ -615,17 +639,18 @@ def build(slug: str, cfg: dict) -> None:
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--slug", action="append", help="hearing slug (repeatable); default: every hearing")
-    ap.add_argument("--config", default=str(DEFAULT_CONFIG))
+    ap.add_argument("--config", help="use this config for every hearing built. Default: each hearing's "
+                    "scripts/meta/<slug>-wordclouds.json if it exists, else scripts/meta/wordclouds.json")
     a = ap.parse_args(argv)
-    cfg_path = Path(a.config)
-    if not cfg_path.is_file():
-        die(f"config missing: {cfg_path}")
-    cfg = load_config(cfg_path)
+    if a.config and not Path(a.config).is_file():
+        die(f"config missing: {a.config}")
     slugs = a.slug or sorted(p.parent.parent.name for p in (REPO / "hearings").glob("*/transcript/turns.csv"))
     if not slugs:
         die("no hearings with transcript/turns.csv")
     for slug in slugs:
-        build(slug, cfg)
+        path = Path(a.config) if a.config else config_for(slug, DEFAULT_CONFIG)
+        log("config", slug=slug, path=path.name)
+        build(slug, load_config(path))
 
 
 if __name__ == "__main__":

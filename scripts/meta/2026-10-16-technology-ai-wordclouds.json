@@ -1,0 +1,28 @@
+{
+  "_comment": "Word cloud groups and people for the 2026-10-16 hearing. Inherits method, display, stopwords, capitalization and join terms from wordclouds.json (made for 2026-10-05); replaces groups, people and the method notes.",
+  "extends": "wordclouds.json",
+  "people_method": {
+    "min_person_count": 2,
+    "brief_threshold": 10,
+    "_comment": "Each person is compared with every other speaker at the hearing, including the rest of their own group.",
+    "intro": "Individual pages for the SpaceXAI witness, the former xAI employee, and the two Council Members who ran the hearing."
+  },
+  "groups": [
+    {"slug": "council-members", "nav": "Council Members", "who": "Council Members",
+     "note": "Including Speaker Menin and Chair De La Rosa, who asked most of the questions",
+     "match": {"category": "council"}},
+    {"slug": "spacexai", "nav": "SpaceXAI", "who": "SpaceXAI",
+     "note": "One witness, Gabriela Castillo Madrid",
+     "match": {"category": "ai-company"}},
+    {"slug": "witnesses", "nav": "Other witnesses", "who": "the other witnesses",
+     "note": "Devin Kim, formerly of xAI, his counsel, and the public witnesses",
+     "match": {"category": "witness"}}
+  ],
+  "people": [
+    {"slug": "gabriela-castillo-madrid", "name": "Gabriela Castillo Madrid", "affiliation": "SpaceXAI", "group": "spacexai"},
+    {"slug": "devin-kim", "name": "Devin Kim", "affiliation": "former xAI employee", "group": "witnesses"},
+    {"slug": "julie-menin", "name": "Julie Menin", "affiliation": "Speaker", "group": "council-members"},
+    {"slug": "carmen-de-la-rosa", "name": "Carmen De La Rosa", "affiliation": "Council Member, chair of the Committee on Technology", "group": "council-members"}
+  ],
+  "removed_note_html": "Common words, speakers&#x27; names, &ldquo;New York&rdquo;, &ldquo;city&rdquo;, &ldquo;AI&rdquo; and hearing boilerplate are left out, using the word lists made for the 2026-10-05 hearing, which include filler an AI assistant proposed cutting from that hearing&#x27;s lists. This hearing&#x27;s lists were not reviewed by hand. Word lists: <a href=\"https://github.com/BetaNYC/hearings-transcripts/blob/main/scripts/meta/wordclouds.json\">scripts/meta/wordclouds.json</a>; this hearing&#x27;s groups: <a href=\"https://github.com/BetaNYC/hearings-transcripts/blob/main/scripts/meta/2026-10-16-technology-ai-wordclouds.json\">scripts/meta/2026-10-16-technology-ai-wordclouds.json</a>."
+}

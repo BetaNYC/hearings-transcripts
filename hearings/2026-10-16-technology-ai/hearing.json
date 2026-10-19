@@ -1,0 +1,101 @@
+{
+  "slug": "2026-10-16-technology-ai",
+  "title": "Oversight - Continuing Discussion about the Risks Posed by Artificial Intelligence",
+  "body": "NYC Council Committee on Technology",
+  "date": "2026-10-16",
+  "start_time_local": "10:00",
+  "timezone": "America/New_York",
+  "location": "Council Chambers, City Hall, New York, NY",
+  "legistar": {
+    "event_id": 22795,
+    "url": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22795&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+    "agenda_url": "https://nyc.legistar1.com/nyc/meetings/2026/10/22795_A_Committee_on_Technology_26-10-16_Committee_Agenda.pdf"
+  },
+  "video": {
+    "duration_hms": "01:57:28",
+    "council_source_url": "https://councilnyc.viebit.com/vod/?s=true&v=NYCC-PV-CH-CHA_261016-101016.mp4",
+    "internet_archive_url": "",
+    "archive_playable": false
+  },
+  "oversight_topic": {
+    "file": "T2026-2684",
+    "name": "Oversight - Continuing Discussion about the Risks Posed by Artificial Intelligence"
+  },
+  "bills": [],
+  "media": {
+    "audio_opus": {
+      "path": "media/hearing-audio-16k.opus",
+      "format": "Opus audio, 16 kbps mono"
+    },
+    "audio_mp3": {
+      "release_tag": "2026-10-16-technology-ai",
+      "release_url": "",
+      "asset_name": "hearing-audio-64k.mp3",
+      "bytes": 56386227,
+      "format": "MP3 audio, 64 kbps mono, 16 kHz",
+      "release_published": false
+    }
+  },
+  "transcription": {
+    "engine": "Deepgram",
+    "model": "nova-3",
+    "diarized": true,
+    "generated": "2026-10-19",
+    "keyterms": "hearings/2026-10-16-technology-ai/lexicon.txt (14 terms, sources in the file); BetaNYC's organization list not used.",
+    "turn_merge_rule": "Consecutive Deepgram segments merged into one turn when they share a speaker cluster and the gap between them is under 5 seconds.",
+    "runs": "Run 2 is published. Run 1 (2026-10-19) used BetaNYC's organization list, which put a staff name in place of the SpaceX witness's self-introduction; its files are kept outside the repo as *-run1-core-lexicon.*"
+  },
+  "disclosure": "",
+  "context": {
+    "text": "The committee report states that SpaceXAI was issued a subpoena to provide testimony before the City Council but did not appear during the Committee of the Whole's hearing on October 5, 2026; that SpaceXAI afterwards reached out to the Council and agreed to provide testimony at this October 16 hearing; and that the Committee expected testimony from SpaceXAI and other interested parties.",
+    "source": "Committee Report, T2026-2684, Committee on Technology, October 16, 2026, Introduction (Legistar attachment, last modified 2026-10-15), legistar/t2026-2684-committee-report.docx"
+  },
+  "chair": "Carmen De La Rosa",
+  "council_members_present": [
+    {
+      "name": "Julie Menin",
+      "role": "Speaker"
+    },
+    {
+      "name": "Carmen De La Rosa",
+      "role": "Council Member"
+    },
+    {
+      "name": "Virginia Maloney",
+      "role": "Council Member"
+    },
+    {
+      "name": "Jennifer Gutiérrez",
+      "role": "Council Member"
+    },
+    {
+      "name": "Mercedes Narcisse",
+      "role": "Council Member"
+    }
+  ],
+  "council_members_present_source": "From the speaker labels (who is heard on the recording), not the committee roster; members who attended without speaking are not listed. Carmen De La Rosa chairs the Committee on Technology (Legistar).",
+  "mixed_turns": 56,
+  "naming_sources": "self-introductions, the chair calling on people, Zoom name labels read from video frames, the Council's own captions, and voice clusters",
+  "witness_spelling": "Witness names follow the Zoom name label where one was shown on screen, and otherwise the transcription. The SpaceXAI witness is \"Gabriela Castillo Madrid\" as her Zoom tile showed it; the Council's captions have \"Gabriella Madrid\" at her self-introduction and \"Christina Madrid\" when counsel called her. Names have not been checked against a witness list or written testimony; corrections are welcome as GitHub issues.",
+  "known_gaps": [
+    "Qiaojing Ella Zheng is labeled \"counsel to Devin Kim\". She named her law firm, but the transcription and the captions disagree on its name, so no firm is given.",
+    "The word lists for this hearing's word clouds were not reviewed by hand. They reuse the stopwords made for the 2026-10-05 hearing, so some filler (for example \"obviously\", \"asked\") remains."
+  ],
+  "stats": {
+    "turns": 248,
+    "speakers": 17,
+    "words": 17366,
+    "duration_sec": 7048.224,
+    "confidence_counts": {
+      "high": 234,
+      "medium": 13,
+      "low": 1
+    },
+    "unidentified_turns": 0,
+    "legistar_documents": 2
+  },
+  "license": {
+    "data": "CC-BY-4.0 (BetaNYC's transcripts, labels and exports)",
+    "public_records": "Video, audio and Legistar documents are public records produced by the New York City Council."
+  }
+}

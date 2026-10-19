@@ -12,8 +12,13 @@ Inputs (all local files):
   --transcript      unedited transcript text  ([HH:MM:SS] Name: text, one turn per block)
   --transcript-clean  clean-verbatim transcript text (same turns, same prefixes)
   --audio-opus      optional: Opus audio to copy into media/ (must be < 100 MB)
-  --legistar-pre-readme / --legistar-pre-dir / --legistar-post-json / --legistar-post-dir
-                    optional: rebuild legistar/ (documents + manifest.csv).
+  --panels          optional: panels.json to copy into the hearing folder (validated against
+                    the turns); scripts/build_panels.py draws it
+  --legistar-pre-dir [--legistar-post-dir]
+                    optional: rebuild legistar/ (documents + manifest.csv) from the pre-hearing
+                    scripts/fetch_legistar.py folder, plus the post-hearing re-download when there
+                    is one (newer copies win). --legistar-pre-readme / --legistar-post-json read
+                    the hand-made 2026-10-05 format instead.
                     If omitted, the existing legistar/manifest.csv is kept.
 
   python3 scripts/build_hearing.py --index-only     rebuilds index.html only.
@@ -49,6 +54,17 @@ TURN_FIELDS = [
     "turn_id", "start_sec", "end_sec", "start_hms", "end_hms", "speaker_name",
     "speaker_role", "confidence", "deepgram_cluster", "text_clean", "text_unedited",
 ]
+MIXED_FIELD = "mixed"  # added when the labels record two-voice turns (meta "mixed_turns" set)
+MIXED_MARK = "MIXED:"  # how a label's evidence marks a turn that holds more than one voice
+DEFAULT_WITNESS_SPELLING = ("Witness names are spelled as the transcription heard them and have not been checked "
+                            "against a witness list or written testimony. Some are likely misspelled; corrections "
+                            "are welcome as GitHub issues.")
+
+
+def turn_fields(meta: dict) -> list[str]:
+    return TURN_FIELDS + ([MIXED_FIELD] if "mixed_turns" in meta else [])
+
+
 SPEAKER_FIELDS = ["speaker_name", "speaker_role", "category", "turns", "talk_seconds", "first_heard_hms"]
 MANIFEST_FIELDS = ["matter_file", "matter_title", "attachment_name", "legistar_url",
                    "last_modified_utc", "filename", "bytes"]
@@ -69,7 +85,9 @@ COUNCIL_STAFF_ROLES = {"Committee Counsel", "Sergeant-at-Arms"}
 ELECTED_ROLE_PREFIXES = ("NY State Senator", "NY State Assembly Member", "NYC Public Advocate",
                          "UK Member of Parliament")
 WITNESS_PREFIX = "Witness — "
-AI_COMPANY_ORGS = {"openai", "anthropic", "meta", "google", "company panel"}
+# The companies the Council invited to testify as AI companies: four on 2026-10-05, SpaceXAI
+# (subpoenaed for 2026-10-05, testified 2026-10-16). Other companies' witnesses are "witness".
+AI_COMPANY_ORGS = {"openai", "anthropic", "meta", "google", "company panel", "spacexai"}
 CITY_AGENCY_ORGS = {"oti", "nyc cyber command / oti", "dcwp", "nyc emergency management",
                     "nyc equal employment practices commission"}
 ELECTED_WITNESS_ORGS = {"ny state senate"}
@@ -139,6 +157,64 @@ def release_note(meta: dict) -> str:
     return "" if meta["media"]["audio_mp3"].get("release_published") else RELEASE_PENDING_NOTE
 
 
+def archive_md(meta: dict) -> str:
+    """README line for the Internet Archive copy; says so when there is none yet."""
+    url = meta["video"].get("internet_archive_url")
+    if not url:
+        return "- Watch: the Internet Archive copy has not been uploaded yet."
+    note = archive_note(meta)
+    return f"- Watch: [Internet Archive]({url})" + (f" ({note})" if note else "")
+
+
+PANEL_KEYS = {"panel_id", "title", "start_hms", "end_hms", "turn_ids", "members"}
+
+
+def check_panels(panels: list[dict], n_turns: int) -> None:
+    """panels.json: [{panel_id,title,start_hms,end_hms,turn_ids,members:[{name,role,org}]}].
+    Every turn id must exist, belong to one panel only, and panels must be in time order."""
+    seen: set[int] = set()
+    ids = []
+    for p in panels:
+        missing = PANEL_KEYS - set(p)
+        if missing:
+            die(f"panel {p.get('panel_id')!r}: missing {sorted(missing)}")
+        ids.append(p["panel_id"])
+        for t in p["turn_ids"]:
+            if not (isinstance(t, int) and 0 <= t < n_turns):
+                die(f"panel {p['panel_id']}: turn id {t!r} out of range 0..{n_turns - 1}")
+            if t in seen:
+                die(f"panel {p['panel_id']}: turn {t} is already in another panel")
+            seen.add(t)
+        for m in p["members"]:
+            if set(m) != {"name", "role", "org"}:
+                die(f"panel {p['panel_id']}: member keys must be name, role, org; got {sorted(m)}")
+    if len(set(ids)) != len(ids):
+        die("panels.json: duplicate panel_id")
+    starts = [p["start_hms"] for p in panels]
+    if starts != sorted(starts):
+        die("panels.json: panels are not in time order")
+
+
+def clock_12h(hhmm: str) -> str:
+    """'11:00' -> '11:00 AM', '14:30' -> '2:30 PM'."""
+    h, m = (int(x) for x in hhmm.split(":"))
+    return f"{(h % 12) or 12}:{m:02d} {'AM' if h < 12 else 'PM'}"
+
+
+def context_md(meta: dict) -> str:
+    """Optional README section: why the hearing happened (meta.context) and who attended."""
+    parts = []
+    ctx = meta.get("context")
+    if ctx:
+        parts.append(f"{ctx['text']} (Source: {ctx['source']}.)")
+    present = meta.get("council_members_present")
+    if present:
+        names = "; ".join(f"{p['name']} ({p['role']})" for p in present)
+        parts.append(f"Council Members heard on the recording: {names}. "
+                     f"{meta.get('council_members_present_source', '')}".rstrip())
+    return ("## Context\n\n" + "\n\n".join(parts) + "\n\n") if parts else ""
+
+
 def human_dur(sec: float) -> str:
     m = round(sec / 60)
     return f"{m // 60}h {m % 60:02d}m" if m >= 60 else f"{m}m"
@@ -179,13 +255,30 @@ TURN_LINE = re.compile(r"^\[(\d{2}:\d{2}:\d{2})\] ")
 
 def parse_transcript(path: Path) -> list[tuple[str, str]]:
     """Return [(hms, 'Name[ [?]]: text'), ...] for each turn block, skipping the header."""
-    blocks = re.split(r"\n\s*\n", path.read_text(encoding="utf-8"))
+    try:
+        return parse_transcript_text(path.read_text(encoding="utf-8"))
+    except ValueError as e:
+        die(f"{path}: {e}")
+
+
+def parse_transcript_text(text: str) -> list[tuple[str, str]]:
+    """Turn blocks are separated by a line that is empty or whitespace only; a block is a turn
+    when it starts with `[HH:MM:SS] `. Lines inside a block are joined with one space.
+
+    Blocks before the first turn are a free-text header. After the first turn, every block must
+    be a turn: a block without a timestamp (for example text cut off from its turn by a stray
+    blank line) raises ValueError instead of being dropped. validate_clean.py uses this same
+    function, so it sees exactly the turns the build sees."""
+    blocks = re.split(r"\n\s*\n", text)
     out = []
     for b in blocks:
         b = b.strip("\n")
         m = TURN_LINE.match(b)
         if m:
             out.append((m.group(1), " ".join(line.strip() for line in b[m.end():].splitlines())))
+        elif out and b.strip():
+            raise ValueError(f"text after turn {len(out) - 1} ([{out[-1][0]}]) is not a turn: "
+                             f"{b.strip()[:60]!r}. A blank line inside a turn splits it; remove it.")
     return out
 
 
@@ -241,13 +334,14 @@ def build_turns(dg: dict, labels: list[dict], t_unedited: Path, t_clean: Path) -
             "deepgram_cluster": t["cluster"],
             "text_clean": split_turn_text(clean[i][1], lab, "clean", i),
             "text_unedited": split_turn_text(unedited[i][1], lab, "unedited", i),
+            MIXED_FIELD: MIXED_MARK in lab.get("evidence", ""),
             "_segments": t["segments"],
         })
     return turns
 
 
-def public_turn(t: dict) -> dict:
-    return {k: t[k] for k in TURN_FIELDS}
+def public_turn(t: dict, fields: list[str] = TURN_FIELDS) -> dict:
+    return {k: t[k] for k in fields}
 
 
 # ---- words + captions ----------------------------------------------------------------
@@ -331,19 +425,42 @@ def build_speakers(turns: list[dict]) -> list[dict]:
 README_ROW = re.compile(r"^\|\s*([^|]+?)\s*\|\s*\[([^\]]+)\]\(([^)]+)\)\s*\|\s*([^|]*?)\s*\|\s*`([^`]+)`")
 
 
-def build_legistar(meta: dict, out: Path, pre_readme: Path, pre_dir: Path, post_json: Path, post_dir: Path) -> list[dict]:
+def fetched_rows(folder: Path) -> list[tuple[str, str, str, str, str, int]]:
+    """(matter, attachment, last_modified_utc, url, filename, bytes) from a scripts/fetch_legistar.py
+    download folder's manifest.csv."""
+    with open(folder / "manifest.csv", encoding="utf-8", newline="") as f:
+        return [(r["matter_file"], r["attachment_name"], r["last_modified_utc"], r["legistar_url"],
+                 r["filename"], int(r["bytes"])) for r in csv.DictReader(f)]
+
+
+def build_legistar(meta: dict, out: Path, pre_readme: Path | None, pre_dir: Path,
+                   post_json: Path | None, post_dir: Path | None) -> list[dict]:
+    """Rebuild legistar/ from the pre-hearing download and, if given, the post-hearing one.
+
+    Each download is either a scripts/fetch_legistar.py folder (its manifest.csv is read) or the
+    2026-10-05 hand-made format (a README attachment table for the pre-hearing download, a JSON list
+    of [matter, attachment, last_modified_utc, url, filename, bytes] for the post-hearing one)."""
     titles = {b["file"]: b["name"] for b in meta["bills"]}
     titles[meta["oversight_topic"]["file"]] = meta["oversight_topic"]["name"]
     titles["Meeting"] = f"Meeting agenda, Legistar event {meta['legistar']['event_id']}"
     rows: dict[tuple[str, str], dict] = {}
-    for line in pre_readme.read_text(encoding="utf-8").splitlines():
-        m = README_ROW.match(line)
-        if not m:
-            continue
-        matter, name, url, mod, fname = m.groups()
-        rows[(matter, name)] = {"matter_file": matter, "attachment_name": name, "legistar_url": url,
-                                "last_modified_utc": mod, "filename": fname, "_src": pre_dir / fname}
-    for matter, name, mod, url, fname, nbytes in read_json(post_json):
+    if pre_readme:
+        for line in pre_readme.read_text(encoding="utf-8").splitlines():
+            m = README_ROW.match(line)
+            if not m:
+                continue
+            matter, name, url, mod, fname = m.groups()
+            rows[(matter, name)] = {"matter_file": matter, "attachment_name": name, "legistar_url": url,
+                                    "last_modified_utc": mod, "filename": fname, "_src": pre_dir / fname}
+    else:
+        for matter, name, mod, url, fname, nbytes in fetched_rows(pre_dir):
+            src = pre_dir / fname
+            if src.stat().st_size != nbytes:
+                die(f"pre-hearing {fname}: {src.stat().st_size} bytes on disk, manifest says {nbytes}")
+            rows[(matter, name)] = {"matter_file": matter, "attachment_name": name, "legistar_url": url,
+                                    "last_modified_utc": mod, "filename": fname, "_src": src}
+    post = read_json(post_json) if post_json else (fetched_rows(post_dir) if post_dir else [])
+    for matter, name, mod, url, fname, nbytes in post:
         src = post_dir / fname
         if src.stat().st_size != nbytes:
             die(f"post-hearing {fname}: {src.stat().st_size} bytes on disk, manifest says {nbytes}")
@@ -352,7 +469,7 @@ def build_legistar(meta: dict, out: Path, pre_readme: Path, pre_dir: Path, post_
     # A filename shared by several matters (or re-saved post-hearing) resolves to the newest copy.
     newest: dict[str, Path] = {}
     for r in rows.values():
-        if r["_src"].parent == post_dir or r["filename"] not in newest:
+        if (post_dir and r["_src"].parent == post_dir) or r["filename"] not in newest:
             newest[r["filename"]] = r["_src"]
     dest = out / "legistar"
     if dest.exists():
@@ -392,13 +509,21 @@ def hearing_readme(meta: dict, stats: dict, speakers: list[dict], manifest: list
         cats[s["category"]] = cats.get(s["category"], 0) + 1
     cat_lines = "\n".join(f"| `{k}` | {CATEGORIES[k][0]} | {cats.get(k, 0)} |" for k in CATEGORIES)
     docs = len({m["filename"] for m in manifest})
-    pending = "".join(f"- {n}\n" for n in (archive_note(meta), release_note(meta)) if n)
+    notes = [archive_note(meta) if meta["video"].get("internet_archive_url")
+             else "The video has not been uploaded to the Internet Archive yet.",
+             release_note(meta) if meta["media"]["audio_mp3"].get("release_url")
+             else "The full-quality MP3 has not been published as a GitHub Release yet."]
+    pending = "".join(f"- {n}\n" for n in notes if n)
+    unid = stats["unidentified_turns"]
+    unid_line = ("No turn is labeled Unidentified." if unid == 0 else
+                 f"{unid} turns are labeled Unidentified: short interjections, audience\n"
+                 "  remarks, off-mic presiding remarks, and a few witnesses whose names were not audible.")
     return f"""# {meta['body']}: {meta['title']}
 
 **{meta['date']}, {meta['start_time_local']}, {meta['location']}.** Legistar event
 [{meta['legistar']['event_id']}]({meta['legistar']['url']}). Video length {meta['video']['duration_hms']}.
 
-- Watch: [Internet Archive]({meta['video']['internet_archive_url']}){(' (' + archive_note(meta) + ')') if archive_note(meta) else ''}
+{archive_md(meta)}
 - Council's own video: [councilnyc.viebit.com]({meta['video']['council_source_url']})
 
 This is a machine transcript with speaker names added by BetaNYC. **It is not an official
@@ -411,25 +536,23 @@ record.** Check the video before quoting anyone.
 | `hearing.json` | Machine-readable metadata: body, date, Legistar ids, video links, bills heard, counts |
 | `transcript/transcript.txt` | Unedited transcript, one turn per paragraph: `[HH:MM:SS] Name: text` |
 | `transcript/transcript-clean.txt` | Clean verbatim: fillers, stutters and false starts removed; punctuation, spelling and number formatting fixed; and words the transcription clearly misheard, including names, corrected. Speaker labels and timestamps are unchanged. |
-| `transcript/turns.csv`, `turns.json` | One row per speaker turn: `{', '.join(TURN_FIELDS)}` |
+| `transcript/turns.csv`, `turns.json` | One row per speaker turn: `{', '.join(turn_fields(meta))}`{mixed_field_note(meta)} |
 | `transcript/words.json` | Every word with its start and end time in seconds and its `turn_id` (unedited words) |
 | `transcript/captions.vtt` | WebVTT captions, speaker in a `<v>` tag, cues of 7 seconds or less |
 | `speakers.csv` | One row per speaker: `{', '.join(SPEAKER_FIELDS)}` |
 | `legistar/` | {docs} documents from Legistar plus `manifest.csv` with each document's Legistar URL and last-modified time |
 | `media/` | 16 kbps Opus audio, and pointers to the video and the full-quality MP3 |
-
+{panels_file_rows(meta['slug'])}
 Times are seconds from the start of the Council's recording (00:00:00 is the first frame,
-not 11:00 AM).
+not {clock_12h(meta['start_time_local'])}).
 
 ## Bills and topics heard
 
 Oversight topic: {meta['oversight_topic']['file']}, {meta['oversight_topic']['name']}.
 
-| File | Subject | Lead sponsor |
-|---|---|---|
-{bills}
+{('| File | Subject | Lead sponsor |' + chr(10) + '|---|---|---|' + chr(10) + bills) if bills else 'No bills were on the agenda; this was an oversight hearing only.'}
 
-## Counts
+{context_md(meta)}## Counts
 
 - Turns: {stats['turns']}; speakers (name and role pairs): {stats['speakers']}; words: {stats['words']}
 - Speaker-name confidence by turn: high {conf['high']}, medium {conf['medium']}, low {conf['low']}
@@ -441,21 +564,19 @@ Speaker categories (derived from the role, see the repository README for the rul
 |---|---|---|
 {cat_lines}
 
-{wordclouds_readme_section(meta['slug'])}## Known gaps
+{panels_readme_section(meta['slug'])}{wordclouds_readme_section(meta['slug'])}## Known gaps
 
 - Speaker names were assigned after transcription. A low-confidence name shows `[?]` in the
   transcripts and `low` in `turns.csv`. Some turns contain two voices (for example a question
   and the start of an answer) because the diarization did not split them.
-- {stats['unidentified_turns']} turns are labeled Unidentified: short interjections, audience
-  remarks, off-mic presiding remarks, and a few witnesses whose names were not audible.
-- Speaker names come from self-introductions, the chair calling on people, the on-screen name
-  banner (shown only for the Speaker), and voice clusters. Names were assigned by AI agents working from these sources, at BetaNYC's direction. Elected officials were checked against Legistar and NYS Open Legislation. Other names were not individually verified by a person.
-- Witness names are spelled as the transcription heard them and have not been checked against a witness list or written testimony. Some are likely misspelled; corrections are welcome as GitHub issues.
+- {unid_line}
+- Speaker names come from {meta.get('naming_sources') or 'self-introductions, the chair calling on people, the on-screen name' + chr(10) + '  banner (shown only for the Speaker), and voice clusters'}. Names were assigned by AI agents working from these sources, at BetaNYC's direction. Elected officials were checked against Legistar and NYS Open Legislation. Other names were not individually verified by a person.
+- {meta.get('witness_spelling') or DEFAULT_WITNESS_SPELLING}
 - The clean verbatim copy edit was AI-assisted: fillers, stutters and false starts removed; punctuation, spelling and number formatting fixed; and words the transcription clearly misheard, including names, corrected. Speaker labels and timestamps are unchanged. The build checks that every turn's
   timestamp and speaker label match the unedited transcript, which is kept alongside in every
   export.
-- Talk time is approximate: a few turns contain two voices.
-{pending}"""
+- Talk time is approximate: {mixed_turns_phrase(meta)}.{(' They are marked `mixed` in `turns.csv`; check the video before quoting one of them.') if 'mixed_turns' in meta else ''}
+{''.join('- ' + g + chr(10) for g in meta.get('known_gaps', []))}{pending}"""
 
 
 def media_readme(meta: dict) -> str:
@@ -468,10 +589,10 @@ license does not cover them.
 
 | What | Where |
 |---|---|
-| Video (Internet Archive copy) | {meta['video']['internet_archive_url']} {archive_note(meta)} |
+| Video (Internet Archive copy) | {(meta['video']['internet_archive_url'] + ' ' + archive_note(meta)) if meta['video']['internet_archive_url'] else 'Not uploaded yet.'} |
 | Video (Council source) | {meta['video']['council_source_url']} |
 | Audio, small | `{Path(opus['path']).name}` in this folder. {opus['format']} |
-| Audio, full quality | GitHub Release `{mp3['release_tag']}`, asset `{mp3['asset_name']}` ({human_bytes(mp3['bytes'])}, {mp3['format']}): {mp3['release_url']} {release_note(meta)} |
+| Audio, full quality | GitHub Release `{mp3['release_tag']}`, asset `{mp3['asset_name']}` ({human_bytes(mp3['bytes'])}, {mp3['format']}): {(mp3['release_url'] + ' ' + release_note(meta)) if mp3['release_url'] else 'not published yet.'} |
 
 The MP3 is the file that was transcribed. It is kept out of git because GitHub refuses files
 over 100 MB. The Opus file was encoded from the same audio and plays the same timeline, so
@@ -494,7 +615,7 @@ def chart_svg(speakers: list[dict], slug: str, top: int = 25) -> str:
                      for r in rows)
     parts = [(f'<svg class="chart" viewBox="0 0 {width} {height}" width="100%" role="img" '
               f'aria-labelledby="chart-title-{slug} chart-desc-{slug}" xmlns="http://www.w3.org/2000/svg">'),
-             f'<title id="chart-title-{slug}">Top {len(rows)} speakers by talk time</title>',
+             f'<title id="chart-title-{slug}">{top_phrase(speakers)} by talk time</title>',
              f'<desc id="chart-desc-{slug}">Horizontal bar chart, longest first. {esc(desc)}.</desc>']
     for n, r in enumerate(rows):
         y = top_pad + n * row_h
@@ -534,6 +655,13 @@ def qa_card_section(slug: str) -> str:
             f'<a href="hearings/{esc(slug)}/city-qa.html">Read the questions and answers</a>.</p>')
 
 
+def wordclouds_config_md(slug: str) -> str:
+    own = REPO / "scripts" / "meta" / f"{slug}-wordclouds.json"
+    if own.is_file():
+        return f"`scripts/meta/{slug}-wordclouds.json` (which builds on `scripts/meta/wordclouds.json`)"
+    return "`scripts/meta/wordclouds.json`"
+
+
 def wordclouds_readme_section(slug: str) -> str:
     """Hearing README section (between markers), if the word cloud gallery exists."""
     if not (REPO / "hearings" / slug / "wordclouds" / "index.html").is_file():
@@ -544,13 +672,76 @@ def wordclouds_readme_section(slug: str) -> str:
             "word cloud, a bar chart and a table. Each `wordclouds/<group>.csv` (and\n"
             "`wordclouds/people/<person>.csv`) lists every phrase that passed: `phrase, group_count,\n"
             "others_count, z`. Built by `scripts/build_wordclouds.py`; groups and word lists are in\n"
-            "`scripts/meta/wordclouds.json`.\n"
+            f"{wordclouds_config_md(slug)}.\n"
             + ("\n[`city-qa.html`](city-qa.html) lists every question Council Members asked the City's panel,\n"
                "with the administration's answers from the transcript. Built by\n"
                "`scripts/build_qa.py`; question headlines and follow-ups are in\n"
                f"`scripts/meta/{slug}-city-qa.json`.\n"
                if (REPO / "hearings" / slug / "city-qa.html").is_file() else "")
             + f"{WC_END}\n\n")
+
+
+PN_START, PN_END = "<!-- panels:start -->", "<!-- panels:end -->"
+
+
+def panels_file_rows(slug: str) -> str:
+    if not (REPO / "hearings" / slug / "panels.json").is_file():
+        return ""
+    return ("| `panels.json` | The hearing's parts in order: `[{panel_id, title, start_hms, end_hms, "
+            "turn_ids, members:[{name, role, org}]}]`. `turn_ids` are `turn_id`s in `turns.csv`; each turn is "
+            "in at most one panel |\n"
+            "| `panels.html` | Who spoke, panel by panel: a timeline of every turn and talk time per panel "
+            "(built by `scripts/build_panels.py`) |\n"
+            + ("| `lexicon.txt` | The keyterms sent to Deepgram for this hearing, with their sources |\n"
+               if (REPO / "hearings" / slug / "lexicon.txt").is_file() else ""))
+
+
+def panels_readme_section(slug: str) -> str:
+    if not (REPO / "hearings" / slug / "panels.html").is_file():
+        return ""
+    return (f"{PN_START}\n## Who spoke, panel by panel\n\n"
+            "[`panels.html`](panels.html) shows every speaker turn on a timeline of the hearing, with the\n"
+            "panels as bands, and each panel's talk time by speaker, Council and witnesses side by side.\n"
+            "Built by `scripts/build_panels.py` from `panels.json` and `transcript/turns.csv`.\n"
+            f"{PN_END}\n\n")
+
+
+def panels_card_section(slug: str) -> str:
+    if not (REPO / "hearings" / slug / "panels.html").is_file():
+        return ""
+    return (f'<h4>Who spoke, panel by panel</h4>\n  <p>Every speaker turn on a timeline of the hearing, and '
+            f'talk time for each panel. <a href="hearings/{esc(slug)}/panels.html">See who spoke, panel by panel</a>.</p>')
+
+
+def mixed_field_note(meta: dict) -> str:
+    if "mixed_turns" not in meta:
+        return ""
+    return (". `mixed` is `true` when the speaker labels record more than one voice in the turn; the turn "
+            "is credited to the person named on it")
+
+
+def mixed_turns_phrase(meta: dict) -> str:
+    n = meta.get("mixed_turns")
+    return f"{n} turns contain two voices" if n else "a few turns contain two voices"
+
+
+def sync_readme_section(slug: str, start: str, end: str, section: str) -> None:
+    """Insert or refresh a marked section in an existing hearing README, before Known gaps."""
+    path = REPO / "hearings" / slug / "README.md"
+    if not path.is_file():
+        return
+    text = path.read_text(encoding="utf-8")
+    if start in text:
+        head, rest = text.split(start, 1)
+        new = head + section + rest.split(end, 1)[1].lstrip("\n")
+    elif section and "## Known gaps" in text:
+        anchor = WC_START if WC_START in text else "## Known gaps"
+        new = text.replace(anchor, section + anchor, 1)
+    else:
+        new = text
+    if new != text:
+        write_text(path, new)
+        log("readme_section_synced", slug=slug, section=start)
 
 
 def sync_readme_wordclouds(slug: str) -> None:
@@ -577,6 +768,10 @@ def file_row(base: Path, rel: str, label: str, fmt: str) -> str:
     return f'<li><a href="{esc(rel)}" download>{esc(label)}</a> <span class="meta">{esc(fmt)}, {size}</span></li>'
 
 
+def top_phrase(speakers: list) -> str:
+    return f"Top 25 of {len(speakers)} speakers" if len(speakers) > 25 else f"All {len(speakers)} speakers"
+
+
 def hearing_card(slug: str) -> str:
     hdir = REPO / "hearings" / slug
     meta = read_json(hdir / "hearing.json")
@@ -600,8 +795,12 @@ def hearing_card(slug: str) -> str:
     ]
     file_items = "\n".join(file_row(REPO, p + rel, label, fmt) for rel, label, fmt in files)
     mp3 = meta["media"]["audio_mp3"]
-    file_items += (f'\n<li><a href="{esc(mp3["release_url"])}">Audio, full quality (GitHub Release)</a> '
-                   f'<span class="meta">{esc(mp3["format"])}, {human_bytes(mp3["bytes"])}{(". " + esc(release_note(meta))) if release_note(meta) else ""}</span></li>')
+    if (hdir / "panels.json").is_file():
+        file_items += "\n" + file_row(REPO, p + "panels.json", "Panels and their turns", "JSON")
+    mp3_label = (f'<a href="{esc(mp3["release_url"])}">Audio, full quality (GitHub Release)</a>' if mp3["release_url"]
+                 else "Audio, full quality (GitHub Release, not published yet)")
+    file_items += (f'\n<li>{mp3_label} '
+                   f'<span class="meta">{esc(mp3["format"])}, {human_bytes(mp3["bytes"])}{(". " + esc(release_note(meta))) if release_note(meta) and mp3["release_url"] else ""}</span></li>')
     seen, doc_items = set(), []
     for m in manifest:
         if m["filename"] in seen:
@@ -618,6 +817,12 @@ def hearing_card(slug: str) -> str:
                     f"<td>{human_dur(s['talk_seconds'])}</td></tr>" for s in speakers[:25])
     bills = "".join(f"<li>{esc(b['file'])}: {esc(b['name'])} <span class=\"meta\">(lead sponsor "
                     f"{esc(b['lead_sponsor'])})</span></li>" for b in meta["bills"])
+    ia = meta["video"].get("internet_archive_url")
+    watch = (f'<a class="button" href="{esc(ia)}">Watch on the Internet Archive</a>\n    '
+             f'<a href="{esc(meta["video"]["council_source_url"])}">Council video source</a> ·' if ia else
+             f'<a class="button" href="{esc(meta["video"]["council_source_url"])}">Watch the Council\'s video</a>')
+    bills_block = (f"<summary>Bills heard ({len(meta['bills'])}) and oversight topic</summary>" if meta["bills"]
+                   else "<summary>Oversight topic</summary>")
     st = meta["stats"]
     return f"""
 <article class="card" aria-labelledby="h-{slug}">
@@ -625,12 +830,11 @@ def hearing_card(slug: str) -> str:
   <p class="facts"><strong>{esc(meta['date'])}</strong>, {esc(meta['start_time_local'])} at {esc(meta['location'])}.
     Duration {esc(meta['video']['duration_hms'])}. {st['turns']} speaker turns, {st['speakers']} speakers.</p>
   <p class="actions">
-    <a class="button" href="{esc(meta['video']['internet_archive_url'])}">Watch on the Internet Archive</a>
-    <a href="{esc(meta['video']['council_source_url'])}">Council video source</a> ·
+    {watch}
     <a href="{esc(meta['legistar']['url'])}">Legistar event {meta['legistar']['event_id']}</a> ·
     <a href="{esc(p + 'README.md')}">Hearing README</a>
   </p>
-  {('<p class="meta">' + esc(archive_note(meta)) + '</p>') if archive_note(meta) else ''}
+  {('<p class="meta">' + esc(archive_note(meta)) + '</p>') if archive_note(meta) and ia else ''}
   {('<p>' + esc(meta['disclosure']) + '</p>') if meta.get('disclosure') else ''}
   <h4>Downloads</h4>
   <ul class="files">
@@ -641,20 +845,21 @@ def hearing_card(slug: str) -> str:
     <ul class="files">{''.join(doc_items)}</ul>
   </details>
   <details>
-    <summary>Bills heard ({len(meta['bills'])}) and oversight topic</summary>
+    {bills_block}
     <p>Oversight topic {esc(meta['oversight_topic']['file'])}: {esc(meta['oversight_topic']['name'])}.</p>
-    <ul>{bills}</ul>
+    {('<ul>' + bills + '</ul>') if bills else ''}
   </details>
+  {panels_card_section(slug)}
   {wordclouds_card_section(slug)}
   {qa_card_section(slug)}
   <h4>Who spoke the longest</h4>
-  <p>Top 25 speakers by total talk time. Colors show the speaker category; the role is also written next to each name.</p>
+  <p>{top_phrase(speakers)} by total talk time. Colors show the speaker category; the role is also written next to each name.</p>
   <ul class="legend" aria-label="Chart legend">{legend}</ul>
   {chart_svg(speakers, slug)}
-  <p class="meta">Talk time is approximate: a few turns contain two voices.</p>
+  <p class="meta">Talk time is approximate: {esc(mixed_turns_phrase(meta))}.</p>
   <details>
     <summary>Chart data as a table</summary>
-    <table><caption>Top 25 speakers by talk time</caption>
+    <table><caption>{top_phrase(speakers)} by talk time</caption>
       <thead><tr><th scope="col">Speaker</th><th scope="col">Role</th><th scope="col">Category</th><th scope="col">Turns</th><th scope="col">Talk time</th></tr></thead>
       <tbody>{table}</tbody></table>
   </details>
@@ -664,6 +869,7 @@ def hearing_card(slug: str) -> str:
 def build_index() -> None:
     slugs = sorted((p.parent.name for p in (REPO / "hearings").glob("*/hearing.json")), reverse=True)
     for s in slugs:
+        sync_readme_section(s, PN_START, PN_END, panels_readme_section(s))
         sync_readme_wordclouds(s)
     cards = "\n".join(hearing_card(s) for s in slugs)
     page = f"""<!doctype html>
@@ -736,8 +942,8 @@ footer {{ border-top:1px solid var(--border); margin-top:54px; padding:24px 0; f
 <p><strong>This is a machine transcript, not an official record of the Council.</strong> Words can be wrong, and a speaker name can be wrong.</p>
 <ul>
 <li><code>[?]</code> after a name marks a low-confidence speaker label. Some turns are labeled Unidentified.</li>
-<li>Witness names are spelled as the transcription heard them and have not been checked against a witness list or written testimony. Some are likely misspelled; corrections are welcome as GitHub issues.</li>
-<li>Talk time is approximate: a few turns contain two voices.</li>
+<li>Unless a hearing&#x27;s README says otherwise, witness names are spelled as the transcription heard them and have not been checked against a witness list or written testimony. Some are likely misspelled; corrections are welcome as GitHub issues.</li>
+<li>Talk time is approximate: some turns contain two voices. Where a hearing records them, <code>turns.csv</code> marks them in a <code>mixed</code> column.</li>
 <li>Check the video at the timestamp before quoting anyone.</li>
 <li>Timestamps count from the start of the Council's recording, not the clock time of the hearing.</li>
 </ul>
@@ -773,8 +979,14 @@ def build_hearing(a: argparse.Namespace) -> None:
     tdir.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(a.transcript, tdir / "transcript.txt")
     shutil.copyfile(a.transcript_clean, tdir / "transcript-clean.txt")
-    pub = [public_turn(t) for t in turns]
-    write_csv(tdir / "turns.csv", TURN_FIELDS, pub)
+    fields = turn_fields(meta)
+    if MIXED_FIELD in fields:
+        n_mixed = sum(t[MIXED_FIELD] for t in turns)
+        if n_mixed != meta["mixed_turns"]:
+            die(f"meta mixed_turns is {meta['mixed_turns']}, but {n_mixed} labels are marked {MIXED_MARK!r}")
+    pub = [public_turn(t, fields) for t in turns]
+    write_csv(tdir / "turns.csv", fields,
+              [{k: (str(v).lower() if isinstance(v, bool) else v) for k, v in r.items()} for r in pub])
     write_text(tdir / "turns.json", json.dumps(pub, ensure_ascii=False, indent=1) + "\n")
     write_text(tdir / "words.json", json.dumps(words, ensure_ascii=False, separators=(",", ":")) + "\n")
     write_text(tdir / "captions.vtt", render_vtt(cues, meta))
@@ -790,11 +1002,23 @@ def build_hearing(a: argparse.Namespace) -> None:
             shutil.copyfile(src, dst)
     write_text(out / "media" / "README.md", media_readme(meta))
 
+    if a.panels:
+        panels = read_json(Path(a.panels))
+        check_panels(panels, len(turns))
+        write_text(out / "panels.json", json.dumps(panels, ensure_ascii=False, indent=2) + "\n")
+
     leg = (a.legistar_pre_readme, a.legistar_pre_dir, a.legistar_post_json, a.legistar_post_dir)
     if any(leg):
-        if not all(leg):
-            die("give all four --legistar-* options, or none")
-        manifest = build_legistar(meta, out, *(Path(x) for x in leg))
+        pre_readme, pre_dir, post_json, post_dir = (Path(x) if x else None for x in leg)
+        if not pre_dir:
+            die("--legistar-* options need --legistar-pre-dir")
+        if not pre_readme and not (pre_dir / "manifest.csv").is_file():
+            die(f"{pre_dir} has no manifest.csv (fetch_legistar.py writes one); else give --legistar-pre-readme")
+        if post_json and not post_dir:
+            die("--legistar-post-json needs --legistar-post-dir")
+        if post_dir and not post_json and not (post_dir / "manifest.csv").is_file():
+            die(f"{post_dir} has no manifest.csv (fetch_legistar.py writes one); else give --legistar-post-json")
+        manifest = build_legistar(meta, out, pre_readme, pre_dir, post_json, post_dir)
     else:
         manifest = read_manifest(out)
 
@@ -826,6 +1050,7 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--transcript")
     ap.add_argument("--transcript-clean")
     ap.add_argument("--audio-opus")
+    ap.add_argument("--panels")
     ap.add_argument("--legistar-pre-readme")
     ap.add_argument("--legistar-pre-dir")
     ap.add_argument("--legistar-post-json")
