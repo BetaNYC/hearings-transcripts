@@ -163,7 +163,7 @@ def build(cfg_path: Path) -> Path:
 <p>The question headlines, titles, bill-position summary and follow-up list were written by BetaNYC from the transcript.</p>
 </section>
 </main>
-{footer(root)}
+{footer(root, f"hearings/{hearing['slug']}/{cfg['page']}", hearing)}
 </body>
 </html>
 """

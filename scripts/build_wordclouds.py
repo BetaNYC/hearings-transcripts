@@ -36,6 +36,9 @@ import sys
 import time
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from feedback import feedback_html  # noqa: E402
+
 REPO = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = REPO / "scripts" / "meta" / "wordclouds.json"
 MAX_FILE_BYTES = 100 * 1024 * 1024
@@ -335,8 +338,10 @@ def site_header(root: str) -> str:
             f'betanyc-logo.svg" alt="BetaNYC home" width="142" height="48"></a></div></header>')
 
 
-def footer(root: str) -> str:
-    return (f'<footer><div class="wrap">BetaNYC · <a href="https://beta.nyc/">beta.nyc</a> · '
+def footer(root: str, page_rel: str, hearing: dict | None) -> str:
+    """Site footer, with the report-a-mistake link for this page (scripts/feedback.py)."""
+    return (f'<footer><div class="wrap">{feedback_html(page_rel, hearing)}'
+            f'BetaNYC · <a href="https://beta.nyc/">beta.nyc</a> · '
             f'<a href="{root}index.html">All hearing transcripts</a> · '
             f'<a href="{root}README.md">About this repository</a></div></footer>')
 
@@ -404,7 +409,7 @@ def how_made(subject_kind: str, min_count: int, csv_name: str, root: str, notes:
 def render_page(*, hearing: dict, groups: list[dict], current_group: str | None, title_who: str, subline: str,
                 extra: str, result: dict, stats: dict, display_cfg: dict, cap: dict, subject: str,
                 subject_kind: str, min_count: int, csv_name: str, root: str, hearing_root: str,
-                nav_prefix: str, gallery_href: str, notes: dict | None = None) -> str:
+                nav_prefix: str, gallery_href: str, notes: dict | None = None, page_rel: str = "") -> str:
     phrases = result["phrases"]
     ph = phrases[:display_cfg["cloud_phrases"]]
     for x in ph:
@@ -457,7 +462,7 @@ def render_page(*, hearing: dict, groups: list[dict], current_group: str | None,
 {charts}
 {how_made(subject_kind, min_count, csv_name, hearing_root, notes)}
 </main>
-{footer(root)}
+{footer(root, page_rel, hearing)}
 <div class="tip" id="tip" aria-hidden="true"></div>
 <script>
 const SUBJECT={json_for_script(subject)}, HL={hl};
@@ -529,7 +534,7 @@ def render_gallery(hearing: dict, group_cards: list[str], person_cards: list[str
 {('<p><strong>' + esc(cfg["gallery_disclosure"]) + '</strong></p>') if cfg.get("gallery_disclosure") else ''}
 </section>
 </main>
-{footer(root)}
+{footer(root, f"hearings/{hearing['slug']}/wordclouds/index.html", hearing)}
 </body>
 </html>
 """
@@ -603,7 +608,8 @@ def build(slug: str, cfg: dict) -> None:
                            subline=sub, extra=extra, result=result, stats=st, display_cfg=disp, cap=cap,
                            subject="This group", subject_kind="group",
                            min_count=cfg["method"]["min_group_count"], csv_name=f"{g['slug']}.csv",
-                           root="../../../", hearing_root="../", nav_prefix="", gallery_href="index.html", notes=cfg)
+                           root="../../../", hearing_root="../", nav_prefix="", gallery_href="index.html", notes=cfg,
+                           page_rel=f"hearings/{slug}/wordclouds/{g['slug']}.html")
         write_text(wdir / f"{g['slug']}.html", page)
         write_phrase_csv(wdir / f"{g['slug']}.csv", result["phrases"])
         title = g["who"][0].upper() + g["who"][1:]
@@ -626,7 +632,8 @@ def build(slug: str, cfg: dict) -> None:
                            subline=sub, extra=extra, result=result, stats=st, display_cfg=disp, cap=cap,
                            subject=p["name"], subject_kind="person", min_count=pm["min_person_count"],
                            csv_name=f"{p['slug']}.csv", root="../../../../", hearing_root="../../",
-                           nav_prefix="../", gallery_href="../index.html", notes=cfg)
+                           nav_prefix="../", gallery_href="../index.html", notes=cfg,
+                           page_rel=f"hearings/{slug}/wordclouds/people/{p['slug']}.html")
         write_text(wdir / "people" / f"{p['slug']}.html", page)
         write_phrase_csv(wdir / "people" / f"{p['slug']}.csv", result["phrases"])
         pcards.append(gallery_card(f"{p['name']} ({p['affiliation']})", "", f"people/{p['slug']}.html",

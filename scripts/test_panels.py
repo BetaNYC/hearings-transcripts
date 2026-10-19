@@ -256,13 +256,23 @@ class QaRound1(unittest.TestCase):
                   H / "transcript" / "transcript.txt", H / "transcript" / "transcript-clean.txt",
                   REPO / "index.html", PAGE]:
             text = p.read_text(encoding="utf-8")
-            self.assertNotIn("Sanford Heisler", text, p.name)
+            # Verified 2026-10-19: the firm may appear as an org or in her own words, never as a role.
+            self.assertNotIn("Witness — Sanford", text, p.name)
         # "whistleblower" is spoken in the hearing; it must not be a label in this hearing's data.
         for p in [H / "speakers.csv", H / "panels.json"]:
             self.assertNotIn("whistleblower", p.read_text(encoding="utf-8").lower(), p.name)
         self.assertIn("Qiaojing Ella Zheng (counsel to Devin Kim):", (H / "transcript" / "transcript.txt").read_text(encoding="utf-8"))
         self.assertIn("panel-2-devin-kim", (H / "panels.json").read_text(encoding="utf-8"))
-        self.assertIn("Demilitarized Brooklyn Navy Yard", (H / "speakers.csv").read_text(encoding="utf-8"))
+        clean = (H / "transcript" / "transcript-clean.txt").read_text(encoding="utf-8")
+        self.assertIn("partner at Sanford Heisler Sharp McKnight", clean)
+        members = {m["name"]: m for p in json.loads((H / "panels.json").read_text(encoding="utf-8")) for m in p["members"]}
+        self.assertEqual(members["Qiaojing Ella Zheng"]["role"], "Witness — counsel to Devin Kim")
+        self.assertEqual(members["Qiaojing Ella Zheng"]["org"], "Sanford Heisler Sharp McKnight")
+        readme = (H / "README.md").read_text(encoding="utf-8")
+        self.assertNotIn("no firm is given", readme)
+        for phrase in ("no surname was found", "Sophie Cody", "as stated at the hearing", "former xAI employee"):
+            self.assertIn(phrase, readme)
+        self.assertIn("Witness — Demilitarize Brooklyn Navy Yard", (H / "speakers.csv").read_text(encoding="utf-8"))
 
     def test_council_member_won_in_clean_text(self):
         clean = (H / "transcript" / "transcript-clean.txt").read_text(encoding="utf-8")
@@ -279,6 +289,25 @@ class QaRound1(unittest.TestCase):
     def test_remote_panels_marked_zoom(self):
         titles = {p["panel_id"]: p["title"] for p in json.loads((H / "panels.json").read_text(encoding="utf-8"))}
         self.assertIn("(Zoom)", titles["panel-1-spacexai"])
+
+
+class IndexToc(unittest.TestCase):
+    def test_index_lists_every_hearing_newest_first(self):
+        text = (REPO / "index.html").read_text(encoding="utf-8")
+        toc = text.split('<nav aria-labelledby="toc-h"', 1)[1].split("</nav>", 1)[0]
+        hearings = sorted(((json.loads(p.read_text(encoding="utf-8"))["date"], p.parent.name)
+                           for p in (REPO / "hearings").glob("*/hearing.json")), reverse=True)
+        self.assertGreaterEqual(len(hearings), 2)
+        linked = re.findall(r'<th scope="row"><a href="#h-([^"]+)">', toc)
+        self.assertEqual(linked, [slug for _, slug in hearings])
+        dates = re.findall(r'<td class="nowrap">(\d{4}-\d{2}-\d{2})</td>', toc)
+        self.assertEqual(dates, [d for d, _ in hearings])
+        for _, slug in hearings:
+            self.assertIn(f'id="h-{slug}"', text)
+            self.assertIn(f'href="hearings/{slug}/README.md"', toc)
+        self.assertIn(f'href="hearings/{SLUG}/panels.html"', toc)
+        self.assertIn('href="hearings/2026-10-05-committee-of-the-whole-ai/city-qa.html"', toc)
+        self.assertLess(text.index('id="toc-h"'), text.index("<h2>Each hearing</h2>"))
 
 
 class WordcloudConfigs(unittest.TestCase):

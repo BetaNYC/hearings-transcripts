@@ -85,12 +85,16 @@ others_count, z`. Built by `scripts/build_wordclouds.py`; groups and word lists 
   and the start of an answer) because the diarization did not split them.
 - No turn is labeled Unidentified.
 - Speaker names come from self-introductions, the chair calling on people, Zoom name labels read from video frames, the Council's own captions, and voice clusters. Names were assigned by AI agents working from these sources, at BetaNYC's direction. Elected officials were checked against Legistar and NYS Open Legislation. Other names were not individually verified by a person.
-- Witness names follow the Zoom name label where one was shown on screen, and otherwise the transcription. The SpaceXAI witness is "Gabriela Castillo Madrid" as her Zoom tile showed it; the Council's captions have "Gabriella Madrid" at her self-introduction and "Christina Madrid" when counsel called her. Names have not been checked against a witness list or written testimony; corrections are welcome as GitHub issues.
+- Witness names follow the Zoom name label where one was shown on screen, and otherwise the transcription. The SpaceXAI witness is "Gabriela Castillo Madrid": that spelling matches her video label and press coverage (PIX11); the Council's captions have "Gabriella Madrid" at her self-introduction and "Christina Madrid" when counsel called her. Qiaojing Ella Zheng's firm, Sanford Heisler Sharp McKnight, was checked against public professional listings (Chambers, Daily Journal). Other names have not been checked against a witness list or written testimony; corrections are welcome as GitHub issues.
 - The clean verbatim copy edit was AI-assisted: fillers, stutters and false starts removed; punctuation, spelling and number formatting fixed; and words the transcription clearly misheard, including names, corrected. Speaker labels and timestamps are unchanged. The build checks that every turn's
   timestamp and speaker label match the unedited transcript, which is kept alongside in every
   export.
 - Talk time is approximate: 56 turns contain two voices. They are marked `mixed` in `turns.csv`; check the video before quoting one of them.
-- Qiaojing Ella Zheng is labeled "counsel to Devin Kim". She named her law firm, but the transcription and the captions disagree on its name, so no firm is given.
+- Kalima gave only one name; no surname was found. Her group's own name is Demilitarize Brooklyn Navy Yard; in her testimony she says "Demilitarized", and the transcript keeps her words.
+- Bryce Rogers, Megan Lagerquist, Ajeet Singh and Chowdhury Hasan Mahmud are spelled as they appeared at the hearing (Zoom labels, self-introductions); none was confirmed in public sources.
+- "Sophie Cote" follows her Oct 16 Zoom label and is not confirmed elsewhere. She is very likely the speaker transcribed as "Sophie Cody" at the 2026-10-05 hearing.
+- Steve Kramer's affiliation, "Get Out the Vote", is as stated at the hearing ("I own the firm Get Out the Vote", 01:46:32), not a verified firm name.
+- Devin Kim is labeled "former xAI employee". Titles and accounts of how he left xAI appear only as he or Council Members said them in the transcript; BetaNYC has not verified them.
 - The word lists for this hearing's word clouds were not reviewed by hand. They reuse the stopwords made for the 2026-10-05 hearing, so some filler (for example "obviously", "asked") remains.
 - The video has not been uploaded to the Internet Archive yet.
 - The full-quality MP3 has not been published as a GitHub Release yet.

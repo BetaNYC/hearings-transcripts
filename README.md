@@ -100,6 +100,16 @@ employee testifying on their own (for example Devin Kim, formerly of xAI) is `wi
   clean edit has no word timings of its own.
 - Each hearing's README lists its own gaps.
 
+## Corrections
+
+Found a mistake, a wrong name or affiliation, or a missing document? Every page has a link at the
+bottom, "Open an issue on GitHub", that opens the
+[correction form](https://github.com/BetaNYC/hearings-transcripts/issues/new?template=correction.yml)
+with the hearing and page already filled in. Tell us what is wrong, what it should say, and how you
+know: a time in the video, a document or a link. We check each report against the source and fix
+it in a pull request that rebuilds the pages. The form lives in
+`.github/ISSUE_TEMPLATE/correction.yml`; the footer link is made by `scripts/feedback.py`.
+
 ## License
 
 - **Data** (transcripts, speaker labels, exports, page text): [CC BY 4.0](LICENSE-DATA),

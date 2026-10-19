@@ -1,9 +1,9 @@
 phrase,group_count,others_count,z
 release,13,6,3.77
-model,22,22,3.62
-law,16,12,3.60
-bad actors,10,3,3.48
-policies,10,3,3.48
+model,22,22,3.63
+law,16,12,3.61
+bad actors,10,3,3.49
+policies,10,3,3.49
 control,12,7,3.42
 reports,10,4,3.39
 obviously,8,3,3.05
@@ -21,12 +21,12 @@ familiar,5,1,2.47
 oversight,5,1,2.47
 catch,5,1,2.47
 predict,5,1,2.47
-misuse,10,10,2.43
+misuse,10,10,2.44
 report,7,5,2.43
 test,5,2,2.39
 models,21,33,2.31
 deployment,6,4,2.31
-safeguards,14,19,2.23
+safeguards,14,19,2.24
 authorities,7,6,2.23
 responsible,7,6,2.23
 assess,4,1,2.22
@@ -36,10 +36,10 @@ chat,4,1,2.22
 content,5,3,2.18
 law enforcement,5,3,2.18
 team,10,12,2.12
-train,6,5,2.09
+train,6,5,2.10
 release models,4,2,2.05
 gaps,4,2,2.05
 national,4,2,2.05
 unfortunately,4,2,2.05
 private,4,2,2.05
-case,7,7,2.03
+case,7,7,2.04

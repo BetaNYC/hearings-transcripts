@@ -1,0 +1,45 @@
+# Correction form for the hearing transcripts.
+# Syntax: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+# Field ids `hearing` and `page` are prefilled by the footer link on every page (scripts/feedback.py).
+name: Correction
+description: Report a mistake in a transcript, a wrong speaker name or affiliation, or a missing document.
+title: "Correction: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. Please point us to the exact spot, and to a source we can check: the video time, a document, or a link. We check every report against the Council's video and fix it in a pull request.
+  - type: input
+    id: hearing
+    attributes:
+      label: Hearing
+      description: Date and committee, for example "2026-10-16, Committee on Technology".
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page or timestamp
+      description: The page with the mistake, and the time in the recording ([HH:MM:SS]) if it is in the transcript.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: Quote the text as it appears now.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What it should say
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: How you know. A video time we can check, a Legistar document, written testimony, or a link to a public page.
+    validations:
+      required: true

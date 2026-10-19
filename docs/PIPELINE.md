@@ -134,7 +134,63 @@ operator's private workspace.
       lists were reviewed by hand. (2026-10-16's file is an example.)
 - [ ] `python3 scripts/build_wordclouds.py --slug $SLUG`, then `python3 scripts/build_hearing.py --index-only`.
 
-## 8. Publish (manual)
+## 8. Validate the hearing record (manual)
+
+The scripts check structure: turn counts, timestamps, speaker labels, links. They cannot tell
+whether a name is right or an edit changed what someone said. This stage does, and it is where
+most of the work on the 2026-10-16 hearing went. Do every step before publishing.
+
+**a. Meaning-changing clean edits.** List every edit that changes a word rather than removing
+filler (`scripts/validate_clean.py … --names` lists name changes; diff the two transcripts for the
+rest). Keep an edit only if the Council's captions or the context support it. If both Deepgram and
+the captions say otherwise, revert it. On 2026-10-19 four edits were reverted this way: "lunch" to
+"launch" (twice), "dictated" to "abdicated", "stopped" to "stalked".
+
+**b. Every name and affiliation, against a public source.** Check each speaker's name and
+affiliation against the Legistar roster, the committee report, posted testimony, the
+organization's own pages or press coverage. Record the source. **Never publish an inferred
+affiliation for a private person.** On 2026-10-19 a witness's law firm had been inferred from a
+garbled transcription. The guess turned out to be right, but publishing it unchecked would still
+have been wrong: until a source confirmed it, her label said only "counsel to Devin Kim". When a
+name or an affiliation cannot be confirmed, say so in the meta file's `known_gaps`. A group's own
+name wins over how a speaker said it, and a self-description is published as one ("as stated at
+the hearing").
+
+**c. On-screen labels, from a video frame.** When a name rests on a name banner or a Zoom tile,
+look at the frame rather than trusting a transcription of it:
+
+```sh
+ffmpeg -v error -ss 00:09:15 -i "$D/<video>.mp4" -frames:v 1 "$D/frame-00-09-15.png"
+```
+
+**d. Two reviews until both say ship.** One reviewer checks the code and the build (a fresh
+reader trying to break it); one checks credibility (every public claim, name, title, number and
+disclosure against its source). Fix, rebuild, and send the changes back to both until both say
+ship.
+
+**e. A person looks at every page in a browser.** Serve the repository locally and open the
+homepage, the hearing's README, `panels.html`, the word-cloud pages and any Q&A page:
+
+```sh
+python3 -m http.server 8000      # from the repository root, then open http://localhost:8000/
+```
+
+**f. After publishing, corrections arrive as issues.** Every page's footer links to the
+correction form (`.github/ISSUE_TEMPLATE/correction.yml`) with the hearing and page filled in.
+Check each report against its source, fix the inputs (labels, clean transcript, meta), and open a
+pull request that reruns the build. Never edit generated files by hand.
+
+Checklist:
+
+- [ ] Every meaning-changing clean edit checked against the captions and Deepgram; unsupported ones reverted.
+- [ ] Every speaker name and affiliation checked against a public source, with the source recorded; nothing inferred is published for a private person.
+- [ ] Unconfirmed names and affiliations listed in `known_gaps`.
+- [ ] On-screen labels confirmed from a video frame.
+- [ ] Code review and credibility review both say ship.
+- [ ] Every page looked at in a browser.
+- [ ] `python3 -m unittest discover -s scripts -v` passes.
+
+## 9. Publish (manual)
 
 - [ ] `hearings/$SLUG/lexicon.txt` stays in git: it records what Deepgram was told.
 - [ ] Opus audio goes into git (`hearings/$SLUG/media/hearing-audio-16k.opus`, well under 100 MB).
@@ -145,3 +201,4 @@ operator's private workspace.
 - [ ] Add the hearing to the table in the top-level `README.md`.
 - [ ] `python3 -m unittest discover -s scripts -v` passes.
 - [ ] The MP4 and MP3 never go into git.
+- [ ] After publishing: handle correction issues as in stage 8f.

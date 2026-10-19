@@ -43,6 +43,9 @@ import sys
 import time
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from feedback import feedback_html  # noqa: E402
+
 REPO = Path(__file__).resolve().parent.parent
 GAP_SEC = 5.0
 MAX_CUE_SEC = 7.0
@@ -866,8 +869,38 @@ def hearing_card(slug: str) -> str:
 </article>"""
 
 
+def hearing_slugs() -> list[str]:
+    """Every built hearing, newest first by its hearing.json date (slug breaks ties)."""
+    found = [(read_json(p)["date"], p.parent.name) for p in (REPO / "hearings").glob("*/hearing.json")]
+    return [slug for _, slug in sorted(found, reverse=True)]
+
+
+def hearings_toc(slugs: list[str]) -> str:
+    """The list of hearings at the top of index.html: one row per hearing, newest first, with a
+    link to its section below and to each of its pages that exists."""
+    rows = []
+    for slug in slugs:
+        h = read_json(REPO / "hearings" / slug / "hearing.json")
+        base = f"hearings/{slug}/"
+        pages = [(base + "README.md", "README"), (base + "transcript/transcript-clean.txt", "Transcript")]
+        for rel, label in (("panels.html", "Who spoke, panel by panel"),
+                           ("wordclouds/index.html", "What each group talked about"),
+                           ("city-qa.html", "What the City said")):
+            if (REPO / "hearings" / slug / rel).is_file():
+                pages.append((base + rel, label))
+        links = " · ".join(f'<a href="{esc(href)}">{esc(label)}</a>' for href, label in pages)
+        body = h["body"].removeprefix("NYC Council ")
+        rows.append(f'<tr><td class="nowrap">{esc(h["date"])}</td><td>{esc(body)}</td>'
+                    f'<th scope="row"><a href="#h-{esc(slug)}">{esc(h["title"])}</a></th>'
+                    f'<td class="pages">{links}</td></tr>')
+    return (f'<nav aria-labelledby="toc-h" class="toc">\n<h2 id="toc-h">All hearings ({len(slugs)})</h2>\n'
+            '<div class="tablewrap"><table class="toc"><caption class="vh">Every hearing, newest first</caption>\n'
+            '<thead><tr><th scope="col">Date</th><th scope="col">Committee</th><th scope="col">Hearing</th>'
+            '<th scope="col">Pages</th></tr></thead>\n<tbody>' + "\n".join(rows) + "</tbody></table></div>\n</nav>")
+
+
 def build_index() -> None:
-    slugs = sorted((p.parent.name for p in (REPO / "hearings").glob("*/hearing.json")), reverse=True)
+    slugs = hearing_slugs()
     for s in slugs:
         sync_readme_section(s, PN_START, PN_END, panels_readme_section(s))
         sync_readme_wordclouds(s)
@@ -915,6 +948,15 @@ table {{ border-collapse:collapse; font-size:15px; line-height:22px; }}
 th, td {{ border:1px solid var(--border); padding:4px 8px; text-align:left; }}
 .note {{ background:var(--bg-blue); padding:16px 24px; max-width:750px; }}
 footer {{ border-top:1px solid var(--border); margin-top:54px; padding:24px 0; font-size:15px; }}
+nav.toc h2 {{ margin-top:32px; }}
+.tablewrap {{ overflow-x:auto; }}
+table.toc {{ width:100%; }}
+table.toc th[scope=row] {{ font-weight:700; }}
+table.toc thead th {{ background:var(--bg-blue); }}
+table.toc td.pages a {{ white-space:nowrap; }}
+.nowrap {{ white-space:nowrap; }}
+.vh {{ position:absolute; left:-9999px; }}
+a:focus-visible {{ outline:3px solid var(--blue); outline-offset:2px; }}
 </style>
 </head>
 <body>
@@ -925,7 +967,9 @@ footer {{ border-top:1px solid var(--border); margin-top:54px; padding:24px 0; f
 <p class="lede">Searchable transcripts, speaker data, captions and the Council's own documents for New York City Council hearings, free to download and reuse. Each hearing has a plain-text transcript, a table of every speaker turn with timestamps, word-level timings, captions, a speaker list, and the Legistar documents that were before the Council. Use them to read, quote (after checking the video), search, or chart who said what.</p>
 <p class="lede">Published by <a href="https://beta.nyc/">BetaNYC</a>. Source code and full history: <a href="https://github.com/BetaNYC/hearings-transcripts">github.com/BetaNYC/hearings-transcripts</a>.</p>
 
-<h2>Hearings</h2>
+{hearings_toc(slugs)}
+
+<h2>Each hearing</h2>
 {cards}
 
 <h2>How this was made</h2>
@@ -952,7 +996,7 @@ footer {{ border-top:1px solid var(--border); margin-top:54px; padding:24px 0; f
 <h2>License and citation</h2>
 <p class="lede">BetaNYC's work here (transcripts, speaker labels, exports, and this page's text) is licensed <a href="LICENSE-DATA">CC BY 4.0</a>. The code is <a href="LICENSE">MIT</a>. The video, audio and Legistar documents are public records produced by the New York City Council; our license does not cover them. To cite, see <a href="CITATION.cff">CITATION.cff</a>, or: BetaNYC (2026). <em>NYC Council hearing transcripts</em>. https://github.com/BetaNYC/hearings-transcripts</p>
 </main>
-<footer><div class="wrap">BetaNYC · <a href="https://beta.nyc/">beta.nyc</a> · <a href="README.md">About this repository</a></div></footer>
+<footer><div class="wrap">{feedback_html("index.html", None)}BetaNYC · <a href="https://beta.nyc/">beta.nyc</a> · <a href="README.md">About this repository</a> · <a href="README.md#corrections">How to report a correction</a></div></footer>
 </body>
 </html>
 """
