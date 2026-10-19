@@ -44,7 +44,7 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from feedback import feedback_html  # noqa: E402
+from feedback import ABOUT_URL, CORRECTIONS_URL, feedback_html, repo_blob  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 GAP_SEC = 5.0
@@ -146,7 +146,8 @@ def human_bytes(n: int) -> str:
     return str(n)
 
 
-ARCHIVE_PENDING_NOTE = "The Internet Archive upload is still in progress; the item may not be playable yet."
+ARCHIVE_PENDING_NOTE = ("The Internet Archive copy is still being processed and may not play yet; "
+                        "until it does, watch the Council's video.")
 RELEASE_PENDING_NOTE = "The GitHub Release may not exist yet."
 
 
@@ -166,7 +167,9 @@ def archive_md(meta: dict) -> str:
     if not url:
         return "- Watch: the Internet Archive copy has not been uploaded yet."
     note = archive_note(meta)
-    return f"- Watch: [Internet Archive]({url})" + (f" ({note})" if note else "")
+    if note:  # not playable yet: link the copy, but do not offer it as the way to watch
+        return f"- Internet Archive copy: [archive.org]({url}) ({note})"
+    return f"- Watch: [Internet Archive]({url})"
 
 
 PANEL_KEYS = {"panel_id", "title", "start_hms", "end_hms", "turn_ids", "members"}
@@ -219,6 +222,8 @@ def context_md(meta: dict) -> str:
 
 
 def human_dur(sec: float) -> str:
+    if sec < 60:  # never show nonzero talk as "0m"
+        return f"{round(sec)}s"
     m = round(sec / 60)
     return f"{m // 60}h {m % 60:02d}m" if m >= 60 else f"{m}m"
 
@@ -557,7 +562,7 @@ Oversight topic: {meta['oversight_topic']['file']}, {meta['oversight_topic']['na
 
 {context_md(meta)}## Counts
 
-- Turns: {stats['turns']}; speakers (name and role pairs): {stats['speakers']}; words: {stats['words']}
+- Turns: {stats['turns']}; speakers (name and role pairs): {stats['speakers']}; words (unedited Deepgram transcript): {stats['words']}
 - Speaker-name confidence by turn: high {conf['high']}, medium {conf['medium']}, low {conf['low']}
 - Turns with no identified speaker (category `unidentified`): {stats['unidentified_turns']}
 
@@ -578,7 +583,8 @@ Speaker categories (derived from the role, see the repository README for the rul
 - The clean verbatim copy edit was AI-assisted: fillers, stutters and false starts removed; punctuation, spelling and number formatting fixed; and words the transcription clearly misheard, including names, corrected. Speaker labels and timestamps are unchanged. The build checks that every turn's
   timestamp and speaker label match the unedited transcript, which is kept alongside in every
   export.
-- Talk time is approximate: {mixed_turns_phrase(meta)}.{(' They are marked `mixed` in `turns.csv`; check the video before quoting one of them.') if 'mixed_turns' in meta else ''}
+- Talk time is approximate: {mixed_turns_phrase(meta)}. It runs from each turn's start to its end, so it
+  includes short pauses (under 5 seconds) inside a turn.{(' They are marked `mixed` in `turns.csv`; check the video before quoting one of them.') if 'mixed_turns' in meta else ''}
 {''.join('- ' + g + chr(10) for g in meta.get('known_gaps', []))}{pending}"""
 
 
@@ -597,8 +603,8 @@ license does not cover them.
 | Audio, small | `{Path(opus['path']).name}` in this folder. {opus['format']} |
 | Audio, full quality | GitHub Release `{mp3['release_tag']}`, asset `{mp3['asset_name']}` ({human_bytes(mp3['bytes'])}, {mp3['format']}): {(mp3['release_url'] + ' ' + release_note(meta)) if mp3['release_url'] else 'not published yet.'} |
 
-The MP3 is the file that was transcribed. It is kept out of git because GitHub refuses files
-over 100 MB. The Opus file was encoded from the same audio and plays the same timeline, so
+The MP3 is the file that was transcribed. MP3s are never committed: git holds only the small
+Opus copy, and the full-quality MP3 goes to a GitHub Release (GitHub also refuses files over 100 MB). The Opus file was encoded from the same audio and plays the same timeline, so
 transcript timestamps line up with both.
 """
 
@@ -628,7 +634,7 @@ def chart_svg(speakers: list[dict], slug: str, top: int = 25) -> str:
         label = r["speaker_name"] if len(r["speaker_name"]) <= 34 else r["speaker_name"][:33] + "…"
         parts.append(
             f'<g><title>{esc(r["speaker_name"])}, {esc(r["speaker_role"])}: {human_dur(r["talk_seconds"])} '
-            f'in {r["turns"]} turns</title>'
+            f'in {r["turns"]} turn{"" if r["turns"] == 1 else "s"}</title>'
             f'<text x="{label_w - 8}" y="{y + 17}" text-anchor="end" class="lbl">{esc(label)}'
             f'<tspan class="role"> · {esc(role if len(role) <= 30 else role[:29] + "…")}</tspan></text>'
             f'<rect x="{label_w}" y="{y + 4}" width="{w:.1f}" height="{row_h - 8}" fill="{color}"/>'
@@ -725,7 +731,8 @@ def mixed_field_note(meta: dict) -> str:
 
 def mixed_turns_phrase(meta: dict) -> str:
     n = meta.get("mixed_turns")
-    return f"{n} turns contain two voices" if n else "a few turns contain two voices"
+    return (f"{n} turns contain two voices" if n else
+            "some turns contain two voices (this hearing's labels do not mark or count them)")
 
 
 def sync_readme_section(slug: str, start: str, end: str, section: str) -> None:
@@ -775,6 +782,40 @@ def top_phrase(speakers: list) -> str:
     return f"Top 25 of {len(speakers)} speakers" if len(speakers) > 25 else f"All {len(speakers)} speakers"
 
 
+def mixed_seconds(hdir: Path) -> dict[tuple[str, str], float] | None:
+    """Seconds each (name, role) spent in turns marked mixed, or None if the hearing's turns.csv
+    has no mixed column (it records two-voice turns only from 2026-10-16 on)."""
+    with open(hdir / "transcript" / "turns.csv", encoding="utf-8", newline="") as f:
+        rows = list(csv.DictReader(f))
+    if not rows or MIXED_FIELD not in rows[0]:
+        return None
+    out: dict[tuple[str, str], float] = {}
+    for t in rows:
+        if t[MIXED_FIELD] == "true":
+            key = (t["speaker_name"], t["speaker_role"])
+            out[key] = out.get(key, 0.0) + float(t["end_sec"]) - float(t["start_sec"])
+    return out
+
+
+def top_two_note(hdir: Path, speakers: list[dict]) -> str:
+    """Numbers audit D1: when the gap between the two longest talkers is smaller than the time
+    either spent in mixed turns (whose other voice is credited to them), the chart cannot rank
+    them, so say so. speakers is sorted longest first."""
+    mixed = mixed_seconds(hdir)
+    if mixed is None or len(speakers) < 2:
+        return ""
+    a, b = speakers[0], speakers[1]
+    gap = a["talk_seconds"] - b["talk_seconds"]
+    margin = max(mixed.get((s["speaker_name"], s["speaker_role"]), 0.0) for s in (a, b))
+    if gap >= margin:
+        return ""
+    ma, mb = round(a["talk_seconds"] / 60), round(b["talk_seconds"] / 60)
+    about = f"each spoke about {ma} minutes" if ma == mb else f"spoke about {ma} and {mb} minutes"
+    return (f'<p class="meta">{esc(a["speaker_name"])} and {esc(b["speaker_name"])} {about}. The gap '
+            f'between them is smaller than the time in their turns that hold two voices, so this chart '
+            f'does not show which of them spoke longer.</p>')
+
+
 def hearing_card(slug: str) -> str:
     hdir = REPO / "hearings" / slug
     meta = read_json(hdir / "hearing.json")
@@ -821,9 +862,15 @@ def hearing_card(slug: str) -> str:
     bills = "".join(f"<li>{esc(b['file'])}: {esc(b['name'])} <span class=\"meta\">(lead sponsor "
                     f"{esc(b['lead_sponsor'])})</span></li>" for b in meta["bills"])
     ia = meta["video"].get("internet_archive_url")
-    watch = (f'<a class="button" href="{esc(ia)}">Watch on the Internet Archive</a>\n    '
-             f'<a href="{esc(meta["video"]["council_source_url"])}">Council video source</a> ·' if ia else
-             f'<a class="button" href="{esc(meta["video"]["council_source_url"])}">Watch the Council\'s video</a>')
+    council = esc(meta["video"]["council_source_url"])
+    if ia and not archive_note(meta):
+        watch = (f'<a class="button" href="{esc(ia)}">Watch on the Internet Archive</a>\n    '
+                 f'<a href="{council}">Council video source</a> ·')
+    elif ia:  # uploaded but not playable yet: the Council's video stays the main way to watch
+        watch = (f'<a class="button" href="{council}">Watch the Council\'s video</a>\n    '
+                 f'<a href="{esc(ia)}">Internet Archive copy</a> ·')
+    else:
+        watch = f'<a class="button" href="{council}">Watch the Council\'s video</a>'
     bills_block = (f"<summary>Bills heard ({len(meta['bills'])}) and oversight topic</summary>" if meta["bills"]
                    else "<summary>Oversight topic</summary>")
     st = meta["stats"]
@@ -835,7 +882,7 @@ def hearing_card(slug: str) -> str:
   <p class="actions">
     {watch}
     <a href="{esc(meta['legistar']['url'])}">Legistar event {meta['legistar']['event_id']}</a> ·
-    <a href="{esc(p + 'README.md')}">Hearing README</a>
+    <a href="{esc(repo_blob(p + 'README.md'))}">Hearing README</a>
   </p>
   {('<p class="meta">' + esc(archive_note(meta)) + '</p>') if archive_note(meta) and ia else ''}
   {('<p>' + esc(meta['disclosure']) + '</p>') if meta.get('disclosure') else ''}
@@ -859,6 +906,7 @@ def hearing_card(slug: str) -> str:
   <p>{top_phrase(speakers)} by total talk time. Colors show the speaker category; the role is also written next to each name.</p>
   <ul class="legend" aria-label="Chart legend">{legend}</ul>
   {chart_svg(speakers, slug)}
+  {top_two_note(hdir, speakers)}
   <p class="meta">Talk time is approximate: {esc(mixed_turns_phrase(meta))}.</p>
   <details>
     <summary>Chart data as a table</summary>
@@ -882,7 +930,7 @@ def hearings_toc(slugs: list[str]) -> str:
     for slug in slugs:
         h = read_json(REPO / "hearings" / slug / "hearing.json")
         base = f"hearings/{slug}/"
-        pages = [(base + "README.md", "README"), (base + "transcript/transcript-clean.txt", "Transcript")]
+        pages = [(repo_blob(base + "README.md"), "README"), (base + "transcript/transcript-clean.txt", "Transcript")]
         for rel, label in (("panels.html", "Who spoke, panel by panel"),
                            ("wordclouds/index.html", "What each group talked about"),
                            ("city-qa.html", "What the City said")):
@@ -976,18 +1024,18 @@ a:focus-visible {{ outline:3px solid var(--blue); outline-offset:2px; }}
 <ol class="lede">
 <li>The Council's published video was converted to audio with ffmpeg.</li>
 <li>The audio was transcribed by Deepgram's Nova-3 model with speaker diarization, which groups speech by voice but does not know names.</li>
-<li>Names were assigned from self-introductions, the chair calling on people, the on-screen name banner (shown only for the Speaker), and voice clusters, and cross-checked against the Legistar roster, titles and bill sponsors and NYS Open Legislation member and sponsor records. Names were assigned by AI agents working from these sources, at BetaNYC&#x27;s direction. Elected officials were checked against Legistar and NYS Open Legislation. Other names were not individually verified by a person.</li>
+<li>Names were assigned from self-introductions, the chair calling on people, on-screen labels (the Speaker&#x27;s name banner on 2026-10-05; Zoom name labels on 2026-10-16, read from video frames), the Council&#x27;s captions, and voice clusters, and cross-checked against the Legistar roster, titles and bill sponsors and NYS Open Legislation member and sponsor records. Names were assigned by AI agents working from these sources, at BetaNYC&#x27;s direction. Elected officials were checked against Legistar and NYS Open Legislation. Other names were not individually verified by a person.</li>
 <li>A clean verbatim copy was produced with AI assistance: fillers, stutters and false starts removed; punctuation, spelling and number formatting fixed; and words the transcription clearly misheard, including names, corrected. Speaker labels and timestamps are unchanged. The build script checks that every turn's timestamp and speaker label match the unedited copy.</li>
-<li><code>scripts/build_hearing.py</code> produced every export and this page. See <a href="scripts/README.md">scripts/README.md</a>.</li>
+<li><code>scripts/build_hearing.py</code> wrote the transcripts, CSV and JSON exports, captions and this page; <code>build_panels.py</code>, <code>build_wordclouds.py</code> and <code>build_qa.py</code> wrote the panel, word-cloud and Q&amp;A pages. See <a href="{esc(repo_blob('scripts/README.md'))}">scripts/README.md</a>.</li>
 </ol>
 
 <h2>Known limits</h2>
 <div class="note">
 <p><strong>This is a machine transcript, not an official record of the Council.</strong> Words can be wrong, and a speaker name can be wrong.</p>
 <ul>
-<li><code>[?]</code> after a name marks a low-confidence speaker label. Some turns are labeled Unidentified.</li>
+<li><code>[?]</code> after a name marks a low-confidence speaker label. Some hearings have short turns labeled Unidentified; each hearing&#x27;s README gives the count.</li>
 <li>Unless a hearing&#x27;s README says otherwise, witness names are spelled as the transcription heard them and have not been checked against a witness list or written testimony. Some are likely misspelled; corrections are welcome as GitHub issues.</li>
-<li>Talk time is approximate: some turns contain two voices. Where a hearing records them, <code>turns.csv</code> marks them in a <code>mixed</code> column.</li>
+<li>Talk time is approximate: some turns contain two voices, credited to the person named on the turn. Where a hearing records them, <code>turns.csv</code> marks them in a <code>mixed</code> column. Talk time runs from a turn&#x27;s start to its end, so it includes short pauses inside a turn.</li>
 <li>Check the video at the timestamp before quoting anyone.</li>
 <li>Timestamps count from the start of the Council's recording, not the clock time of the hearing.</li>
 </ul>
@@ -996,7 +1044,7 @@ a:focus-visible {{ outline:3px solid var(--blue); outline-offset:2px; }}
 <h2>License and citation</h2>
 <p class="lede">BetaNYC's work here (transcripts, speaker labels, exports, and this page's text) is licensed <a href="LICENSE-DATA">CC BY 4.0</a>. The code is <a href="LICENSE">MIT</a>. The video, audio and Legistar documents are public records produced by the New York City Council; our license does not cover them. To cite, see <a href="CITATION.cff">CITATION.cff</a>, or: BetaNYC (2026). <em>NYC Council hearing transcripts</em>. https://github.com/BetaNYC/hearings-transcripts</p>
 </main>
-<footer><div class="wrap">{feedback_html("index.html", None)}BetaNYC · <a href="https://beta.nyc/">beta.nyc</a> · <a href="README.md">About this repository</a> · <a href="README.md#corrections">How to report a correction</a></div></footer>
+<footer><div class="wrap">{feedback_html("index.html", None)}BetaNYC · <a href="https://beta.nyc/">beta.nyc</a> · <a href="{ABOUT_URL}">About this repository</a> · <a href="{CORRECTIONS_URL}">How to report a correction</a></div></footer>
 </body>
 </html>
 """

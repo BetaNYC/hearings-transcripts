@@ -14,7 +14,7 @@
   "video": {
     "duration_hms": "01:57:28",
     "council_source_url": "https://councilnyc.viebit.com/vod/?s=true&v=NYCC-PV-CH-CHA_261016-101016.mp4",
-    "internet_archive_url": "",
+    "internet_archive_url": "https://archive.org/details/nyc-council-technology-ai-2026-10-16",
     "archive_playable": false
   },
   "oversight_topic": {
@@ -29,11 +29,11 @@
     },
     "audio_mp3": {
       "release_tag": "2026-10-16-technology-ai",
-      "release_url": "",
+      "release_url": "https://github.com/BetaNYC/hearings-transcripts/releases/tag/2026-10-16-technology-ai",
       "asset_name": "hearing-audio-64k.mp3",
       "bytes": 56386227,
       "format": "MP3 audio, 64 kbps mono, 16 kHz",
-      "release_published": false
+      "release_published": true
     }
   },
   "transcription": {

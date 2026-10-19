@@ -19,11 +19,23 @@ from __future__ import annotations
 import html
 import urllib.parse
 
-ISSUES_NEW = "https://github.com/BetaNYC/hearings-transcripts/issues/new"
+GITHUB_REPO = "https://github.com/BetaNYC/hearings-transcripts"
+ISSUES_NEW = GITHUB_REPO + "/issues/new"
 SITE = "https://betanyc.github.io/hearings-transcripts/"
 TEMPLATE = "correction.yml"  # .github/ISSUE_TEMPLATE/correction.yml; field ids below must match it
 FIELD_HEARING, FIELD_PAGE = "hearing", "page"
 TEXT = "See a mistake, a wrong name or a missing document?"
+
+
+def repo_blob(path: str, anchor: str = "") -> str:
+    """GitHub page for a file in the repository (main branch). Pages link Markdown here, not to
+    the site copy: GitHub Pages serves a .md file as raw text/markdown, which shows unformatted
+    source (or downloads) and cannot follow a #heading anchor. GitHub renders it, anchors included."""
+    return f"{GITHUB_REPO}/blob/main/{path}" + (f"#{anchor}" if anchor else "")
+
+
+ABOUT_URL = repo_blob("README.md")
+CORRECTIONS_URL = repo_blob("README.md", "corrections")
 
 
 def hearing_label(hearing: dict | None) -> str:

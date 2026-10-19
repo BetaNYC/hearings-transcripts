@@ -37,7 +37,7 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from feedback import feedback_html  # noqa: E402
+from feedback import ABOUT_URL, feedback_html  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = REPO / "scripts" / "meta" / "wordclouds.json"
@@ -211,9 +211,27 @@ def score(turns: list[dict], in_group, stop: set[str], method: dict, min_count: 
 
 def turn_stats(turns: list[dict], in_group) -> dict:
     mine = [t for t in turns if in_group(t)]
-    return {"speakers": collections.Counter(t["speaker_name"] for t in mine), "turns": len(mine),
-            "minutes": round(sum(float(t["end_sec"]) - float(t["start_sec"]) for t in mine) / 60, 1),
-            "words": sum(len(tokens(t["text_clean"])) for t in mine)}
+    st = {"speakers": collections.Counter(t["speaker_name"] for t in mine), "turns": len(mine),
+          "minutes": round(sum(float(t["end_sec"]) - float(t["start_sec"]) for t in mine) / 60, 1),
+          "words": sum(len(tokens(t["text_clean"])) for t in mine)}
+    if turns and "mixed" in turns[0]:  # turns.csv records two-voice turns (2026-10-16 on)
+        st["mixed_words"] = sum(len(tokens(t["text_clean"])) for t in mine if t["mixed"] == "true")
+    return st
+
+
+def mixed_note(hearing: dict, stats: dict | None) -> str:
+    """Numbers audit D2: words in a two-voice turn count toward the person named on it. With
+    stats (a page's turn_stats), also says how many of the page's words sit in such turns."""
+    rule = ("their words count toward the person named on the turn, so a cloud can include some "
+            "words said by another speaker")
+    n = hearing.get("mixed_turns")
+    if not n:
+        return f"Some turns hold two voices (often a question and the start of an answer); {rule}."
+    text = f"{plural(n, 'turn')} at this hearing hold two voices; {rule}."
+    if stats is not None and "mixed_words" in stats:
+        text += (f" On this page, {stats['mixed_words']:,} of the {plural(stats['words'], 'word')} "
+                 f"are in such turns.")
+    return text
 
 
 def display(phrase: str, cap: dict[str, str]) -> str:
@@ -343,7 +361,7 @@ def footer(root: str, page_rel: str, hearing: dict | None) -> str:
     return (f'<footer><div class="wrap">{feedback_html(page_rel, hearing)}'
             f'BetaNYC · <a href="https://beta.nyc/">beta.nyc</a> · '
             f'<a href="{root}index.html">All hearing transcripts</a> · '
-            f'<a href="{root}README.md">About this repository</a></div></footer>')
+            f'<a href="{ABOUT_URL}">About this repository</a></div></footer>')
 
 
 def group_nav(groups: list[dict], current: str | None, prefix: str) -> str:
@@ -378,7 +396,8 @@ def method_notes(cfg: dict | None) -> tuple[str, str]:
     return cfg.get("removed_note_html", REMOVED), cfg.get("joined_note_html", JOINED)
 
 
-def how_made(subject_kind: str, min_count: int, csv_name: str, root: str, notes: dict | None = None) -> str:
+def how_made(subject_kind: str, min_count: int, csv_name: str, root: str, notes: dict | None = None,
+             mixed: str = "") -> str:
     removed, joined = method_notes(notes)
     if subject_kind == "person":
         base = ("this speaker said much more often than everyone else at the hearing, including the "
@@ -400,6 +419,7 @@ def how_made(subject_kind: str, min_count: int, csv_name: str, root: str, notes:
 <li>Counts are how many times each 1- to 3-word phrase occurs in the clean verbatim transcript. Hyphenated words are counted as separate words (&ldquo;self-improvement&rdquo; is &ldquo;self improvement&rdquo;), and a few terms the transcript spells more than one way are counted as one ({joined}).</li>
 <li>{removed}</li>
 <li>{who_rule}</li>
+{f"<li>{esc(mixed)}</li>" if mixed else ""}
 <li>This is a machine transcript, not an official record. Check the video before quoting anyone; search <a href="{root}transcript/transcript-clean.txt">the clean transcript</a> to find where a phrase was said.</li>
 <li>Data: <a href="{esc(csv_name)}" download>{esc(csv_name)}</a> (every phrase that passed). Code: <code>scripts/build_wordclouds.py</code>.</li>
 </ul>
@@ -460,7 +480,7 @@ def render_page(*, hearing: dict, groups: list[dict], current_group: str | None,
 <p class="sub">{subline}</p>
 {extra}
 {charts}
-{how_made(subject_kind, min_count, csv_name, hearing_root, notes)}
+{how_made(subject_kind, min_count, csv_name, hearing_root, notes, mixed_note(hearing, stats))}
 </main>
 {footer(root, page_rel, hearing)}
 <div class="tip" id="tip" aria-hidden="true"></div>
@@ -529,7 +549,7 @@ def render_gallery(hearing: dict, group_cards: list[str], person_cards: list[str
 {('<section aria-labelledby="people-h" style="margin-top:36px"><h2 id="people-h">Individual speakers</h2><p>' + esc(cfg["people_method"].get("intro", "")) + '</p><p class="note">Each person is compared with everyone else at the hearing, including the rest of their own group. Phrases said at least ' + str(cfg["people_method"]["min_person_count"]) + ' times count, because some spoke only briefly.</p><div class="grid">' + "".join(person_cards) + '</div></section>') if person_cards else ''}
 <section class="how" aria-labelledby="how" style="margin-top:36px">
 <h2 id="how">How this was made</h2>
-<p>&ldquo;Distinctive&rdquo; means a phrase a group said much more often than all other speakers, after allowing for how much each side talked, scored with the weighted log-odds test in {PAPER}. Counts come from the clean verbatim transcript. Groups come from AI-assigned speaker labels. This is a machine transcript; check the video before quoting anyone. Each page explains the details. Code: <code>scripts/build_wordclouds.py</code>.</p>
+<p>&ldquo;Distinctive&rdquo; means a phrase a group said much more often than all other speakers, after allowing for how much each side talked, scored with the weighted log-odds test in {PAPER}. Counts come from the clean verbatim transcript. Groups come from AI-assigned speaker labels. {esc(mixed_note(hearing, None))} This is a machine transcript; check the video before quoting anyone. Each page explains the details. Code: <code>scripts/build_wordclouds.py</code>.</p>
 <p>{method_notes(cfg)[0]}</p>
 {('<p><strong>' + esc(cfg["gallery_disclosure"]) + '</strong></p>') if cfg.get("gallery_disclosure") else ''}
 </section>
