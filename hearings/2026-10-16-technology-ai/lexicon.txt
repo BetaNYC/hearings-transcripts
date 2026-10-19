@@ -1,0 +1,39 @@
+# Deepgram keyterms for the 2026-10-16 Committee on Technology hearing (Legistar event 22795).
+# Format and rules: lexicon/README.md. One term per line; `#` starts a comment.
+# Only people, organizations and terms that are in this hearing. No BetaNYC names.
+# Built 2026-10-19. Deepgram limit: 100 terms, 500 tokens (https://developers.deepgram.com/docs/keyterm).
+
+# source: Legistar Web API, OfficeRecords for body 5213 (Committee on Technology) active 2026-10-16.
+# Legistar gives "Carmen N. De La Rosa", "Shahana K. Hanif", "Kevin C. Riley"; middle initials
+# dropped here because they are not spoken.
+Carmen De La Rosa
+Jennifer Gutiérrez
+Shahana Hanif
+Kevin Riley
+Julie Won
+
+# source: Legistar Web API, OfficeRecords, Julie Menin, title "The Speaker", City Council.
+Julie Menin
+
+# source: Committee report (Legistar attachment, T2026-2684, 2026-10-15). Its spellings.
+SpaceXAI
+xAI
+Elon Musk
+
+# source: Council captions (NYCC-PV-CH-CHA_261016-101016.vtt): "SPACEX" 34 times, "GROK" 8 times,
+# "GROK IMAGINE" at 00:18:19. Captions are upper case; case here follows Deepgram's guidance
+# to write proper nouns as they should appear.
+SpaceX
+Grok
+Grok Imagine
+
+# source: Council captions, the witness's self-introduction at 00:09:21 ("NAME IS GABRIELLA MADRID").
+# Kept exactly as sent to Deepgram on 2026-10-19 (run 2). Settled afterwards in speaker naming: her
+# Zoom tile reads "Gabriela Castillo Madrid, SpaceXAI", and the published transcript uses that
+# spelling (see the hearing README's known gaps). Counsel's line in the captions reads "CHRISTINA MADRID".
+Gabriella Madrid
+
+# source: Committee report (98 uses) and Deepgram's keyterm guidance, which lists acronyms of
+# technical jargon (its example is "API") as good keyterms. Included to counter run 1's
+# "SpaceX SI" for "SpaceX AI".
+AI

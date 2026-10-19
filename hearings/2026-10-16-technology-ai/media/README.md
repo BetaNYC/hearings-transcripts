@@ -1,0 +1,15 @@
+# Media: Oversight - Continuing Discussion about the Risks Posed by Artificial Intelligence (2026-10-16)
+
+The video and audio are a public record produced by the New York City Council. BetaNYC's
+license does not cover them.
+
+| What | Where |
+|---|---|
+| Video (Internet Archive copy) | Not uploaded yet. |
+| Video (Council source) | https://councilnyc.viebit.com/vod/?s=true&v=NYCC-PV-CH-CHA_261016-101016.mp4 |
+| Audio, small | `hearing-audio-16k.opus` in this folder. Opus audio, 16 kbps mono |
+| Audio, full quality | GitHub Release `2026-10-16-technology-ai`, asset `hearing-audio-64k.mp3` (53.8 MB, MP3 audio, 64 kbps mono, 16 kHz): not published yet. |
+
+The MP3 is the file that was transcribed. It is kept out of git because GitHub refuses files
+over 100 MB. The Opus file was encoded from the same audio and plays the same timeline, so
+transcript timestamps line up with both.
