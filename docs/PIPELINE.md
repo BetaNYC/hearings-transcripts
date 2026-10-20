@@ -14,7 +14,9 @@ D=~/Movies/BetaNYC/council-hearings/$SLUG                  # raw files; never in
 ## 1. Legistar documents (scripted)
 
 - [ ] Find the event id on the Council's Legistar calendar (`MeetingDetail.aspx?LEGID=<id>`).
-- [ ] `python3 scripts/fetch_legistar.py <id> --out "$D/legistar"` (needs `LEGISTAR_TOKEN`).
+- [ ] `python3 scripts/fetch_legistar.py <id> --out "$D/legistar"` (needs `LEGISTAR_TOKEN`, a
+      Legistar Web API token: NYC's API requires one, https://webapi.legistar.com/Home/Examples;
+      ask the NYC Council for one).
 - [ ] Read `$D/legistar/README.md`: agenda items, attachments, and whether `Video` is filled in.
       The committee report usually names the invited witnesses.
 - [ ] Re-run a day or more after the hearing, into a dated subfolder, to collect testimony and
@@ -31,6 +33,13 @@ D=~/Movies/BetaNYC/council-hearings/$SLUG                  # raw files; never in
 - [ ] Check `$D/media.json`: the MP4, MP3 and Opus durations should agree within a second.
 
 ## 3. Transcription (scripted, paid)
+
+The transcription script is **not in this repository**: it is `deepgram_transcribe.py` in
+BetaNYC's private workspace, run in that workspace's Python environment (it uses the Deepgram
+SDK). It needs a paid Deepgram API key in `DEEPGRAM_API_KEY`. Without the script, make the same
+request against Deepgram's pre-recorded API (see [`scripts/README.md`](../scripts/README.md#3-deepgram-transcription)
+§3). The raw files below (`$D`) are not published either, so a clone can rebuild the pages from
+the published data but cannot rerun a published hearing from scratch.
 
 - [ ] Note the audio duration from `media.json` before sending: Deepgram bills by audio length.
 - [ ] **Build the keyterm list** `hearings/$SLUG/lexicon.txt` (rules and format:
@@ -123,7 +132,8 @@ operator's private workspace.
       post-hearing download. Both folders are read through their `manifest.csv`.
 - [ ] `python3 scripts/build_panels.py --slug $SLUG` when there is a `panels.json` ("Who spoke,
       panel by panel"), then `python3 scripts/build_hearing.py --index-only` to link it.
-- [ ] Write the hearing's own known gaps into the meta file (`known_gaps`, a list of sentences;
+- [ ] Write the hearing's own known gaps into the meta file (before the build above, or rebuild
+      after) (`known_gaps`, a list of sentences;
       `witness_spelling` if names do not simply follow the transcription). The build writes the
       README from the meta, so anything typed into the README by hand is lost on the next build.
 
@@ -197,7 +207,9 @@ Checklist:
 - [ ] MP3 goes to a GitHub Release tagged `$SLUG`, asset `hearing-audio-64k.mp3`; then set
       `media.audio_mp3.release_url` and `release_published: true` in the meta file and rebuild.
 - [ ] Upload the MP4 to the Internet Archive; set `video.internet_archive_url`, and
-      `archive_playable: true` once the item plays; rebuild.
+      `archive_playable: true` once the item plays; rebuild. While `archive_playable` is false the
+      pages link the archive copy with a "still being processed" note and keep the Council's video
+      as the Watch button; once true, the archive copy becomes the Watch button.
 - [ ] Add the hearing to the table in the top-level `README.md`.
 - [ ] `python3 -m unittest discover -s scripts -v` passes.
 - [ ] The MP4 and MP3 never go into git.

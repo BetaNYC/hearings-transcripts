@@ -14,8 +14,9 @@ Deepgram Nova-3, diarization on     → deepgram-intermediate.json  {segments:[{
 Turns: merge consecutive segments with the same speaker cluster and a gap < 5 s
   ▼
 Speaker naming                      → speaker-labels.json  [{i,name,role,confidence,evidence}], one per turn
-  │  self-introductions, chair call-outs, the on-screen name banner (shown only for
-  │  the Speaker), voice clusters; cross-checked against the Legistar roster, titles and
+  │  self-introductions, chair call-outs, on-screen labels (the Speaker's name banner on
+  │  2026-10-05; Zoom name labels on 2026-10-16, read from video frames), the Council's
+  │  captions, voice clusters; cross-checked against the Legistar roster, titles and
   │  bill sponsors and NYS Open Legislation member and sponsor records.
   │  Names were assigned by AI agents working from these sources, at BetaNYC's direction.
   │  Elected officials were checked against Legistar and NYS Open Legislation.
@@ -89,8 +90,11 @@ by code in this repository:
 ```sh
 python deepgram_transcribe.py "$D/hearing-audio-64k.mp3" \
   --out "$D/deepgram-intermediate.json" --raw-out "$D/deepgram-response.json" \
-  --keyterms-file hearings/<slug>/lexicon.txt --no-core
+  --keyterms-file ~/Code/hearings-transcripts/hearings/<slug>/lexicon.txt --no-core
 ```
+
+(The keyterms path is absolute: the command runs from the workspace `scripts/` folder, not from
+this repository. The script needs `DEEPGRAM_API_KEY`, a paid Deepgram key.)
 
 `--keyterms-file` sends the hearing's own keyterm list
 ([Deepgram keyterm prompting](https://developers.deepgram.com/docs/keyterm): Nova-3 only, at most
@@ -211,6 +215,8 @@ Method, all parameters in `wordclouds.json`:
 - a shorter phrase is dropped when a longer kept phrase contains it and has at least 80% of its
   count;
 - a person is compared with everyone else at the hearing, including the rest of their group;
+- a turn that holds two voices counts toward the person named on it; every page says so, and where
+  `turns.csv` has a `mixed` column it also says how many of the page's words are in such turns;
 - beyond generic stopwords, filler was removed by hand after an AI assistant, at BetaNYC's
   direction, reviewed each group's and person's list. The pages say so, and link the list.
 
@@ -226,7 +232,7 @@ produces identical files.
 python3 -m unittest discover -s scripts -v
 ```
 
-`test_wordclouds.py` checks that the six groups are non-empty and disjoint, that the council group
+`test_wordclouds.py` checks, for the 2026-10-05 hearing, that the six groups are non-empty and disjoint, that the council group
 excludes the two chairs, that each group's and person's top 45 phrases equal the fixtures in
 `tests/fixtures/wordclouds/` (regenerate them when `wordclouds.json` changes on purpose), that
 "RAISE Act" forms as one phrase, that each person page counts only that person's turns, that every
@@ -243,8 +249,14 @@ failures, shrink warnings and the `--names` report.
 
 `test_panels.py` checks `build_panels.py` (talk-time sums, row order, band labels, every turn drawn
 once in time order and keyboard-reachable, bars inside the plot, no external resources, links and
-ids, idempotence), the `panels.json` checks in `build_hearing.py`, per-hearing word cloud configs, and
-the built 2026-10-16 hearing.
+ids, idempotence), the `panels.json` checks in `build_hearing.py`, per-hearing word cloud configs,
+the built 2026-10-16 hearing, and the fixes from the 2026-10-19 docs and numbers audits (media
+link states, the top-two talk-time note, mixed-turn notes on word-cloud pages, sub-minute times).
+
+`test_feedback.py` checks the report-a-mistake footer link on every generated page against the
+correction form, and that no page links a Markdown file on the site instead of its GitHub page.
+
+`test_qa.py` checks `build_qa.py` and the built City Q&A page.
 
 `test_build.py` checks the 2026-10-05 hearing's built files: 830 turns, transcript prefixes, word timings inside
 their turns, CSV columns and confidence values, WebVTT header and ordering, file sizes,

@@ -3,7 +3,7 @@
 **2026-10-05, 11:00, City Hall, New York, NY.** Legistar event
 [22752](https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22752&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3). Video length 10:08:12.
 
-- Watch: [Internet Archive](https://archive.org/details/nyc-council-committee-of-the-whole-ai-2026-10-05) (The Internet Archive upload is still in progress; the item may not be playable yet.)
+- Watch: [Internet Archive](https://archive.org/details/nyc-council-committee-of-the-whole-ai-2026-10-05)
 - Council's own video: [councilnyc.viebit.com](https://councilnyc.viebit.com/vod/?s=true&v=NYCC-PV-CH-CHA_261005-110828.mp4)
 
 This is a machine transcript with speaker names added by BetaNYC. **It is not an official
@@ -47,7 +47,7 @@ Oversight topic: T2026-2573, Oversight - Examining the Risks Posed by Artificial
 
 ## Counts
 
-- Turns: 830; speakers (name and role pairs): 106; words: 89181
+- Turns: 830; speakers (name and role pairs): 106; words (unedited Deepgram transcript): 89181
 - Speaker-name confidence by turn: high 611, medium 183, low 36
 - Turns with no identified speaker (category `unidentified`): 19
 
@@ -92,5 +92,5 @@ with the administration's answers from the transcript. Built by
 - The clean verbatim copy edit was AI-assisted: fillers, stutters and false starts removed; punctuation, spelling and number formatting fixed; and words the transcription clearly misheard, including names, corrected. Speaker labels and timestamps are unchanged. The build checks that every turn's
   timestamp and speaker label match the unedited transcript, which is kept alongside in every
   export.
-- Talk time is approximate: a few turns contain two voices.
-- The Internet Archive upload is still in progress; the item may not be playable yet.
+- Talk time is approximate: some turns contain two voices (this hearing's labels do not mark or count them). It runs from each turn's start to its end, so it
+  includes short pauses (under 5 seconds) inside a turn.

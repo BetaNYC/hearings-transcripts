@@ -75,8 +75,12 @@ turned off:
 
 ```sh
 python deepgram_transcribe.py "$D/hearing-audio-64k.mp3" --out "$D/deepgram-intermediate.json" \
-  --raw-out "$D/deepgram-response.json" --keyterms-file hearings/<slug>/lexicon.txt --no-core
+  --raw-out "$D/deepgram-response.json" \
+  --keyterms-file ~/Code/hearings-transcripts/hearings/<slug>/lexicon.txt --no-core
 ```
+
+(An absolute path: the command runs from the workspace `scripts/` folder, not from this
+repository.)
 
 The script checks the 100-term and 500-token limits before sending anything. The token count is
 an approximation (words separated by spaces), not Deepgram's own tokenizer, so stay well under the

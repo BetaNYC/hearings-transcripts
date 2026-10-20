@@ -72,14 +72,18 @@ employee testifying on their own (for example Devin Kim, formerly of xAI) is `wi
    into voice clusters but does not know names.
 3. **Turns.** Consecutive Deepgram segments with the same voice cluster and less than 5
    seconds between them are merged into one turn.
-4. **Speaker names.** Assigned from self-introductions, the chair calling on people, the
-   on-screen name banner (shown only for the Speaker), and voice clusters, then cross-checked
+4. **Speaker names.** Assigned from self-introductions, the chair calling on people, on-screen
+   labels (the Speaker's name banner on 2026-10-05; Zoom name labels on 2026-10-16, read from
+   video frames), the Council's captions, and voice clusters, then cross-checked
    against the Legistar roster, titles and bill sponsors and NYS Open Legislation member and
    sponsor records. Names were assigned by AI agents working from these sources, at BetaNYC's direction. Elected officials were checked against Legistar and NYS Open Legislation. Other names were not individually verified by a person. Each turn carries a confidence (`high`, `medium`, `low`).
 5. **Clean verbatim.** An AI-assisted copy edit: fillers, stutters and false starts removed; punctuation, spelling and number formatting fixed; and words the transcription clearly misheard, including names, corrected. Speaker labels and timestamps are unchanged. The build checks that every turn's
    timestamp and speaker label match the unedited transcript exactly.
-6. **Exports.** `scripts/build_hearing.py` (Python standard library only) writes every file
-   above and `index.html`. See [`scripts/README.md`](scripts/README.md).
+6. **Exports.** `scripts/build_hearing.py` (Python standard library only) writes the
+   transcripts, CSV and JSON exports, captions, `hearing.json`, the hearing README and
+   `index.html`; `build_panels.py`, `build_wordclouds.py` and `build_qa.py` write the panel,
+   word-cloud and Q&A pages, and `lexicon.txt` is written by hand. See
+   [`scripts/README.md`](scripts/README.md).
 7. **Word clouds.** `scripts/build_wordclouds.py` scores the 1- to 3-word phrases in the clean
    transcript with a weighted log-odds test (Monroe, Colaresi and Quinn 2008, "Fightin' Words")
    to find what each speaker group, and some individual speakers, said far more than everyone
@@ -91,10 +95,18 @@ employee testifying on their own (for example Devin Kim, formerly of xAI) is `wi
 - **This is a machine transcript, not an official record of the Council.** Words and speaker
   names can be wrong. Check the video at the timestamp before quoting anyone.
 - `[?]` after a name in the transcripts (and `low` in `turns.csv`) marks a low-confidence
-  speaker label. Some short turns are labeled Unidentified.
+  speaker label. Some hearings have short turns labeled Unidentified; each hearing's README
+  gives the count.
 - Diarization occasionally puts two voices in one turn, typically a question and the first
-  words of the answer. Talk time is approximate. Where a hearing records them (2026-10-16 on),
-  `turns.csv` marks these turns `mixed`; check the video before quoting one.
+  words of the answer. The whole turn, and its talk time and words, are credited to the person
+  named on it, so talk time and the word clouds are approximate. Where a hearing records them
+  (2026-10-16 on), `turns.csv` marks these turns `mixed`; check the video before quoting one.
+  The 2026-10-05 labels do not mark them, so how many there are is not known.
+- Talk time is a turn's end minus its start, so it includes short pauses (under 5 seconds)
+  inside a turn, not only speech.
+- "Words" in a hearing's README and `hearing.json` counts the unedited Deepgram transcript
+  (`words.json`). The word-cloud pages count words in the clean verbatim text, which has fewer
+  (fillers and false starts removed), so the two do not add up to the same total.
 - Unless a hearing's README says otherwise, witness names are spelled as the transcription heard them and have not been checked against a witness list or written testimony. Some are likely misspelled; corrections are welcome as GitHub issues.
 - Word timings in `words.json` and `captions.vtt` come from the unedited transcript. The
   clean edit has no word timings of its own.
@@ -128,6 +140,22 @@ See [`CITATION.cff`](CITATION.cff). Short form:
 
 ## Adding a hearing
 
+**Before you start: what a clone of this repository cannot do.**
+
+- **Transcription is not in this repository.** BetaNYC sends the audio to Deepgram from a script
+  in its private workspace. To transcribe a hearing yourself you need your own paid Deepgram API
+  key (`DEEPGRAM_API_KEY`; Deepgram bills by audio length) and must make the same request
+  yourself; [`scripts/README.md`](scripts/README.md#3-deepgram-transcription) lists the model,
+  options and output format.
+- **`scripts/fetch_legistar.py` needs a Legistar Web API token** in `LEGISTAR_TOKEN`. NYC's
+  Legistar API requires one (https://webapi.legistar.com/Home/Examples); ask the NYC Council
+  for one.
+- **The raw working files are not published.** Each hearing's Deepgram output, speaker labels and
+  transcripts before export stay on BetaNYC's machines. A clone can rebuild
+  the web pages from the published data (`build_hearing.py --index-only`, `build_panels.py`,
+  `build_wordclouds.py`, `build_qa.py`) but cannot rerun a published hearing from scratch. To
+  check our work instead, compare the published `turns.csv` against the Council's video.
+
 Follow the checklist in [`docs/PIPELINE.md`](docs/PIPELINE.md). In short: download the
 Council's documents with `scripts/fetch_legistar.py` and the video, captions and audio with
 `scripts/fetch_media.py`; transcribe with Deepgram and render the raw text with
@@ -136,4 +164,6 @@ edit and check it with `scripts/validate_clean.py`; write `scripts/meta/<slug>.j
 existing one) and run `python3 scripts/build_hearing.py …`; then `python3 scripts/build_panels.py`
 and `python3 scripts/build_wordclouds.py` (a hearing's own groups go in
 `scripts/meta/<slug>-wordclouds.json`), `python3 scripts/build_hearing.py --index-only`, and
-`python3 -m unittest discover -s scripts`. Files over 100 MB go to a GitHub Release, not git.
+`python3 -m unittest discover -s scripts`. MP3s and video never go into git: the full-quality
+MP3 goes to a GitHub Release and the video to the Internet Archive (GitHub also refuses files over
+100 MB).

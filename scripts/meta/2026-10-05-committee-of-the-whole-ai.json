@@ -15,7 +15,7 @@
     "duration_hms": "10:08:12",
     "council_source_url": "https://councilnyc.viebit.com/vod/?s=true&v=NYCC-PV-CH-CHA_261005-110828.mp4",
     "internet_archive_url": "https://archive.org/details/nyc-council-committee-of-the-whole-ai-2026-10-05",
-    "archive_playable": false
+    "archive_playable": true
   },
   "oversight_topic": {
     "file": "T2026-2573",

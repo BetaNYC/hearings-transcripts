@@ -85,7 +85,26 @@ class FeedbackLink(unittest.TestCase):
     def test_readme_explains_corrections(self):
         readme = (REPO / "README.md").read_text(encoding="utf-8")
         self.assertIn("## Corrections", readme)
-        self.assertIn('href="README.md#corrections"', (REPO / "index.html").read_text(encoding="utf-8"))
+        # GitHub renders the README and follows #corrections; the Pages copy is raw Markdown.
+        self.assertEqual(fb.CORRECTIONS_URL,
+                         "https://github.com/BetaNYC/hearings-transcripts/blob/main/README.md#corrections")
+        self.assertIn(f'href="{fb.CORRECTIONS_URL}"', (REPO / "index.html").read_text(encoding="utf-8"))
+
+    def test_no_page_links_markdown_on_the_site(self):
+        """Docs audit M5 (2026-10-19): GitHub Pages serves .md as text/markdown, so every link from
+        a generated page to a Markdown file must go to its rendered GitHub page."""
+        md = re.compile(r'href="([^"]+\.md(?:#[^"]*)?)"')
+        for page in generated_pages():
+            for href in md.findall(page.read_text(encoding="utf-8")):
+                with self.subTest(page=str(page.relative_to(REPO)), href=href):
+                    self.assertTrue(href.startswith(fb.GITHUB_REPO + "/blob/main/"), href)
+                    self.assertTrue((REPO / href.removeprefix(fb.GITHUB_REPO + "/blob/main/")
+                                     .split("#")[0]).is_file(), href)
+
+    def test_repo_blob(self):
+        self.assertEqual(fb.repo_blob("scripts/README.md"),
+                         "https://github.com/BetaNYC/hearings-transcripts/blob/main/scripts/README.md")
+        self.assertEqual(fb.ABOUT_URL, fb.GITHUB_REPO + "/blob/main/README.md")
 
 
 if __name__ == "__main__":

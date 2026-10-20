@@ -43,7 +43,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from feedback import feedback_html  # noqa: E402
+from feedback import ABOUT_URL, feedback_html, repo_blob  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 SCRIPT = "build_panels"
@@ -275,10 +275,16 @@ def legend(turns: list[dict]) -> str:
     return f'<ul class="legend" aria-label="Colors: speaker category">{items}</ul>'
 
 
+def share(secs: float, total: float) -> str:
+    """Percent of a part's talk time; a nonzero share that rounds to 0 shows as "<1%"."""
+    pct = secs / total * 100
+    return "<1%" if 0 < pct < 0.5 else f"{pct:.0f}%"
+
+
 def panel_section(k: int, p: dict, st: dict) -> str:
     total = st["total"] or 1.0
     top = max((x["seconds"] for x in st["people"]), default=1.0) or 1.0
-    split = " · ".join(f"{side} {clock(secs)} ({secs / total * 100:.0f}%)"
+    split = " · ".join(f"{side} {clock(secs)} ({share(secs, total)})"
                        for side, secs in st["sides"].items() if secs > 0)
     rows = []
     for x in st["people"]:
@@ -428,7 +434,7 @@ def render(hearing: dict, panels: list[dict], turns: list[dict]) -> str:
 <a href="#main" class="note" style="position:absolute;left:-999px" onfocus="this.style.left='8px'" onblur="this.style.left='-999px'">Skip to content</a>
 <header class="site"><div class="wrap"><a href="https://beta.nyc/"><img src="{root}assets/betanyc-logo.svg" alt="BetaNYC home" width="142" height="48"></a></div></header>
 <main id="main" class="wrap">
-<p class="crumbs"><a href="{root}index.html#h-{esc(slug)}">{esc(name)}</a> › <a href="README.md">Hearing README</a></p>
+<p class="crumbs"><a href="{root}index.html#h-{esc(slug)}">{esc(name)}</a> › <a href="{repo_blob(f'hearings/{slug}/README.md')}">Hearing README</a></p>
 <h1>Who spoke, panel by panel</h1>
 <p class="sub">{esc(hearing['title'])}. {esc(name)}, {esc(hearing['video']['duration_hms'])} of video, {len(turns)} speaker turns in {len(panels)} parts.</p>
 
@@ -457,7 +463,7 @@ def render(hearing: dict, panels: list[dict], turns: list[dict]) -> str:
 <p>Built by <code>scripts/build_panels.py</code> from <code>panels.json</code>, <code>transcript/turns.csv</code> and <code>speakers.csv</code>. This is a machine transcript, not an official record; check the video before quoting anyone.</p>
 </div>
 </main>
-<footer><div class="wrap">{feedback_html(f"hearings/{slug}/panels.html", hearing)}BetaNYC · <a href="https://beta.nyc/">beta.nyc</a> · <a href="{root}index.html">All hearing transcripts</a> · <a href="{root}README.md">About this repository</a></div></footer>
+<footer><div class="wrap">{feedback_html(f"hearings/{slug}/panels.html", hearing)}BetaNYC · <a href="https://beta.nyc/">beta.nyc</a> · <a href="{root}index.html">All hearing transcripts</a> · <a href="{ABOUT_URL}">About this repository</a></div></footer>
 <div class="tip" id="tip" aria-hidden="true"></div>
 <script>
 const TURNS={json_for_script(js_turns)};

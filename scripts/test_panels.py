@@ -204,15 +204,32 @@ class Hearing20261016(unittest.TestCase):
         turns = sum(float(r["end_sec"]) - float(r["start_sec"]) for r in turns_csv())
         self.assertAlmostEqual(total, turns, delta=0.5)
 
-    def test_hearing_json_and_pending_media(self):
+    def test_hearing_json_and_media_state(self):
+        """2026-10-19: the MP3 Release is published; the Internet Archive item is uploaded but not
+        yet playable, so it is linked as a copy and the Council's video stays the Watch button."""
         h = json.loads((H / "hearing.json").read_text(encoding="utf-8"))
         self.assertEqual(h["legistar"]["event_id"], 22795)
-        self.assertFalse(h["media"]["audio_mp3"]["release_published"])
+        mp3 = h["media"]["audio_mp3"]
+        self.assertTrue(mp3["release_published"])
+        self.assertEqual(mp3["release_url"],
+                         "https://github.com/BetaNYC/hearings-transcripts/releases/tag/2026-10-16-technology-ai")
+        ia = "https://archive.org/details/nyc-council-technology-ai-2026-10-16"
+        self.assertEqual(h["video"]["internet_archive_url"], ia)
         self.assertFalse(h["video"]["archive_playable"])
-        self.assertEqual(h["video"]["internet_archive_url"], "")
         media = (H / "media" / "README.md").read_text(encoding="utf-8")
-        self.assertIn("Not uploaded yet.", media)
-        self.assertIn("not published yet.", media)
+        self.assertIn(mp3["release_url"], media)
+        self.assertNotIn("not published yet", media)
+        self.assertIn(ia + " " + bh.ARCHIVE_PENDING_NOTE, media)
+        readme = (H / "README.md").read_text(encoding="utf-8")
+        self.assertIn(f"- Internet Archive copy: [archive.org]({ia})", readme)
+        self.assertNotIn("- Watch: [Internet Archive]", readme)
+        self.assertNotIn("has not been published as a GitHub Release", readme)
+        card = (REPO / "index.html").read_text(encoding="utf-8").split(f'id="h-{SLUG}"', 1)[1].split("</article>", 1)[0]
+        self.assertIn(f'<a class="button" href="{bh.esc(h["video"]["council_source_url"])}">Watch the Council', card)
+        self.assertNotIn("Watch on the Internet Archive", card)
+        self.assertIn(f'<a href="{ia}">Internet Archive copy</a>', card)
+        self.assertIn(bh.esc(bh.ARCHIVE_PENDING_NOTE), card)
+        self.assertIn(f'<a href="{mp3["release_url"]}">Audio, full quality (GitHub Release)</a>', card)
         self.assertTrue((H / "media" / "hearing-audio-16k.opus").is_file())
         self.assertFalse(any(H.rglob("*.mp3")) or any(H.rglob("*.mp4")))
 
@@ -304,7 +321,7 @@ class IndexToc(unittest.TestCase):
         self.assertEqual(dates, [d for d, _ in hearings])
         for _, slug in hearings:
             self.assertIn(f'id="h-{slug}"', text)
-            self.assertIn(f'href="hearings/{slug}/README.md"', toc)
+            self.assertIn(f'href="{bh.repo_blob(f"hearings/{slug}/README.md")}"', toc)
         self.assertIn(f'href="hearings/{SLUG}/panels.html"', toc)
         self.assertIn('href="hearings/2026-10-05-committee-of-the-whole-ai/city-qa.html"', toc)
         self.assertLess(text.index('id="toc-h"'), text.index("<h2>Each hearing</h2>"))
@@ -335,6 +352,138 @@ class WordcloudConfigs(unittest.TestCase):
         self.assertNotIn("BetaNYC, which built these pages, testified", (H / "wordclouds" / "index.html").read_text(encoding="utf-8"))
         for p in ("gabriela-castillo-madrid", "devin-kim", "julie-menin", "carmen-de-la-rosa"):
             self.assertTrue((H / "wordclouds" / "people" / f"{p}.html").is_file(), p)
+
+
+
+class Audits20261019(unittest.TestCase):
+    """Regression checks for the 2026-10-19 docs audit (M3, M4) and numbers audit (D1-D6)."""
+
+    OCT5 = REPO / "hearings" / "2026-10-05-committee-of-the-whole-ai"
+
+    def index(self) -> str:
+        return (REPO / "index.html").read_text(encoding="utf-8")
+
+    def card(self, slug: str) -> str:
+        return self.index().split(f'id="h-{slug}"', 1)[1].split("</article>", 1)[0]
+
+    def test_human_dur_never_shows_zero_minutes(self):  # D5
+        self.assertEqual(bh.human_dur(10.48), "10s")
+        self.assertEqual(bh.human_dur(16.18), "16s")
+        self.assertEqual(bh.human_dur(0.4), "0s")
+        self.assertEqual(bh.human_dur(60), "1m")
+        self.assertEqual(bh.human_dur(1648.78), "27m")
+        self.assertEqual(bh.human_dur(3600), "1h 00m")
+        self.assertNotIn(">0m<", self.index())
+
+    def test_chart_title_pluralizes_turns(self):  # D5
+        sp = [{"speaker_name": "A", "speaker_role": "Council Member", "category": "council",
+               "turns": 1, "talk_seconds": 30.0},
+              {"speaker_name": "B", "speaker_role": "Council Member", "category": "council",
+               "turns": 2, "talk_seconds": 90.0}]
+        svg = bh.chart_svg(sp, "x")
+        self.assertIn("in 1 turn</title>", svg)
+        self.assertIn("in 2 turns</title>", svg)
+        self.assertNotIn("in 1 turns", self.index())
+
+    def test_panel_share_below_half_percent(self):  # D5
+        self.assertEqual(bp.share(10.48, 3439.99), "<1%")
+        self.assertEqual(bp.share(0, 100), "0%")
+        self.assertEqual(bp.share(30.0, 100), "30%")
+        self.assertIn("Council staff 0:10 (&lt;1%)", PAGE.read_text(encoding="utf-8"))
+
+    def test_top_two_tie_note(self):  # D1
+        def sp(name, secs):
+            return {"speaker_name": name, "speaker_role": "R", "talk_seconds": secs}
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            hdir = Path(d)
+            (hdir / "transcript").mkdir()
+            fields = ["turn_id", "start_sec", "end_sec", "speaker_name", "speaker_role", "mixed"]
+            with open(hdir / "transcript" / "turns.csv", "w", encoding="utf-8", newline="") as f:
+                w = csv.DictWriter(f, fieldnames=fields)
+                w.writeheader()
+                w.writerow({"turn_id": 0, "start_sec": 0, "end_sec": 100, "speaker_name": "A",
+                            "speaker_role": "R", "mixed": "true"})
+                w.writerow({"turn_id": 1, "start_sec": 100, "end_sec": 200, "speaker_name": "B",
+                            "speaker_role": "R", "mixed": "false"})
+            tied = bh.top_two_note(hdir, [sp("A", 1630), sp("B", 1600)])  # gap 30 s < 100 s mixed
+            self.assertIn("A and B each spoke about 27 minutes", tied)
+            self.assertIn("does not show which of them spoke longer", tied)
+            self.assertEqual(bh.top_two_note(hdir, [sp("A", 1800), sp("B", 1600)]), "")  # gap 200 s
+            self.assertIn("spoke about 30 and 28 minutes",
+                          bh.top_two_note(hdir, [sp("A", 1790), sp("B", 1700)]))
+        with tempfile.TemporaryDirectory() as d:  # no mixed column (2026-10-05): no claim either way
+            hdir = Path(d)
+            (hdir / "transcript").mkdir()
+            (hdir / "transcript" / "turns.csv").write_text("turn_id,start_sec,end_sec,speaker_name,speaker_role\n"
+                                                           "0,0,1,A,R\n", encoding="utf-8")
+            self.assertEqual(bh.top_two_note(hdir, [sp("A", 1650), sp("B", 1600)]), "")
+
+    def test_oct16_chart_does_not_rank_top_two(self):  # D1
+        card = self.card(SLUG)
+        self.assertIn("Julie Menin and Gabriela Castillo Madrid each spoke about 27 minutes", card)
+        self.assertNotIn("each spoke about", self.card(self.OCT5.name))
+
+    def test_wordcloud_pages_disclose_mixed_turns(self):  # D2
+        for page in sorted((H / "wordclouds").rglob("*.html")):
+            with self.subTest(page=page.name):
+                text = page.read_text(encoding="utf-8")
+                self.assertIn("56 turns at this hearing hold two voices", text)
+                self.assertIn("count toward the person named on the turn", text)
+                if page.name != "index.html":
+                    self.assertRegex(text, r"On this page, [\d,]+ of the [\d,]+ words are in such turns")
+        menin = (H / "wordclouds" / "people" / "julie-menin.html").read_text(encoding="utf-8")
+        self.assertIn("On this page, 1,747 of the 3,979 words are in such turns", menin)  # numbers audit D2
+        for page in sorted((self.OCT5 / "wordclouds").rglob("*.html")):
+            with self.subTest(page=page.name):
+                text = page.read_text(encoding="utf-8")
+                self.assertIn("Some turns hold two voices", text)
+                self.assertNotIn("On this page,", text)
+
+    def test_mixed_words_counted_only_with_a_mixed_column(self):  # D2
+        turns = [{"speaker_name": "A", "start_sec": "0", "end_sec": "60", "text_clean": "one two three",
+                  "mixed": "true"},
+                 {"speaker_name": "A", "start_sec": "60", "end_sec": "120", "text_clean": "four five",
+                  "mixed": "false"}]
+        st = bw.turn_stats(turns, lambda t: True)
+        self.assertEqual((st["words"], st["mixed_words"]), (5, 3))
+        old = [{k: v for k, v in t.items() if k != "mixed"} for t in turns]
+        self.assertNotIn("mixed_words", bw.turn_stats(old, lambda t: True))
+        self.assertIn("On this page, 3 of the 5 words", bw.mixed_note({"mixed_turns": 2}, st))
+        self.assertTrue(bw.mixed_note({}, None).startswith("Some turns hold two voices"))
+
+    def test_shared_how_made_covers_both_hearings(self):  # M3, D3
+        text = self.index()
+        self.assertNotIn("shown only for the Speaker", text)
+        self.assertIn("Zoom name labels on 2026-10-16, read from video frames", text)
+        self.assertIn("the Council&#x27;s captions", text)
+        self.assertNotIn("Some turns are labeled Unidentified", text)
+        self.assertIn("each hearing&#x27;s README gives the count", text)
+        self.assertIn("includes short pauses inside a turn", text)
+
+    def test_oct5_archive_copy_is_playable(self):  # M4
+        h = json.loads((self.OCT5 / "hearing.json").read_text(encoding="utf-8"))
+        self.assertTrue(h["video"]["archive_playable"])
+        for f in (self.OCT5 / "README.md", self.OCT5 / "media" / "README.md"):
+            self.assertNotIn("still in progress", f.read_text(encoding="utf-8"))
+            self.assertNotIn(bh.ARCHIVE_PENDING_NOTE, f.read_text(encoding="utf-8"))
+        card = self.card(self.OCT5.name)
+        self.assertIn('Watch on the Internet Archive</a>', card)
+        self.assertNotIn(bh.esc(bh.ARCHIVE_PENDING_NOTE), card)
+
+    def test_archive_md_variants(self):  # M4
+        meta = {"video": {"internet_archive_url": "", "archive_playable": False}}
+        self.assertIn("has not been uploaded yet", bh.archive_md(meta))
+        meta["video"]["internet_archive_url"] = "https://archive.org/details/x"
+        self.assertTrue(bh.archive_md(meta).startswith("- Internet Archive copy: "))
+        meta["video"]["archive_playable"] = True
+        self.assertEqual(bh.archive_md(meta), "- Watch: [Internet Archive](https://archive.org/details/x)")
+
+    def test_words_and_unquantified_mixed_wording(self):  # D4, D6
+        for d in (H, self.OCT5):
+            self.assertIn("words (unedited Deepgram transcript):", (d / "README.md").read_text(encoding="utf-8"))
+        self.assertNotIn("a few turns", self.index())
+        self.assertIn("this hearing&#x27;s labels do not mark or count them", self.card(self.OCT5.name))
 
 
 if __name__ == "__main__":
