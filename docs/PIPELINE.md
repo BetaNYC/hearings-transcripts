@@ -49,7 +49,7 @@ the published data but cannot rerun a published hearing from scratch.
       BetaNYC names and no general list. Deepgram allows 100 terms and 500 tokens per request and
       recommends 20 to 50 (https://developers.deepgram.com/docs/keyterm).
       On 2026-10-19, for the 2026-10-16 hearing, the workspace `core` list turned the SpaceX witness's self-introduction
-      ("Gabriella Madrid" in the Council's captions) into a BetaNYC staff name.
+      ("Gabriella Madrid" in the Council's captions) into a BetaNYC staff name, so that hearing was transcribed twice (both runs paid).
 - [ ] Run Deepgram once, saving `--raw-out` so the response is never paid for twice. From the
       BetaNYC workspace `scripts/` folder:
 
@@ -107,7 +107,7 @@ operator's private workspace.
       also enforces). Read `big_shrinks` (turns over 200 characters cut by more than 40%; shorter turns are not checked) and the `--names` list of
       proper nouns added or removed, and check each one.
 - [ ] **Lesson: check meaning-changing edits against the Council's captions.** On 2026-10-19 (2026-10-16 hearing) four
-      clean-edit changes were reverted because both Deepgram and the captions disagreed with
+      clean-edit changes were reverted because neither Deepgram nor the captions supported
       them: "lunch" to "launch" (twice), "dictated" to "abdicated", "stopped" to "stalked". A fix
       that changes what someone said needs a second source, not a better-sounding word.
 
@@ -152,8 +152,8 @@ most of the work on the 2026-10-16 hearing went. Do every step before publishing
 
 **a. Meaning-changing clean edits.** List every edit that changes a word rather than removing
 filler (`scripts/validate_clean.py … --names` lists name changes; diff the two transcripts for the
-rest). Keep an edit only if the Council's captions or the context support it. If both Deepgram and
-the captions say otherwise, revert it. On 2026-10-19 four edits were reverted this way: "lunch" to
+rest). Keep an edit only if the Council's captions or the context support it. If neither Deepgram nor
+the captions supports it, revert it. On 2026-10-19 four edits were reverted this way: "lunch" to
 "launch" (twice), "dictated" to "abdicated", "stopped" to "stalked".
 
 **b. Every name and affiliation, against a public source.** Check each speaker's name and
@@ -172,6 +172,10 @@ look at the frame rather than trusting a transcription of it:
 ```sh
 ffmpeg -v error -ss 00:09:15 -i "$D/<video>.mp4" -frames:v 1 "$D/frame-00-09-15.png"
 ```
+
+A Zoom label is small. Crop it at full resolution and scale it up 4x before reading it (no OCR
+is needed). To search the Council's captions for a name, remember they are live roll-up: each
+line appears twice, so collapse them to the `line:74%` cues first.
 
 **d. Two reviews until both say ship.** One reviewer checks the code and the build (a fresh
 reader trying to break it); one checks credibility (every public claim, name, title, number and
@@ -209,7 +213,9 @@ Checklist:
 - [ ] Upload the MP4 to the Internet Archive; set `video.internet_archive_url`, and
       `archive_playable: true` once the item plays; rebuild. While `archive_playable` is false the
       pages link the archive copy with a "still being processed" note and keep the Council's video
-      as the Watch button; once true, the archive copy becomes the Watch button.
+      as the Watch button; once true, the archive copy becomes the Watch button. Processing can
+      take hours or days (the 2026-10-16 item was still processing the morning after upload), so publish
+      with the Council's video first and come back.
 - [ ] Add the hearing to the table in the top-level `README.md`.
 - [ ] `python3 -m unittest discover -s scripts -v` passes.
 - [ ] The MP4 and MP3 never go into git.
