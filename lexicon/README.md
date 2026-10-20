@@ -36,14 +36,14 @@ list that are not in the room, the more chances it has to put one of them into s
 
 This happened on 2026-10-19. The first run for the 2026-10-16 hearing used BetaNYC's own
 workspace word list, which holds staff names. The SpaceX witness introduced herself, and the
-Council's captions read "Gabriella Madrid". Deepgram wrote "Gabrielle Langston", the name of a
+Council's captions read "Gabriella Madrid". Deepgram wrote the name of a
 BetaNYC staff member on that list, who was not at the hearing. So:
 
 - never send tier 1, or any organization's general list, as keyterms;
 - never include BetaNYC names unless a BetaNYC person speaks at that hearing;
 - build each hearing's list from that hearing's own sources.
 
-What a hearing list did, 2026-10-16 hearing, run 2 against run 1: "Langston" went from 1 to 0
+What a hearing list did, 2026-10-16 hearing, run 2 against run 1: the staff name went from 1 to 0
 and the witness came out as "Gabriella Castillo Madrid". "Grock" went from 8 to 0 and
 "SpaceX SI" from 9 to 1. "Menon" became "Menin" all 9 times. One got worse: the keyterm
 "Gutiérrez" came out as "Gutirez" (twice), where run 1 had "Gutierrez" and the captions have
