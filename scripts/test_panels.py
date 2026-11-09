@@ -245,6 +245,60 @@ class Hearing20261016(unittest.TestCase):
             self.assertEqual((H / "legistar" / r["filename"]).stat().st_size, int(r["bytes"]))
 
 
+class Hearing20260930(unittest.TestCase):
+    """The 2026-09-30 Committee on Technology 311 hearing (built 2026-11-08)."""
+
+    S = "2026-09-30-technology-311"
+    D = REPO / "hearings" / S
+
+    def rows(self):
+        with open(self.D / "transcript" / "turns.csv", encoding="utf-8", newline="") as f:
+            return list(csv.DictReader(f))
+
+    def test_turns_prefixes_and_mixed(self):
+        rows = self.rows()
+        self.assertEqual(len(rows), 151)
+        for name in ("transcript.txt", "transcript-clean.txt"):
+            parsed = bh.parse_transcript(self.D / "transcript" / name)
+            self.assertEqual([h for h, _ in parsed], [r["start_hms"] for r in rows], name)
+        h = json.loads((self.D / "hearing.json").read_text(encoding="utf-8"))
+        self.assertEqual(sum(r["mixed"] == "true" for r in rows), 61)
+        self.assertEqual(h["legistar"]["event_id"], 22733)
+
+    def test_panels_cover_every_turn_once_and_list_their_speakers(self):
+        panels = json.loads((self.D / "panels.json").read_text(encoding="utf-8"))
+        ids = [i for p in panels for i in p["turn_ids"]]
+        self.assertEqual(ids, list(range(151)))
+        rows = self.rows()
+        for p in panels:
+            spoke = list(dict.fromkeys(rows[i]["speaker_name"] for i in p["turn_ids"]))
+            self.assertEqual([m["name"] for m in p["members"]], spoke, p["panel_id"])
+
+    def test_speakers_and_categories(self):
+        with open(self.D / "speakers.csv", encoding="utf-8", newline="") as f:
+            sp = {r["speaker_name"]: r for r in csv.DictReader(f)}
+        self.assertEqual(sp["Joe Morrisroe"]["category"], "city-official")
+        self.assertEqual(sp["Chowdhury Hasan Mahmud"]["category"], "witness")
+        self.assertEqual(sp["Carmen De La Rosa"]["category"], "council")
+        total = sum(float(r["talk_seconds"]) for r in sp.values())
+        turns = sum(float(r["end_sec"]) - float(r["start_sec"]) for r in self.rows())
+        self.assertAlmostEqual(total, turns, delta=0.5)
+
+    def test_media_state_before_release(self):
+        self.assertTrue((self.D / "media" / "hearing-audio-16k.opus").is_file())
+        self.assertFalse(any(self.D.rglob("*.mp3")) or any(self.D.rglob("*.mp4")))
+        readme = (self.D / "README.md").read_text(encoding="utf-8")
+        self.assertIn("has not been published as a GitHub Release", readme)
+
+    def test_panels_and_wordclouds_rebuild_identically(self):
+        files = [self.D / "panels.html"] + sorted((self.D / "wordclouds").rglob("*.*"))
+        before = {f: f.read_bytes() for f in files}
+        bp.build(self.S)
+        bw.main(["--slug", self.S])
+        for f, b in before.items():
+            self.assertEqual(f.read_bytes(), b, f)
+
+
 class QaRound1(unittest.TestCase):
     """Regression checks for the 2026-10-19 QA round on the 2026-10-16 hearing."""
 
@@ -455,7 +509,7 @@ class Audits20261019(unittest.TestCase):
     def test_shared_how_made_covers_both_hearings(self):  # M3, D3
         text = self.index()
         self.assertNotIn("shown only for the Speaker", text)
-        self.assertIn("Zoom name labels on 2026-10-16, read from video frames", text)
+        self.assertIn("Zoom name labels on 2026-10-16 and 2026-09-30, read from video frames", text)
         self.assertIn("the Council&#x27;s captions", text)
         self.assertNotIn("Some turns are labeled Unidentified", text)
         self.assertIn("each hearing&#x27;s README gives the count", text)

@@ -15,8 +15,9 @@ Turns: merge consecutive segments with the same speaker cluster and a gap < 5 s
   ▼
 Speaker naming                      → speaker-labels.json  [{i,name,role,confidence,evidence}], one per turn
   │  self-introductions, chair call-outs, on-screen labels (the Speaker's name banner on
-  │  2026-10-05; Zoom name labels on 2026-10-16, read from video frames), the Council's
-  │  captions, voice clusters; cross-checked against the Legistar roster, titles and
+  │  2026-10-05; Zoom name labels on 2026-10-16 and 2026-09-30, read from video frames),
+  │  the Council's captions (and its official transcript when posted, as for 2026-09-30),
+  │  voice clusters; cross-checked against the Legistar roster, titles and
   │  bill sponsors and NYS Open Legislation member and sponsor records.
   │  Names were assigned by AI agents working from these sources, at BetaNYC's direction.
   │  Elected officials were checked against Legistar and NYS Open Legislation.
@@ -153,6 +154,11 @@ the build. The 2026-10-05 hearing was made from hand-made downloads, read with
 of `[matter, attachment, last_modified_utc, url, filename, bytes]`). Leave the options off to keep
 the existing `legistar/` folder.
 
+A file named in the meta's `legistar_not_hosted` (`{filename: note}`) is not copied. `manifest.csv`
+then gains `hosted` (`yes`/`no`) and `note` columns, `bytes` is the size of the Council's file, and
+`index.html` and the hearing README link to its `legistar_url` instead. A name not in the download
+stops the build, and so does a kept `legistar/` folder that still holds a file the meta names.
+
 Re-running is safe: every output is rewritten in full, and the Opus file is copied only when
 missing or a different size.
 
@@ -168,6 +174,22 @@ python3 scripts/validate_clean.py <unedited>.txt <clean>.txt --names
 Exit 0 only when both files have the same number of turns and byte-identical
 `[HH:MM:SS] Name:` prefixes. Also prints how many turns changed, the overall length ratio,
 turns cut by more than 40%, and (with `--names`) every capitalized token added or removed.
+
+## build_qa.py
+
+Python 3.11 to 3.14, standard library only. No network access. Writes a hearing's "What the City
+said" page (`city-qa.html`): every question Council Members asked the City's panel, the exchange
+word for word from `turns.json` (clean verbatim), the City's position on each bill, and what the
+City said it would follow up on. The question headlines, titles, positions and follow-ups are
+written by hand in `scripts/meta/<slug>-city-qa.json`.
+
+```sh
+python3 scripts/build_qa.py --config scripts/meta/<slug>-city-qa.json
+python3 scripts/build_hearing.py --index-only   # links the page from index.html and the hearing README
+```
+
+Optional config keys: `topic` (the page description's "hearing on <topic>", default "AI") and
+`opening.summary` (the opening statement's summary line; the default is the 2026-10-05 wording).
 
 ## build_panels.py
 
@@ -241,8 +263,8 @@ is idempotent.
 
 `test_fetch.py` checks the pure parts of steps 1 to 3 without network access: attachment
 file names against the 2026-10-05 manifest, manifest columns, agenda-first ordering and
-duplicate names, Viebit `pageConfig` parsing and host checks, the ffmpeg arguments, and turn
-merging in the raw text.
+duplicate names, Viebit `pageConfig` parsing and host checks, the ffmpeg arguments, turn
+merging in the raw text, and files listed but not hosted (`legistar_not_hosted`).
 
 `test_validate_clean.py` checks the clean-transcript validator: header skipping, prefix and turn-count
 failures, shrink warnings and the `--names` report.
@@ -250,14 +272,16 @@ failures, shrink warnings and the `--names` report.
 `test_panels.py` checks `build_panels.py` (talk-time sums, row order, band labels, every turn drawn
 once in time order and keyboard-reachable, bars inside the plot, no external resources, links and
 ids, idempotence), the `panels.json` checks in `build_hearing.py`, per-hearing word cloud configs,
-the built 2026-10-16 hearing, and the fixes from the 2026-10-19 docs and numbers audits (media
+the built 2026-10-16 and 2026-09-30 hearings, and the fixes from the 2026-10-19 docs and numbers audits (media
 link states, the top-two talk-time note, mixed-turn notes on word-cloud pages, sub-minute times).
 
 `test_feedback.py` checks the report-a-mistake footer link on every generated page against the
 correction form, and that no page links a Markdown file on the site instead of its GitHub page.
 
-`test_qa.py` checks `build_qa.py` and the built City Q&A page.
+`test_qa.py` checks `build_qa.py` and the built City Q&A pages (2026-10-05 and 2026-09-30): turns
+inside the panel and shown once, answers verbatim, in-page links, and that each page is current.
 
 `test_build.py` checks the 2026-10-05 hearing's built files: 830 turns, transcript prefixes, word timings inside
 their turns, CSV columns and confidence values, WebVTT header and ordering, file sizes,
-every relative link in `index.html`, and that speaker talk time sums to turn time.
+every relative link in `index.html`, and that speaker talk time sums to turn time; and, for
+2026-09-30, that the testimony files marked not hosted are absent and linked to the Council's site.

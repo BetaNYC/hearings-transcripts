@@ -239,6 +239,51 @@ class BuiltFileTests(unittest.TestCase):
         self.assertIn("<desc id=", html_text)
 
 
+class NotHostedTests(unittest.TestCase):
+    """2026-09-30: four written-testimony PDFs show a witness's personal contact details. They are
+    listed in manifest.csv and linked to the Council's copy, not hosted here."""
+    SLUG = "2026-09-30-technology-311"
+
+    def setUp(self):
+        self.h = REPO / "hearings" / self.SLUG
+        self.meta = json.loads((REPO / "scripts" / "meta" / f"{self.SLUG}.json").read_text(encoding="utf-8"))
+        self.manifest = bh.read_manifest(self.h)
+
+    def test_marked_rows_are_not_in_the_repo(self):
+        not_hosted = self.meta["legistar_not_hosted"]
+        self.assertEqual(len(not_hosted), 4)
+        marked = {m["filename"]: m for m in self.manifest if m["hosted"] == "no"}
+        self.assertEqual(set(marked), set(not_hosted))
+        for fname, m in marked.items():
+            self.assertFalse((self.h / "legistar" / fname).exists(), fname)
+            self.assertTrue(m["legistar_url"].startswith("https://nyc.legistar1.com/"))
+            self.assertEqual(m["note"], not_hosted[fname])
+        for m in self.manifest:
+            if m["hosted"] == "yes":
+                self.assertTrue((self.h / "legistar" / m["filename"]).is_file(), m["filename"])
+
+    def test_pages_link_to_the_council(self):
+        index = (REPO / "index.html").read_text(encoding="utf-8")
+        readme = (self.h / "README.md").read_text(encoding="utf-8")
+        hearing = json.loads((self.h / "hearing.json").read_text(encoding="utf-8"))
+        for m in self.manifest:
+            if m["hosted"] == "no":
+                self.assertIn(f'<a href="{m["legistar_url"]}">', index)
+                self.assertNotIn("legistar/" + m["filename"], index)
+        self.assertIn("On the Council's site (not copied here:", index)
+        self.assertIn("4 more on the Council's site", index)
+        self.assertIn("4 more are listed in `manifest.csv` and link to the Council's site", readme)
+        hosted = len({m["filename"] for m in self.manifest if m["hosted"] == "yes"})
+        self.assertEqual(hearing["stats"]["legistar_documents"], hosted)
+
+    def test_other_hearings_have_no_not_hosted_columns(self):
+        for slug in ("2026-10-05-committee-of-the-whole-ai", "2026-10-16-technology-ai"):
+            p = REPO / "hearings" / slug / "legistar" / "manifest.csv"
+            if p.exists():
+                header = p.read_text(encoding="utf-8").splitlines()[0]
+                self.assertEqual(header, ",".join(bh.MANIFEST_FIELDS), slug)
+
+
 class ServeTests(unittest.TestCase):
     """Serve the repo root as GitHub Pages would and fetch every relative link."""
 
