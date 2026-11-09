@@ -12,6 +12,7 @@ Browse and download: **https://betanyc.github.io/hearings-transcripts/** (or ope
 |---|---|---|---|
 | 2026-10-16 | Committee on Technology | Oversight - Continuing Discussion about the Risks Posed by Artificial Intelligence | [`hearings/2026-10-16-technology-ai/`](hearings/2026-10-16-technology-ai/) |
 | 2026-10-05 | Committee of the Whole | Oversight - Examining the Risks Posed by Artificial Intelligence | [`hearings/2026-10-05-committee-of-the-whole-ai/`](hearings/2026-10-05-committee-of-the-whole-ai/) |
+| 2026-09-30 | Committee on Technology | Oversight - New York City’s 311 System | [`hearings/2026-09-30-technology-311/`](hearings/2026-09-30-technology-311/) |
 
 BetaNYC's executive director, Noel Hidalgo, testified at the 2026-10-05 hearing; his testimony is transcribed and labeled the same way as everyone else's.
 
@@ -28,7 +29,7 @@ what, jump to the moment in the video, and count who got the floor.
 | `hearing.json` | JSON | Title, date, body, Legistar event id and URL, video links, duration, bills heard (file number, subject, lead sponsor), counts |
 | `transcript/transcript.txt` | text | Unedited machine transcript, `[HH:MM:SS] Name: text`, one turn per paragraph |
 | `transcript/transcript-clean.txt` | text | Clean verbatim edit of the same turns |
-| `transcript/turns.csv`, `turns.json` | CSV, JSON | One row per speaker turn: `turn_id, start_sec, end_sec, start_hms, end_hms, speaker_name, speaker_role, confidence, deepgram_cluster, text_clean, text_unedited`, plus `mixed` (`true`/`false`) from 2026-10-16 on: the turn holds more than one voice and is credited to the person named on it |
+| `transcript/turns.csv`, `turns.json` | CSV, JSON | One row per speaker turn: `turn_id, start_sec, end_sec, start_hms, end_hms, speaker_name, speaker_role, confidence, deepgram_cluster, text_clean, text_unedited`, plus `mixed` (`true`/`false`) for 2026-09-30 and 2026-10-16: the turn holds more than one voice and is credited to the person named on it |
 | `transcript/words.json` | JSON | `[{turn_id, word, start, end}]`, every recognized word with its timing |
 | `transcript/captions.vtt` | WebVTT | Captions with the speaker in a `<v>` tag; cues of 7 seconds or less, at most two lines |
 | `speakers.csv` | CSV | `speaker_name, speaker_role, category, turns, talk_seconds, first_heard_hms` |
@@ -73,8 +74,9 @@ employee testifying on their own (for example Devin Kim, formerly of xAI) is `wi
 3. **Turns.** Consecutive Deepgram segments with the same voice cluster and less than 5
    seconds between them are merged into one turn.
 4. **Speaker names.** Assigned from self-introductions, the chair calling on people, on-screen
-   labels (the Speaker's name banner on 2026-10-05; Zoom name labels on 2026-10-16, read from
-   video frames), the Council's captions, and voice clusters, then cross-checked
+   labels (the Speaker's name banner on 2026-10-05; Zoom name labels on 2026-10-16 and
+   2026-09-30, read from video frames), the Council's captions (and, for 2026-09-30, the
+   Council's official transcript, posted in Legistar), and voice clusters, then cross-checked
    against the Legistar roster, titles and bill sponsors and NYS Open Legislation member and
    sponsor records. Names were assigned by AI agents working from these sources, at BetaNYC's direction. Elected officials were checked against Legistar and NYS Open Legislation. Other names were not individually verified by a person. Each turn carries a confidence (`high`, `medium`, `low`).
 5. **Clean verbatim.** An AI-assisted copy edit: fillers, stutters and false starts removed; punctuation, spelling and number formatting fixed; and words the transcription clearly misheard, including names, corrected. Speaker labels and timestamps are unchanged. The build checks that every turn's
@@ -101,7 +103,7 @@ employee testifying on their own (for example Devin Kim, formerly of xAI) is `wi
 - Diarization occasionally puts two voices in one turn, typically a question and the first
   words of the answer. The whole turn, and its talk time and words, are credited to the person
   named on it, so talk time and the word clouds are approximate. Where a hearing records them
-  (2026-10-16 on), `turns.csv` marks these turns `mixed`; check the video before quoting one.
+  (2026-09-30 and 2026-10-16), `turns.csv` marks these turns `mixed`; check the video before quoting one.
   The 2026-10-05 labels do not mark them, so how many there are is not known.
 - Talk time is a turn's end minus its start, so it includes short pauses (under 5 seconds)
   inside a turn, not only speech.

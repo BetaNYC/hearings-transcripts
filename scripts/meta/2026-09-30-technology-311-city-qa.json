@@ -1,0 +1,411 @@
+{
+ "slug": "2026-09-30-technology-311",
+ "page": "city-qa.html",
+ "topic": "the 311 system",
+ "title": "What the City said: Council questions to the administration",
+ "panel": {
+  "start_hms": "00:11:59",
+  "end_hms": "01:23:56",
+  "summary": "The administration's panel came first, after the Council Members' opening statements, and before public testimony. It ran about 1 hour 12 minutes. Joe Morrisroe, Deputy Commissioner for NYC 311 at OTI, was the only City witness. He read OTI's opening statement, then Council Members asked questions."
+ },
+ "officials": [
+  {
+   "name": "Joe Morrisroe",
+   "title": "Deputy Commissioner, NYC 311, Office of Technology and Innovation (OTI)."
+  }
+ ],
+ "titles_note": "Title as introduced at the hearing and in OTI's written testimony.",
+ "opening": {
+  "turns": [
+   8
+  ],
+  "speaker": "Joe Morrisroe",
+  "start_hms": "00:12:17",
+  "summary": "Joe Morrisroe's opening statement for OTI"
+ },
+ "positions": [
+  [
+   "Int 173 (Dinowitz)",
+   "311 uses GPS coordinates for complaints and service requests",
+   "Agrees 311's user interface would be better with a \"pin drop\"; OTI is exploring it with its geolocation partner, ESRI, and wants to work with the Council on the best path. Asked whether he supports the bill, he answered (in a turn the transcript credits to Council Member Dinowitz, 00:30:29): \"We are supportive of the GPS locate... The pin drop locator.\""
+  ],
+  [
+   "Int 669 (Williams)",
+   "311 refers non-emergency traffic complaints to the NYPD Transportation Bureau",
+   "311 can change the routing, but neither OTI nor 311 can comment on the merits: the policy belongs to NYPD. Says NYPD believes many of these calls should go through 911 or to other NYPD bureaus, and urges the Council to discuss the bill with NYPD."
+  ],
+  [
+   "Int 800 (Schulman)",
+   "311 redirects requests for service or complaints to the appropriate agency",
+   "Most requests are routed correctly; cites street cave-ins, which DOT assesses and then reassigns. Understands the frustration, says 311 has been identifying solutions, and offers to talk through options and align on next steps. No position stated for or against."
+  ]
+ ],
+ "sections": [
+  {
+   "id": "de-la-rosa-1",
+   "who": "Chair Carmen De La Rosa (staffing and the overflow vendor)",
+   "turns": [
+    9,
+    36
+   ],
+   "questions": [
+    [
+     "00:19:31",
+     "What is 311's headcount?"
+    ],
+    [
+     "00:20:43",
+     "How many people work on the 311 website and mobile app?"
+    ],
+    [
+     "00:21:49",
+     "Are text messages answered by people or automated? Is there a plan to automate?"
+    ],
+    [
+     "00:22:39",
+     "How many vacancies are there?"
+    ],
+    [
+     "00:22:53",
+     "What is the starting salary for a call center representative?"
+    ],
+    [
+     "00:23:16",
+     "Are call takers outsourced? Which vendor?"
+    ],
+    [
+     "00:24:05",
+     "When is the overflow vendor used?"
+    ],
+    [
+     "00:24:32",
+     "Are the vendor's workers paid the same as City workers?"
+    ],
+    [
+     "00:24:53",
+     "Was the King TeleServices contract renewed?"
+    ],
+    [
+     "00:25:40",
+     "What is the contract's value?"
+    ]
+   ]
+  },
+  {
+   "id": "schulman",
+   "who": "Council Member Lynn Schulman",
+   "turns": [
+    37,
+    45
+   ],
+   "questions": [
+    [
+     "00:25:59",
+     "How do 311 homeless encampment requests work now?"
+    ],
+    [
+     "00:28:05",
+     "Is there a definition of an encampment? Can 311 share it?"
+    ]
+   ]
+  },
+  {
+   "id": "dinowitz",
+   "who": "Council Member Eric Dinowitz",
+   "turns": [
+    47,
+    55
+   ],
+   "questions": [
+    [
+     "00:28:47",
+     "Is 311 still exploring ESRI to turn a pin drop into an address?"
+    ],
+    [
+     "00:29:29",
+     "Will 311 pass GPS coordinates, not just an address, to agencies?"
+    ],
+    [
+     "00:30:29",
+     "Is OTI supportive of Intro 173?"
+    ],
+    [
+     "00:30:42",
+     "Why is the third-party satisfaction rating 93% when the legally required resolution survey shows far less?"
+    ]
+   ]
+  },
+  {
+   "id": "riley",
+   "who": "Council Member Kevin Riley",
+   "turns": [
+    57,
+    61
+   ],
+   "questions": [
+    [
+     "00:33:58",
+     "Does the City measure whether closed 311 requests were actually resolved?"
+    ],
+    [
+     "00:35:30",
+     "Does the City use patterns across 311 complaints to prompt agency action?"
+    ]
+   ]
+  },
+  {
+   "id": "gutierrez",
+   "who": "Council Member Jennifer Gutiérrez",
+   "turns": [
+    63,
+    74
+   ],
+   "questions": [
+    [
+     "00:37:13",
+     "Has the new Office of Community Safety told 311 how calls will work after the consolidation?"
+    ],
+    [
+     "00:40:47",
+     "Do all call center representatives know how to direct those calls?"
+    ],
+    [
+     "00:41:42",
+     "Who built the AI Smart Select tool, and what data does it keep?"
+    ]
+   ]
+  },
+  {
+   "id": "de-la-rosa-2",
+   "who": "Chair Carmen De La Rosa (accountability, technology, privacy and more)",
+   "turns": [
+    75,
+    139
+   ],
+   "questions": [
+    [
+     "00:44:42",
+     "How can 311 hold agencies accountable for closing tickets?"
+    ],
+    [
+     "00:48:14",
+     "Can people see that a request closed on 311 is still open at the agency?"
+    ],
+    [
+     "00:50:20",
+     "Does 311 review patterns with agencies, or leave analysis to them?"
+    ],
+    [
+     "00:51:22",
+     "Can the 311 app be translated?"
+    ],
+    [
+     "00:52:55",
+     "Why is 311 soliciting an outsourced contact center (PASSPort RFP)?"
+    ],
+    [
+     "00:54:00",
+     "How are software updates to 311 made, after the August 911 outage?"
+    ],
+    [
+     "00:57:43",
+     "Has the 911 outage changed 311's update procedures?"
+    ],
+    [
+     "00:58:41",
+     "What alerts or failover does 311 have if something fails live?"
+    ],
+    [
+     "01:00:30",
+     "How many operators speak other languages?"
+    ],
+    [
+     "01:00:56",
+     "How does 311 surge staff in an emergency?"
+    ],
+    [
+     "01:02:13",
+     "What are the plans for AI in the 311 app and website?"
+    ],
+    [
+     "01:03:35",
+     "Why do agencies mark requests out of their jurisdiction?"
+    ],
+    [
+     "01:05:32",
+     "Does OTI track which requests are often marked out of jurisdiction?"
+    ],
+    [
+     "01:05:59",
+     "Is reassignment data on Open Data?"
+    ],
+    [
+     "01:06:53",
+     "What happens when a request goes to the wrong unit within an agency?"
+    ],
+    [
+     "01:08:17",
+     "What does it take to add a 311 category?"
+    ],
+    [
+     "01:10:08",
+     "Has the 311 privacy policy changed?"
+    ],
+    [
+     "01:10:52",
+     "Who receives users' data, and for what purpose?"
+    ],
+    [
+     "01:12:07",
+     "Is mobile app data encrypted in transit?"
+    ],
+    [
+     "01:12:29",
+     "Can users have their 311 app data deleted?"
+    ],
+    [
+     "01:12:55",
+     "Should there be a data retention policy for personal information?"
+    ],
+    [
+     "01:13:55",
+     "Why are users' device domain names collected?"
+    ],
+    [
+     "01:14:24",
+     "Will the cookie banner let users opt out of nonessential cookies?"
+    ],
+    [
+     "01:14:49",
+     "Did 311 launch on WhatsApp, as planned?"
+    ],
+    [
+     "01:16:11",
+     "How does a new complaint type get created under Local Law 97 of 2022?"
+    ],
+    [
+     "01:17:51",
+     "How do 311 and NYPD work together on unfulfilled complaints?"
+    ],
+    [
+     "01:19:09",
+     "Are emergency calls to 311 transferred to 911?"
+    ],
+    [
+     "01:20:30",
+     "Does 311 have a budget for public education about what it does?"
+    ]
+   ]
+  }
+ ],
+ "speaker_notes": {
+  "11": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "12": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "14": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "21": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "22": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "23": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "26": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "30": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "35": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "36": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "37": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "38": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "45": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "49": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "50": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "51": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "55": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "57": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "60": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "61": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "64": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "66": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "67": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "69": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "70": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "74": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "77": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "79": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "80": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "82": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "83": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "86": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "90": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "92": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "98": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "100": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "104": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "108": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "111": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "115": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "116": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "118": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "119": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "120": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "121": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "122": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "126": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "130": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "132": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "134": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video.",
+  "135": "This turn also contains words from Joe Morrisroe or another speaker; the transcript did not split the speakers. Check the video.",
+  "138": "This turn also contains a Council Member's words; the transcript did not split the speakers. Check the video."
+ },
+ "followups": [
+  [
+   "Joe Morrisroe",
+   "Chair De La Rosa",
+   "How many staff work on the 311 website and mobile app (an estimate), and check the Council's figure of 10 for the app",
+   "00:20:51"
+  ],
+  [
+   "Joe Morrisroe",
+   "Chair De La Rosa",
+   "The current value of the King TeleServices overflow contract",
+   "00:25:46"
+  ],
+  [
+   "Joe Morrisroe",
+   "Council Member Schulman",
+   "311's definition of a homeless encampment, as given to call center staff and on the website",
+   "00:28:26"
+  ],
+  [
+   "Joe Morrisroe",
+   "Council Member Gutiérrez",
+   "Confirm that information on the Office of Community Safety and the Office to End Gender-Based Violence is in the 311 system",
+   "00:41:08"
+  ],
+  [
+   "Joe Morrisroe",
+   "Chair De La Rosa",
+   "Whether 311 mobile app data is encrypted in transit",
+   "01:12:29"
+  ],
+  [
+   "Joe Morrisroe",
+   "Chair De La Rosa",
+   "Whether users can have their 311 app data deleted",
+   "01:12:29"
+  ],
+  [
+   "Joe Morrisroe",
+   "Chair De La Rosa",
+   "Look at a retention policy for personal information, and work with the Council on it (\"conceptually, yes\")",
+   "01:13:37"
+  ],
+  [
+   "Joe Morrisroe",
+   "Chair De La Rosa",
+   "Why the privacy policy collects the domain names of users' devices",
+   "01:14:08"
+  ],
+  [
+   "Joe Morrisroe",
+   "Chair De La Rosa",
+   "Whether the cookie banner will let users opt out of nonessential cookies",
+   "01:14:24"
+  ]
+ ]
+}

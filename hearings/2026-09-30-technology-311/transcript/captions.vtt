@@ -1,0 +1,7647 @@
+WEBVTT
+
+NOTE
+NYC Council Committee on Technology: Oversight - New York City’s 311 System, 2026-09-30.
+Machine transcript (Deepgram Nova-3), unedited words with their real timings.
+Speaker names assigned by BetaNYC; [?] = low confidence. Not an official record.
+Transcript data CC BY 4.0, BetaNYC. https://github.com/BetaNYC/hearings-transcripts
+
+1
+00:00:00.000 --> 00:00:00.720
+<v Sergeant-at-Arms>Good
+
+2
+00:00:07.520 --> 00:00:11.280
+<v Sergeant-at-Arms>afternoon, and welcome to the New York
+City Council hearing for the committee on
+
+3
+00:00:11.280 --> 00:00:11.840
+<v Sergeant-at-Arms>technology.
+
+4
+00:00:12.315 --> 00:00:16.635
+<v Sergeant-at-Arms>At this time, as a reminder,
+please put all devices on silent.
+
+5
+00:00:16.955 --> 00:00:19.435
+<v Sergeant-at-Arms>At no time, anyone should
+approach the dais.
+
+6
+00:00:19.755 --> 00:00:21.275
+<v Sergeant-at-Arms>If you wish to testify,
+
+7
+00:00:21.675 --> 00:00:23.595
+<v Sergeant-at-Arms>please see one of the sergeant of arms.
+
+8
+00:00:23.755 --> 00:00:24.795
+<v Sergeant-at-Arms>Chair, you may begin.
+
+9
+00:00:27.320 --> 00:00:28.520
+<v CM Carmen De La Rosa>Good afternoon,
+
+10
+00:00:28.680 --> 00:00:32.920
+<v CM Carmen De La Rosa>everyone, and welcome to our oversight
+hearing on three one one. I am council member
+
+11
+00:00:32.920 --> 00:00:36.360
+<v CM Carmen De La Rosa>Carmen De La Rosa, chair of the committee
+on technology. And today, will be
+
+12
+00:00:36.360 --> 00:00:38.680
+<v CM Carmen De La Rosa>discussing New York City's
+three one one system.
+
+13
+00:00:38.920 --> 00:00:40.805
+<v CM Carmen De La Rosa>New York NYC311
+
+14
+00:00:40.805 --> 00:00:43.365
+<v CM Carmen De La Rosa>is New York City's 24,
+
+15
+00:00:43.365 --> 00:00:45.685
+<v CM Carmen De La Rosa>seven day a week, nonemergency
+
+16
+00:00:45.685 --> 00:00:50.485
+<v CM Carmen De La Rosa>services connecting New Yorkers and
+visitors with city government, providing
+
+17
+00:00:50.485 --> 00:00:52.645
+<v CM Carmen De La Rosa>necessary information
+and taking complaints.
+
+18
+00:00:53.110 --> 00:00:54.710
+<v CM Carmen De La Rosa>Launched in 2003
+
+19
+00:00:54.710 --> 00:00:59.910
+<v CM Carmen De La Rosa>as a centralized telephone call center,
+311 has evolved significantly over the past
+
+20
+00:00:59.910 --> 00:01:00.790
+<v CM Carmen De La Rosa>two decades,
+
+21
+00:01:01.110 --> 00:01:05.110
+<v CM Carmen De La Rosa>expanding the ways in which the public
+can communicate with city government as
+
+22
+00:01:05.110 --> 00:01:07.190
+<v CM Carmen De La Rosa>technology and public expectations
+
+23
+00:01:07.190 --> 00:01:07.750
+<v CM Carmen De La Rosa>have changed.
+
+24
+00:01:08.315 --> 00:01:11.275
+<v CM Carmen De La Rosa>Today, 311 handles
+millions of interactions
+
+25
+00:01:11.355 --> 00:01:16.155
+<v CM Carmen De La Rosa>each year through phone calls, text
+messages, its mobile application, website,
+
+26
+00:01:16.475 --> 00:01:19.755
+<v CM Carmen De La Rosa>providing assistance to more
+than a... In more than a 175
+
+27
+00:01:19.755 --> 00:01:20.555
+<v CM Carmen De La Rosa>languages
+
+28
+00:01:20.635 --> 00:01:24.560
+<v CM Carmen De La Rosa>as the largest three one one
+system in the country. NYC311
+
+29
+00:01:24.560 --> 00:01:28.800
+<v CM Carmen De La Rosa>plays an essential role in making city
+government more accessible and responsive to
+
+30
+00:01:28.800 --> 00:01:33.600
+<v CM Carmen De La Rosa>the people it serves. New Yorkers rely on
+three one one for a broad range of issues
+
+31
+00:01:33.600 --> 00:01:35.840
+<v CM Carmen De La Rosa>from questions about parking regulation
+
+32
+00:01:35.920 --> 00:01:40.315
+<v CM Carmen De La Rosa>and sanitation services to filing
+complaints about heat or hot water in their
+
+33
+00:01:40.315 --> 00:01:40.875
+<v CM Carmen De La Rosa>building.
+
+34
+00:01:41.435 --> 00:01:46.715
+<v CM Carmen De La Rosa>In many instances, 311 serves as a
+starting point for resolving an issue by
+
+35
+00:01:46.715 --> 00:01:49.755
+<v CM Carmen De La Rosa>directing a complaint to
+the appropriate city agency
+
+36
+00:01:49.835 --> 00:01:50.395
+<v CM Carmen De La Rosa>for action.
+
+37
+00:01:50.890 --> 00:01:55.690
+<v CM Carmen De La Rosa>Today, 311 is more than a customer service
+system. The information generated through
+
+38
+00:01:55.690 --> 00:02:00.170
+<v CM Carmen De La Rosa>millions of service requests provide an
+important source of data for city agencies,
+
+39
+00:02:00.170 --> 00:02:01.210
+<v CM Carmen De La Rosa>elected officials,
+
+40
+00:02:01.370 --> 00:02:02.170
+<v CM Carmen De La Rosa>researchers,
+
+41
+00:02:02.170 --> 00:02:06.695
+<v CM Carmen De La Rosa>advocates, and members of the public through
+the city's open data portal. The data
+
+42
+00:02:06.695 --> 00:02:08.935
+<v CM Carmen De La Rosa>can help identify patterns in service,
+
+43
+00:02:09.095 --> 00:02:09.895
+<v CM Carmen De La Rosa>delivery,
+
+44
+00:02:09.895 --> 00:02:13.095
+<v CM Carmen De La Rosa>inform discussions about
+allocations of resources,
+
+45
+00:02:13.095 --> 00:02:16.375
+<v CM Carmen De La Rosa>highlight community needs, and
+reveal areas where the city
+
+46
+00:02:16.615 --> 00:02:18.650
+<v CM Carmen De La Rosa>may may be improved.
+
+47
+00:02:19.050 --> 00:02:23.210
+<v CM Carmen De La Rosa>Given the central role of three one one
+plays in the day to day functioning of our
+
+48
+00:02:23.210 --> 00:02:25.530
+<v CM Carmen De La Rosa>city, we must continually examine
+
+49
+00:02:25.530 --> 00:02:29.930
+<v CM Carmen De La Rosa>how the system can be improved and modernized.
+Three one one should serve as a tool
+
+50
+00:02:29.930 --> 00:02:31.450
+<v CM Carmen De La Rosa>for accountability and communication
+
+51
+00:02:31.845 --> 00:02:34.885
+<v CM Carmen De La Rosa>between New Yorker... New
+Yorkers and local government.
+
+52
+00:02:35.125 --> 00:02:39.845
+<v CM Carmen De La Rosa>Today, we will be considering three bills
+intended to improve New York City three
+
+53
+00:02:39.845 --> 00:02:45.365
+<v CM Carmen De La Rosa>one one and its services... And the services
+it provides. Intro one seventy three by
+
+54
+00:02:45.365 --> 00:02:49.750
+<v CM Carmen De La Rosa>council member Dinowitz in relation to
+the use of global positioning systems,
+
+55
+00:02:49.750 --> 00:02:50.550
+<v CM Carmen De La Rosa>coordinates
+
+56
+00:02:50.550 --> 00:02:53.190
+<v CM Carmen De La Rosa>for three one 1 complaints
+and service requests.
+
+57
+00:02:53.670 --> 00:02:55.910
+<v CM Carmen De La Rosa>Intro six six nine
+
+58
+00:02:56.070 --> 00:02:56.790
+<v CM Carmen De La Rosa>by
+
+59
+00:02:56.870 --> 00:02:58.470
+<v CM Carmen De La Rosa>deputy speaker Williams
+
+60
+00:02:58.710 --> 00:03:03.485
+<v CM Carmen De La Rosa>in relation to referring 311 nonemergency
+traffic condition complaints to the rep...
+
+61
+00:03:03.485 --> 00:03:05.725
+<v CM Carmen De La Rosa>Transportation bureau of
+the police department
+
+62
+00:03:05.885 --> 00:03:09.965
+<v CM Carmen De La Rosa>and in Troy Hunter by council member Schulman
+requiring the three one one customer
+
+63
+00:03:09.965 --> 00:03:15.005
+<v CM Carmen De La Rosa>service center to redirect requests for
+services or complaints to the appropriate
+
+64
+00:03:15.005 --> 00:03:18.300
+<v CM Carmen De La Rosa>agencies. We look forward
+hearing from the administration,
+
+65
+00:03:18.380 --> 00:03:22.220
+<v CM Carmen De La Rosa>advocates, and members of the public
+about these bills as well as broader
+
+66
+00:03:22.220 --> 00:03:23.100
+<v CM Carmen De La Rosa>opportunities
+
+67
+00:03:23.180 --> 00:03:27.100
+<v CM Carmen De La Rosa>to make NYC three one one more resilient,
+accessible, user friendly, and effective
+
+68
+00:03:27.100 --> 00:03:31.500
+<v CM Carmen De La Rosa>for all New Yorkers. I'd like to thank
+the committee staff, policy analyst, Eric
+
+69
+00:03:31.500 --> 00:03:35.055
+<v CM Carmen De La Rosa>Brown, legislative council,
+Irina Boba... Babaski,
+
+70
+00:03:35.215 --> 00:03:38.175
+<v CM Carmen De La Rosa>and chief of staff, James
+Burke and Hiba Imad,
+
+71
+00:03:38.335 --> 00:03:41.375
+<v CM Carmen De La Rosa>for working in and putting
+this hearing together.
+
+72
+00:03:41.855 --> 00:03:43.215
+<v CM Carmen De La Rosa>I'd like to recognize
+
+73
+00:03:43.375 --> 00:03:47.020
+<v CM Carmen De La Rosa>technology committee members,
+council member Juan Gutierrez,
+
+74
+00:03:47.020 --> 00:03:52.060
+<v CM Carmen De La Rosa>and we've also been joined by council member
+Dinowitz and Schulman. I will say there
+
+75
+00:03:52.060 --> 00:03:57.100
+<v CM Carmen De La Rosa>are more than 15 other bills that we're
+not considering today on three one one. So
+
+76
+00:03:57.100 --> 00:04:01.905
+<v CM Carmen De La Rosa>even though we're light on folks today, I
+wanna be sure to emphasize that three one
+
+77
+00:04:01.905 --> 00:04:05.745
+<v CM Carmen De La Rosa>one is an important issue that this
+council cares about. Specifically,
+
+78
+00:04:05.825 --> 00:04:07.185
+<v CM Carmen De La Rosa>there's a lot of legislation
+
+79
+00:04:07.185 --> 00:04:12.465
+<v CM Carmen De La Rosa>to try and make it work a little better.
+I'll now turn to council member Dinowitz to
+
+80
+00:04:12.465 --> 00:04:14.065
+<v CM Carmen De La Rosa>deliver his opening remarks.
+
+81
+00:04:16.280 --> 00:04:19.320
+<v CM Eric Dinowitz>Lynn also reached... We weren't sure who
+you're gonna call first. Oh, I'm sorry.
+
+82
+00:04:19.480 --> 00:04:19.880
+<v CM Eric Dinowitz>Thank
+
+83
+00:04:20.840 --> 00:04:21.640
+<v CM Eric Dinowitz>you, chair,
+
+84
+00:04:23.480 --> 00:04:25.720
+<v CM Eric Dinowitz>for for the hearing and for hearing,
+
+85
+00:04:26.600 --> 00:04:27.160
+<v CM Eric Dinowitz>my bill.
+
+86
+00:04:27.745 --> 00:04:31.985
+<v CM Eric Dinowitz>Of of all the issues we face in our city,
+the one that rises to the top time and
+
+87
+00:04:31.985 --> 00:04:33.905
+<v CM Eric Dinowitz>again is is quality of life.
+
+88
+00:04:34.545 --> 00:04:36.945
+<v CM Eric Dinowitz>And I'm often reminded of this because
+
+89
+00:04:37.345 --> 00:04:41.950
+<v CM Eric Dinowitz>during COVID, during the height of when
+there was fear surrounding all of us, and I
+
+90
+00:04:41.950 --> 00:04:45.950
+<v CM Eric Dinowitz>was doing... Before I was in office
+doing wellness calls to our older adults,
+
+91
+00:04:46.430 --> 00:04:48.750
+<v CM Eric Dinowitz>I started out these calls expecting
+
+92
+00:04:49.390 --> 00:04:54.110
+<v CM Eric Dinowitz>to hear the tragic stories of people losing
+loved ones, being afraid to go out to
+
+93
+00:04:54.110 --> 00:04:55.230
+<v CM Eric Dinowitz>get eggs and milk.
+
+94
+00:04:56.165 --> 00:04:58.565
+<v CM Eric Dinowitz>And the vast majority of my calls
+
+95
+00:04:58.805 --> 00:05:02.645
+<v CM Eric Dinowitz>really were about quality of life, were
+about the noise, or about the cracks in the
+
+96
+00:05:02.645 --> 00:05:06.325
+<v CM Eric Dinowitz>sidewalk. They wanted to go out for a walk,
+and and the cracks in the sidewalks were
+
+97
+00:05:06.325 --> 00:05:10.405
+<v CM Eric Dinowitz>preventing them from safely doing
+that. You know, illegal dumping places.
+
+98
+00:05:10.970 --> 00:05:14.490
+<v CM Eric Dinowitz>The... So, you know, I think
+about this because at the height
+
+99
+00:05:14.730 --> 00:05:20.170
+<v CM Eric Dinowitz>of when fear and death was permeate...
+Permeating our city, quality of life still
+
+100
+00:05:20.170 --> 00:05:23.370
+<v CM Eric Dinowitz>rose to the top as this
+critical issue for,
+
+101
+00:05:23.770 --> 00:05:24.730
+<v CM Eric Dinowitz>many New Yorkers.
+
+102
+00:05:26.605 --> 00:05:30.845
+<v CM Eric Dinowitz>And quality of life speaks to our ability
+to live with safety and with dignity in
+
+103
+00:05:30.845 --> 00:05:32.205
+<v CM Eric Dinowitz>our old... In our own city.
+
+104
+00:05:32.685 --> 00:05:33.885
+<v CM Eric Dinowitz>Streets
+
+105
+00:05:34.045 --> 00:05:38.285
+<v CM Eric Dinowitz>rife with potholes, hydrants that are
+running and wasting water, darkened streets
+
+106
+00:05:38.285 --> 00:05:42.830
+<v CM Eric Dinowitz>due to broken broken street lamps, flooded
+homes due to blocked sewer lines, broken
+
+107
+00:05:42.830 --> 00:05:44.190
+<v CM Eric Dinowitz>fences in our parks.
+
+108
+00:05:44.430 --> 00:05:46.750
+<v CM Eric Dinowitz>These are just some of
+the quality of life issues
+
+109
+00:05:46.990 --> 00:05:51.150
+<v CM Eric Dinowitz>that will not address do impact that safety
+and quality of life and dignity that we
+
+110
+00:05:51.150 --> 00:05:55.630
+<v CM Eric Dinowitz>cherish so much. Here in New York City, of
+course, we have three one one, a system
+
+111
+00:05:55.630 --> 00:05:59.445
+<v CM Eric Dinowitz>through which New Yorkers can report and
+address our quality of life concerns.
+
+112
+00:05:59.925 --> 00:06:03.045
+<v CM Eric Dinowitz>But we know three one one
+is in need of improvement.
+
+113
+00:06:03.445 --> 00:06:07.285
+<v CM Eric Dinowitz>Today, we are discussing my bill, intro
+one seventy three, which will require three
+
+114
+00:06:07.285 --> 00:06:11.445
+<v CM Eric Dinowitz>one one to use GPS data
+to pinpoint exactly
+
+115
+00:06:11.510 --> 00:06:14.070
+<v CM Eric Dinowitz>where a constituent wants
+to report their issue.
+
+116
+00:06:14.470 --> 00:06:18.950
+<v CM Eric Dinowitz>Time and again, constituents call
+my office because 311 was used,
+
+117
+00:06:19.270 --> 00:06:23.750
+<v CM Eric Dinowitz>but the city agency either couldn't find
+the location or went to the wrong location.
+
+118
+00:06:24.950 --> 00:06:26.390
+<v CM Eric Dinowitz>We had a missing hydrant
+
+119
+00:06:26.745 --> 00:06:27.625
+<v CM Eric Dinowitz>reported.
+
+120
+00:06:27.785 --> 00:06:31.305
+<v CM Eric Dinowitz>The DEP repaired a separate
+hydrant down the block.
+
+121
+00:06:31.625 --> 00:06:35.945
+<v CM Eric Dinowitz>On a service road in my district, a
+constituent was unable to file a 311 complaint
+
+122
+00:06:36.025 --> 00:06:39.465
+<v CM Eric Dinowitz>because the stretches on the
+service road have no street address.
+
+123
+00:06:40.780 --> 00:06:42.300
+<v CM Eric Dinowitz>Lights on an overpass
+
+124
+00:06:42.380 --> 00:06:43.820
+<v CM Eric Dinowitz>in my district were out.
+
+125
+00:06:44.220 --> 00:06:47.100
+<v CM Eric Dinowitz>Because there was no
+address on the overpass,
+
+126
+00:06:47.100 --> 00:06:49.260
+<v CM Eric Dinowitz>the constituent called 311
+
+127
+00:06:49.260 --> 00:06:52.540
+<v CM Eric Dinowitz>instead of using the app. The
+report was logged manually,
+
+128
+00:06:52.995 --> 00:06:56.115
+<v CM Eric Dinowitz>and three months later, the lights were
+still out. And when there was follow-up
+
+129
+00:06:56.115 --> 00:06:57.315
+<v CM Eric Dinowitz>done, we eventually
+
+130
+00:06:57.475 --> 00:07:00.435
+<v CM Eric Dinowitz>were given the response that
+the lights weren't fixed because
+
+131
+00:07:00.595 --> 00:07:02.995
+<v CM Eric Dinowitz>the location could not be found.
+
+132
+00:07:03.715 --> 00:07:08.660
+<v CM Eric Dinowitz>A constituent who reported a blocked sewer
+line had to describe it as a 100 feet
+
+133
+00:07:08.660 --> 00:07:13.380
+<v CM Eric Dinowitz>from his house toward the direction of the
+sewer plant, which is hardly an efficient
+
+134
+00:07:13.380 --> 00:07:15.060
+<v CM Eric Dinowitz>way to describe a location.
+
+135
+00:07:15.780 --> 00:07:19.060
+<v CM Eric Dinowitz>Bell Tower Park in Riverdale had a broken
+sidewalk, and the constituent had to use
+
+136
+00:07:19.060 --> 00:07:20.260
+<v CM Eric Dinowitz>the nearest address,
+
+137
+00:07:20.500 --> 00:07:21.940
+<v CM Eric Dinowitz>which isn't really close
+
+138
+00:07:22.395 --> 00:07:23.595
+<v CM Eric Dinowitz>to this Bell Tower.
+
+139
+00:07:23.915 --> 00:07:29.115
+<v CM Eric Dinowitz>There are obviously more cases in my office
+alone. Each of us in the council has
+
+140
+00:07:29.115 --> 00:07:33.995
+<v CM Eric Dinowitz>dealt with similar issues. Countless New
+Yorkers who haven't called our offices have
+
+141
+00:07:33.995 --> 00:07:35.595
+<v CM Eric Dinowitz>dealt with this issue time and again.
+
+142
+00:07:36.560 --> 00:07:41.120
+<v CM Eric Dinowitz>As New Yorkers, we deserve a more responsive
+and efficient experience with our
+
+143
+00:07:41.120 --> 00:07:41.760
+<v CM Eric Dinowitz>government.
+
+144
+00:07:42.160 --> 00:07:45.440
+<v CM Eric Dinowitz>If three one one is the vehicle by which
+New Yorkers address their quality of life
+
+145
+00:07:45.440 --> 00:07:48.640
+<v CM Eric Dinowitz>concerns, we must ensure
+that it is as efficient
+
+146
+00:07:49.115 --> 00:07:50.315
+<v CM Eric Dinowitz>and responsive
+
+147
+00:07:50.475 --> 00:07:52.795
+<v CM Eric Dinowitz>to the needs of our
+constituents as possible.
+
+148
+00:07:53.355 --> 00:07:56.155
+<v CM Eric Dinowitz>Adding precise GPS location ability
+
+149
+00:07:56.235 --> 00:08:00.875
+<v CM Eric Dinowitz>would allow for that to happen. Intro
+one seventy three would allow for that to
+
+150
+00:08:00.875 --> 00:08:02.360
+<v CM Eric Dinowitz>happen. Thank you, chair.
+
+151
+00:08:02.760 --> 00:08:03.560
+<v CM Carmen De La Rosa>Thank you.
+
+152
+00:08:04.200 --> 00:08:08.200
+<v CM Carmen De La Rosa>And now I turn over to council member,
+Schulman, for her opening remarks.
+
+153
+00:08:09.400 --> 00:08:11.240
+<v CM Lynn Schulman>Thank you, chair De La Rosa.
+
+154
+00:08:11.560 --> 00:08:12.680
+<v CM Lynn Schulman>Today,
+
+155
+00:08:14.040 --> 00:08:16.920
+<v CM Lynn Schulman>I'm here to speak in support
+of my bill, intro 800.
+
+156
+00:08:17.285 --> 00:08:20.965
+<v CM Lynn Schulman>This legislation would create a clearer,
+more transparent way to track complaints
+
+157
+00:08:20.965 --> 00:08:22.965
+<v CM Lynn Schulman>about conditions in our city jails.
+
+158
+00:08:23.285 --> 00:08:26.885
+<v CM Lynn Schulman>Currently, when someone in a city jail has
+a complaint about the conditions of their
+
+159
+00:08:26.885 --> 00:08:27.685
+<v CM Lynn Schulman>confinement,
+
+160
+00:08:27.765 --> 00:08:31.880
+<v CM Lynn Schulman>there is not a clear public facing
+system for tracking that complaint from
+
+161
+00:08:31.880 --> 00:08:33.560
+<v CM Lynn Schulman>submission through resolution.
+
+162
+00:08:34.040 --> 00:08:35.400
+<v CM Lynn Schulman>Without that transparency,
+
+163
+00:08:35.400 --> 00:08:39.320
+<v CM Lynn Schulman>it can be difficult to know whether a
+complaint was received, whether it was
+
+164
+00:08:39.320 --> 00:08:42.280
+<v CM Lynn Schulman>referred to the appropriate personnel,
+or whether the underlying issue was
+
+165
+00:08:42.280 --> 00:08:43.160
+<v CM Lynn Schulman>ultimately addressed.
+
+166
+00:08:43.755 --> 00:08:47.275
+<v CM Lynn Schulman>My legislation would require the
+Department of Information Technology and
+
+167
+00:08:47.275 --> 00:08:48.475
+<v CM Lynn Schulman>Telecommunications
+
+168
+00:08:48.635 --> 00:08:52.475
+<v CM Lynn Schulman>to establish a dedicated three
+one one service request category
+
+169
+00:08:52.555 --> 00:08:56.980
+<v CM Lynn Schulman>for complaints and service requests related
+to conditions in city jails. It would
+
+170
+00:08:56.980 --> 00:09:01.060
+<v CM Lynn Schulman>also require the city to publish records
+of those requests and provide updates on
+
+171
+00:09:01.060 --> 00:09:01.940
+<v CM Lynn Schulman>their status.
+
+172
+00:09:02.180 --> 00:09:04.100
+<v CM Lynn Schulman>This legislation is fundamentally
+
+173
+00:09:04.100 --> 00:09:05.460
+<v CM Lynn Schulman>about accountability.
+
+174
+00:09:05.860 --> 00:09:08.740
+<v CM Lynn Schulman>A transparent system for
+receiving and tracking complaints
+
+175
+00:09:08.820 --> 00:09:12.975
+<v CM Lynn Schulman>can help identify recurring problems,
+ensure that concerns are directed to the
+
+176
+00:09:12.975 --> 00:09:16.895
+<v CM Lynn Schulman>appropriate personnel, and provide the public
+with greater visibility into how these
+
+177
+00:09:16.895 --> 00:09:18.175
+<v CM Lynn Schulman>issues are being addressed.
+
+178
+00:09:18.415 --> 00:09:21.615
+<v CM Lynn Schulman>Everyone in our city deserves to be treated
+with dignity, including people who are
+
+179
+00:09:21.615 --> 00:09:22.815
+<v CM Lynn Schulman>incarcerated.
+
+180
+00:09:23.310 --> 00:09:27.310
+<v CM Lynn Schulman>I believe this legislation is an important
+step toward greater transparency and
+
+181
+00:09:27.310 --> 00:09:31.390
+<v CM Lynn Schulman>accountability and toward ensuring that
+our city jails are humane and habitable.
+
+182
+00:09:31.390 --> 00:09:32.030
+<v CM Lynn Schulman>Thank you.
+
+183
+00:09:32.350 --> 00:09:33.070
+<v CM Carmen De La Rosa>Thanks.
+
+184
+00:09:33.710 --> 00:09:38.095
+<v CM Carmen De La Rosa>Thank you, council member Schulman. I will
+now read a statement on behalf of deputy
+
+185
+00:09:38.095 --> 00:09:40.175
+<v CM Carmen De La Rosa>speaker doctor Nantasha Williams.
+
+186
+00:09:40.495 --> 00:09:43.775
+<v CM Carmen De La Rosa>Thank you, chair De La Rosa and members
+of the committee on technology for the
+
+187
+00:09:43.775 --> 00:09:48.415
+<v CM Carmen De La Rosa>opportunity to submit testimony on intro
+six six nine. New Yorkers rely on three one
+
+188
+00:09:48.415 --> 00:09:52.610
+<v CM Carmen De La Rosa>one as their primary points of contact with
+city government. When residents take the
+
+189
+00:09:52.610 --> 00:09:55.970
+<v CM Carmen De La Rosa>time to report a concern, they should have
+the confidence that the complaint will
+
+190
+00:09:55.970 --> 00:10:00.450
+<v CM Carmen De La Rosa>reach the agency position to respond. In
+Southeast Queens, traffic concerns are
+
+191
+00:10:00.450 --> 00:10:04.930
+<v CM Carmen De La Rosa>among the issues residents raise with my
+office regularly. We hear about chronic
+
+192
+00:10:04.930 --> 00:10:06.690
+<v CM Carmen De La Rosa>speeding on residential streets,
+
+193
+00:10:07.065 --> 00:10:10.345
+<v CM Carmen De La Rosa>illegal truck traffic,
+dangerous driving, congestion,
+
+194
+00:10:10.345 --> 00:10:13.785
+<v CM Carmen De La Rosa>and other conditions that affect both
+quality of life and public safety.
+
+195
+00:10:14.105 --> 00:10:16.505
+<v CM Carmen De La Rosa>Many of these are not isolated incidents.
+
+196
+00:10:16.585 --> 00:10:21.820
+<v CM Carmen De La Rosa>They are recurring problems that residents
+experience day after day. Intro 669 would
+
+197
+00:10:21.820 --> 00:10:23.740
+<v CM Carmen De La Rosa>require NYC311
+
+198
+00:10:23.740 --> 00:10:29.100
+<v CM Carmen De La Rosa>to refer nonemergency traffic condition
+complaints to NYPD Transportation Bureau.
+
+199
+00:10:29.260 --> 00:10:31.820
+<v CM Carmen De La Rosa>This includes complaints
+involving drag racing,
+
+200
+00:10:31.980 --> 00:10:36.005
+<v CM Carmen De La Rosa>chronic speeding, congestion,
+gridlock, truck route violations,
+
+201
+00:10:36.165 --> 00:10:40.245
+<v CM Carmen De La Rosa>and other nonemergency traffic conditions.
+The goal is simple. When New Yorkers
+
+202
+00:10:40.245 --> 00:10:41.765
+<v CM Carmen De La Rosa>report a traffic concern,
+
+203
+00:10:41.925 --> 00:10:46.565
+<v CM Carmen De La Rosa>that complaint should have a clear path to
+an agency responsible for addressing it.
+
+204
+00:10:46.645 --> 00:10:50.420
+<v CM Carmen De La Rosa>Residents should not have to repeatedly
+report the same condition without
+
+205
+00:10:50.420 --> 00:10:53.940
+<v CM Carmen De La Rosa>understanding where the complaint is
+going or whether appropriate agency has
+
+206
+00:10:53.940 --> 00:10:58.100
+<v CM Carmen De La Rosa>received it. 311 should be more than a
+system that generates service request
+
+207
+00:10:58.100 --> 00:10:58.820
+<v CM Carmen De La Rosa>numbers.
+
+208
+00:10:58.980 --> 00:11:03.405
+<v CM Carmen De La Rosa>It should help residents navigate city
+government, help agencies identify recurring
+
+209
+00:11:03.405 --> 00:11:08.045
+<v CM Carmen De La Rosa>conditions, and create a clearer connection
+between a complaint and a city response.
+
+210
+00:11:08.285 --> 00:11:12.365
+<v CM Carmen De La Rosa>Better routing is an important part
+of making the system more useful and
+
+211
+00:11:12.365 --> 00:11:15.965
+<v CM Carmen De La Rosa>accountable. I look forward to hearing
+from the administration about how traffic
+
+212
+00:11:15.965 --> 00:11:19.230
+<v CM Carmen De La Rosa>related complaints are
+currently handled through 311,
+
+213
+00:11:19.310 --> 00:11:22.430
+<v CM Carmen De La Rosa>where gaps may exist, and how
+the city can improve coordination
+
+214
+00:11:22.510 --> 00:11:25.390
+<v CM Carmen De La Rosa>when residents report
+recurring traffic conditions.
+
+215
+00:11:25.790 --> 00:11:30.765
+<v CM Carmen De La Rosa>I thank the chair and the committee for
+in... For hearing intro six six nine and for
+
+216
+00:11:30.765 --> 00:11:34.925
+<v CM Carmen De La Rosa>examining how we make three one one more
+responsive and effective for all New
+
+217
+00:11:34.925 --> 00:11:37.565
+<v CM Carmen De La Rosa>Yorkers in service,
+doctor Nantasha Williams.
+
+218
+00:11:39.405 --> 00:11:44.365
+<v CM Carmen De La Rosa>We thank our deputy speaker for her
+statement, and today we will hear testimony
+
+219
+00:11:44.510 --> 00:11:48.350
+<v CM Carmen De La Rosa>from the office of technology and
+innovation, followed by testimonies from the
+
+220
+00:11:48.350 --> 00:11:50.910
+<v CM Carmen De La Rosa>public. I now wanna welcome Joe
+
+221
+00:11:50.910 --> 00:11:52.350
+<v CM Carmen De La Rosa>Morrisroe.
+
+222
+00:11:52.430 --> 00:11:55.550
+<v CM Carmen De La Rosa>Morrisroe, OTI deputy
+commissioner for three one one.
+
+223
+00:11:59.325 --> 00:12:01.645
+<v Committee Counsel>Good afternoon. Before we begin,
+
+224
+00:12:01.725 --> 00:12:04.525
+<v Committee Counsel>I just kindly wanna request
+
+225
+00:12:05.005 --> 00:12:07.405
+<v Committee Counsel>you to raise your right hand.
+
+226
+00:12:08.045 --> 00:12:13.160
+<v Committee Counsel>Do you affirm to tell the truth and respond
+honestly to council member's questions?
+
+227
+00:12:13.160 --> 00:12:13.640
+<v Committee Counsel>Thank
+
+228
+00:12:14.280 --> 00:12:16.520
+<v Committee Counsel>you. You can start your testimony. Okay.
+
+229
+00:12:17.080 --> 00:12:21.480
+<v Joe Morrisroe (OTI)>Thank you. Good afternoon, Chowdhury La
+Rosa and members of the city council
+
+230
+00:12:21.480 --> 00:12:22.120
+<v Joe Morrisroe (OTI)>committee
+
+231
+00:12:22.760 --> 00:12:23.880
+<v Joe Morrisroe (OTI)>on technology.
+
+232
+00:12:23.880 --> 00:12:27.320
+<v Joe Morrisroe (OTI)>My name is Joe Morrisroe, and I am the
+deputy commissioner of New York City three
+
+233
+00:12:27.320 --> 00:12:27.720
+<v Joe Morrisroe (OTI)>one one.
+
+234
+00:12:28.515 --> 00:12:31.795
+<v Joe Morrisroe (OTI)>Over the last twenty years, I have
+overseen New York City three one one's
+
+235
+00:12:31.795 --> 00:12:35.715
+<v Joe Morrisroe (OTI)>transformation from a call center
+to the multichannel, multilingual
+
+236
+00:12:35.715 --> 00:12:37.395
+<v Joe Morrisroe (OTI)>platform that it is today.
+
+237
+00:12:37.875 --> 00:12:41.155
+<v Joe Morrisroe (OTI)>I'm pleased to join the committee
+today to discuss our operations,
+
+238
+00:12:41.155 --> 00:12:45.530
+<v Joe Morrisroe (OTI)>highlight our recent successes, and
+discuss today's proposed legislation.
+
+239
+00:12:46.250 --> 00:12:47.930
+<v Joe Morrisroe (OTI)>As you know, NYC311
+
+240
+00:12:47.930 --> 00:12:52.010
+<v Joe Morrisroe (OTI)>delivers fast and easy access to government
+services and information with the
+
+241
+00:12:52.010 --> 00:12:54.250
+<v Joe Morrisroe (OTI)>highest possible level
+of customer service.
+
+242
+00:12:54.890 --> 00:12:58.565
+<v Joe Morrisroe (OTI)>Three one one is available twenty four hours
+a day, seven days a week, three hundred
+
+243
+00:12:58.565 --> 00:13:03.285
+<v Joe Morrisroe (OTI)>sixty five days a year through multiple
+channels, including the call center, online
+
+244
+00:13:03.285 --> 00:13:04.005
+<v Joe Morrisroe (OTI)>portal,
+
+245
+00:13:04.165 --> 00:13:06.885
+<v Joe Morrisroe (OTI)>text, mobile application,
+and social media.
+
+246
+00:13:07.925 --> 00:13:11.605
+<v Joe Morrisroe (OTI)>Originally launched as a call center, New
+York City three one one has evolved into
+
+247
+00:13:11.605 --> 00:13:12.725
+<v Joe Morrisroe (OTI)>the most comprehensive
+
+248
+00:13:12.990 --> 00:13:16.670
+<v Joe Morrisroe (OTI)>municipal government customer
+service platform in the nation.
+
+249
+00:13:17.150 --> 00:13:19.790
+<v Joe Morrisroe (OTI)>Through... 311 received 37,000,000
+
+250
+00:13:19.790 --> 00:13:21.950
+<v Joe Morrisroe (OTI)>customer contacts in 2025
+
+251
+00:13:22.270 --> 00:13:27.470
+<v Joe Morrisroe (OTI)>and on an annual basis receives more
+calls than all US City three one one call
+
+252
+00:13:27.470 --> 00:13:28.430
+<v Joe Morrisroe (OTI)>centers combined.
+
+253
+00:13:29.305 --> 00:13:33.065
+<v Joe Morrisroe (OTI)>I'm also pleased to share with the council
+a recent report by an independent third
+
+254
+00:13:33.065 --> 00:13:37.145
+<v Joe Morrisroe (OTI)>party on the public satisfaction
+with New York City three one one.
+
+255
+00:13:37.705 --> 00:13:39.065
+<v Joe Morrisroe (OTI)>Call center representatives
+
+256
+00:13:39.065 --> 00:13:42.425
+<v Joe Morrisroe (OTI)>received a customer
+satisfaction rating of 93%,
+
+257
+00:13:43.430 --> 00:13:48.390
+<v Joe Morrisroe (OTI)>and 90% of the respondents stated they are
+likely to recommend three one one, which
+
+258
+00:13:48.390 --> 00:13:51.350
+<v Joe Morrisroe (OTI)>outperforms best in class
+private sector companies.
+
+259
+00:13:51.990 --> 00:13:56.150
+<v Joe Morrisroe (OTI)>The level of public satisfaction is a
+testament to the dedication and the commitment
+
+260
+00:13:56.415 --> 00:14:00.175
+<v Joe Morrisroe (OTI)>of the New York City three one one team
+that serves their fellow New Yorkers every
+
+261
+00:14:00.175 --> 00:14:00.655
+<v Joe Morrisroe (OTI)>day.
+
+262
+00:14:02.095 --> 00:14:06.175
+<v Joe Morrisroe (OTI)>It is important to note that three one
+one serves as the platform to provide
+
+263
+00:14:06.175 --> 00:14:07.855
+<v Joe Morrisroe (OTI)>information and services to the public.
+
+264
+00:14:08.850 --> 00:14:13.010
+<v Joe Morrisroe (OTI)>With few exceptions, public interactions
+with three one one result in one of the
+
+265
+00:14:13.010 --> 00:14:14.130
+<v Joe Morrisroe (OTI)>following outcomes.
+
+266
+00:14:14.610 --> 00:14:18.610
+<v Joe Morrisroe (OTI)>The customer has an information request
+such as a garbage pickup day and the
+
+267
+00:14:18.610 --> 00:14:19.890
+<v Joe Morrisroe (OTI)>information is provided.
+
+268
+00:14:20.450 --> 00:14:24.845
+<v Joe Morrisroe (OTI)>A customer is referred to an external entity,
+which can include a utility or a state
+
+269
+00:14:24.845 --> 00:14:26.205
+<v Joe Morrisroe (OTI)>or federal agency.
+
+270
+00:14:26.685 --> 00:14:30.525
+<v Joe Morrisroe (OTI)>And a customer's inquiry is
+submitted as a service request
+
+271
+00:14:30.925 --> 00:14:34.845
+<v Joe Morrisroe (OTI)>to the designated agency and a
+confirmation tracking number is provided.
+
+272
+00:14:36.180 --> 00:14:40.500
+<v Joe Morrisroe (OTI)>We rely on our collaborative relationships
+with each city agency to build out
+
+273
+00:14:40.500 --> 00:14:43.220
+<v Joe Morrisroe (OTI)>service request forms
+and information pages,
+
+274
+00:14:43.540 --> 00:14:45.780
+<v Joe Morrisroe (OTI)>which we also call knowledge articles,
+
+275
+00:14:46.500 --> 00:14:50.740
+<v Joe Morrisroe (OTI)>those that properly reflect the mission
+and services for each agency or office.
+
+276
+00:14:51.955 --> 00:14:55.155
+<v Joe Morrisroe (OTI)>Three one one does not create
+service requests unilaterally.
+
+277
+00:14:55.555 --> 00:14:58.915
+<v Joe Morrisroe (OTI)>There must be an agency that will
+accept the request, investigate,
+
+278
+00:14:58.915 --> 00:15:02.115
+<v Joe Morrisroe (OTI)>and if applicable, undertake
+appropriate action or resolution.
+
+279
+00:15:03.330 --> 00:15:06.930
+<v Joe Morrisroe (OTI)>Once a service request is submitted through
+New York City three one one, it becomes
+
+280
+00:15:06.930 --> 00:15:09.250
+<v Joe Morrisroe (OTI)>the responding agency's responsibility
+
+281
+00:15:09.410 --> 00:15:11.170
+<v Joe Morrisroe (OTI)>to address and respond.
+
+282
+00:15:12.210 --> 00:15:16.850
+<v Joe Morrisroe (OTI)>When an agency decides that amending a
+current service request or adding a new one
+
+283
+00:15:16.850 --> 00:15:17.490
+<v Joe Morrisroe (OTI)>is necessary,
+
+284
+00:15:17.855 --> 00:15:23.135
+<v Joe Morrisroe (OTI)>it contacts three one one to create,
+test, and deploy a service request form.
+
+285
+00:15:23.935 --> 00:15:28.415
+<v Joe Morrisroe (OTI)>Agency feedback partially informs the
+update we implement to the entire three one
+
+286
+00:15:28.415 --> 00:15:29.295
+<v Joe Morrisroe (OTI)>one platform.
+
+287
+00:15:29.775 --> 00:15:34.070
+<v Joe Morrisroe (OTI)>User feedback is also extremely useful
+to us, which is why we deploy customer
+
+288
+00:15:34.070 --> 00:15:37.110
+<v Joe Morrisroe (OTI)>surveys that inform the
+resolution satisfaction
+
+289
+00:15:37.110 --> 00:15:40.310
+<v Joe Morrisroe (OTI)>dashboard, which goes by the acronym RSAT,
+
+290
+00:15:40.790 --> 00:15:42.870
+<v Joe Morrisroe (OTI)>which is available on the city's website.
+
+291
+00:15:43.270 --> 00:15:47.670
+<v Joe Morrisroe (OTI)>We also value the input we receive from
+council members as frequent three one one
+
+292
+00:15:47.670 --> 00:15:50.565
+<v Joe Morrisroe (OTI)>users, and I'm happy to
+continue the conversation.
+
+293
+00:15:51.445 --> 00:15:54.885
+<v Joe Morrisroe (OTI)>I will now turn to the legislation
+associated with this hearing.
+
+294
+00:15:55.765 --> 00:16:01.285
+<v Joe Morrisroe (OTI)>Intro one seventy three would require the
+use of global positioning system, GPS,
+
+295
+00:16:01.285 --> 00:16:04.040
+<v Joe Morrisroe (OTI)>coordinates for three one
+one service requests. We
+
+296
+00:16:04.680 --> 00:16:09.080
+<v Joe Morrisroe (OTI)>agree that our user interface would be
+improved with the capability to capture a
+
+297
+00:16:09.080 --> 00:16:10.360
+<v Joe Morrisroe (OTI)>user's coordinates
+
+298
+00:16:10.360 --> 00:16:14.360
+<v Joe Morrisroe (OTI)>with the familiar pin drop that many
+location based applications use.
+
+299
+00:16:15.605 --> 00:16:16.405
+<v Joe Morrisroe (OTI)>Currently,
+
+300
+00:16:16.485 --> 00:16:19.845
+<v Joe Morrisroe (OTI)>three one one service request
+collect GPS coordinates,
+
+301
+00:16:19.925 --> 00:16:21.365
+<v Joe Morrisroe (OTI)>latitude and longitude,
+
+302
+00:16:21.845 --> 00:16:26.405
+<v Joe Morrisroe (OTI)>based on the customer enabling location
+services in the mobile app or on the website
+
+303
+00:16:26.725 --> 00:16:29.845
+<v Joe Morrisroe (OTI)>and the customer confirming
+the address that is identified.
+
+304
+00:16:30.830 --> 00:16:35.470
+<v Joe Morrisroe (OTI)>If location services functionality is
+disabled, three one one collects latitude and
+
+305
+00:16:35.470 --> 00:16:38.910
+<v Joe Morrisroe (OTI)>longitude based on the address
+entered by the customer.
+
+306
+00:16:39.870 --> 00:16:42.510
+<v Joe Morrisroe (OTI)>We have been exploring how our geolocator
+
+307
+00:16:42.510 --> 00:16:43.310
+<v Joe Morrisroe (OTI)>service
+
+308
+00:16:43.565 --> 00:16:47.005
+<v Joe Morrisroe (OTI)>could collect Latin long
+based on a pin drop,
+
+309
+00:16:47.325 --> 00:16:51.965
+<v Joe Morrisroe (OTI)>then identify the address in the format
+required by the agency based on the service
+
+310
+00:16:51.965 --> 00:16:52.685
+<v Joe Morrisroe (OTI)>request.
+
+311
+00:16:52.925 --> 00:16:55.885
+<v Joe Morrisroe (OTI)>For example, an address, an
+intersection, or a block face.
+
+312
+00:16:56.700 --> 00:17:00.540
+<v Joe Morrisroe (OTI)>I am looking forward to working with the
+council to find the best path forward for
+
+313
+00:17:00.540 --> 00:17:01.500
+<v Joe Morrisroe (OTI)>this enhancement.
+
+314
+00:17:02.780 --> 00:17:05.580
+<v Joe Morrisroe (OTI)>Introduction six six nine proposes
+
+315
+00:17:05.580 --> 00:17:09.340
+<v Joe Morrisroe (OTI)>to refer three one one nonemergency
+traffic condition complaints
+
+316
+00:17:09.340 --> 00:17:11.900
+<v Joe Morrisroe (OTI)>to the Transportation Bureau
+of the Police Department.
+
+317
+00:17:12.775 --> 00:17:17.575
+<v Joe Morrisroe (OTI)>As I noted above, we work with each agency
+to develop service requests to work best
+
+318
+00:17:17.575 --> 00:17:19.815
+<v Joe Morrisroe (OTI)>for the customer and agency
+
+319
+00:17:19.895 --> 00:17:23.015
+<v Joe Morrisroe (OTI)>policies and workflows that
+support their responsibilities.
+
+320
+00:17:23.815 --> 00:17:26.375
+<v Joe Morrisroe (OTI)>For the types of complaints
+listed in this legislation,
+
+321
+00:17:26.760 --> 00:17:28.360
+<v Joe Morrisroe (OTI)>the protocol is similar.
+
+322
+00:17:28.520 --> 00:17:32.360
+<v Joe Morrisroe (OTI)>If a customer describes an emergency
+condition in progress, the call is transferred
+
+323
+00:17:32.360 --> 00:17:33.640
+<v Joe Morrisroe (OTI)>to 911.
+
+324
+00:17:34.040 --> 00:17:38.360
+<v Joe Morrisroe (OTI)>A call describing a nonemergency situation
+will generate a service request that is
+
+325
+00:17:38.360 --> 00:17:40.440
+<v Joe Morrisroe (OTI)>routed to the appropriate NYPD
+
+326
+00:17:40.440 --> 00:17:41.000
+<v Joe Morrisroe (OTI)>precinct.
+
+327
+00:17:42.275 --> 00:17:46.355
+<v Joe Morrisroe (OTI)>NYPD has determined that this is the course
+of action to occur for such complaints.
+
+328
+00:17:46.755 --> 00:17:50.195
+<v Joe Morrisroe (OTI)>While the New York City Three Zero One
+system is capable of changing the way such
+
+329
+00:17:50.195 --> 00:17:51.395
+<v Joe Morrisroe (OTI)>complaints are routed,
+
+330
+00:17:51.635 --> 00:17:55.395
+<v Joe Morrisroe (OTI)>neither OTI nor three one one can
+comment on the merits of the proposal
+
+331
+00:17:55.760 --> 00:17:59.680
+<v Joe Morrisroe (OTI)>as the underlying policy and
+procedures belong to NYPD.
+
+332
+00:18:00.960 --> 00:18:04.560
+<v Joe Morrisroe (OTI)>My colleagues at the NYPD have told us
+that they believe many of the calls
+
+333
+00:18:04.560 --> 00:18:07.600
+<v Joe Morrisroe (OTI)>contemplated by the bill
+should be routed through 911
+
+334
+00:18:07.945 --> 00:18:11.865
+<v Joe Morrisroe (OTI)>and that many would call for responses
+from other bureaus within the department.
+
+335
+00:18:12.665 --> 00:18:16.825
+<v Joe Morrisroe (OTI)>Therefore, I urge the council to
+discuss this proposal directly with NYPD
+
+336
+00:18:16.825 --> 00:18:18.585
+<v Joe Morrisroe (OTI)>who would be happy to
+meet with the sponsors.
+
+337
+00:18:19.950 --> 00:18:22.590
+<v Joe Morrisroe (OTI)>And finally, intro 800
+
+338
+00:18:22.830 --> 00:18:26.510
+<v Joe Morrisroe (OTI)>would require New York City three one
+one to redirect service requests to the
+
+339
+00:18:26.510 --> 00:18:27.790
+<v Joe Morrisroe (OTI)>appropriate agency.
+
+340
+00:18:28.270 --> 00:18:31.950
+<v Joe Morrisroe (OTI)>While a vast majority of service requests
+are appropriately assigned and routed to
+
+341
+00:18:31.950 --> 00:18:32.430
+<v Joe Morrisroe (OTI)>agencies,
+
+342
+00:18:32.765 --> 00:18:37.005
+<v Joe Morrisroe (OTI)>there are some exceptions that it appears
+this legislation is seeking to address.
+
+343
+00:18:37.805 --> 00:18:42.205
+<v Joe Morrisroe (OTI)>A common example is when a customer
+reports a street cave in. The Department of
+
+344
+00:18:42.205 --> 00:18:47.050
+<v Joe Morrisroe (OTI)>Transportation or DOT initially investigates
+reports of cave ins, determines who is
+
+345
+00:18:47.050 --> 00:18:49.050
+<v Joe Morrisroe (OTI)>responsible for restoring the roadway,
+
+346
+00:18:49.290 --> 00:18:52.810
+<v Joe Morrisroe (OTI)>and then refers the cave in to
+that agency or utility for repair.
+
+347
+00:18:53.370 --> 00:18:57.610
+<v Joe Morrisroe (OTI)>Information about the agency or utility
+responsible for repairing the cave in will
+
+348
+00:18:57.610 --> 00:19:01.050
+<v Joe Morrisroe (OTI)>be available within ten to twenty...
+Sorry, ten days of submitting a service
+
+349
+00:19:01.050 --> 00:19:01.370
+<v Joe Morrisroe (OTI)>request.
+
+350
+00:19:02.575 --> 00:19:03.455
+<v Joe Morrisroe (OTI)>That said,
+
+351
+00:19:03.695 --> 00:19:05.935
+<v Joe Morrisroe (OTI)>I do understand the customer's frustration
+
+352
+00:19:06.415 --> 00:19:07.695
+<v Joe Morrisroe (OTI)>when this occurs,
+
+353
+00:19:08.015 --> 00:19:11.935
+<v Joe Morrisroe (OTI)>which is why we have been identifying
+solutions for these kinds of scenarios.
+
+354
+00:19:12.415 --> 00:19:15.935
+<v Joe Morrisroe (OTI)>I'm happy to talk you through how we have
+been thinking about implementing solutions
+
+355
+00:19:15.935 --> 00:19:20.660
+<v Joe Morrisroe (OTI)>to this problem and align on the best next
+steps to make this process better for New
+
+356
+00:19:20.660 --> 00:19:21.300
+<v Joe Morrisroe (OTI)>Yorkers.
+
+357
+00:19:22.020 --> 00:19:26.820
+<v Joe Morrisroe (OTI)>In closing, on behalf of the dedicated
+team at three one one, thank you again for
+
+358
+00:19:26.820 --> 00:19:30.660
+<v Joe Morrisroe (OTI)>the opportunity to testify today. I will
+now take council members' questions.
+
+359
+00:19:31.965 --> 00:19:36.525
+<v CM Carmen De La Rosa>Thank you so much for your testimony. I
+just wanna say twenty years is a long time,
+
+360
+00:19:36.525 --> 00:19:38.205
+<v CM Carmen De La Rosa>so we thank you for your service.
+
+361
+00:19:38.925 --> 00:19:42.605
+<v CM Carmen De La Rosa>And we're looking forward to this
+conversation. As I mentioned, there's a ton of
+
+362
+00:19:42.605 --> 00:19:45.805
+<v CM Carmen De La Rosa>bills that the council wants
+to pursue around 03/11,
+
+363
+00:19:46.130 --> 00:19:47.090
+<v CM Carmen De La Rosa>and I think
+
+364
+00:19:47.410 --> 00:19:52.370
+<v CM Carmen De La Rosa>Dinowitz said it best, my neighbor to the
+north, that, you know, our constituents
+
+365
+00:19:52.370 --> 00:19:55.490
+<v CM Carmen De La Rosa>are often calling us about
+quality of life issues.
+
+366
+00:19:55.890 --> 00:19:57.890
+<v CM Carmen De La Rosa>And, you know, 93%,
+
+367
+00:19:57.890 --> 00:19:59.570
+<v CM Carmen De La Rosa>I think you said, satisfaction
+
+368
+00:19:59.890 --> 00:20:00.770
+<v CM Carmen De La Rosa>rating
+
+369
+00:20:00.850 --> 00:20:01.730
+<v CM Carmen De La Rosa>is impressive.
+
+370
+00:20:02.345 --> 00:20:06.745
+<v CM Carmen De La Rosa>It doesn't feel like that on the street.
+I feel like we get the brunt of folks
+
+371
+00:20:06.745 --> 00:20:11.065
+<v CM Carmen De La Rosa>telling us, like, service requests are
+being closed and not being fixed, and I know
+
+372
+00:20:11.065 --> 00:20:15.705
+<v CM Carmen De La Rosa>that there is a process here. So we hope
+today to dig into some of those questions.
+
+373
+00:20:16.350 --> 00:20:20.670
+<v CM Carmen De La Rosa>And I know we've been joined by my colleague
+from The Bronx, council member Riley as
+
+374
+00:20:20.670 --> 00:20:21.070
+<v CM Carmen De La Rosa>well.
+
+375
+00:20:21.630 --> 00:20:25.550
+<v CM Carmen De La Rosa>I'm gonna I'm gonna ask a few questions
+about staffing, and then I'm gonna open it
+
+376
+00:20:25.550 --> 00:20:26.110
+<v CM Carmen De La Rosa>for
+
+377
+00:20:26.510 --> 00:20:27.230
+<v CM Carmen De La Rosa>committee,
+
+378
+00:20:28.030 --> 00:20:31.635
+<v CM Carmen De La Rosa>members for questions, and then I'll come
+back. But what is the present headcount
+
+379
+00:20:31.635 --> 00:20:32.915
+<v CM Carmen De La Rosa>for three one one?
+
+380
+00:20:33.235 --> 00:20:35.235
+<v Joe Morrisroe (OTI)>The budgeted headcount is 248
+
+381
+00:20:35.235 --> 00:20:36.835
+<v Joe Morrisroe (OTI)>call center representatives.
+
+382
+00:20:37.075 --> 00:20:38.755
+<v Joe Morrisroe (OTI)>We use the term CCR.
+
+383
+00:20:38.835 --> 00:20:41.555
+<v Joe Morrisroe (OTI)>Mhmm. And that's the folks who are
+on the frontline answering calls.
+
+384
+00:20:43.170 --> 00:20:47.250
+<v CM Carmen De La Rosa>So those are the call center
+operators. Two forty eight? 248.
+
+385
+00:20:47.250 --> 00:20:50.690
+<v CM Carmen De La Rosa>Yes. Mhmm. And how many
+work on the 311 website?
+
+386
+00:20:51.570 --> 00:20:54.770
+<v Joe Morrisroe (OTI)>We don't have any call center representatives
+on the three one one website. It's
+
+387
+00:20:54.770 --> 00:20:59.415
+<v Joe Morrisroe (OTI)>actually supported by folks at three one
+one as well as the broader OTI team. Okay.
+
+388
+00:20:59.415 --> 00:21:04.535
+<v Joe Morrisroe (OTI)>And about how many? It's a good question.
+It's a it's... I I would have to come back
+
+389
+00:21:04.535 --> 00:21:08.455
+<v Joe Morrisroe (OTI)>and come up with a figure because it's a
+work that's done by different people and
+
+390
+00:21:08.455 --> 00:21:12.110
+<v Joe Morrisroe (OTI)>it's piece part work. So I don't have a I
+don't have a single answer for that, but
+
+391
+00:21:12.110 --> 00:21:15.630
+<v Joe Morrisroe (OTI)>it's something we could, estimate for you.
+Okay. If you could come back to it, that
+
+392
+00:21:15.630 --> 00:21:19.390
+<v Joe Morrisroe (OTI)>would be great. Mhmm. And what about on
+the three one one mobile app? That would be
+
+393
+00:21:19.390 --> 00:21:23.395
+<v Joe Morrisroe (OTI)>similar to the website where there's a
+group of folks both on the, we call it, the
+
+394
+00:21:23.395 --> 00:21:26.835
+<v Joe Morrisroe (OTI)>business side, right, the three on one side
+as well as the application side who...
+
+395
+00:21:26.835 --> 00:21:29.795
+<v Joe Morrisroe (OTI)>We had a number of 10 people, but
+we're not sure if that's accurate.
+
+396
+00:21:30.275 --> 00:21:31.715
+<v Joe Morrisroe (OTI)>Can check that. Okay.
+
+397
+00:21:33.875 --> 00:21:39.030
+<v Joe Morrisroe (OTI)>Text messages, same same answer, sort of.
+That... Appreciate that question because I
+
+398
+00:21:39.030 --> 00:21:43.110
+<v Joe Morrisroe (OTI)>can give a little bit more context on that
+one. The text messages are handled by the
+
+399
+00:21:43.110 --> 00:21:46.550
+<v Joe Morrisroe (OTI)>same call center representatives that
+handle calls. So that's part of the broader
+
+400
+00:21:46.550 --> 00:21:47.990
+<v Joe Morrisroe (OTI)>call center representative group.
+
+401
+00:21:48.745 --> 00:21:49.385
+<v CM Carmen De La Rosa>Okay.
+
+402
+00:21:49.865 --> 00:21:54.105
+<v Joe Morrisroe (OTI)>And then is that process, the text
+messaging process automated or are people
+
+403
+00:21:54.105 --> 00:21:57.865
+<v Joe Morrisroe (OTI)>manually replying to text messages? Thank
+you for that question. They are manually
+
+404
+00:21:57.865 --> 00:22:01.760
+<v Joe Morrisroe (OTI)>replying. When someone texts three one
+one, which you can do by tackling...
+
+405
+00:22:01.840 --> 00:22:04.640
+<v Joe Morrisroe (OTI)>By texting 311692311
+
+406
+00:22:06.160 --> 00:22:10.880
+<v Joe Morrisroe (OTI)>that request is going to be served by a
+person, by someone who works at 311, a call
+
+407
+00:22:10.880 --> 00:22:13.920
+<v Joe Morrisroe (OTI)>center representative. Is there
+a plan to automate the process?
+
+408
+00:22:15.405 --> 00:22:19.005
+<v Joe Morrisroe (OTI)>We have looked at different plans that
+would automate that, ideally, for something
+
+409
+00:22:19.005 --> 00:22:20.845
+<v Joe Morrisroe (OTI)>that would serve the customer better.
+
+410
+00:22:21.085 --> 00:22:25.885
+<v Joe Morrisroe (OTI)>For now though, the q and a, as we call it,
+serves very well for customers. So we we
+
+411
+00:22:25.885 --> 00:22:30.550
+<v Joe Morrisroe (OTI)>get very good quality scores, customer
+satisfaction scores in that area. And there
+
+412
+00:22:30.550 --> 00:22:35.030
+<v Joe Morrisroe (OTI)>is that element of kind of back and forth
+questions so the customer knows that
+
+413
+00:22:35.030 --> 00:22:39.510
+<v Joe Morrisroe (OTI)>they're dealing with a representative as
+opposed to perhaps, an automated assistant.
+
+414
+00:22:39.670 --> 00:22:40.310
+<v CM Carmen De La Rosa>Okay.
+
+415
+00:22:40.550 --> 00:22:43.430
+<v CM Carmen De La Rosa>And how many vacancies are there
+at three one one right now?
+
+416
+00:22:44.285 --> 00:22:48.765
+<v Joe Morrisroe (OTI)>Currently, as of this week, there are 53
+vacancies in the call center representative
+
+417
+00:22:48.765 --> 00:22:49.565
+<v Joe Morrisroe (OTI)>position.
+
+418
+00:22:51.245 --> 00:22:51.965
+<v Joe Morrisroe (OTI)>Okay.
+
+419
+00:22:53.085 --> 00:22:56.845
+<v CM Carmen De La Rosa>Do you know what's the starting salary
+for call center representative?
+
+420
+00:22:57.510 --> 00:23:01.030
+<v Joe Morrisroe (OTI)>Thank you for that question.
+Yes. I do. It's $40,600
+
+421
+00:23:01.030 --> 00:23:01.750
+<v Joe Morrisroe (OTI)>a year.
+
+422
+00:23:03.910 --> 00:23:05.510
+<v CM Carmen De La Rosa>More than paraprofessionals.
+
+423
+00:23:07.350 --> 00:23:10.470
+<v CM Carmen De La Rosa>Did the number of call takers
+change in the last two years?
+
+424
+00:23:12.445 --> 00:23:16.605
+<v Joe Morrisroe (OTI)>Over the last two years, the
+budgeted headcount has been 248.
+
+425
+00:23:16.605 --> 00:23:18.765
+<v CM Carmen De La Rosa>That's been consistent.
+Okay. It's consistent.
+
+426
+00:23:19.485 --> 00:23:21.245
+<v CM Carmen De La Rosa>And what about outsourcing?
+
+427
+00:23:21.245 --> 00:23:22.765
+<v CM Carmen De La Rosa>Are call takers
+
+428
+00:23:23.005 --> 00:23:23.885
+<v CM Carmen De La Rosa>outsourced?
+
+429
+00:23:24.685 --> 00:23:26.525
+<v Joe Morrisroe (OTI)>Thank you for that question. The
+
+430
+00:23:27.060 --> 00:23:30.580
+<v Joe Morrisroe (OTI)>three one one call takers or call center
+representatives themselves are not
+
+431
+00:23:30.580 --> 00:23:35.220
+<v Joe Morrisroe (OTI)>outsourced. Mhmm. However, the agency
+has a contract with an overflow vendor
+
+432
+00:23:35.300 --> 00:23:40.180
+<v Joe Morrisroe (OTI)>that's based in Brooklyn to handle calls.
+Which is the vendor? The vendor is King
+
+433
+00:23:40.180 --> 00:23:41.060
+<v Joe Morrisroe (OTI)>TeleServices
+
+434
+00:23:41.060 --> 00:23:43.635
+<v Joe Morrisroe (OTI)>Inc, k I n g. Okay.
+
+435
+00:23:44.115 --> 00:23:44.835
+<v CM Carmen De La Rosa>Telus...
+
+436
+00:23:45.475 --> 00:23:47.075
+<v CM Carmen De La Rosa>Tele... King TeleServices. And
+
+437
+00:23:48.675 --> 00:23:54.275
+<v CM Carmen De La Rosa>then you said... So that's for an overflow
+if the if the the number is higher than
+
+438
+00:23:54.275 --> 00:23:54.755
+<v CM Carmen De La Rosa>capacity.
+
+439
+00:23:55.360 --> 00:23:59.920
+<v Joe Morrisroe (OTI)>Correct. So we use that vendor as what
+what we call our overflow vendor.
+
+440
+00:24:00.080 --> 00:24:04.400
+<v Joe Morrisroe (OTI)>They are trained to do the same work that
+the Citi three one one call center staff
+
+441
+00:24:04.400 --> 00:24:04.880
+<v Joe Morrisroe (OTI)>does.
+
+442
+00:24:05.200 --> 00:24:06.960
+<v CM Carmen De La Rosa>And when is that overflow triggered?
+
+443
+00:24:07.705 --> 00:24:11.945
+<v Joe Morrisroe (OTI)>So they actually operate in a steady state.
+So they take calls every day. So in that
+
+444
+00:24:11.945 --> 00:24:15.865
+<v Joe Morrisroe (OTI)>way, we have a baseline that there's always
+going to be someone there. Mhmm. The
+
+445
+00:24:15.865 --> 00:24:18.265
+<v Joe Morrisroe (OTI)>vendor serves as our... One
+of our backup locations,
+
+446
+00:24:18.505 --> 00:24:22.770
+<v Joe Morrisroe (OTI)>basically, our continuity of operations
+plan. So if something were to happen, we
+
+447
+00:24:22.770 --> 00:24:26.770
+<v Joe Morrisroe (OTI)>have the ability to have that vendor kind
+of hot and ready as opposed to having to
+
+448
+00:24:26.770 --> 00:24:31.810
+<v Joe Morrisroe (OTI)>stand them up. So that... They're they're
+in effect every day. Okay. Are those, the
+
+449
+00:24:31.810 --> 00:24:32.370
+<v Joe Morrisroe (OTI)>the
+
+450
+00:24:32.610 --> 00:24:34.450
+<v CM Carmen De La Rosa>folks who work for the
+
+451
+00:24:34.915 --> 00:24:35.795
+<v CM Carmen De La Rosa>vendor
+
+452
+00:24:35.955 --> 00:24:38.115
+<v CM Carmen De La Rosa>paid the same as the city workers?
+
+453
+00:24:38.435 --> 00:24:39.715
+<v Joe Morrisroe (OTI)>I appreciate that question.
+
+454
+00:24:40.275 --> 00:24:43.715
+<v Joe Morrisroe (OTI)>I don't have the answer on how much they
+are paid. The city has a contract with the
+
+455
+00:24:43.715 --> 00:24:47.475
+<v Joe Morrisroe (OTI)>vendor. We pay what we call a production
+hour rate, so that's the information that
+
+456
+00:24:47.475 --> 00:24:51.720
+<v Joe Morrisroe (OTI)>we would have. The vendor as a private
+company would would work that arrangement
+
+457
+00:24:51.720 --> 00:24:52.760
+<v Joe Morrisroe (OTI)>with their employees.
+
+458
+00:24:53.000 --> 00:24:53.640
+<v CM Carmen De La Rosa>Okay.
+
+459
+00:24:54.040 --> 00:24:55.320
+<v CM Carmen De La Rosa>Let see.
+
+460
+00:24:57.640 --> 00:24:58.920
+<v CM Carmen De La Rosa>Was the contract,
+
+461
+00:25:00.200 --> 00:25:03.885
+<v CM Carmen De La Rosa>the contract term... We have information
+that contract term ended... Was ending
+
+462
+00:25:03.885 --> 00:25:04.805
+<v CM Carmen De La Rosa>February
+
+463
+00:25:04.805 --> 00:25:05.725
+<v CM Carmen De La Rosa>2026.
+
+464
+00:25:05.885 --> 00:25:09.245
+<v CM Carmen De La Rosa>We're now in September 2026.
+Was the contract renewed
+
+465
+00:25:09.805 --> 00:25:14.045
+<v Joe Morrisroe (OTI)>with King TeleServices? That is a very
+timely question. Thank you. The current
+
+466
+00:25:14.045 --> 00:25:18.268
+<v Joe Morrisroe (OTI)>contract that we're in was extended
+last year for the period March
+
+467
+00:25:18.268 --> 00:25:19.610
+<v Joe Morrisroe (OTI)>2026
+
+468
+00:25:19.610 --> 00:25:22.250
+<v Joe Morrisroe (OTI)>through 02/28/2027.
+
+469
+00:25:22.570 --> 00:25:23.450
+<v CM Carmen De La Rosa [?]>'26
+
+470
+00:25:23.450 --> 00:25:26.090
+<v Joe Morrisroe (OTI)>to no extension on that. Okay.
+
+471
+00:25:29.850 --> 00:25:32.170
+<v CM Carmen De La Rosa>The expiration date is March 2027.
+
+472
+00:25:33.525 --> 00:25:38.325
+<v Joe Morrisroe (OTI)>Correct. The the current end date of the
+contract we're under ends on March 20...
+
+473
+00:25:38.325 --> 00:25:40.645
+<v Joe Morrisroe (OTI)>I'm sorry. 02/28/2027.
+
+474
+00:25:40.725 --> 00:25:45.365
+<v CM Carmen De La Rosa>Okay. And what is the contract value? Do
+you know? The contract value, it's...
+
+475
+00:25:46.460 --> 00:25:49.500
+<v Joe Morrisroe (OTI)>I would have to get back to you the exact
+figure. The contract has had different
+
+476
+00:25:49.500 --> 00:25:53.180
+<v Joe Morrisroe (OTI)>iterations over the years, so I I would
+wanna zero in on what the current one is.
+
+477
+00:25:53.180 --> 00:25:57.100
+<v Joe Morrisroe (OTI)>Okay. Alright. I'm gonna stop there for
+now. I have a lot more questions, but I
+
+478
+00:25:57.100 --> 00:25:59.100
+<v Joe Morrisroe (OTI)>wanna open to council member Schulman.
+
+479
+00:25:59.915 --> 00:26:00.555
+<v CM Lynn Schulman>So
+
+480
+00:26:00.875 --> 00:26:02.075
+<v CM Lynn Schulman>what the...
+
+481
+00:26:03.115 --> 00:26:06.635
+<v CM Lynn Schulman>What I... The statement I read was
+for a different three one one bill.
+
+482
+00:26:06.955 --> 00:26:08.395
+<v CM Lynn Schulman>There was some confusion
+
+483
+00:26:08.635 --> 00:26:13.920
+<v CM Lynn Schulman>as to what was on the agenda, what... Okay.
+Anyway... Sorry. So that's okay. I I I
+
+484
+00:26:13.920 --> 00:26:16.560
+<v CM Lynn Schulman>caught it, but then I was
+like... I I just caught it now.
+
+485
+00:26:17.280 --> 00:26:19.840
+<v CM Lynn Schulman>I have a different bill that's
+gonna be in another committee
+
+486
+00:26:20.240 --> 00:26:23.120
+<v CM Lynn Schulman>for people who are
+incarcerated. Okay. Mhmm.
+
+487
+00:26:23.520 --> 00:26:27.200
+<v CM Lynn Schulman>This one, I don't have questions. I do
+have a oversight question though, deputy
+
+488
+00:26:27.200 --> 00:26:27.600
+<v CM Lynn Schulman>commissioner.
+
+489
+00:26:28.015 --> 00:26:32.415
+<v CM Lynn Schulman>So the new regulations around
+three one one and homelessness,
+
+490
+00:26:32.415 --> 00:26:37.935
+<v CM Lynn Schulman>can you explain that to us? Because I will
+tell you that in my district, there's
+
+491
+00:26:37.935 --> 00:26:38.735
+<v CM Lynn Schulman>confusion
+
+492
+00:26:38.735 --> 00:26:41.295
+<v CM Lynn Schulman>in the NYPD as to what exactly
+
+493
+00:26:41.535 --> 00:26:45.600
+<v Joe Morrisroe (OTI)>it is and isn't. Sure. Well, thank you. I
+appreciate the question, and I appreciate
+
+494
+00:26:45.600 --> 00:26:47.760
+<v Joe Morrisroe (OTI)>the clarification on intro 800.
+
+495
+00:26:47.760 --> 00:26:52.720
+<v Joe Morrisroe (OTI)>Thank you. Intro 800 is fine. Well, we
+could... It's fine. Okay. Okay. Thank you.
+
+496
+00:26:53.040 --> 00:26:57.575
+<v Joe Morrisroe (OTI)>With respect to the question on on the
+the homeless handling and NYPD Mhmm. I can
+
+497
+00:26:57.575 --> 00:27:01.735
+<v Joe Morrisroe (OTI)>speak to the three one one piece Yeah. Where
+we play a role, which is to perform the
+
+498
+00:27:01.735 --> 00:27:03.655
+<v Joe Morrisroe (OTI)>intake from our customer's request,
+
+499
+00:27:03.895 --> 00:27:06.935
+<v Joe Morrisroe (OTI)>which could be the calls... They could
+call. They could do some mobile app or they
+
+500
+00:27:06.935 --> 00:27:07.815
+<v Joe Morrisroe (OTI)>could go online.
+
+501
+00:27:08.135 --> 00:27:11.735
+<v Joe Morrisroe (OTI)>And then our job is to get that
+request to the responding agency.
+
+502
+00:27:12.520 --> 00:27:16.760
+<v Joe Morrisroe (OTI)>In this case, as of recent, the responding
+agency for an encampment request, which I
+
+503
+00:27:16.760 --> 00:27:20.200
+<v Joe Morrisroe (OTI)>believe you're referring to Yes. Does
+route now to the Department of Social
+
+504
+00:27:20.200 --> 00:27:21.640
+<v Joe Morrisroe (OTI)>Services, DSS.
+
+505
+00:27:22.360 --> 00:27:23.720
+<v CM Lynn Schulman>Ex... Exclusively.
+
+506
+00:27:23.960 --> 00:27:24.600
+<v CM Lynn Schulman>Right? Not...
+
+507
+00:27:25.095 --> 00:27:29.655
+<v Joe Morrisroe (OTI)>Thank you. Yes. Clarify. Yes.
+Exclusively to DSS. Mhmm. Okay.
+
+508
+00:27:29.895 --> 00:27:30.535
+<v CM Lynn Schulman>And
+
+509
+00:27:33.575 --> 00:27:37.415
+<v CM Lynn Schulman>other 311 calls in terms of people that
+are homeless on the street other than an
+
+510
+00:27:37.415 --> 00:27:39.960
+<v CM Lynn Schulman>encampment, that still goes to NYPD?
+
+511
+00:27:39.960 --> 00:27:45.000
+<v Joe Morrisroe (OTI)>Or... For other calls, we typically call...
+We refer to what... That's known as a
+
+512
+00:27:45.000 --> 00:27:48.120
+<v Joe Morrisroe (OTI)>homeless outreach assistance or
+homeless service assistance.
+
+513
+00:27:48.280 --> 00:27:52.200
+<v Joe Morrisroe (OTI)>So if it's more of a... An individual
+in need of of support services,
+
+514
+00:27:52.835 --> 00:27:53.475
+<v Joe Morrisroe (OTI)>Those,
+
+515
+00:27:53.715 --> 00:27:59.475
+<v Joe Morrisroe (OTI)>currently go and have gone directly to, I
+I say DHS. I should say DSS, Department of
+
+516
+00:27:59.475 --> 00:28:00.435
+<v Joe Morrisroe (OTI)>Social Services.
+
+517
+00:28:00.595 --> 00:28:01.315
+<v Joe Morrisroe (OTI)>So those,
+
+518
+00:28:01.635 --> 00:28:05.235
+<v Joe Morrisroe (OTI)>there's been no change in that.
+Those continue to go to DSS.
+
+519
+00:28:05.715 --> 00:28:06.035
+<v CM Lynn Schulman>Okay.
+
+520
+00:28:07.670 --> 00:28:13.510
+<v CM Lynn Schulman>Yeah. My questions are more, like, for NYPD
+now because it... Your your role is your
+
+521
+00:28:13.510 --> 00:28:15.750
+<v CM Lynn Schulman>role. So that's fine.
+Do you... Let me ask,
+
+522
+00:28:16.230 --> 00:28:18.230
+<v CM Lynn Schulman>just one question about...
+
+523
+00:28:18.710 --> 00:28:20.790
+<v CM Lynn Schulman>Is there a definition of
+what an encampment is?
+
+524
+00:28:22.845 --> 00:28:24.045
+<v Joe Morrisroe (OTI)>Thank you for that question.
+
+525
+00:28:24.285 --> 00:28:25.965
+<v Joe Morrisroe (OTI)>We do provide information,
+
+526
+00:28:26.125 --> 00:28:31.085
+<v CM Lynn Schulman>both for the call center rep and on our
+website that kind of defines what... Can we
+
+527
+00:28:31.085 --> 00:28:34.845
+<v CM Lynn Schulman>can we get that? Can you share that with
+the committee? We could... Thank you. I I
+
+528
+00:28:34.845 --> 00:28:37.890
+<v CM Lynn Schulman>can take that and we'll get back to you.
+That would be that would be very helpful
+
+529
+00:28:37.890 --> 00:28:41.730
+<v CM Lynn Schulman>because we get asked questions, like, about
+that. Yep. Alright. Thank you. That...
+
+530
+00:28:41.730 --> 00:28:44.690
+<v CM Lynn Schulman>That's all the quest... That's all the
+questions I have. Thank you. Thank you.
+
+531
+00:28:45.010 --> 00:28:46.530
+<v CM Carmen De La Rosa>Council member Dinowitz.
+
+532
+00:28:47.410 --> 00:28:48.050
+<v CM Eric Dinowitz>Great.
+
+533
+00:28:49.010 --> 00:28:53.535
+<v CM Eric Dinowitz>Thank you. Thank you for coming for
+your testimony, deputy commissioner.
+
+534
+00:28:53.935 --> 00:28:56.415
+<v CM Eric Dinowitz>I wanna ask first about the the GPS
+
+535
+00:28:56.975 --> 00:28:57.615
+<v CM Eric Dinowitz>location.
+
+536
+00:28:58.415 --> 00:29:00.895
+<v CM Eric Dinowitz>On 04/25/2024,
+
+537
+00:29:01.615 --> 00:29:03.215
+<v CM Eric Dinowitz>if you remember back that far,
+
+538
+00:29:03.855 --> 00:29:06.255
+<v CM Eric Dinowitz>you had testified that NYC311
+
+539
+00:29:06.255 --> 00:29:08.920
+<v CM Eric Dinowitz>is exploring a new geolocator,
+
+540
+00:29:08.920 --> 00:29:10.120
+<v CM Eric Dinowitz>ESRI,
+
+541
+00:29:10.440 --> 00:29:12.520
+<v CM Eric Dinowitz>which is you referenced
+in your testimony today.
+
+542
+00:29:12.600 --> 00:29:15.640
+<v CM Eric Dinowitz>The service that will take a step further
+and collect latitude and longitude based
+
+543
+00:29:15.640 --> 00:29:20.360
+<v CM Eric Dinowitz>on a pin drop, then identify the address
+in the format required by the agency based
+
+544
+00:29:20.360 --> 00:29:23.785
+<v CM Eric Dinowitz>on the service report. So I just wanna make
+sure that's the format that's being used
+
+545
+00:29:23.785 --> 00:29:24.265
+<v CM Eric Dinowitz>now.
+
+546
+00:29:24.825 --> 00:29:28.185
+<v Joe Morrisroe (OTI)>Thank you for the question and the
+background. I I appreciate the timing, the the
+
+547
+00:29:28.185 --> 00:29:29.225
+<v Joe Morrisroe (OTI)>the date reminder.
+
+548
+00:29:29.465 --> 00:29:32.825
+<v CM Eric Dinowitz>Yes. That's the current state that we're
+in now. So this is different. So I wanna,
+
+549
+00:29:33.225 --> 00:29:36.750
+<v CM Eric Dinowitz>just explain the difference between what
+you're describing, your testimony about
+
+550
+00:29:36.750 --> 00:29:38.350
+<v CM Eric Dinowitz>using geolocation
+
+551
+00:29:38.430 --> 00:29:39.790
+<v CM Eric Dinowitz>to find an address,
+
+552
+00:29:40.030 --> 00:29:41.470
+<v CM Eric Dinowitz>and the actual problem,
+
+553
+00:29:41.870 --> 00:29:45.870
+<v CM Eric Dinowitz>that so many of our constituents are facing
+that is is that that latitude launch
+
+554
+00:29:45.870 --> 00:29:47.870
+<v CM Eric Dinowitz>doesn't always line up with an address.
+
+555
+00:29:48.430 --> 00:29:52.725
+<v CM Eric Dinowitz>So what steps is the three zero one
+prepared to make to actually use the the
+
+556
+00:29:52.725 --> 00:29:53.925
+<v CM Eric Dinowitz>geolocation,
+
+557
+00:29:54.485 --> 00:29:59.125
+<v Joe Morrisroe (OTI)>not to align it to necessarily the end
+address, but to GPS coordinates much as you
+
+558
+00:29:59.125 --> 00:30:03.845
+<v Joe Morrisroe (OTI)>would, you know, if you're getting an Uber
+or a Lyft? Right. Right. Thank you. And
+
+559
+00:30:03.845 --> 00:30:07.450
+<v Joe Morrisroe (OTI)>again, for the context around that, it's
+helpful. That's the work that we're doing,
+
+560
+00:30:07.450 --> 00:30:10.330
+<v Joe Morrisroe (OTI)>the work that I referenced in the opening
+statement. That's the work that we're
+
+561
+00:30:10.330 --> 00:30:12.810
+<v Joe Morrisroe (OTI)>continuing with our partner, ESRI,
+
+562
+00:30:12.810 --> 00:30:17.450
+<v Joe Morrisroe (OTI)>the... Use that acronym Okay.
+To determine how we can do that
+
+563
+00:30:18.225 --> 00:30:21.585
+<v Joe Morrisroe (OTI)>for the public side, for the customer
+side, but then also be able to collect that
+
+564
+00:30:21.585 --> 00:30:25.425
+<v Joe Morrisroe (OTI)>and pass that to the agencies in the format
+that they need. So that's the crux of
+
+565
+00:30:25.425 --> 00:30:29.345
+<v Joe Morrisroe (OTI)>the work that's underway. Okay. But just
+to be clear, essentially, are supportive
+
+566
+00:30:29.345 --> 00:30:34.260
+<v CM Eric Dinowitz>of the bill? We we are supportive of the
+GPS locate... The pin drop locator. Pin
+
+567
+00:30:34.260 --> 00:30:37.140
+<v CM Eric Dinowitz>drop locator. Right. Right. If it's good
+enough for Uber, it's good enough for a New
+
+568
+00:30:37.140 --> 00:30:38.420
+<v CM Eric Dinowitz>Yorker. Right.
+
+569
+00:30:40.180 --> 00:30:41.940
+<v CM Eric Dinowitz>I I have one
+
+570
+00:30:42.420 --> 00:30:43.140
+<v CM Eric Dinowitz>other question.
+
+571
+00:30:46.805 --> 00:30:49.685
+<v CM Eric Dinowitz>I may come back to the GPS,
+but in your testimony,
+
+572
+00:30:50.085 --> 00:30:51.285
+<v CM Eric Dinowitz>you said you're
+
+573
+00:30:51.925 --> 00:30:55.765
+<v CM Eric Dinowitz>pleased to share with the council a report
+by an independent third party on the
+
+574
+00:30:55.765 --> 00:30:58.245
+<v CM Eric Dinowitz>public satisfaction with NYC311
+
+575
+00:30:58.670 --> 00:31:00.030
+<v CM Eric Dinowitz>that it's a rating of,
+
+576
+00:31:00.430 --> 00:31:02.110
+<v CM Eric Dinowitz>customer satisfaction
+
+577
+00:31:02.350 --> 00:31:04.190
+<v CM Eric Dinowitz>rating of 93%.
+
+578
+00:31:04.830 --> 00:31:08.350
+<v CM Eric Dinowitz>A little while back, I passed legislation
+
+579
+00:31:08.670 --> 00:31:09.950
+<v CM Eric Dinowitz>that required
+
+580
+00:31:10.110 --> 00:31:14.685
+<v CM Eric Dinowitz>customer satisfaction feedback surveys to
+be done at the end of the calls or allow
+
+581
+00:31:14.685 --> 00:31:16.125
+<v CM Eric Dinowitz>people on the app to
+
+582
+00:31:16.285 --> 00:31:17.485
+<v CM Eric Dinowitz>fill those out.
+
+583
+00:31:17.885 --> 00:31:21.565
+<v CM Eric Dinowitz>And on that, in your internal surveys,
+this... The customer satisfaction,
+
+584
+00:31:21.885 --> 00:31:24.410
+<v CM Eric Dinowitz>just looking at now is 33%
+
+585
+00:31:24.410 --> 00:31:27.370
+<v CM Eric Dinowitz>strongly or agree or regular agree
+
+586
+00:31:27.770 --> 00:31:29.530
+<v CM Eric Dinowitz>that they're satisfied.
+
+587
+00:31:29.610 --> 00:31:31.850
+<v CM Eric Dinowitz>Can you explain the discrepancy between,
+
+588
+00:31:32.250 --> 00:31:36.090
+<v CM Eric Dinowitz>the system that we enacted per law
+and this outside firm that you hired,
+
+589
+00:31:36.410 --> 00:31:37.770
+<v CM Eric Dinowitz>for customer satisfaction?
+
+590
+00:31:37.770 --> 00:31:40.815
+<v Joe Morrisroe (OTI)>Yeah. I I appreciate that
+question. And, I can.
+
+591
+00:31:41.135 --> 00:31:43.615
+<v Joe Morrisroe (OTI)>Please. So we'll we'll
+start... There's two sides,
+
+592
+00:31:43.935 --> 00:31:47.615
+<v Joe Morrisroe (OTI)>so to speak. So I'll start on the
+information that I shared. The customer
+
+593
+00:31:47.615 --> 00:31:50.815
+<v Joe Morrisroe (OTI)>satisfaction survey that we
+do is a third party resource,
+
+594
+00:31:51.400 --> 00:31:52.600
+<v Joe Morrisroe (OTI)>CFI
+
+595
+00:31:52.600 --> 00:31:56.920
+<v Joe Morrisroe (OTI)>Group Inc, that's their name. They are the
+leaders in American customer satisfaction
+
+596
+00:31:56.920 --> 00:32:01.480
+<v Joe Morrisroe (OTI)>index survey in science. We've been using
+them for several years. It's a really nice
+
+597
+00:32:01.480 --> 00:32:03.720
+<v Joe Morrisroe (OTI)>independent approach to having someone
+
+598
+00:32:04.415 --> 00:32:07.935
+<v Joe Morrisroe (OTI)>contact customers who have interacted with
+the three one one call center. It's a
+
+599
+00:32:07.935 --> 00:32:10.015
+<v Joe Morrisroe (OTI)>pretty robust survey, multiple questions,
+
+600
+00:32:10.495 --> 00:32:13.135
+<v Joe Morrisroe (OTI)>and pretty robust response.
+It was statistically
+
+601
+00:32:13.135 --> 00:32:14.415
+<v Joe Morrisroe (OTI)>valid response rate.
+
+602
+00:32:14.895 --> 00:32:18.895
+<v Joe Morrisroe (OTI)>And that's... That... Their methodology
+is what evaluates how the customer feels
+
+603
+00:32:18.895 --> 00:32:22.100
+<v Joe Morrisroe (OTI)>about their experience with three
+one one call center representative.
+
+604
+00:32:22.260 --> 00:32:24.260
+<v CM Eric Dinowitz>Okay. So we're... I just wanna be clear.
+
+605
+00:32:25.460 --> 00:32:27.060
+<v CM Eric Dinowitz>The representative himself,
+
+606
+00:32:27.060 --> 00:32:29.620
+<v CM Eric Dinowitz>we're talking about satisfaction
+with their interaction
+
+607
+00:32:29.940 --> 00:32:33.635
+<v CM Eric Dinowitz>with the representative, not necessarily
+their satisfaction with the way their
+
+608
+00:32:33.635 --> 00:32:35.075
+<v CM Eric Dinowitz>service request was,
+
+609
+00:32:35.395 --> 00:32:37.155
+<v CM Eric Dinowitz>fixed or or not fixed.
+
+610
+00:32:37.395 --> 00:32:40.435
+<v Joe Morrisroe (OTI)>That is fair. I'll amend it just
+slightly, the the experience with the
+
+611
+00:32:40.435 --> 00:32:43.635
+<v Joe Morrisroe (OTI)>representative themselves, but also that
+whole three one one experience. Right?
+
+612
+00:32:43.635 --> 00:32:45.875
+<v Joe Morrisroe (OTI)>Okay. Calling, reaching,
+having the conversation
+
+613
+00:32:46.980 --> 00:32:50.340
+<v CM Eric Dinowitz>that the rep is polite and professional,
+all of that, that's what that score is.
+
+614
+00:32:50.340 --> 00:32:53.940
+<v CM Eric Dinowitz>Good. And I think that's an important
+clarification. You hire great people who have
+
+615
+00:32:53.940 --> 00:32:55.300
+<v CM Eric Dinowitz>very good interactions.
+
+616
+00:32:55.700 --> 00:32:56.980
+<v CM Eric Dinowitz>And at the same time,
+
+617
+00:32:57.300 --> 00:32:58.980
+<v CM Eric Dinowitz>people's quality of life concerns,
+
+618
+00:32:59.540 --> 00:33:01.380
+<v CM Eric Dinowitz>only... Or 35%
+
+619
+00:33:01.865 --> 00:33:02.745
+<v CM Eric Dinowitz>satisfaction
+
+620
+00:33:02.745 --> 00:33:04.585
+<v CM Eric Dinowitz>score are really addressed,
+
+621
+00:33:04.905 --> 00:33:08.345
+<v CM Eric Dinowitz>in the meaningful way. And that was the
+purpose behind that previous legislation to
+
+622
+00:33:08.345 --> 00:33:09.945
+<v CM Eric Dinowitz>make sure there's transparency,
+
+623
+00:33:10.345 --> 00:33:14.265
+<v CM Eric Dinowitz>around how the service requests
+are being not handled by the
+
+624
+00:33:15.270 --> 00:33:19.750
+<v CM Eric Dinowitz>call service person, but handled really
+by the agency if the problem itself was
+
+625
+00:33:19.750 --> 00:33:20.390
+<v CM Eric Dinowitz>fixed.
+
+626
+00:33:20.710 --> 00:33:23.590
+<v CM Eric Dinowitz>Both things could be true at the same time
+that the person on the other end of the
+
+627
+00:33:23.590 --> 00:33:26.070
+<v CM Eric Dinowitz>line is great, and the agency,
+
+628
+00:33:26.310 --> 00:33:30.965
+<v CM Eric Dinowitz>didn't live up to the standards we expect.
+So that was a previous three zero one
+
+629
+00:33:31.045 --> 00:33:34.805
+<v CM Eric Dinowitz>bill that I passed that I think, really
+sheds a lot of light on this. And this other
+
+630
+00:33:34.805 --> 00:33:36.805
+<v CM Eric Dinowitz>one going forward, the GPS location,
+
+631
+00:33:36.885 --> 00:33:41.285
+<v CM Eric Dinowitz>is going to make life a lot easier for New
+Yorkers, maybe even get that satisfaction
+
+632
+00:33:41.285 --> 00:33:42.805
+<v CM Eric Dinowitz>score on your website up.
+
+633
+00:33:43.370 --> 00:33:47.690
+<v CM Carmen De La Rosa>Alright? Thank you, chair.
+Thank you so much. Good points.
+
+634
+00:33:48.410 --> 00:33:52.010
+<v CM Carmen De La Rosa>I pass it on to council member
+Gutierrez, followed by Riley.
+
+635
+00:33:52.810 --> 00:33:56.090
+<v CM Carmen De La Rosa>Oh, and you've been joined by
+council member Hanif as well. Oh,
+
+636
+00:33:58.115 --> 00:34:00.915
+<v CM Kevin Riley>council member Riley. Thank you so much,
+chair, and thank you so much, council
+
+637
+00:34:00.915 --> 00:34:04.995
+<v CM Kevin Riley>member. I have another hearing I have to
+run to. Deputy commissioner, it was great,
+
+638
+00:34:05.155 --> 00:34:08.995
+<v CM Kevin Riley>seeing you and hearing your presentation.
+Just to follow-up on my colleague from the
+
+639
+00:34:08.995 --> 00:34:10.355
+<v CM Kevin Riley>Bronx council member Dinowitz.
+
+640
+00:34:10.970 --> 00:34:14.170
+<v CM Kevin Riley>A request marked closed
+does not necessarily mean,
+
+641
+00:34:14.410 --> 00:34:16.730
+<v CM Kevin Riley>that the underlying
+problem has been fixed.
+
+642
+00:34:17.050 --> 00:34:20.250
+<v CM Kevin Riley>And that's a concern that we're hearing
+from many constituents that come to our
+
+643
+00:34:20.250 --> 00:34:23.850
+<v CM Kevin Riley>office that they'll put in a three one
+one complaint and then miraculously is
+
+644
+00:34:23.850 --> 00:34:28.875
+<v CM Kevin Riley>closed, but the issue wasn't fixed. So does
+the city have any performance measures,
+
+645
+00:34:29.195 --> 00:34:33.515
+<v CM Kevin Riley>that they assess whether three zero
+one, requests are being resolved?
+
+646
+00:34:33.755 --> 00:34:37.995
+<v Joe Morrisroe (OTI)>Great. Thank you. I appreciate the question,
+and I can actually leverage council
+
+647
+00:34:37.995 --> 00:34:39.035
+<v Joe Morrisroe (OTI)>member Dinowitz's
+
+648
+00:34:39.035 --> 00:34:41.370
+<v Joe Morrisroe (OTI)>previous update to to
+
+649
+00:34:41.370 --> 00:34:44.730
+<v Joe Morrisroe (OTI)>provide some context around that. So as
+I mentioned, we do have the front end,
+
+650
+00:34:44.970 --> 00:34:46.410
+<v Joe Morrisroe (OTI)>survey, which I described.
+
+651
+00:34:46.570 --> 00:34:47.610
+<v Joe Morrisroe (OTI)>But the survey that,
+
+652
+00:34:48.170 --> 00:34:50.010
+<v Joe Morrisroe (OTI)>council member Dinowitz mentioned,
+
+653
+00:34:50.490 --> 00:34:54.490
+<v Joe Morrisroe (OTI)>we kinda have a shorthand for it. We call
+it resolution satisfaction survey. It has
+
+654
+00:34:54.490 --> 00:34:55.930
+<v Joe Morrisroe (OTI)>an arc... Acronym, RSAT,
+
+655
+00:34:56.345 --> 00:35:01.065
+<v Joe Morrisroe (OTI)>That gets at what you just asked. When a
+customer submits a service request to 311
+
+656
+00:35:01.065 --> 00:35:04.425
+<v Joe Morrisroe (OTI)>and provides contact information,
+typically an email address,
+
+657
+00:35:04.825 --> 00:35:08.345
+<v Joe Morrisroe (OTI)>after that service request is
+closed by the responding agency,
+
+658
+00:35:08.505 --> 00:35:12.200
+<v Joe Morrisroe (OTI)>a survey is generated to that customer.
+Can be a one question answer or a three
+
+659
+00:35:12.200 --> 00:35:15.080
+<v Joe Morrisroe (OTI)>question answer. Basically, it
+comes down to were you satisfied?
+
+660
+00:35:15.240 --> 00:35:19.320
+<v Joe Morrisroe (OTI)>The customer was, it's just the one question.
+If the answer was no, it gives them an
+
+661
+00:35:19.320 --> 00:35:23.880
+<v Joe Morrisroe (OTI)>option to explain why. That information is
+then collected, and that's what posted on
+
+662
+00:35:23.880 --> 00:35:27.565
+<v Joe Morrisroe (OTI)>the web... City website under
+what we call the RSAT dashboard.
+
+663
+00:35:27.965 --> 00:35:30.685
+<v Joe Morrisroe (OTI)>And that's what customer over
+Dinowitz was referencing.
+
+664
+00:35:30.925 --> 00:35:31.645
+<v CM Kevin Riley>Thank you.
+
+665
+00:35:32.445 --> 00:35:33.725
+<v CM Kevin Riley>Repeated complaints
+
+666
+00:35:33.725 --> 00:35:38.605
+<v CM Kevin Riley>about the same location or issues can be a
+signal or persistent service failure that
+
+667
+00:35:38.605 --> 00:35:40.685
+<v CM Kevin Riley>individual case closures may not address,
+
+668
+00:35:41.350 --> 00:35:45.590
+<v CM Kevin Riley>and aggravated three zero one data
+could help agencies identify patterns
+
+669
+00:35:45.670 --> 00:35:47.910
+<v CM Kevin Riley>and take preventative broader action.
+
+670
+00:35:48.070 --> 00:35:52.550
+<v CM Kevin Riley>So does the city identify patterns across
+individual three zero one complaints?
+
+671
+00:35:52.710 --> 00:35:57.895
+<v CM Kevin Riley>For example, repeated reports of illegal
+dumping, broken street lies, danger of
+
+672
+00:35:57.895 --> 00:35:59.095
+<v CM Kevin Riley>traffic conditions.
+
+673
+00:35:59.415 --> 00:36:03.175
+<v CM Kevin Riley>Is there any way that you could use
+that information to prop agencies'
+
+674
+00:36:03.175 --> 00:36:06.855
+<v Joe Morrisroe (OTI)>actions and their responses? Thank you
+for that. I appreciate the question, and I
+
+675
+00:36:06.855 --> 00:36:10.775
+<v Joe Morrisroe (OTI)>can, talk to that a bit. I'll do
+the three one one side first.
+
+676
+00:36:11.015 --> 00:36:16.000
+<v Joe Morrisroe (OTI)>So all complaints are are captured. And
+then the vast majority of those complaints
+
+677
+00:36:16.000 --> 00:36:18.880
+<v Joe Morrisroe (OTI)>are available on what's
+known as NYC open data,
+
+678
+00:36:19.120 --> 00:36:23.760
+<v Joe Morrisroe (OTI)>which then allows you to do, location
+information, you know, a borough, a ZIP code,
+
+679
+00:36:23.760 --> 00:36:24.800
+<v Joe Morrisroe (OTI)>but right down to an address.
+
+680
+00:36:25.525 --> 00:36:30.085
+<v Joe Morrisroe (OTI)>So that the the city as well as the public
+can track that to understand what's
+
+681
+00:36:30.085 --> 00:36:33.845
+<v Joe Morrisroe (OTI)>repeatedly there or if there is a common
+trend or anything to that effect.
+
+682
+00:36:34.645 --> 00:36:38.725
+<v Joe Morrisroe (OTI)>That information also goes to each
+agency that accepts the service request.
+
+683
+00:36:39.150 --> 00:36:41.630
+<v Joe Morrisroe (OTI)>So while I can't speak to the agency's
+
+684
+00:36:41.630 --> 00:36:44.350
+<v Joe Morrisroe (OTI)>tools and practice in
+terms of how they identify
+
+685
+00:36:44.590 --> 00:36:48.990
+<v Joe Morrisroe (OTI)>not only their workflow, but in this
+case, they repeat or recurring, locations,
+
+686
+00:36:49.230 --> 00:36:53.365
+<v CM Kevin Riley>the information that three one one
+provides is there. Okay. Thank you, deputy
+
+687
+00:36:53.365 --> 00:36:57.605
+<v CM Kevin Riley>commissioner. Three zero one is an amazing
+asset to everyday New Yorkers. I think,
+
+688
+00:36:57.605 --> 00:37:02.085
+<v CM Kevin Riley>you know, we always refer our constituents
+to utilize it. So just making sure that
+
+689
+00:37:02.085 --> 00:37:03.845
+<v CM Kevin Riley>it works a little bit more efficiently
+
+690
+00:37:04.030 --> 00:37:06.990
+<v CM Kevin Riley>something that we're always trying to gear
+towards. So thank you for your testimony,
+
+691
+00:37:06.990 --> 00:37:10.430
+<v CM Kevin Riley>Taylor. Looking forward to continue working
+with you. Thank you. Appreciate that.
+
+692
+00:37:10.990 --> 00:37:13.230
+<v CM Carmen De La Rosa>Thank you. Councilmember Gutierrez?
+
+693
+00:37:13.550 --> 00:37:15.470
+<v CM Jennifer Gutiérrez>Thank you. Good to see you, Joe.
+
+694
+00:37:15.950 --> 00:37:19.470
+<v CM Jennifer Gutiérrez>I just have a couple of
+questions. One ties into a topic
+
+695
+00:37:19.775 --> 00:37:24.895
+<v CM Jennifer Gutiérrez>the council heard earlier today in the women
+and gender equity hearing. Just curious
+
+696
+00:37:24.895 --> 00:37:26.655
+<v CM Jennifer Gutiérrez>from your side, the
+
+697
+00:37:28.975 --> 00:37:32.015
+<v CM Jennifer Gutiérrez>office of community safety
+is now the umbrella
+
+698
+00:37:32.310 --> 00:37:36.870
+<v CM Jennifer Gutiérrez>office that is kind of folding in a a
+bunch of other offices, one of which is the
+
+699
+00:37:36.870 --> 00:37:39.030
+<v CM Jennifer Gutiérrez>mayor's office to end
+gender based violence.
+
+700
+00:37:39.670 --> 00:37:41.830
+<v CM Jennifer Gutiérrez>I had asked today earlier in the hearing
+
+701
+00:37:42.070 --> 00:37:42.790
+<v CM Jennifer Gutiérrez>if...
+
+702
+00:37:43.110 --> 00:37:46.230
+<v CM Jennifer Gutiérrez>Because of this new classification,
+essentially, they're still working out through
+
+703
+00:37:46.230 --> 00:37:51.425
+<v CM Jennifer Gutiérrez>kind of what the new office will look like
+for them. If they have communicated to
+
+704
+00:37:51.425 --> 00:37:56.465
+<v CM Jennifer Gutiérrez>OTI or or three one one about kind of what
+a call would look like now serving under
+
+705
+00:37:56.465 --> 00:37:58.545
+<v CM Jennifer Gutiérrez>not its own separate office, but under,
+
+706
+00:37:58.945 --> 00:38:03.690
+<v CM Jennifer Gutiérrez>you know, a whole another office. And
+whether or not that would place a delay on a
+
+707
+00:38:03.690 --> 00:38:07.370
+<v CM Jennifer Gutiérrez>call center representative potentially
+if they're in the know or not. So I just
+
+708
+00:38:07.370 --> 00:38:08.490
+<v CM Jennifer Gutiérrez>wanted to ask you,
+
+709
+00:38:08.810 --> 00:38:12.570
+<v CM Jennifer Gutiérrez>how up to date are you kind of on
+this this office consolidation?
+
+710
+00:38:12.810 --> 00:38:16.010
+<v CM Jennifer Gutiérrez>And do you know if there's any reason for,
+
+711
+00:38:16.785 --> 00:38:20.945
+<v CM Jennifer Gutiérrez>you know, a two, three second delay in a
+call center representative potentially kind
+
+712
+00:38:20.945 --> 00:38:22.305
+<v CM Jennifer Gutiérrez>of redirecting a call,
+
+713
+00:38:22.705 --> 00:38:26.785
+<v Joe Morrisroe (OTI)>now that it's not a standalone office?
+Great. Thank you for the question and
+
+714
+00:38:26.785 --> 00:38:28.385
+<v Joe Morrisroe (OTI)>especially for the timely,
+
+715
+00:38:28.545 --> 00:38:29.825
+<v Joe Morrisroe (OTI)>this morning update.
+
+716
+00:38:29.985 --> 00:38:32.145
+<v CM Jennifer Gutiérrez>They scheduled it perfectly. So
+
+717
+00:38:32.600 --> 00:38:36.600
+<v Joe Morrisroe (OTI)>I can speak to the the first part of your
+question, which is essentially have we
+
+718
+00:38:36.600 --> 00:38:40.760
+<v Joe Morrisroe (OTI)>been in touch? I think if I can frame it
+way. And the answer is yes. We've actually
+
+719
+00:38:40.760 --> 00:38:42.680
+<v Joe Morrisroe (OTI)>had the office 2311,
+
+720
+00:38:42.680 --> 00:38:45.400
+<v Joe Morrisroe (OTI)>as you know, as as you
+know from the location.
+
+721
+00:38:46.165 --> 00:38:49.445
+<v Joe Morrisroe (OTI)>So we've not only had them on-site to
+see our operation, but have started
+
+722
+00:38:49.445 --> 00:38:53.685
+<v Joe Morrisroe (OTI)>discussions about the work that they're
+doing, how three one one can help and inform
+
+723
+00:38:53.685 --> 00:38:57.525
+<v Joe Morrisroe (OTI)>that work, and how we would be a a vehicle.
+You had the office of community safety
+
+724
+00:38:57.525 --> 00:39:00.325
+<v Joe Morrisroe (OTI)>come see you. Office of community safety.
+Correct. Well, there's... I mean, I I
+
+725
+00:39:00.325 --> 00:39:00.965
+<v Joe Morrisroe (OTI)>think there's still...
+
+726
+00:39:01.630 --> 00:39:04.590
+<v CM Jennifer Gutiérrez>To my understanding, I feel like
+they're kind of restructuring. And
+
+727
+00:39:04.990 --> 00:39:08.750
+<v CM Jennifer Gutiérrez>I don't know. I don't I don't think what
+we we know today, September 30, I... I'm
+
+728
+00:39:08.750 --> 00:39:11.870
+<v CM Jennifer Gutiérrez>not sure if it will look structured the
+same way. So that's... And I know that
+
+729
+00:39:11.870 --> 00:39:12.910
+<v CM Jennifer Gutiérrez>oftentimes,
+
+730
+00:39:13.755 --> 00:39:17.115
+<v CM Jennifer Gutiérrez>even when the council passes new legislation,
+right, if that communication is not
+
+731
+00:39:17.115 --> 00:39:21.355
+<v CM Jennifer Gutiérrez>directed to three one one, but not necessarily
+changing the way that these service
+
+732
+00:39:21.355 --> 00:39:25.355
+<v CM Jennifer Gutiérrez>requests are captured. So they've they've
+visited. You've been in communication.
+
+733
+00:39:25.435 --> 00:39:28.510
+<v CM Jennifer Gutiérrez>Do you feel like... Don't know.
+Was it a constructive conversation?
+
+734
+00:39:28.510 --> 00:39:30.590
+<v CM Jennifer Gutiérrez>Is there any reason for
+New Yorkers to feel like,
+
+735
+00:39:30.910 --> 00:39:34.590
+<v CM Jennifer Gutiérrez>I I don't know if I can call 311 now for
+this because now they're... They... They're
+
+736
+00:39:34.590 --> 00:39:38.270
+<v CM Jennifer Gutiérrez>on... They're a subset. They're not even
+a stand alone office anymore. Okay. Great.
+
+737
+00:39:38.270 --> 00:39:42.655
+<v CM Jennifer Gutiérrez>I appreciate that that distinction there.
+So I will say yes. My colleague came. My
+
+738
+00:39:42.655 --> 00:39:45.695
+<v CM Jennifer Gutiérrez>peer colleague came for the for the
+meeting. We've had those discussions.
+
+739
+00:39:45.935 --> 00:39:46.575
+<v Joe Morrisroe (OTI)>But more,
+
+740
+00:39:47.135 --> 00:39:49.455
+<v Joe Morrisroe (OTI)>more importantly and more structurally,
+
+741
+00:39:49.615 --> 00:39:54.270
+<v Joe Morrisroe (OTI)>the three one one process will... Works
+well in this situation. So we have a group
+
+742
+00:39:54.270 --> 00:39:57.470
+<v Joe Morrisroe (OTI)>called agency relations. They
+deal with every city agency,
+
+743
+00:39:57.630 --> 00:40:01.230
+<v Joe Morrisroe (OTI)>a number of state and federal agencies.
+But every city agency, every office, every
+
+744
+00:40:01.230 --> 00:40:03.070
+<v Joe Morrisroe (OTI)>mayor's office, there's a contact.
+
+745
+00:40:03.390 --> 00:40:07.390
+<v Joe Morrisroe (OTI)>And the purpose of that is to exchange
+information such as a new program, a new
+
+746
+00:40:07.390 --> 00:40:07.710
+<v Joe Morrisroe (OTI)>policy,
+
+747
+00:40:08.365 --> 00:40:12.605
+<v Joe Morrisroe (OTI)>and make sure it gets into the three one
+one system. So if there's something that's
+
+748
+00:40:12.605 --> 00:40:16.765
+<v Joe Morrisroe (OTI)>not there, we have vehicles that identify
+that, and then we raise it up with the
+
+749
+00:40:16.765 --> 00:40:17.485
+<v Joe Morrisroe (OTI)>agency.
+
+750
+00:40:17.565 --> 00:40:21.565
+<v Joe Morrisroe (OTI)>And if the agency has something new or even
+if they're not sure what they do or may
+
+751
+00:40:21.565 --> 00:40:21.885
+<v Joe Morrisroe (OTI)>not have,
+
+752
+00:40:22.600 --> 00:40:26.760
+<v Joe Morrisroe (OTI)>they come to 311, and then that's when our
+collaborative work starts. So if there's
+
+753
+00:40:26.760 --> 00:40:31.080
+<v Joe Morrisroe (OTI)>anything avail... Anything that an agency
+needs to provide available to the public,
+
+754
+00:40:31.160 --> 00:40:34.760
+<v Joe Morrisroe (OTI)>there's a vehicle to get that into three
+one one, and in turn, we get that into...
+
+755
+00:40:34.760 --> 00:40:38.895
+<v Joe Morrisroe (OTI)>To the system. I always like to tell that
+for the public, what's online and in the
+
+756
+00:40:38.895 --> 00:40:42.415
+<v Joe Morrisroe (OTI)>mobile app is written in a plain language
+standard. So it makes it fair and
+
+757
+00:40:42.415 --> 00:40:43.615
+<v Joe Morrisroe (OTI)>equitable for everyone.
+
+758
+00:40:43.855 --> 00:40:47.375
+<v Joe Morrisroe (OTI)>And we have all in. We have over 7,000
+
+759
+00:40:47.375 --> 00:40:51.440
+<v CM Jennifer Gutiérrez>discrete pieces of information in the
+system, all going... Have... All having gone
+
+760
+00:40:51.440 --> 00:40:55.200
+<v CM Jennifer Gutiérrez>through that process at one point or
+another. Okay. And so is it fair to say that
+
+761
+00:40:55.200 --> 00:40:59.520
+<v CM Jennifer Gutiérrez>all the 200 and some odd service
+representatives at this point are aware
+
+762
+00:40:59.920 --> 00:41:03.735
+<v CM Jennifer Gutiérrez>the Office to End Gender Based Violence
+is... If someone calls in asking for a
+
+763
+00:41:03.735 --> 00:41:06.215
+<v CM Jennifer Gutiérrez>purpose of community safety or
+whatever that they'll understand,
+
+764
+00:41:06.535 --> 00:41:08.455
+<v CM Jennifer Gutiérrez>they know what that is, and
+they know how to direct it?
+
+765
+00:41:08.935 --> 00:41:13.575
+<v Joe Morrisroe (OTI)>I can address that in terms of how our
+process works. So, yes, as long as the
+
+766
+00:41:13.575 --> 00:41:16.240
+<v Joe Morrisroe (OTI)>information's in our
+system, the representatives
+
+767
+00:41:16.240 --> 00:41:20.080
+<v Joe Morrisroe (OTI)>are trained on how to use the
+tool, how to use the system,
+
+768
+00:41:20.400 --> 00:41:24.080
+<v Joe Morrisroe (OTI)>and count on and rely on the... What we
+call the content, the content in that
+
+769
+00:41:24.080 --> 00:41:27.920
+<v Joe Morrisroe (OTI)>system. So they would be able to search.
+As long as it's in our system, they would
+
+770
+00:41:27.920 --> 00:41:31.175
+<v Joe Morrisroe (OTI)>have information in a standard structured
+way and they can give that to the public.
+
+771
+00:41:31.175 --> 00:41:35.015
+<v Joe Morrisroe (OTI)>But it's in the system to your knowledge.
+I... To my knowledge, I believe it is. I
+
+772
+00:41:35.015 --> 00:41:38.135
+<v Joe Morrisroe (OTI)>would have to be double checking. Just
+confirm. That'll be that'll just be helpful
+
+773
+00:41:38.135 --> 00:41:41.735
+<v Joe Morrisroe (OTI)>for us to confirm. And then my next
+question, and I'm sure the chair will
+
+774
+00:41:42.215 --> 00:41:46.160
+<v CM Jennifer Gutiérrez>kind of expand a little bit more, but I
+did... I do have the app. I'm living in
+
+775
+00:41:46.160 --> 00:41:47.600
+<v CM Jennifer Gutiérrez>Bushwick, a frequent
+
+776
+00:41:47.920 --> 00:41:48.880
+<v CM Jennifer Gutiérrez>trash
+
+777
+00:41:48.960 --> 00:41:50.320
+<v CM Jennifer Gutiérrez>service requester.
+
+778
+00:41:51.280 --> 00:41:55.280
+<v CM Jennifer Gutiérrez>On the... I noticed that there's, like,
+the AI Smart Select. Sorry. This chair is
+
+779
+00:41:55.280 --> 00:41:56.000
+<v CM Jennifer Gutiérrez>malfunctioning.
+
+780
+00:41:59.035 --> 00:42:02.155
+<v CM Jennifer Gutiérrez>Can you share a little bit about... And
+and I think it's helpful. I think it's been
+
+781
+00:42:02.155 --> 00:42:05.595
+<v CM Jennifer Gutiérrez>helpful because I think for a long time,
+especially if you're putting in a complaint
+
+782
+00:42:05.595 --> 00:42:09.755
+<v CM Jennifer Gutiérrez>about trash, there was a lot of miscommunication
+about what is illegal dumping, what
+
+783
+00:42:09.755 --> 00:42:11.115
+<v CM Jennifer Gutiérrez>is just a dirty sidewalk
+
+784
+00:42:11.780 --> 00:42:13.300
+<v CM Jennifer Gutiérrez>versus a dirty
+
+785
+00:42:13.700 --> 00:42:14.340
+<v CM Jennifer Gutiérrez>street.
+
+786
+00:42:14.820 --> 00:42:19.380
+<v CM Jennifer Gutiérrez>Can you share if that feature or if the AI
+Smart Select tool, was that designed in
+
+787
+00:42:19.380 --> 00:42:20.660
+<v CM Jennifer Gutiérrez>house, or did you all,
+
+788
+00:42:21.300 --> 00:42:22.740
+<v CM Jennifer Gutiérrez>contract with a vendor?
+
+789
+00:42:23.060 --> 00:42:24.180
+<v CM Jennifer Gutiérrez>And whether or not,
+
+790
+00:42:26.425 --> 00:42:28.105
+<v CM Jennifer Gutiérrez>yeah, whether you use the vendor
+
+791
+00:42:28.505 --> 00:42:32.585
+<v CM Jennifer Gutiérrez>and what information does this tool capture.
+Because I think while you're putting it
+
+792
+00:42:32.585 --> 00:42:35.305
+<v CM Jennifer Gutiérrez>in, obviously, it's prompting you to
+put your address, your information.
+
+793
+00:42:35.945 --> 00:42:39.465
+<v CM Jennifer Gutiérrez>How much of that is the tool capturing and
+how much of your, like, personal data is
+
+794
+00:42:39.465 --> 00:42:41.145
+<v CM Jennifer Gutiérrez>it holding on to? And is it a different
+
+795
+00:42:41.730 --> 00:42:45.570
+<v CM Jennifer Gutiérrez>data privacy agreement than the
+standard three one one app? Oh,
+
+796
+00:42:45.890 --> 00:42:49.170
+<v Joe Morrisroe (OTI)>great. Thank you. I appreciate the
+user feedback in that situation.
+
+797
+00:42:49.570 --> 00:42:50.690
+<v Joe Morrisroe (OTI)>I take
+
+798
+00:42:50.850 --> 00:42:54.850
+<v Joe Morrisroe (OTI)>your kind of the different points in kind
+of an order if I can if I can remember it.
+
+799
+00:42:55.925 --> 00:42:59.765
+<v Joe Morrisroe (OTI)>So first off, I'm glad you're using Smart
+Select. It is a I don't think it gives me
+
+800
+00:42:59.765 --> 00:43:02.645
+<v Joe Morrisroe (OTI)>a choice. I wanna be honest. If you go to
+the app, I think it, like, the The first
+
+801
+00:43:02.645 --> 00:43:07.525
+<v Joe Morrisroe (OTI)>at the top. It's at the top. Yes. So a
+little bit of context behind that. I feel
+
+802
+00:43:07.525 --> 00:43:08.405
+<v Joe Morrisroe (OTI)>like we have a tremendous
+
+803
+00:43:08.850 --> 00:43:13.490
+<v Joe Morrisroe (OTI)>CX team at three one one, customer experience
+team. And this is one of the things
+
+804
+00:43:13.490 --> 00:43:16.850
+<v Joe Morrisroe (OTI)>where over the time, they're constantly
+looking at what more do we need to do. What
+
+805
+00:43:16.850 --> 00:43:20.130
+<v Joe Morrisroe (OTI)>else can we be doing? So we know a lot of
+people come to the mobile app. We've seen
+
+806
+00:43:20.130 --> 00:43:23.485
+<v Joe Morrisroe (OTI)>it grow over the years. Obviously,
+the growth of smartphones.
+
+807
+00:43:23.885 --> 00:43:27.565
+<v Joe Morrisroe (OTI)>But people like to submit things in different
+ways. So we were giving them one way.
+
+808
+00:43:27.645 --> 00:43:31.085
+<v Joe Morrisroe (OTI)>What the Smart Select does is give them
+another way and actually gives them three
+
+809
+00:43:31.085 --> 00:43:34.365
+<v Joe Morrisroe (OTI)>other ways. Right? So if you
+go to it, pull it up, you can
+
+810
+00:43:34.720 --> 00:43:38.560
+<v Joe Morrisroe (OTI)>take a picture. You can use a picture.
+You can upload a picture. You can take a
+
+811
+00:43:38.560 --> 00:43:42.160
+<v Joe Morrisroe (OTI)>picture, and now you can actually type in
+some text Mhmm. About a condition you're
+
+812
+00:43:42.160 --> 00:43:43.920
+<v Joe Morrisroe (OTI)>seeing, you're near, you can observe.
+
+813
+00:43:44.400 --> 00:43:48.800
+<v Joe Morrisroe (OTI)>The Smart Select will then determine what
+it is. You confirm and then you submit it.
+
+814
+00:43:48.800 --> 00:43:53.075
+<v Joe Morrisroe (OTI)>So now you don't have to go through the
+step of having to fill out a form, because
+
+815
+00:43:53.075 --> 00:43:54.515
+<v Joe Morrisroe (OTI)>it's doing it for you.
+
+816
+00:43:55.395 --> 00:43:59.475
+<v Joe Morrisroe (OTI)>The work to do that was done by a
+combination of the OTI organization,
+
+817
+00:43:59.475 --> 00:44:01.395
+<v Joe Morrisroe (OTI)>and it's contracted MWBE
+
+818
+00:44:01.395 --> 00:44:01.795
+<v Joe Morrisroe (OTI)>vendor.
+
+819
+00:44:02.610 --> 00:44:03.810
+<v CM Jennifer Gutiérrez>Do know the name of the vendor?
+
+820
+00:44:04.690 --> 00:44:08.450
+<v Joe Morrisroe (OTI)>Don't. I know it... We we call it an MWBE
+vendor, so I don't know the name offhand.
+
+821
+00:44:08.450 --> 00:44:11.890
+<v Joe Morrisroe (OTI)>But... Oh, that's the most generic. Okay.
+We'll we'll follow-up. I'm sure she'll get
+
+822
+00:44:11.890 --> 00:44:12.850
+<v Joe Morrisroe (OTI)>the... Okay.
+
+823
+00:44:13.490 --> 00:44:16.690
+<v Joe Morrisroe (OTI)>And that went into effect last year. The
+text was just an enhancement this year.
+
+824
+00:44:16.785 --> 00:44:19.585
+<v Joe Morrisroe (OTI)>Okay. The... But the the
+picture version was last year.
+
+825
+00:44:19.905 --> 00:44:25.025
+<v Joe Morrisroe (OTI)>And then very much falls under the same
+purview of privacy. We are very serious
+
+826
+00:44:25.025 --> 00:44:29.345
+<v Joe Morrisroe (OTI)>about privacy at three one one. I personally
+believe it's what drives the public
+
+827
+00:44:29.345 --> 00:44:34.150
+<v Joe Morrisroe (OTI)>trust in three one one and has over twenty
+plus years. That is very important to us.
+
+828
+00:44:34.150 --> 00:44:38.310
+<v Joe Morrisroe (OTI)>So any tool that we use falls under that
+same purview with OTI and three one one's
+
+829
+00:44:38.310 --> 00:44:41.430
+<v Joe Morrisroe (OTI)>privacy policy. Okay. Thank
+you. Thank you, chair.
+
+830
+00:44:42.070 --> 00:44:42.870
+<v CM Carmen De La Rosa>Thank you.
+
+831
+00:44:43.270 --> 00:44:48.275
+<v CM Carmen De La Rosa>So I wanna ask sort of a question that
+follows the the frame of thought of council
+
+832
+00:44:48.275 --> 00:44:50.195
+<v CM Carmen De La Rosa>member Dinowitz and Riley around
+
+833
+00:44:50.595 --> 00:44:53.235
+<v CM Carmen De La Rosa>the closing of request by agencies.
+
+834
+00:44:53.795 --> 00:44:56.275
+<v CM Carmen De La Rosa>Obviously, none of us were here in 2003.
+
+835
+00:44:56.435 --> 00:45:00.355
+<v CM Carmen De La Rosa>I was in high school. I don't know
+where other people were. But... Yeah.
+
+836
+00:45:01.150 --> 00:45:02.270
+<v CM Carmen De La Rosa>So
+
+837
+00:45:02.590 --> 00:45:05.310
+<v CM Carmen De La Rosa>what... Why is it that
+three one one was...
+
+838
+00:45:05.470 --> 00:45:09.630
+<v CM Carmen De La Rosa>Like, when it was originally, I guess, put
+together. Right? Obviously, I know that
+
+839
+00:45:09.630 --> 00:45:11.630
+<v CM Carmen De La Rosa>there's limit in capacity,
+
+840
+00:45:11.790 --> 00:45:16.865
+<v CM Carmen De La Rosa>but it doesn't feel like there is a
+system that speaks back to agencies for
+
+841
+00:45:16.865 --> 00:45:17.905
+<v CM Carmen De La Rosa>accountability
+
+842
+00:45:17.905 --> 00:45:19.905
+<v CM Carmen De La Rosa>if an agency is closing,
+
+843
+00:45:20.705 --> 00:45:22.225
+<v CM Carmen De La Rosa>a ticket. Right?
+
+844
+00:45:22.625 --> 00:45:26.785
+<v CM Carmen De La Rosa>I get it often in my community, like, for
+noise complaints. Right? It gets rerouted
+
+845
+00:45:26.785 --> 00:45:30.600
+<v CM Carmen De La Rosa>to NYPD, and NYPD goes out, and they do
+whatever they do. And then it appears
+
+846
+00:45:30.600 --> 00:45:31.400
+<v CM Carmen De La Rosa>closed.
+
+847
+00:45:31.560 --> 00:45:35.640
+<v CM Carmen De La Rosa>And then constituents are telling
+us, hey, the issue was not resolved.
+
+848
+00:45:35.880 --> 00:45:40.520
+<v CM Carmen De La Rosa>So is it more of, like, when
+three one one was imagined,
+
+849
+00:45:40.680 --> 00:45:43.960
+<v CM Carmen De La Rosa>it was a call centers... A call center
+
+850
+00:45:43.960 --> 00:45:44.200
+<v CM Carmen De La Rosa>model?
+
+851
+00:45:44.925 --> 00:45:49.245
+<v CM Carmen De La Rosa>Has there ever been a conversation
+about, like, how to hold agencies better
+
+852
+00:45:49.245 --> 00:45:51.245
+<v CM Carmen De La Rosa>accountable to closing
+
+853
+00:45:51.245 --> 00:45:52.045
+<v CM Carmen De La Rosa>tickets?
+
+854
+00:45:52.205 --> 00:45:55.965
+<v Joe Morrisroe (OTI)>Right. Thank you for the question.
+I was also not there in 2003,
+
+855
+00:45:55.965 --> 00:45:57.005
+<v Joe Morrisroe (OTI)>but came shortly after.
+
+856
+00:45:57.690 --> 00:45:59.530
+<v Joe Morrisroe (OTI)>So I can't speak to the very beginning.
+
+857
+00:45:59.690 --> 00:46:04.890
+<v Joe Morrisroe (OTI)>But, I think there's three or four things
+that I can share that it it gets to what
+
+858
+00:46:04.890 --> 00:46:09.050
+<v Joe Morrisroe (OTI)>you're asking. But on a on an intake side,
+if I can do that first, there's a couple
+
+859
+00:46:09.050 --> 00:46:12.170
+<v Joe Morrisroe (OTI)>of things that happen whether you're self
+serving through the mobile app or online
+
+860
+00:46:12.170 --> 00:46:15.075
+<v Joe Morrisroe (OTI)>or whether you're talking to
+a call center representative.
+
+861
+00:46:15.475 --> 00:46:19.875
+<v Joe Morrisroe (OTI)>There's two key things that you'll get,
+what we call the expectation. Right? And
+
+862
+00:46:19.875 --> 00:46:22.515
+<v Joe Morrisroe (OTI)>matter of fact, on the online,
+it says what happens next.
+
+863
+00:46:22.755 --> 00:46:26.355
+<v Joe Morrisroe (OTI)>And that's a description of what happens
+next, which agency is going to respond, and
+
+864
+00:46:26.355 --> 00:46:31.080
+<v Joe Morrisroe (OTI)>what the typical turnaround time is or
+the the due date, to use that term.
+
+865
+00:46:31.240 --> 00:46:33.480
+<v Joe Morrisroe (OTI)>Technically, we call those
+service level agreements.
+
+866
+00:46:34.040 --> 00:46:37.240
+<v Joe Morrisroe (OTI)>So those are two things that happen on
+any interact... Any service request
+
+867
+00:46:37.240 --> 00:46:38.040
+<v Joe Morrisroe (OTI)>interaction.
+
+868
+00:46:39.160 --> 00:46:43.255
+<v Joe Morrisroe (OTI)>Then in addition to that, all the service
+level agreements that an agency... That
+
+869
+00:46:43.255 --> 00:46:46.695
+<v Joe Morrisroe (OTI)>that agencies have really with the
+city, right, with with the public,
+
+870
+00:46:47.015 --> 00:46:50.935
+<v Joe Morrisroe (OTI)>are available on open data. There's
+a list called three one one SLA.
+
+871
+00:46:51.095 --> 00:46:54.900
+<v Joe Morrisroe (OTI)>So for every complaint, every complaint
+type, it will say how... What's the expected
+
+872
+00:46:54.900 --> 00:46:58.580
+<v Joe Morrisroe (OTI)>time to resolve? That can be
+hours for some dire situations.
+
+873
+00:46:58.740 --> 00:47:01.620
+<v Joe Morrisroe (OTI)>It can be days. And in some cases, it
+could be longer than that because they're
+
+874
+00:47:01.620 --> 00:47:02.660
+<v Joe Morrisroe (OTI)>seasonal cycles.
+
+875
+00:47:02.820 --> 00:47:04.340
+<v Joe Morrisroe (OTI)>So that's available.
+
+876
+00:47:04.660 --> 00:47:09.300
+<v Joe Morrisroe (OTI)>And then the other piece that talks to...
+I believe what you're what you're talking
+
+877
+00:47:09.300 --> 00:47:14.875
+<v Joe Morrisroe (OTI)>to is the aforementioned RSAT dashboard,
+where a customer can say, I opened this
+
+878
+00:47:14.875 --> 00:47:15.835
+<v Joe Morrisroe (OTI)>service request.
+
+879
+00:47:16.315 --> 00:47:18.315
+<v Joe Morrisroe (OTI)>The agency told me here's the status.
+
+880
+00:47:18.555 --> 00:47:21.275
+<v Joe Morrisroe (OTI)>I get this request. I can
+now say whether it is or not.
+
+881
+00:47:21.595 --> 00:47:24.315
+<v Joe Morrisroe (OTI)>And then that agents... That customer's
+point of view may be different than the
+
+882
+00:47:24.315 --> 00:47:29.190
+<v Joe Morrisroe (OTI)>agency's point of view. One of the things
+we try to do is define that what is that
+
+883
+00:47:29.190 --> 00:47:29.830
+<v Joe Morrisroe (OTI)>mean.
+
+884
+00:47:30.470 --> 00:47:34.550
+<v Joe Morrisroe (OTI)>So in the service request that the customer
+gets an update on, if if they take the
+
+885
+00:47:34.550 --> 00:47:38.550
+<v Joe Morrisroe (OTI)>confirmation number, if they get it emailed
+to them, or if they call and look it up,
+
+886
+00:47:38.870 --> 00:47:40.630
+<v Joe Morrisroe (OTI)>we have what we call a
+resolution description.
+
+887
+00:47:41.475 --> 00:47:44.995
+<v Joe Morrisroe (OTI)>It's a kind of a, you know, a
+field and it's got a literal in it.
+
+888
+00:47:45.635 --> 00:47:48.115
+<v Joe Morrisroe (OTI)>Those... Some of those do date back to
+
+889
+00:47:48.355 --> 00:47:52.995
+<v Joe Morrisroe (OTI)>twenty years. So there's a work effort
+that started a couple of years ago that we
+
+890
+00:47:52.995 --> 00:47:55.875
+<v Joe Morrisroe (OTI)>tried to do. We've we've done
+it successfully with NYPD
+
+891
+00:47:56.060 --> 00:47:58.620
+<v Joe Morrisroe (OTI)>is to refine those
+resolution descriptions.
+
+892
+00:47:58.780 --> 00:48:02.380
+<v Joe Morrisroe (OTI)>Frankly, put them into plain language
+terms so the public can actually understand
+
+893
+00:48:02.620 --> 00:48:03.980
+<v Joe Morrisroe (OTI)>what the city is saying.
+
+894
+00:48:04.300 --> 00:48:07.900
+<v Joe Morrisroe (OTI)>So that's something that has... We believe
+has helped. It's hard to get data on
+
+895
+00:48:07.900 --> 00:48:11.425
+<v Joe Morrisroe (OTI)>that, but we believe has helped helped us
+clarify that situation. Like, what does
+
+896
+00:48:11.425 --> 00:48:14.065
+<v Joe Morrisroe (OTI)>this mean? What does this
+agency response mean?
+
+897
+00:48:14.305 --> 00:48:18.465
+<v CM Carmen De La Rosa>So those are a number of things we do where
+we can control that, and just all under
+
+898
+00:48:18.465 --> 00:48:22.225
+<v CM Carmen De La Rosa>the guise of trying to make it more
+informative and more understanding to the
+
+899
+00:48:22.225 --> 00:48:26.560
+<v CM Carmen De La Rosa>customer. Mhmm. I also think that it's
+important, like, you mentioned, like, setting
+
+900
+00:48:26.560 --> 00:48:30.400
+<v CM Carmen De La Rosa>expectations because I think people think
+once you put in a three one complaint,
+
+901
+00:48:30.400 --> 00:48:34.160
+<v CM Carmen De La Rosa>like, I heard another agency say one time,
+we're in a meeting. Well, only because
+
+902
+00:48:34.160 --> 00:48:37.360
+<v CM Carmen De La Rosa>it's closed on 03/11 doesn't mean
+it's closed on the agency side.
+
+903
+00:48:37.955 --> 00:48:40.355
+<v CM Carmen De La Rosa>Right? But it would be great to, like,
+
+904
+00:48:41.075 --> 00:48:42.595
+<v CM Carmen De La Rosa>explain that to the
+
+905
+00:48:42.835 --> 00:48:46.355
+<v CM Carmen De La Rosa>person who's experiencing it. Sure.
+Because they see the closed status and they
+
+906
+00:48:46.355 --> 00:48:51.235
+<v CM Carmen De La Rosa>think it's done. No one's following up. It
+might be closed on 03/11, but at the DOT
+
+907
+00:48:51.235 --> 00:48:53.075
+<v CM Carmen De La Rosa>or at the parks department,
+it's still open.
+
+908
+00:48:54.260 --> 00:48:59.300
+<v CM Carmen De La Rosa>Is there a mechanism right now where people
+can, like, drop down and see that, like,
+
+909
+00:48:59.300 --> 00:49:02.900
+<v CM Carmen De La Rosa>it's with the parks department and
+they're still working on it or no? Okay.
+
+910
+00:49:03.700 --> 00:49:08.580
+<v Joe Morrisroe (OTI)>Thank you for describing that. I would say
+that just as a point of how we operate,
+
+911
+00:49:08.915 --> 00:49:13.155
+<v Joe Morrisroe (OTI)>three one one doesn't close any requests.
+Right? So 31 opens and submits to the
+
+912
+00:49:13.155 --> 00:49:17.075
+<v Joe Morrisroe (OTI)>agency, but the agency owns all the status
+from that point on, whether it's in
+
+913
+00:49:17.075 --> 00:49:20.995
+<v Joe Morrisroe (OTI)>progress, updated, you know, closed or
+resolved, whatever term they may use.
+
+914
+00:49:21.650 --> 00:49:25.490
+<v Joe Morrisroe (OTI)>But I agree with you with respect to
+informing more and more that we can. Right?
+
+915
+00:49:25.490 --> 00:49:27.250
+<v Joe Morrisroe (OTI)>Setting that expectation upfront.
+
+916
+00:49:27.810 --> 00:49:28.930
+<v Joe Morrisroe (OTI)>But, yeah, the
+
+917
+00:49:29.010 --> 00:49:32.610
+<v Joe Morrisroe (OTI)>opportunity to see what's happening,
+there's at least two ways for the public.
+
+918
+00:49:32.770 --> 00:49:34.865
+<v Joe Morrisroe (OTI)>One is if you have the
+confirmation number.
+
+919
+00:49:35.185 --> 00:49:38.865
+<v Joe Morrisroe (OTI)>Again, if you did it online, if you have
+an email, that's the best way to look it
+
+920
+00:49:38.865 --> 00:49:41.905
+<v Joe Morrisroe (OTI)>up. You can actually do it on the homepage
+of the app. Just cut and paste your
+
+921
+00:49:41.905 --> 00:49:44.865
+<v Joe Morrisroe (OTI)>confirmation number, put it in,
+and it's gonna give you the status.
+
+922
+00:49:45.345 --> 00:49:47.585
+<v Joe Morrisroe (OTI)>If you don't have that,
+you can contact 311.
+
+923
+00:49:47.825 --> 00:49:52.990
+<v Joe Morrisroe (OTI)>So that's one way. But also the open data
+portal, and I give a a compliment out to
+
+924
+00:49:52.990 --> 00:49:57.070
+<v Joe Morrisroe (OTI)>my colleagues at, the data analytics team
+at OTI who do a tremendous job with the
+
+925
+00:49:57.070 --> 00:50:01.195
+<v Joe Morrisroe (OTI)>open data portal for so many things in New
+York City. But there's several rich three
+
+926
+00:50:01.195 --> 00:50:05.115
+<v Joe Morrisroe (OTI)>one one datasets on there. There are
+three one one service request dataset.
+
+927
+00:50:05.115 --> 00:50:08.795
+<v Joe Morrisroe (OTI)>It's probably one of the most popular ones,
+and that has a lot of information that
+
+928
+00:50:08.795 --> 00:50:12.555
+<v Joe Morrisroe (OTI)>can give you an update on your status of
+your complaint. But also if there's a
+
+929
+00:50:12.555 --> 00:50:16.470
+<v Joe Morrisroe (OTI)>collection or as as council member Riley
+had said, if there's a focus in a certain
+
+930
+00:50:16.470 --> 00:50:19.990
+<v Joe Morrisroe (OTI)>area in your neighborhood, that open
+data tool is really, really powerful.
+
+931
+00:50:20.230 --> 00:50:24.790
+<v CM Carmen De La Rosa>Is there, like, end of year meeting where
+three one one sits with the agencies and
+
+932
+00:50:24.790 --> 00:50:25.510
+<v CM Carmen De La Rosa>it's like,
+
+933
+00:50:25.830 --> 00:50:30.070
+<v CM Carmen De La Rosa>these are the patterns we're observing? Or
+once that data is sort of uploaded to the
+
+934
+00:50:30.070 --> 00:50:30.390
+<v CM Carmen De La Rosa>open
+
+935
+00:50:31.205 --> 00:50:35.685
+<v CM Carmen De La Rosa>data portal is the expectation that the
+agencies kind of do that type of analysis
+
+936
+00:50:35.685 --> 00:50:36.965
+<v CM Carmen De La Rosa>for themselves? I really
+
+937
+00:50:37.445 --> 00:50:40.965
+<v Joe Morrisroe (OTI)>appreciate that question. If you allow me
+to kinda brag on the teams at three on one
+
+938
+00:50:40.965 --> 00:50:42.485
+<v Joe Morrisroe (OTI)>and answering it, I'd appreciate that.
+
+939
+00:50:43.440 --> 00:50:46.960
+<v Joe Morrisroe (OTI)>That happens every day, and it happens
+quarterly, and it happens over the course of
+
+940
+00:50:46.960 --> 00:50:50.960
+<v Joe Morrisroe (OTI)>a year as well. I alluded to earlier, we
+have a group that's called CX team. They
+
+941
+00:50:50.960 --> 00:50:52.400
+<v Joe Morrisroe (OTI)>look at the customer experience.
+
+942
+00:50:52.560 --> 00:50:55.760
+<v Joe Morrisroe (OTI)>We have a quality assurance team making
+sure things are handled correctly. We have
+
+943
+00:50:55.760 --> 00:50:59.545
+<v Joe Morrisroe (OTI)>the agency analyst. We have content writers.
+We have business relation. So there's a
+
+944
+00:50:59.545 --> 00:51:03.545
+<v Joe Morrisroe (OTI)>lot of folks all focused on
+are we doing it right today
+
+945
+00:51:03.705 --> 00:51:05.305
+<v Joe Morrisroe (OTI)>and how do we do it better tomorrow.
+
+946
+00:51:05.545 --> 00:51:10.345
+<v Joe Morrisroe (OTI)>So that happens more on a workplace
+basis, but we do have structured reviews.
+
+947
+00:51:10.505 --> 00:51:14.050
+<v Joe Morrisroe (OTI)>Some of our surveys get to that. We bring
+the whole team together. We do the readout
+
+948
+00:51:14.050 --> 00:51:17.810
+<v Joe Morrisroe (OTI)>of the survey, and then our agency relations
+team carries that to their respective
+
+949
+00:51:17.810 --> 00:51:22.130
+<v Joe Morrisroe (OTI)>agency counterparts. Great. I
+I do wanna ask some questions
+
+950
+00:51:22.210 --> 00:51:22.930
+<v CM Carmen De La Rosa>about,
+
+951
+00:51:23.650 --> 00:51:24.850
+<v CM Carmen De La Rosa>language access.
+
+952
+00:51:25.650 --> 00:51:28.205
+<v CM Carmen De La Rosa>And I I do have some,
+
+953
+00:51:29.005 --> 00:51:32.685
+<v CM Carmen De La Rosa>concerns about the app right
+now is just in English.
+
+954
+00:51:33.645 --> 00:51:37.805
+<v CM Carmen De La Rosa>Yeah. Can you speak to... Sort of, is there
+a function to translate the entire app?
+
+955
+00:51:38.300 --> 00:51:40.620
+<v CM Carmen De La Rosa>Like, if you're a Spanish speaker,
+
+956
+00:51:40.620 --> 00:51:45.260
+<v CM Carmen De La Rosa>for example, and you wanna access the
+app, like, can you translate the app? I
+
+957
+00:51:45.740 --> 00:51:49.020
+<v Joe Morrisroe (OTI)>understand the question. Appreciate
+it. I'll speak to that specifically.
+
+958
+00:51:49.260 --> 00:51:53.895
+<v Joe Morrisroe (OTI)>So now the app has kind of two components
+to it. What you see is is there.
+
+959
+00:51:54.455 --> 00:51:58.775
+<v Joe Morrisroe (OTI)>It is mobile optimized. So if we link you
+to the three one one online, the website
+
+960
+00:51:59.015 --> 00:52:02.295
+<v Joe Morrisroe (OTI)>Mhmm. Then you have all the benefit of
+what's on the website, including the Google
+
+961
+00:52:02.295 --> 00:52:05.975
+<v Joe Morrisroe (OTI)>Translate tool. Mhmm. On the app itself,
+if you're using a service request and
+
+962
+00:52:05.975 --> 00:52:09.390
+<v Joe Morrisroe (OTI)>you're submitting a service request that's
+embedded in the app, we call that native
+
+963
+00:52:09.390 --> 00:52:15.150
+<v Joe Morrisroe (OTI)>to the app, that's in English only. Okay.
+So it's something that only only exists in
+
+964
+00:52:15.150 --> 00:52:15.710
+<v Joe Morrisroe (OTI)>English.
+
+965
+00:52:15.950 --> 00:52:20.110
+<v Joe Morrisroe (OTI)>If a customer does want to use the app,
+they can go to the mobile site. I'm sorry.
+
+966
+00:52:20.110 --> 00:52:23.005
+<v Joe Morrisroe (OTI)>Go from the mobile site, quick
+link right to the website,
+
+967
+00:52:23.325 --> 00:52:27.725
+<v Joe Morrisroe (OTI)>and then use the website to be able to,
+one, trans... Convert to it... To the
+
+968
+00:52:27.725 --> 00:52:31.005
+<v Joe Morrisroe (OTI)>language they wish to and then access
+anything in that language. So what's the
+
+969
+00:52:31.005 --> 00:52:32.685
+<v Joe Morrisroe (OTI)>challenge in making the
+
+970
+00:52:32.925 --> 00:52:36.220
+<v CM Carmen De La Rosa>app sort of just switch
+languages? Understood.
+
+971
+00:52:36.220 --> 00:52:40.220
+<v Joe Morrisroe (OTI)>And it it ties back to the work we do with
+the mobile app in total. So whether it be
+
+972
+00:52:40.220 --> 00:52:41.980
+<v Joe Morrisroe (OTI)>trying to do better with the GPS
+
+973
+00:52:42.060 --> 00:52:45.820
+<v Joe Morrisroe (OTI)>that comes from a Budinowitz had
+referenced to trying to find better way of
+
+974
+00:52:45.820 --> 00:52:49.020
+<v Joe Morrisroe (OTI)>presenting the information and then
+just trying to do enhancements.
+
+975
+00:52:49.580 --> 00:52:53.515
+<v Joe Morrisroe (OTI)>There's a lot of work that constantly
+goes on in the mobile app, and it's just
+
+976
+00:52:53.515 --> 00:52:55.435
+<v Joe Morrisroe (OTI)>getting to that work. Okay.
+
+977
+00:52:55.675 --> 00:52:59.355
+<v CM Carmen De La Rosa>Okay. I I do wanna ask
+a few questions about,
+
+978
+00:53:00.795 --> 00:53:02.955
+<v CM Carmen De La Rosa>passport procurement and other things.
+
+979
+00:53:03.515 --> 00:53:06.395
+<v CM Carmen De La Rosa>On the passport procurement
+website, there is an RFP
+
+980
+00:53:06.770 --> 00:53:07.970
+<v CM Carmen De La Rosa>for outsourced
+
+981
+00:53:07.970 --> 00:53:08.690
+<v CM Carmen De La Rosa>contract
+
+982
+00:53:08.930 --> 00:53:12.290
+<v CM Carmen De La Rosa>center services for NYC311.
+
+983
+00:53:12.290 --> 00:53:16.290
+<v CM Carmen De La Rosa>We have the RFP number. Please tell us
+more about the need for outsourcing
+
+984
+00:53:16.290 --> 00:53:18.290
+<v CM Carmen De La Rosa>the con... Contact center.
+
+985
+00:53:18.690 --> 00:53:22.445
+<v Joe Morrisroe (OTI)>Great. Thank you for the question and for
+the context with respect to PASSPort. I
+
+986
+00:53:22.445 --> 00:53:25.485
+<v Joe Morrisroe (OTI)>thought you're gonna ask me a
+PASSPORT question. Oh. So I'm
+
+987
+00:53:25.485 --> 00:53:27.005
+<v Joe Morrisroe (OTI)>glad it's a three one one question.
+
+988
+00:53:27.565 --> 00:53:31.645
+<v Joe Morrisroe (OTI)>So, yes, I can speak to that. We've talked
+previously about the contracted vendor,
+
+989
+00:53:31.725 --> 00:53:33.405
+<v Joe Morrisroe (OTI)>also known as the overflow vendor.
+
+990
+00:53:33.965 --> 00:53:35.485
+<v Joe Morrisroe (OTI)>So that contract ends
+
+991
+00:53:35.580 --> 00:53:37.020
+<v Joe Morrisroe (OTI)>February '27...
+
+992
+00:53:37.020 --> 00:53:39.820
+<v Joe Morrisroe (OTI)>02/28/2027.
+
+993
+00:53:40.460 --> 00:53:45.420
+<v Joe Morrisroe (OTI)>The city, the approach is that we're going
+to solicit bids for a new contract that
+
+994
+00:53:45.420 --> 00:53:47.740
+<v Joe Morrisroe (OTI)>would start 03/01/2027.
+
+995
+00:53:48.540 --> 00:53:53.785
+<v Joe Morrisroe (OTI)>So that arm... I'll call it the RFP that
+you referenced, that is to solicit vendors
+
+996
+00:53:53.785 --> 00:53:57.545
+<v Joe Morrisroe (OTI)>for that purpose. Okay. And so as of right
+now, you're just soliciting. You're in
+
+997
+00:53:57.545 --> 00:54:00.025
+<v Joe Morrisroe (OTI)>the process of soliciting.
+Correct. Mhmm. Okay.
+
+998
+00:54:00.585 --> 00:54:02.585
+<v CM Carmen De La Rosa>On 08/18/2026,
+
+999
+00:54:02.585 --> 00:54:06.280
+<v CM Carmen De La Rosa>New York City experienced a significant
+nine one one service disruption after
+
+1000
+00:54:06.280 --> 00:54:07.240
+<v CM Carmen De La Rosa>Motorola.
+
+1001
+00:54:07.240 --> 00:54:11.640
+<v CM Carmen De La Rosa>The city service provider performed the
+routine software update. Approximately 1,700
+
+1002
+00:54:11.640 --> 00:54:14.200
+<v CM Carmen De La Rosa>calls were impacted during that outage.
+
+1003
+00:54:14.280 --> 00:54:15.800
+<v CM Carmen De La Rosa>If I recall correctly,
+
+1004
+00:54:16.225 --> 00:54:21.025
+<v CM Carmen De La Rosa>IBM is the principal vendor supporting
+the three one one system. And during
+
+1005
+00:54:21.185 --> 00:54:22.625
+<v CM Carmen De La Rosa>prior testimony,
+
+1006
+00:54:24.465 --> 00:54:27.585
+<v CM Carmen De La Rosa>you stated that a joint team of OTI,
+
+1007
+00:54:27.585 --> 00:54:30.305
+<v CM Carmen De La Rosa>IBM is responsible for three
+one one system updates.
+
+1008
+00:54:31.200 --> 00:54:35.120
+<v CM Carmen De La Rosa>Can you walk us through the standard
+process for implementing software updates to
+
+1009
+00:54:35.120 --> 00:54:36.000
+<v CM Carmen De La Rosa>three one one?
+
+1010
+00:54:36.640 --> 00:54:40.400
+<v Joe Morrisroe (OTI)>Thank you for the context. And, yes, I I
+can give you some of that perspective. I
+
+1011
+00:54:40.400 --> 00:54:43.760
+<v Joe Morrisroe (OTI)>probably can't go deep as some of my
+colleagues at OTI would, but I can give you a
+
+1012
+00:54:43.760 --> 00:54:44.480
+<v Joe Morrisroe (OTI)>flavor of that.
+
+1013
+00:54:45.445 --> 00:54:49.045
+<v Joe Morrisroe (OTI)>And I think the starting point
+would be to make a distinction.
+
+1014
+00:54:49.445 --> 00:54:53.605
+<v Joe Morrisroe (OTI)>So the work that we do with IBM
+and what was previously referenced,
+
+1015
+00:54:54.405 --> 00:54:58.180
+<v Joe Morrisroe (OTI)>we do that for mostly for what we call
+applications development. So for the system
+
+1016
+00:54:58.180 --> 00:55:02.100
+<v Joe Morrisroe (OTI)>that you see online or the system that gets
+used in the call center, the application
+
+1017
+00:55:02.100 --> 00:55:06.740
+<v Joe Morrisroe (OTI)>side of that, not the telephony system.
+Okay. So those are two separate.
+
+1018
+00:55:07.060 --> 00:55:11.485
+<v Joe Morrisroe (OTI)>And then most recently of... The telephone
+system. So the telephone system is
+
+1019
+00:55:11.485 --> 00:55:12.125
+<v Joe Morrisroe (OTI)>actually...
+
+1020
+00:55:12.285 --> 00:55:16.205
+<v Joe Morrisroe (OTI)>The the source system, the platform is
+a Cisco platform Cisco. Which is pretty
+
+1021
+00:55:16.205 --> 00:55:17.805
+<v Joe Morrisroe (OTI)>common across the city. Mhmm.
+
+1022
+00:55:18.525 --> 00:55:20.205
+<v Joe Morrisroe (OTI)>And then back on the application side,
+
+1023
+00:55:21.180 --> 00:55:24.220
+<v Joe Morrisroe (OTI)>as we... In the past, when
+I would have referenced IBM,
+
+1024
+00:55:24.460 --> 00:55:27.180
+<v Joe Morrisroe (OTI)>the the OTI is now using MWBE
+
+1025
+00:55:27.180 --> 00:55:31.740
+<v Joe Morrisroe (OTI)>contracts more so than the IBM contract.
+Okay. So that work, though, is similar.
+
+1026
+00:55:31.740 --> 00:55:36.715
+<v Joe Morrisroe (OTI)>We're contracting for specific skill sets
+and specific work that can help us develop
+
+1027
+00:55:36.715 --> 00:55:38.475
+<v Joe Morrisroe (OTI)>and build out in our application.
+
+1028
+00:55:38.955 --> 00:55:42.075
+<v Joe Morrisroe (OTI)>In some cases, you know, you bring it on,
+you help build it, and then you don't need
+
+1029
+00:55:42.075 --> 00:55:42.955
+<v Joe Morrisroe (OTI)>it anymore.
+
+1030
+00:55:43.035 --> 00:55:44.795
+<v Joe Morrisroe (OTI)>But all of that gets overseen
+
+1031
+00:55:44.795 --> 00:55:46.235
+<v Joe Morrisroe (OTI)>overseen and
+
+1032
+00:55:46.475 --> 00:55:48.240
+<v Joe Morrisroe (OTI)>managed by the OTI,
+
+1033
+00:55:48.480 --> 00:55:49.440
+<v Joe Morrisroe (OTI)>organization.
+
+1034
+00:55:49.520 --> 00:55:50.160
+<v CM Carmen De La Rosa>Okay.
+
+1035
+00:55:50.480 --> 00:55:53.840
+<v CM Carmen De La Rosa>Obviously, you know, given what happened
+at nine one one, we have a few more
+
+1036
+00:55:53.840 --> 00:55:54.640
+<v CM Carmen De La Rosa>questions about,
+
+1037
+00:55:55.520 --> 00:55:56.320
+<v CM Carmen De La Rosa>updates
+
+1038
+00:55:56.560 --> 00:56:01.600
+<v CM Carmen De La Rosa>performed on on the regular. Are, you
+know, software updates of that nature
+
+1039
+00:56:02.135 --> 00:56:06.375
+<v CM Carmen De La Rosa>happening on a regular basis? Are they
+predetermined? And then who determines
+
+1040
+00:56:06.375 --> 00:56:11.095
+<v CM Carmen De La Rosa>when an update should occur and who
+within OTI or three zero one must approve
+
+1041
+00:56:11.335 --> 00:56:15.095
+<v Joe Morrisroe (OTI)>before it is deployed? Great. Thank you
+for that question. I get to expand a little
+
+1042
+00:56:15.095 --> 00:56:16.135
+<v Joe Morrisroe (OTI)>bit on the work that we do.
+
+1043
+00:56:17.050 --> 00:56:21.690
+<v Joe Morrisroe (OTI)>So there are a number of levels of approval.
+Software updates are very much our our
+
+1044
+00:56:21.690 --> 00:56:23.210
+<v Joe Morrisroe (OTI)>focus, as you can imagine,
+
+1045
+00:56:24.010 --> 00:56:27.850
+<v Joe Morrisroe (OTI)>even, you know, without the the reference
+to the to the earlier August event.
+
+1046
+00:56:28.490 --> 00:56:32.515
+<v Joe Morrisroe (OTI)>But this one, I would say, goes back
+twenty three years as well. It's it's
+
+1047
+00:56:32.675 --> 00:56:36.675
+<v Joe Morrisroe (OTI)>grounded in three on one's approach that
+we must always be available. Right? And
+
+1048
+00:56:36.675 --> 00:56:39.715
+<v Joe Morrisroe (OTI)>if... And and there's always times where
+you're have scheduled updates and scheduled
+
+1049
+00:56:39.715 --> 00:56:40.435
+<v Joe Morrisroe (OTI)>outages,
+
+1050
+00:56:40.595 --> 00:56:44.050
+<v Joe Morrisroe (OTI)>then you're have a backup, and you're have
+enough backup to the backup. So that's
+
+1051
+00:56:44.050 --> 00:56:47.170
+<v Joe Morrisroe (OTI)>something that that we take, whether
+it's the telecom side, whether it's the
+
+1052
+00:56:47.170 --> 00:56:51.010
+<v Joe Morrisroe (OTI)>application side, take very serious. And
+therefore, we have a number of processes in
+
+1053
+00:56:51.010 --> 00:56:54.450
+<v Joe Morrisroe (OTI)>place. I'll just speak at a
+high level, and I have the,
+
+1054
+00:56:54.850 --> 00:56:58.530
+<v Joe Morrisroe (OTI)>the privilege of also supporting
+the city's internal customer,
+
+1055
+00:56:58.770 --> 00:57:00.955
+<v Joe Morrisroe (OTI)>service desk, the citywide service desk.
+
+1056
+00:57:01.355 --> 00:57:05.435
+<v Joe Morrisroe (OTI)>Within that team, there's a number of folks
+who focus solely on change management as
+
+1057
+00:57:05.435 --> 00:57:09.515
+<v Joe Morrisroe (OTI)>we call it. Mhmm. So I can kinda speak to
+that in both ways. But if there's there's
+
+1058
+00:57:09.515 --> 00:57:13.275
+<v Joe Morrisroe (OTI)>always a need for a software upgrade...
+Software updates, software changes, software
+
+1059
+00:57:13.275 --> 00:57:13.675
+<v Joe Morrisroe (OTI)>upgrades,
+
+1060
+00:57:14.190 --> 00:57:18.830
+<v Joe Morrisroe (OTI)>It's a very controlled process of the
+teams that need to do it put put forth what
+
+1061
+00:57:18.830 --> 00:57:23.230
+<v Joe Morrisroe (OTI)>they need to do. There's a body that
+understands what's happening. So your change...
+
+1062
+00:57:23.230 --> 00:57:26.670
+<v Joe Morrisroe (OTI)>I have to think about your change, but also
+will it affect somebody else's change.
+
+1063
+00:57:27.095 --> 00:57:31.735
+<v Joe Morrisroe (OTI)>They all go through an approval process.
+It's pretty standard. It can be on a daily
+
+1064
+00:57:31.735 --> 00:57:36.055
+<v Joe Morrisroe (OTI)>basis. It can be on a cycle basis. But
+there's a pretty standard protocol of being
+
+1065
+00:57:36.055 --> 00:57:39.655
+<v Joe Morrisroe (OTI)>able to go back and look at, here's the
+changes we need to make. Here's why we need
+
+1066
+00:57:39.655 --> 00:57:42.695
+<v Joe Morrisroe (OTI)>to make them. And as everybody
+signed off on making those changes.
+
+1067
+00:57:43.550 --> 00:57:47.550
+<v CM Carmen De La Rosa>Since the nine one one outage, has that
+prompted you all to review or change
+
+1068
+00:57:47.550 --> 00:57:50.190
+<v CM Carmen De La Rosa>procedures governing software
+updates to three one one?
+
+1069
+00:57:50.990 --> 00:57:51.870
+<v Joe Morrisroe (OTI)>Thank you for that.
+
+1070
+00:57:52.430 --> 00:57:53.470
+<v Joe Morrisroe (OTI)>I will say yes,
+
+1071
+00:57:53.710 --> 00:57:58.475
+<v Joe Morrisroe (OTI)>because any event that occurs forces us to
+do just that. So this winter when we had,
+
+1072
+00:57:58.475 --> 00:58:00.235
+<v Joe Morrisroe (OTI)>you know, extreme winter weather,
+
+1073
+00:58:00.555 --> 00:58:03.995
+<v Joe Morrisroe (OTI)>this summer when we had heat waves, you
+know, dating back again. You mentioned the
+
+1074
+00:58:03.995 --> 00:58:07.275
+<v Joe Morrisroe (OTI)>history of three one one, but dating back
+to their earliest days when there was a
+
+1075
+00:58:07.275 --> 00:58:09.355
+<v Joe Morrisroe (OTI)>transit strike in 2003.
+
+1076
+00:58:09.995 --> 00:58:11.995
+<v Joe Morrisroe (OTI)>That causes us to think about things
+
+1077
+00:58:12.700 --> 00:58:16.060
+<v Joe Morrisroe (OTI)>whether it's a natural disaster, whether
+it's a city... Oh, sorry. What's a
+
+1078
+00:58:16.060 --> 00:58:17.340
+<v Joe Morrisroe (OTI)>technical change?
+
+1079
+00:58:17.420 --> 00:58:20.780
+<v Joe Morrisroe (OTI)>But anything that occurs, we have a
+process through our emergency management
+
+1080
+00:58:20.780 --> 00:58:22.540
+<v Joe Morrisroe (OTI)>resources on our team. We
+
+1081
+00:58:22.860 --> 00:58:26.635
+<v Joe Morrisroe (OTI)>also partner with New York City emergency
+management. But within our own team, we'll
+
+1082
+00:58:26.635 --> 00:58:30.715
+<v Joe Morrisroe (OTI)>evaluate anything that is out of the norm
+out of the norm and say, how would this...
+
+1083
+00:58:30.715 --> 00:58:34.475
+<v Joe Morrisroe (OTI)>How would we handle this? Are we are we
+covered? Are we set? Are we able to do that?
+
+1084
+00:58:34.635 --> 00:58:38.475
+<v Joe Morrisroe (OTI)>So one of the questions that we asked of
+OTI when we were doing the nine one one
+
+1085
+00:58:38.475 --> 00:58:40.730
+<v Joe Morrisroe (OTI)>hearing was if there were any,
+
+1086
+00:58:41.850 --> 00:58:42.650
+<v CM Carmen De La Rosa>redundancies
+
+1087
+00:58:42.650 --> 00:58:43.850
+<v CM Carmen De La Rosa>or failover
+
+1088
+00:58:44.090 --> 00:58:46.570
+<v CM Carmen De La Rosa>procedures if something is failing,
+
+1089
+00:58:46.730 --> 00:58:51.210
+<v CM Carmen De La Rosa>like, live. Like, something is failing
+and someone... Like, for the nine one one
+
+1090
+00:58:51.210 --> 00:58:52.650
+<v CM Carmen De La Rosa>outage, it wasn't
+
+1091
+00:58:53.265 --> 00:58:55.505
+<v CM Carmen De La Rosa>clear that something was failing until
+
+1092
+00:58:55.665 --> 00:59:00.065
+<v CM Carmen De La Rosa>some of the, nine one one dispatchers
+began to notice things that were happening
+
+1093
+00:59:00.065 --> 00:59:03.905
+<v CM Carmen De La Rosa>that were out of the ordinary. So can you
+walk us through what that looks like for
+
+1094
+00:59:03.905 --> 00:59:04.545
+<v CM Carmen De La Rosa>the 311?
+
+1095
+00:59:05.010 --> 00:59:08.210
+<v Joe Morrisroe (OTI)>Yeah. Sure. Thank you for
+the for the framing of that.
+
+1096
+00:59:08.530 --> 00:59:13.410
+<v Joe Morrisroe (OTI)>So we do have a number of, alerts and
+flags that that are designed from a system
+
+1097
+00:59:13.410 --> 00:59:16.930
+<v Joe Morrisroe (OTI)>perspective. Right? So that's
+built into our operating systems,
+
+1098
+00:59:17.330 --> 00:59:18.770
+<v Joe Morrisroe (OTI)>our our alerts,
+
+1099
+00:59:18.770 --> 00:59:22.865
+<v Joe Morrisroe (OTI)>and then there's, you know, systems that
+do monitor just for alerts. So that's
+
+1100
+00:59:22.865 --> 00:59:27.345
+<v Joe Morrisroe (OTI)>that's a a necessary requirement,
+somewhat of a standard requirement.
+
+1101
+00:59:27.745 --> 00:59:30.065
+<v Joe Morrisroe (OTI)>But we also have built in over the years
+
+1102
+00:59:30.385 --> 00:59:33.505
+<v Joe Morrisroe (OTI)>tools that will alert us if
+something were to happen.
+
+1103
+00:59:34.160 --> 00:59:39.840
+<v Joe Morrisroe (OTI)>Our telecom platform is very robust. It
+operates very well, but things can happen.
+
+1104
+00:59:39.840 --> 00:59:40.400
+<v Joe Morrisroe (OTI)>We
+
+1105
+00:59:40.880 --> 00:59:43.440
+<v Joe Morrisroe (OTI)>have built in... I'll give
+just a simple example.
+
+1106
+00:59:43.920 --> 00:59:46.960
+<v Joe Morrisroe (OTI)>If a call has not been
+received for x minutes,
+
+1107
+00:59:47.925 --> 00:59:52.165
+<v Joe Morrisroe (OTI)>there's going to be a a trigger and an
+alert and an email generated to one of our
+
+1108
+00:59:52.165 --> 00:59:54.005
+<v Joe Morrisroe (OTI)>twenty four seven operating people.
+
+1109
+00:59:54.565 --> 00:59:55.285
+<v Joe Morrisroe (OTI)>So
+
+1110
+00:59:55.525 --> 00:59:58.805
+<v Joe Morrisroe (OTI)>during the course of a day, you know, if
+that were to happen, it would be very
+
+1111
+00:59:58.805 --> 01:00:02.780
+<v Joe Morrisroe (OTI)>quickly detected simply because there's a
+lot of calls during the day. But we also
+
+1112
+01:00:02.780 --> 01:00:06.700
+<v Joe Morrisroe (OTI)>tweak it so even on the overnight when
+there may be gaps in calls because not a lot
+
+1113
+01:00:06.700 --> 01:00:10.300
+<v Joe Morrisroe (OTI)>of people are calling, if we go for
+a certain period of time, minutes,
+
+1114
+01:00:10.940 --> 01:00:15.100
+<v Joe Morrisroe (OTI)>there is a a a trigger and an email report
+and it goes to a live person to be able
+
+1115
+01:00:15.100 --> 01:00:19.405
+<v Joe Morrisroe (OTI)>to say, now what do we do? The city has a
+very structured process that OTI oversees.
+
+1116
+01:00:19.405 --> 01:00:22.925
+<v Joe Morrisroe (OTI)>I mentioned before the citywide service
+desk, that's the first step. Mhmm. Open up a
+
+1117
+01:00:22.925 --> 01:00:26.125
+<v Joe Morrisroe (OTI)>ticket. Let's get everyone involved. Let's
+start to understand what it is. But the
+
+1118
+01:00:26.125 --> 01:00:29.085
+<v Joe Morrisroe (OTI)>identification of that is something we
+have built in over the years. Okay.
+
+1119
+01:00:30.040 --> 01:00:34.200
+<v CM Carmen De La Rosa>Going back to language access, how many
+of your operators are fluent in other
+
+1120
+01:00:34.200 --> 01:00:34.920
+<v CM Carmen De La Rosa>languages?
+
+1121
+01:00:35.240 --> 01:00:36.440
+<v Joe Morrisroe (OTI)>Thank you for that.
+
+1122
+01:00:36.920 --> 01:00:37.880
+<v Joe Morrisroe (OTI)>In total,
+
+1123
+01:00:38.200 --> 01:00:39.720
+<v Joe Morrisroe (OTI)>the the only languages
+
+1124
+01:00:39.880 --> 01:00:42.040
+<v Joe Morrisroe (OTI)>our operators speak other than
+English would be Spanish.
+
+1125
+01:00:42.525 --> 01:00:46.845
+<v Joe Morrisroe (OTI)>So we have a small number of, I'll say,
+bilingual English Spanish language speakers.
+
+1126
+01:00:46.845 --> 01:00:47.245
+<v Joe Morrisroe (OTI)>Mhmm.
+
+1127
+01:00:47.725 --> 01:00:51.805
+<v Joe Morrisroe (OTI)>Everything else, we rely on a third party
+interpretation vendor, language line.
+
+1128
+01:00:51.805 --> 01:00:52.925
+<v Joe Morrisroe (OTI)>Language line.
+
+1129
+01:00:53.085 --> 01:00:53.405
+<v CM Carmen De La Rosa>Okay.
+
+1130
+01:00:56.680 --> 01:01:02.200
+<v Joe Morrisroe (OTI)>Okay. What is the current protocol if a
+need arises of having a staffing search of
+
+1131
+01:01:02.200 --> 01:01:07.720
+<v Joe Morrisroe (OTI)>three one one call takers such as during
+an emergency? Oh, okay. We do have a
+
+1132
+01:01:07.720 --> 01:01:11.755
+<v Joe Morrisroe (OTI)>protocol for that. We've actually used it
+several times this year because of the
+
+1133
+01:01:11.755 --> 01:01:13.675
+<v Joe Morrisroe (OTI)>weather emergencies that
+I mentioned before.
+
+1134
+01:01:13.915 --> 01:01:16.475
+<v Joe Morrisroe (OTI)>But this is where our
+contracted vendor resource
+
+1135
+01:01:16.795 --> 01:01:18.235
+<v Joe Morrisroe (OTI)>comes into play
+
+1136
+01:01:18.395 --> 01:01:19.755
+<v Joe Morrisroe (OTI)>more so than ever.
+
+1137
+01:01:20.555 --> 01:01:24.155
+<v Joe Morrisroe (OTI)>Because they do steady state work, they're
+already in the three one one program.
+
+1138
+01:01:24.155 --> 01:01:27.330
+<v Joe Morrisroe (OTI)>They have three one one systems. They have
+people who are trained on that. But we go
+
+1139
+01:01:27.330 --> 01:01:31.330
+<v Joe Morrisroe (OTI)>to the vendor and say, we need more. We
+need it quickly, and we need people who are
+
+1140
+01:01:31.330 --> 01:01:32.050
+<v Joe Morrisroe (OTI)>qualified.
+
+1141
+01:01:32.370 --> 01:01:35.890
+<v Joe Morrisroe (OTI)>Because the vendor is a private organization
+and they have other business, they have
+
+1142
+01:01:35.890 --> 01:01:38.930
+<v Joe Morrisroe (OTI)>the ability to have resources. Right?
+They can have them available quickly.
+
+1143
+01:01:39.425 --> 01:01:43.585
+<v Joe Morrisroe (OTI)>So we'll we'll anticipate something's
+coming up. This past weekend, we had the
+
+1144
+01:01:43.585 --> 01:01:44.225
+<v Joe Morrisroe (OTI)>nor'easter.
+
+1145
+01:01:44.705 --> 01:01:48.465
+<v Joe Morrisroe (OTI)>My executive director who runs the call
+center said, yep. Weather's bad. We're gonna
+
+1146
+01:01:48.465 --> 01:01:52.065
+<v Joe Morrisroe (OTI)>get more calls. Let's see what we can do
+about adding some staff. So if people are
+
+1147
+01:01:52.065 --> 01:01:56.060
+<v Joe Morrisroe (OTI)>calling for downed trees, for example,
+we've got some small additional staff to be
+
+1148
+01:01:56.060 --> 01:01:59.660
+<v Joe Morrisroe (OTI)>able to do that. So we go to the vendor
+for that. They can turn that resource up
+
+1149
+01:01:59.660 --> 01:02:01.260
+<v Joe Morrisroe (OTI)>pretty quickly from their pool.
+
+1150
+01:02:01.580 --> 01:02:04.940
+<v Joe Morrisroe (OTI)>But then equally, they can then also take
+that resource down when it's needed.
+
+1151
+01:02:04.940 --> 01:02:07.980
+<v Joe Morrisroe (OTI)>Right? So that is our primary response to,
+
+1152
+01:02:08.585 --> 01:02:12.345
+<v Joe Morrisroe (OTI)>that is our primary approach when it's
+responding to a a surge. We we tend to call
+
+1153
+01:02:12.345 --> 01:02:13.145
+<v Joe Morrisroe (OTI)>it a surge.
+
+1154
+01:02:13.465 --> 01:02:14.105
+<v CM Carmen De La Rosa>Great.
+
+1155
+01:02:14.985 --> 01:02:18.985
+<v CM Carmen De La Rosa>My colleague, council member Gutierrez
+spoke a little bit of artificial
+
+1156
+01:02:18.985 --> 01:02:19.705
+<v CM Carmen De La Rosa>intelligence.
+
+1157
+01:02:19.785 --> 01:02:24.650
+<v Joe Morrisroe (OTI)>I just want us to dig in more. Can you tell
+us more about your current plans for, AI
+
+1158
+01:02:24.650 --> 01:02:28.730
+<v Joe Morrisroe (OTI)>within three one one mobile app and website?
+Like, what's the vision? Thank you. I I
+
+1159
+01:02:28.730 --> 01:02:33.130
+<v Joe Morrisroe (OTI)>do appreciate that one. Like everyone,
+right, we're looking at how does that affect
+
+1160
+01:02:33.130 --> 01:02:37.210
+<v Joe Morrisroe (OTI)>every aspect of the work that we do and
+and the work... And what we deliver to the
+
+1161
+01:02:37.210 --> 01:02:39.435
+<v Joe Morrisroe (OTI)>public. So we've had a few
+
+1162
+01:02:39.835 --> 01:02:43.035
+<v Joe Morrisroe (OTI)>exercises and and activities
+where we've worked and
+
+1163
+01:02:43.435 --> 01:02:47.755
+<v Joe Morrisroe (OTI)>seen what AI can do. We've had different
+demos that we've been able to take a look
+
+1164
+01:02:47.755 --> 01:02:48.235
+<v Joe Morrisroe (OTI)>at.
+
+1165
+01:02:48.555 --> 01:02:51.275
+<v Joe Morrisroe (OTI)>So we start with the
+principle though that AI
+
+1166
+01:02:51.470 --> 01:02:56.270
+<v Joe Morrisroe (OTI)>working in our call center is designed to
+augment the work that the representative
+
+1167
+01:02:56.270 --> 01:02:59.310
+<v Joe Morrisroe (OTI)>does, not replace the work
+that the representative does.
+
+1168
+01:02:59.790 --> 01:03:04.110
+<v Joe Morrisroe (OTI)>And we've seen a number of ways
+that can help if AI can handle
+
+1169
+01:03:04.350 --> 01:03:09.045
+<v Joe Morrisroe (OTI)>some... Can help the agent identify how to
+navigate or be able to pre pop something
+
+1170
+01:03:09.285 --> 01:03:14.005
+<v Joe Morrisroe (OTI)>or even, we have a we have a very older
+version of it today that exists in our call
+
+1171
+01:03:14.005 --> 01:03:18.005
+<v Joe Morrisroe (OTI)>center called natural language where it
+can detect... If you if you interact with
+
+1172
+01:03:18.005 --> 01:03:22.240
+<v Joe Morrisroe (OTI)>it, it can detect what you are asking about
+and it'll do a screen pop for the rep to
+
+1173
+01:03:22.240 --> 01:03:24.800
+<v Joe Morrisroe (OTI)>say, you know, it's a
+garbage recycle question.
+
+1174
+01:03:25.760 --> 01:03:29.920
+<v Joe Morrisroe (OTI)>That's ten plus years old technology, but
+the concept behind that is what we look at
+
+1175
+01:03:29.920 --> 01:03:34.080
+<v Joe Morrisroe (OTI)>with AI as well. How could AI help us
+better help the agent to better help the
+
+1176
+01:03:34.080 --> 01:03:35.405
+<v Joe Morrisroe (OTI)>customer? Okay.
+
+1177
+01:03:35.885 --> 01:03:39.405
+<v CM Carmen De La Rosa>Okay. So I'm gonna switch
+back to legislation
+
+1178
+01:03:39.405 --> 01:03:40.525
+<v CM Carmen De La Rosa>rate... Related
+
+1179
+01:03:40.925 --> 01:03:41.805
+<v CM Carmen De La Rosa>questions.
+
+1180
+01:03:41.805 --> 01:03:45.325
+<v CM Carmen De La Rosa>I know that council member Dinowitz asked
+about the geolocation. I think we have a
+
+1181
+01:03:45.325 --> 01:03:47.805
+<v CM Carmen De La Rosa>good understanding of
+that. But I wanted to ask,
+
+1182
+01:03:49.670 --> 01:03:54.150
+<v CM Carmen De La Rosa>why might an agency determine that a
+service request is outside of their
+
+1183
+01:03:54.150 --> 01:03:55.030
+<v CM Carmen De La Rosa>jurisdiction?
+
+1184
+01:03:55.590 --> 01:03:59.590
+<v CM Carmen De La Rosa>It is my understanding that service requests
+are sent to agency based on the problem
+
+1185
+01:03:59.590 --> 01:04:02.630
+<v CM Carmen De La Rosa>type. So if the request is
+determined to be out of jurisdiction
+
+1186
+01:04:02.710 --> 01:04:03.990
+<v CM Carmen De La Rosa>of the assigned agency,
+
+1187
+01:04:04.415 --> 01:04:08.095
+<v CM Carmen De La Rosa>is that an issue of how the problem is
+set up at three one one? Like, what is the
+
+1188
+01:04:08.095 --> 01:04:09.775
+<v CM Carmen De La Rosa>genesis of the confusion?
+
+1189
+01:04:09.775 --> 01:04:13.935
+<v Joe Morrisroe (OTI)>Right. Yeah. Yes. There there... That
+situation does exist, so I'm happy to be able
+
+1190
+01:04:13.935 --> 01:04:14.895
+<v Joe Morrisroe (OTI)>to talk to that.
+
+1191
+01:04:15.695 --> 01:04:16.175
+<v Joe Morrisroe (OTI)>We would...
+
+1192
+01:04:16.870 --> 01:04:20.870
+<v Joe Morrisroe (OTI)>Kind of a term we use is reassign
+service request in that situation.
+
+1193
+01:04:21.030 --> 01:04:24.310
+<v Joe Morrisroe (OTI)>So there's at least a couple of
+flavors to it. Some are by design,
+
+1194
+01:04:24.870 --> 01:04:28.390
+<v Joe Morrisroe (OTI)>and it typically is something that happens
+where a customer is self serving rather
+
+1195
+01:04:28.390 --> 01:04:32.385
+<v Joe Morrisroe (OTI)>than if they call the call center. The
+human aspect on the call center can help
+
+1196
+01:04:32.385 --> 01:04:33.985
+<v Joe Morrisroe (OTI)>kinda put it in the right bucket.
+
+1197
+01:04:34.225 --> 01:04:39.185
+<v Joe Morrisroe (OTI)>But a very simple one is a a cave in on
+the street. So to the public, it's a defect
+
+1198
+01:04:39.185 --> 01:04:42.225
+<v Joe Morrisroe (OTI)>in the street and I wanna report it.
+And from a three zero one perspective,
+
+1199
+01:04:42.305 --> 01:04:43.265
+<v Joe Morrisroe (OTI)>we wanna make that simple.
+
+1200
+01:04:44.670 --> 01:04:48.270
+<v Joe Morrisroe (OTI)>For the agency to go fulfill on that,
+especially in infrastructure situations like
+
+1201
+01:04:48.270 --> 01:04:52.910
+<v Joe Morrisroe (OTI)>that, it's not always clear who has
+authority on it because it's not... You know,
+
+1202
+01:04:52.910 --> 01:04:56.110
+<v Joe Morrisroe (OTI)>customer could describe it one way, but it
+could certainly be something different or
+
+1203
+01:04:56.110 --> 01:04:59.305
+<v Joe Morrisroe (OTI)>the agency needs a different......
+Whole. It could be... Correct. So
+
+1204
+01:04:59.305 --> 01:05:03.545
+<v Joe Morrisroe (OTI)>by design, some of those
+complaint types go to DOT first.
+
+1205
+01:05:03.865 --> 01:05:09.465
+<v Joe Morrisroe (OTI)>DOT does the assessment, and then DOT may
+in turn assign it to another agency or
+
+1206
+01:05:09.465 --> 01:05:14.100
+<v Joe Morrisroe (OTI)>utility that's contracted to go do that
+work. That's probably the most common one.
+
+1207
+01:05:14.580 --> 01:05:18.420
+<v Joe Morrisroe (OTI)>Some other ones may be, again, because
+a customer has described a situation and
+
+1208
+01:05:18.420 --> 01:05:22.100
+<v Joe Morrisroe (OTI)>it'll get coded as such.
+I can say it's relatively
+
+1209
+01:05:22.100 --> 01:05:26.115
+<v Joe Morrisroe (OTI)>rare. While I appreciate the impact for
+those, it does hit effect. Just from a
+
+1210
+01:05:26.115 --> 01:05:27.235
+<v Joe Morrisroe (OTI)>context perspective,
+
+1211
+01:05:27.235 --> 01:05:30.835
+<v Joe Morrisroe (OTI)>it's about 1% of all service requests
+that are processed... That go through a
+
+1212
+01:05:30.835 --> 01:05:31.955
+<v Joe Morrisroe (OTI)>reassigned process.
+
+1213
+01:05:32.995 --> 01:05:33.715
+<v CM Carmen De La Rosa>Okay.
+
+1214
+01:05:36.755 --> 01:05:41.310
+<v CM Carmen De La Rosa>Does OTI look into, like, which problems
+are often marked out of jurisdiction? And
+
+1215
+01:05:41.310 --> 01:05:42.110
+<v CM Carmen De La Rosa>if so,
+
+1216
+01:05:42.350 --> 01:05:43.390
+<v CM Carmen De La Rosa>which requests
+
+1217
+01:05:43.390 --> 01:05:47.310
+<v CM Carmen De La Rosa>are responded to... Well, you already
+said that the street caving is the most
+
+1218
+01:05:47.310 --> 01:05:52.110
+<v CM Carmen De La Rosa>popular one. Yep. Yep. We heard from deputy
+speaker Williams, the one about traffic
+
+1219
+01:05:52.110 --> 01:05:56.885
+<v CM Carmen De La Rosa>tends to be problematic as well,
+but the traffic bureau versus NYPD.
+
+1220
+01:05:56.885 --> 01:05:58.645
+<v CM Carmen De La Rosa>Can you speak to some of that?
+
+1221
+01:05:59.045 --> 01:06:03.685
+<v Joe Morrisroe (OTI)>Yes. I I... Again, not maybe on the specific
+level or the traffic bureau one because
+
+1222
+01:06:03.765 --> 01:06:07.525
+<v Joe Morrisroe (OTI)>Mhmm. I think that would go to NYPD.
+It's just a matter within NYPD.
+
+1223
+01:06:07.525 --> 01:06:10.310
+<v Joe Morrisroe (OTI)>But but, yep, we do look at that by
+
+1224
+01:06:10.310 --> 01:06:12.550
+<v Joe Morrisroe (OTI)>my CX team that I keep referring to.
+
+1225
+01:06:13.190 --> 01:06:17.670
+<v Joe Morrisroe (OTI)>I've done analysis over the years, including
+recently, to look just at that. Do we
+
+1226
+01:06:17.670 --> 01:06:21.285
+<v Joe Morrisroe (OTI)>have reassigned service request? Why do we
+have them? What could be done about it?
+
+1227
+01:06:21.285 --> 01:06:24.245
+<v Joe Morrisroe (OTI)>As And I said in the opening testimony,
+that's something we're looking into. How can
+
+1228
+01:06:24.245 --> 01:06:26.965
+<v Joe Morrisroe (OTI)>we do that better? And and
+can three on one do more?
+
+1229
+01:06:27.365 --> 01:06:31.525
+<v Joe Morrisroe (OTI)>Can we enable an agency to do more? And
+if it is a necessary step that has to
+
+1230
+01:06:31.525 --> 01:06:35.205
+<v Joe Morrisroe (OTI)>happen, how can we make that better
+for the customer? Is that data on the
+
+1231
+01:06:35.205 --> 01:06:38.150
+<v Joe Morrisroe (OTI)>reassignment on open data? It
+
+1232
+01:06:38.470 --> 01:06:39.030
+<v Joe Morrisroe (OTI)>is
+
+1233
+01:06:39.350 --> 01:06:42.630
+<v Joe Morrisroe (OTI)>embedded in open data. I I would say you
+can't... It is not a field you can click
+
+1234
+01:06:42.630 --> 01:06:46.230
+<v Joe Morrisroe (OTI)>on. It's gonna give you the number that
+I just quoted the 1%. Mhmm. But in what I
+
+1235
+01:06:46.230 --> 01:06:49.750
+<v Joe Morrisroe (OTI)>called the resolution description earlier,
+it'll have that in there that, you know,
+
+1236
+01:06:49.750 --> 01:06:52.470
+<v Joe Morrisroe (OTI)>agency a has reassigned
+this to agency b. Okay.
+
+1237
+01:06:53.195 --> 01:06:54.075
+<v CM Carmen De La Rosa>Again,
+
+1238
+01:06:54.075 --> 01:06:57.435
+<v CM Carmen De La Rosa>going back to deputy speaker's question,
+but if a request is assigned to the correct
+
+1239
+01:06:57.435 --> 01:06:58.235
+<v CM Carmen De La Rosa>agency,
+
+1240
+01:06:58.395 --> 01:07:02.555
+<v CM Carmen De La Rosa>but the wrong unit within an agency,
+not... You know, I know NYPD is kind of a
+
+1241
+01:07:02.555 --> 01:07:05.515
+<v CM Carmen De La Rosa>different situation which we can
+talk about, but in any agency,
+
+1242
+01:07:06.075 --> 01:07:06.795
+<v CM Carmen De La Rosa>what happens?
+
+1243
+01:07:08.320 --> 01:07:09.280
+<v Joe Morrisroe (OTI)>That can happen.
+
+1244
+01:07:09.680 --> 01:07:12.480
+<v Joe Morrisroe (OTI)>There... There's probably
+two sides to that as well.
+
+1245
+01:07:12.800 --> 01:07:16.880
+<v Joe Morrisroe (OTI)>I can't speak to the agency side of that,
+but from familiarity, I can say a lot of
+
+1246
+01:07:16.880 --> 01:07:21.515
+<v Joe Morrisroe (OTI)>the work that agencies do, their workflow
+is designed to handle it. But if it goes
+
+1247
+01:07:21.515 --> 01:07:25.355
+<v Joe Morrisroe (OTI)>goes down a different pipe, let's say,
+it's within the same agency, they have the
+
+1248
+01:07:25.355 --> 01:07:29.115
+<v Joe Morrisroe (OTI)>ability to communicate with with each other
+in that respect to be able to respond to
+
+1249
+01:07:29.115 --> 01:07:31.995
+<v Joe Morrisroe (OTI)>it. That's a generic kind of observation,
+
+1250
+01:07:31.995 --> 01:07:33.195
+<v Joe Morrisroe (OTI)>but but it's... It happens.
+
+1251
+01:07:34.340 --> 01:07:39.380
+<v Joe Morrisroe (OTI)>What our role is though is if that is
+happening on a more than a one off basis,
+
+1252
+01:07:39.540 --> 01:07:42.660
+<v Joe Morrisroe (OTI)>agency contacts their agency
+relations counterpart.
+
+1253
+01:07:42.820 --> 01:07:46.260
+<v Joe Morrisroe (OTI)>We dive into that. We'll look at it.
+And do we need to change the routing? Is
+
+1254
+01:07:46.260 --> 01:07:48.845
+<v Joe Morrisroe (OTI)>something changed on
+the agency side perhaps?
+
+1255
+01:07:49.325 --> 01:07:53.965
+<v Joe Morrisroe (OTI)>And if so, do we need to change the the the
+electronic form that goes to them to get
+
+1256
+01:07:53.965 --> 01:07:55.645
+<v Joe Morrisroe (OTI)>it to the right workflow? Okay.
+
+1257
+01:07:55.965 --> 01:07:57.485
+<v CM Carmen De La Rosa>I imagine that happens often.
+
+1258
+01:07:57.725 --> 01:08:01.170
+<v Joe Morrisroe (OTI)>We get a lot of feedback and then a lot of
+times we're digging into it. So I think a
+
+1259
+01:08:01.170 --> 01:08:04.050
+<v Joe Morrisroe (OTI)>lot of the agencies are very mature
+in their processes, especially the
+
+1260
+01:08:04.050 --> 01:08:08.210
+<v Joe Morrisroe (OTI)>infrastructure agencies who, you know,
+do do this work on a regular basis. So I
+
+1261
+01:08:08.210 --> 01:08:11.250
+<v Joe Morrisroe (OTI)>think it's pretty standard. It it... So
+much so that if it does happen and we get
+
+1262
+01:08:11.250 --> 01:08:15.315
+<v Joe Morrisroe (OTI)>notified, it's it's more of a, oh, let's
+jump into this and figure it out cause it's
+
+1263
+01:08:15.315 --> 01:08:16.915
+<v Joe Morrisroe (OTI)>not the day to day. Mhmm. I
+
+1264
+01:08:17.635 --> 01:08:22.115
+<v CM Carmen De La Rosa>I alluded to earlier that we have a lot
+of bills that my colleagues wanna hear on
+
+1265
+01:08:22.115 --> 01:08:25.715
+<v CM Carmen De La Rosa>three one one. Some of them are to, like,
+add categories. Right? Like, I have one
+
+1266
+01:08:25.715 --> 01:08:29.715
+<v CM Carmen De La Rosa>that is my pet peeve one, which
+is about dog runs. Like, we can't
+
+1267
+01:08:30.910 --> 01:08:34.590
+<v CM Carmen De La Rosa>report stuff that's happening in dog runs
+right now. There's not a category for
+
+1268
+01:08:34.590 --> 01:08:37.950
+<v CM Carmen De La Rosa>that. Can you walk us through the process
+of, like, what would it take to add
+
+1269
+01:08:37.950 --> 01:08:42.590
+<v CM Carmen De La Rosa>categories? That's a simple one, but some
+colleagues have bills, for example, around
+
+1270
+01:08:43.095 --> 01:08:46.935
+<v CM Carmen De La Rosa>SNAP benefits being stolen. Right?
+Like, things that are Okay. Really,
+
+1271
+01:08:47.655 --> 01:08:51.575
+<v CM Carmen De La Rosa>critical for someone who's not getting a
+benefit from the city that they deserve. So
+
+1272
+01:08:51.575 --> 01:08:53.655
+<v CM Carmen De La Rosa>what's the process of adding a category?
+
+1273
+01:08:54.055 --> 01:08:58.215
+<v Joe Morrisroe (OTI)>Can definitely speak to that. There's a few
+different drivers that could trigger it.
+
+1274
+01:08:58.215 --> 01:08:59.980
+<v Joe Morrisroe (OTI)>So yours is a great example. Alright?
+
+1275
+01:09:00.460 --> 01:09:05.180
+<v Joe Morrisroe (OTI)>And I assume we'll hear more in a future
+hearing on some of those suggestions. But,
+
+1276
+01:09:05.420 --> 01:09:07.260
+<v Joe Morrisroe (OTI)>legislative driven is some.
+
+1277
+01:09:07.740 --> 01:09:10.940
+<v Joe Morrisroe (OTI)>You know, last year, there was a great
+partnership between the council and three one
+
+1278
+01:09:10.940 --> 01:09:11.740
+<v Joe Morrisroe (OTI)>one and OTI
+
+1279
+01:09:12.115 --> 01:09:15.155
+<v Joe Morrisroe (OTI)>to create the new cannabis
+retailer complaint.
+
+1280
+01:09:15.235 --> 01:09:19.075
+<v Joe Morrisroe (OTI)>So we worked with council member Brewer
+and then the entire process. So that's one
+
+1281
+01:09:19.075 --> 01:09:22.995
+<v Joe Morrisroe (OTI)>way. Right? It gets brought up in that
+respect. Our own team will figure it out.
+
+1282
+01:09:22.995 --> 01:09:25.315
+<v Joe Morrisroe (OTI)>Hey. There's something gapped here.
+There's something missing here.
+
+1283
+01:09:26.210 --> 01:09:30.450
+<v Joe Morrisroe (OTI)>We have a vehicle for the public to submit
+that situation. Council passed local law
+
+1284
+01:09:30.450 --> 01:09:34.450
+<v Joe Morrisroe (OTI)>97 a couple of years ago. Mhmm. So that's
+a process that the public can identify
+
+1285
+01:09:34.450 --> 01:09:35.010
+<v Joe Morrisroe (OTI)>something.
+
+1286
+01:09:35.250 --> 01:09:39.170
+<v Joe Morrisroe (OTI)>And then we'll put the three one one resources
+and the agency resources to assess it
+
+1287
+01:09:39.170 --> 01:09:40.130
+<v Joe Morrisroe (OTI)>to see if it's needed.
+
+1288
+01:09:41.035 --> 01:09:45.675
+<v Joe Morrisroe (OTI)>And then the agencies themselves, which
+is is often a way to not only bring
+
+1289
+01:09:45.675 --> 01:09:48.395
+<v Joe Morrisroe (OTI)>something new, but also to tweak
+something that may be in place.
+
+1290
+01:09:48.875 --> 01:09:52.235
+<v Joe Morrisroe (OTI)>So all of those are different ways, but
+they all, at one point or other, come into
+
+1291
+01:09:52.235 --> 01:09:56.440
+<v Joe Morrisroe (OTI)>three one one as similar to what we do with
+the public as intake. We're gonna assess
+
+1292
+01:09:56.440 --> 01:09:59.400
+<v Joe Morrisroe (OTI)>that. We're gonna confirm it's not in
+place, and then what does it look like it
+
+1293
+01:09:59.400 --> 01:10:03.800
+<v Joe Morrisroe (OTI)>could be, and then work with the agency or
+work with the the mayor's office and or
+
+1294
+01:10:03.800 --> 01:10:07.240
+<v Joe Morrisroe (OTI)>work with counsel to be able to figure out
+how can we now get that into the system.
+
+1295
+01:10:07.320 --> 01:10:07.880
+<v Joe Morrisroe (OTI)>Got it.
+
+1296
+01:10:08.735 --> 01:10:12.655
+<v CM Carmen De La Rosa>Privacy and data. So three
+one one privacy policy has
+
+1297
+01:10:13.055 --> 01:10:13.775
+<v CM Carmen De La Rosa>an...
+
+1298
+01:10:14.015 --> 01:10:16.015
+<v CM Carmen De La Rosa>Has been updated from last year.
+
+1299
+01:10:16.975 --> 01:10:20.255
+<v CM Carmen De La Rosa>Has hasn't been updated, I guess, was the
+question. It has been...... Share with us
+
+1300
+01:10:20.255 --> 01:10:21.295
+<v CM Carmen De La Rosa>if
+
+1301
+01:10:21.455 --> 01:10:23.215
+<v CM Carmen De La Rosa>there has been changes to prior policy.
+
+1302
+01:10:23.700 --> 01:10:28.740
+<v Joe Morrisroe (OTI)>Thank you for that one. Yes. It has been.
+I I I have to check myself on whether it's
+
+1303
+01:10:28.740 --> 01:10:32.500
+<v Joe Morrisroe (OTI)>a year or a couple of months, you know,
+give or take. Mhmm. But the privacy policy
+
+1304
+01:10:32.500 --> 01:10:34.740
+<v Joe Morrisroe (OTI)>has been long standing
+as I mentioned before.
+
+1305
+01:10:35.060 --> 01:10:38.340
+<v Joe Morrisroe (OTI)>Last year, we took the opportunity to
+strengthen it on behalf of customers.
+
+1306
+01:10:38.875 --> 01:10:44.235
+<v Joe Morrisroe (OTI)>So we put some language in specific to the
+the the the section that speaks to how we
+
+1307
+01:10:44.235 --> 01:10:46.155
+<v Joe Morrisroe (OTI)>use your data, how we won't use your data.
+
+1308
+01:10:46.555 --> 01:10:50.315
+<v Joe Morrisroe (OTI)>And I I can't recall the exact language,
+but the goal of that was, as I said, to
+
+1309
+01:10:50.315 --> 01:10:51.915
+<v Joe Morrisroe (OTI)>strengthen it on behalf of the customers.
+
+1310
+01:10:52.950 --> 01:10:56.470
+<v CM Carmen De La Rosa>So the following questions were... It's
+kind of a follow-up, but the following
+
+1311
+01:10:56.470 --> 01:11:00.550
+<v CM Carmen De La Rosa>questions were asked of our last committee
+hearing during which you respectfully
+
+1312
+01:11:00.550 --> 01:11:02.470
+<v CM Carmen De La Rosa>offered to get back to the
+committee with answers.
+
+1313
+01:11:03.510 --> 01:11:08.225
+<v CM Carmen De La Rosa>So one of the questions is, according to
+the privacy policy, three and one does not
+
+1314
+01:11:08.225 --> 01:11:11.825
+<v CM Carmen De La Rosa>sell, rent, or otherwise use
+information for marketing purposes.
+
+1315
+01:11:12.225 --> 01:11:16.065
+<v CM Carmen De La Rosa>So for what purposes does... Do
+you share users' information?
+
+1316
+01:11:16.465 --> 01:11:20.705
+<v CM Carmen De La Rosa>What third parties are receiving the user
+data? And what kind of data is being sent
+
+1317
+01:11:20.705 --> 01:11:21.745
+<v CM Carmen De La Rosa>and for what purpose?
+
+1318
+01:11:22.420 --> 01:11:26.500
+<v Joe Morrisroe (OTI)>K. Great. I'll do the first one. We
+we don't share user information,
+
+1319
+01:11:26.900 --> 01:11:31.700
+<v Joe Morrisroe (OTI)>and it's something that's, interesting
+with three one one. The user information,
+
+1320
+01:11:31.780 --> 01:11:36.475
+<v Joe Morrisroe (OTI)>name, contact information, right,
+is very rare that it's needed.
+
+1321
+01:11:36.875 --> 01:11:40.075
+<v Joe Morrisroe (OTI)>Most of what you can do, you don't need to
+provide user information, and that's by
+
+1322
+01:11:40.075 --> 01:11:44.235
+<v Joe Morrisroe (OTI)>design. Again, going back to the history
+of three one one Mhmm. Because it then
+
+1323
+01:11:44.235 --> 01:11:47.515
+<v Joe Morrisroe (OTI)>contributes to helping people feel comfortable
+and confident to be able to do that.
+
+1324
+01:11:48.060 --> 01:11:49.260
+<v Joe Morrisroe (OTI)>But we do have
+
+1325
+01:11:49.580 --> 01:11:52.780
+<v Joe Morrisroe (OTI)>protect... We do have limits around what
+can be shared. It's really in the interest
+
+1326
+01:11:52.780 --> 01:11:54.620
+<v Joe Morrisroe (OTI)>of fulfilling that service request.
+
+1327
+01:11:54.860 --> 01:11:58.140
+<v Joe Morrisroe (OTI)>So if you want to make a heat complaint,
+you can do that without giving your name.
+
+1328
+01:11:58.140 --> 01:11:59.980
+<v Joe Morrisroe (OTI)>If you wanna make a heat
+complaint in your apartment,
+
+1329
+01:12:00.535 --> 01:12:04.375
+<v Joe Morrisroe (OTI)>then the HPD needs your contact information.
+So you'll include that, but that
+
+1330
+01:12:04.375 --> 01:12:07.335
+<v Joe Morrisroe (OTI)>information is not shared then
+with third parties. Mhmm.
+
+1331
+01:12:07.735 --> 01:12:08.375
+<v CM Carmen De La Rosa>Okay.
+
+1332
+01:12:09.015 --> 01:12:11.015
+<v CM Carmen De La Rosa>And so even your contractors,
+
+1333
+01:12:11.015 --> 01:12:15.220
+<v CM Carmen De La Rosa>your third party contractors, any
+information that is picked up in any of those
+
+1334
+01:12:15.220 --> 01:12:19.700
+<v CM Carmen De La Rosa>scenarios is not shared. Right. So they
+restrict protocols so... To prevent that
+
+1335
+01:12:19.700 --> 01:12:21.540
+<v CM Carmen De La Rosa>from happening. Mhmm. Okay.
+
+1336
+01:12:22.420 --> 01:12:27.860
+<v CM Carmen De La Rosa>Can OTI ensure that the mobile app data
+is encrypted in transit, or is that up to
+
+1337
+01:12:27.860 --> 01:12:28.500
+<v CM Carmen De La Rosa>another party?
+
+1338
+01:12:29.675 --> 01:12:33.755
+<v Joe Morrisroe (OTI)>That's a good question. Mhmm. I'm pausing
+because I don't know if I can give you a
+
+1339
+01:12:33.755 --> 01:12:36.795
+<v Joe Morrisroe (OTI)>diff... I can give you a definitive
+answer, but OTI could give you a definitive
+
+1340
+01:12:36.795 --> 01:12:39.835
+<v Joe Morrisroe (OTI)>answer. If I can get back to you on
+that, I'd feel more comfortable. So we'll
+
+1341
+01:12:39.835 --> 01:12:45.190
+<v Joe Morrisroe (OTI)>follow-up with that one. And then can OTI
+allow for user data from three one one
+
+1342
+01:12:45.190 --> 01:12:47.670
+<v Joe Morrisroe (OTI)>up... App to be deleted if requested?
+
+1343
+01:12:48.950 --> 01:12:52.310
+<v Joe Morrisroe (OTI)>I'd like to take that same approach, you
+don't mind, if I can just get back to you
+
+1344
+01:12:52.310 --> 01:12:55.315
+<v Joe Morrisroe (OTI)>so I can make sure we get
+you the correct answer. Okay.
+
+1345
+01:12:55.475 --> 01:12:58.835
+<v CM Carmen De La Rosa>So when looking at the privacy
+policy policy, there is no,
+
+1346
+01:12:59.075 --> 01:13:04.435
+<v CM Carmen De La Rosa>set retention policy listed for personal
+information except for voice recordings.
+
+1347
+01:13:04.435 --> 01:13:07.075
+<v CM Carmen De La Rosa>Meaning that personal information
+is possibly stored indefinitely.
+
+1348
+01:13:07.500 --> 01:13:11.740
+<v CM Carmen De La Rosa>Retain user information for as long as
+it's necessary to fulfill user submitted
+
+1349
+01:13:11.740 --> 01:13:14.300
+<v CM Carmen De La Rosa>request or to provide ongoing assistance
+
+1350
+01:13:14.460 --> 01:13:19.500
+<v CM Carmen De La Rosa>to a user. If a user has set up an account
+with 311 contact center, the user's
+
+1351
+01:13:19.500 --> 01:13:22.460
+<v CM Carmen De La Rosa>information will be retained until
+the user deletes the account.
+
+1352
+01:13:23.115 --> 01:13:27.435
+<v CM Carmen De La Rosa>For compliance re... Reasons, some users'
+information may be retained after deletion
+
+1353
+01:13:27.435 --> 01:13:29.435
+<v CM Carmen De La Rosa>of the account. That's a quote from,
+
+1354
+01:13:30.394 --> 01:13:31.834
+<v CM Carmen De La Rosa>the privacy policy. Would
+
+1355
+01:13:32.394 --> 01:13:35.995
+<v CM Carmen De La Rosa>you agree that we should set a data
+retention policy for personal information?
+
+1356
+01:13:37.260 --> 01:13:40.380
+<v Joe Morrisroe (OTI)>I appreciate that question. And, yeah, I
+appreciate you mentioning the... On the
+
+1357
+01:13:40.380 --> 01:13:41.740
+<v Joe Morrisroe (OTI)>voice side, there is a
+
+1358
+01:13:42.460 --> 01:13:43.660
+<v Joe Morrisroe (OTI)>purging
+
+1359
+01:13:43.900 --> 01:13:47.340
+<v Joe Morrisroe (OTI)>Say that again? On the voice side. Sorry.
+The call center. The voice recordings.
+
+1360
+01:13:48.515 --> 01:13:49.715
+<v Joe Morrisroe (OTI)>And conceptually,
+
+1361
+01:13:49.795 --> 01:13:53.155
+<v Joe Morrisroe (OTI)>yes, I think we should look at that. Mhmm.
+And we'd be happy to work with you on
+
+1362
+01:13:53.155 --> 01:13:54.275
+<v Joe Morrisroe (OTI)>that. Great.
+
+1363
+01:13:55.795 --> 01:13:59.315
+<v CM Carmen De La Rosa>Do you think... I think... Okay. That's
+fine. Okay. I think you answered our
+
+1364
+01:13:59.315 --> 01:14:03.555
+<v CM Carmen De La Rosa>questions. According to the privacy policy,
+the domain names associated with the
+
+1365
+01:14:03.555 --> 01:14:07.450
+<v CM Carmen De La Rosa>user's device are collected. What is
+the purpose of the collection? Thank
+
+1366
+01:14:08.890 --> 01:14:10.170
+<v Joe Morrisroe (OTI)>you for that one. I
+
+1367
+01:14:10.570 --> 01:14:14.570
+<v Joe Morrisroe (OTI)>think I would prefer to be able to get
+back to you if you don't mind because I...
+
+1368
+01:14:14.810 --> 01:14:17.610
+<v Joe Morrisroe (OTI)>The answer I'm going to give you is based
+on my knowledge, but I'd rather get our
+
+1369
+01:14:17.610 --> 01:14:21.025
+<v Joe Morrisroe (OTI)>experts to give you... Give me the answer
+to give to you. Mhmm. I imagine it's the
+
+1370
+01:14:21.025 --> 01:14:24.225
+<v Joe Morrisroe (OTI)>same reply, but for, the cookies when you,
+
+1371
+01:14:24.785 --> 01:14:29.185
+<v CM Carmen De La Rosa>does the cookie banner to
+provide options for users to opt
+
+1372
+01:14:29.425 --> 01:14:34.030
+<v CM Carmen De La Rosa>out from using the nonessential cookies?
+Do you plan to provide that option for New
+
+1373
+01:14:34.030 --> 01:14:37.550
+<v CM Carmen De La Rosa>Yorkers? If... With respect, I would
+appreciate being able to do that and get back
+
+1374
+01:14:37.550 --> 01:14:40.750
+<v CM Carmen De La Rosa>to you on that one. Okay.
+So those are more like OTI
+
+1375
+01:14:40.830 --> 01:14:44.590
+<v Joe Morrisroe (OTI)>questions. That's what I've talked to my
+colleagues who are very proficient in that.
+
+1376
+01:14:44.910 --> 01:14:47.470
+<v Joe Morrisroe (OTI)>So let's talk a little
+bit about future plans.
+
+1377
+01:14:49.085 --> 01:14:50.925
+<v CM Carmen De La Rosa>According to your testimony,
+
+1378
+01:14:51.085 --> 01:14:52.685
+<v CM Carmen De La Rosa>on 06/30/2022
+
+1379
+01:14:52.685 --> 01:14:54.045
+<v CM Carmen De La Rosa>and 2023,
+
+1380
+01:14:54.285 --> 01:14:55.165
+<v CM Carmen De La Rosa>03/11
+
+1381
+01:14:55.165 --> 01:14:58.925
+<v CM Carmen De La Rosa>will extend services to the
+WhatsApp messaging platform.
+
+1382
+01:14:59.325 --> 01:15:02.040
+<v CM Carmen De La Rosa>Further on 04/25/2024,
+
+1383
+01:15:02.040 --> 01:15:06.520
+<v CM Carmen De La Rosa>you confirmed those plans as is still part
+of the road map for three one one. Did it
+
+1384
+01:15:06.520 --> 01:15:07.080
+<v CM Carmen De La Rosa>happen?
+
+1385
+01:15:08.120 --> 01:15:11.480
+<v Joe Morrisroe (OTI)>It has not happened yet. We have a
+WhatsApp account, but we have not moved it
+
+1386
+01:15:11.480 --> 01:15:15.320
+<v Joe Morrisroe (OTI)>forward to make it a channel, make it publicly
+available. Mhmm. So it's still on our
+
+1387
+01:15:15.320 --> 01:15:16.760
+<v Joe Morrisroe (OTI)>road map and still work in progress.
+
+1388
+01:15:18.075 --> 01:15:20.235
+<v CM Carmen De La Rosa>What are some of the challenges there?
+
+1389
+01:15:20.795 --> 01:15:24.155
+<v Joe Morrisroe (OTI)>Couple of different challenges. It's a new
+channel for us. Right? And we don't have
+
+1390
+01:15:24.155 --> 01:15:28.555
+<v Joe Morrisroe (OTI)>a good baseline on what kind of volume we
+would have. We we have... Obviously, we
+
+1391
+01:15:28.555 --> 01:15:32.650
+<v Joe Morrisroe (OTI)>size it based on what we can. We really
+have to figure out if we open that channel
+
+1392
+01:15:32.650 --> 01:15:34.730
+<v Joe Morrisroe (OTI)>or when we open that channel up,
+
+1393
+01:15:35.690 --> 01:15:39.610
+<v Joe Morrisroe (OTI)>what is going to be the demand, and then
+how do we staff up to meet that demand. But
+
+1394
+01:15:39.610 --> 01:15:43.715
+<v Joe Morrisroe (OTI)>we don't wanna be under staffing it and
+especially if we're going to... Even if we
+
+1395
+01:15:43.715 --> 01:15:46.835
+<v Joe Morrisroe (OTI)>launch it on a pilot basis. Right? We wanna
+be able to make sure we can handle what
+
+1396
+01:15:46.835 --> 01:15:51.555
+<v Joe Morrisroe (OTI)>comes in. So that's one of the pieces. And
+then working through the process with the
+
+1397
+01:15:51.555 --> 01:15:55.715
+<v Joe Morrisroe (OTI)>the WhatsApp tool itself is something that
+we're very cognizant of. Yeah. So how
+
+1398
+01:15:55.715 --> 01:15:58.835
+<v Joe Morrisroe (OTI)>would the WhatsApp privacy
+policy in terms of agreements
+
+1399
+01:15:59.430 --> 01:16:03.190
+<v CM Carmen De La Rosa>align with three one one
+privacy policies? Do you know? I
+
+1400
+01:16:03.670 --> 01:16:06.310
+<v Joe Morrisroe (OTI)>can't answer the question, but I can tell
+you that that's one of the things that
+
+1401
+01:16:06.310 --> 01:16:09.590
+<v Joe Morrisroe (OTI)>we're looking at as far as the road map.
+How do we reconcile those two things? Okay.
+
+1402
+01:16:09.590 --> 01:16:10.070
+<v Joe Morrisroe (OTI)>Okay.
+
+1403
+01:16:11.350 --> 01:16:15.655
+<v CM Carmen De La Rosa>Going into complaint types,
+local law 97 of 2022,
+
+1404
+01:16:15.735 --> 01:16:20.375
+<v CM Carmen De La Rosa>can you walk us through from the beginning
+to the end the process for creating a new
+
+1405
+01:16:20.375 --> 01:16:23.095
+<v CM Carmen De La Rosa>complaint or service request type for 311,
+
+1406
+01:16:23.095 --> 01:16:24.615
+<v CM Carmen De La Rosa>which we kind of talked
+about a little bit? Okay.
+
+1407
+01:16:25.760 --> 01:16:27.360
+<v Joe Morrisroe (OTI)>Thank you for that clarifying
+
+1408
+01:16:27.360 --> 01:16:31.760
+<v Joe Morrisroe (OTI)>specific to the local ninety
+seven process or... Yeah. Okay.
+
+1409
+01:16:32.240 --> 01:16:37.440
+<v Joe Morrisroe (OTI)>So since local ninety seven has been in
+effect, the public can recommend or suggest
+
+1410
+01:16:37.440 --> 01:16:42.425
+<v Joe Morrisroe (OTI)>or request a service request. Mhmm. I'm
+kinda generalizing that. But there's a
+
+1411
+01:16:42.425 --> 01:16:45.705
+<v Joe Morrisroe (OTI)>vehicle where they can do that. It comes
+into three one one. We have a team that
+
+1412
+01:16:45.705 --> 01:16:50.345
+<v Joe Morrisroe (OTI)>receives that and does the initial intake
+on it. And, basically, everything that
+
+1413
+01:16:50.345 --> 01:16:53.225
+<v Joe Morrisroe (OTI)>comes in is considered
+the starting point. Right?
+
+1414
+01:16:53.945 --> 01:16:57.350
+<v Joe Morrisroe (OTI)>Our team, that fabulous CX
+team that I keep referencing,
+
+1415
+01:16:57.590 --> 01:17:01.190
+<v Joe Morrisroe (OTI)>they have a group called customer relations
+who takes the first kind of look at
+
+1416
+01:17:01.190 --> 01:17:04.710
+<v Joe Morrisroe (OTI)>this. And one of the first things we do
+is, does this already exist? You know, it's
+
+1417
+01:17:04.710 --> 01:17:08.070
+<v Joe Morrisroe (OTI)>just in a different way. Mhmm. And if a
+customer is given contact information, we
+
+1418
+01:17:08.070 --> 01:17:11.965
+<v Joe Morrisroe (OTI)>can even get back to the customer and
+explain that. But then that gets logged in a
+
+1419
+01:17:11.965 --> 01:17:14.125
+<v Joe Morrisroe (OTI)>in a tool within three one one.
+
+1420
+01:17:14.845 --> 01:17:18.525
+<v Joe Morrisroe (OTI)>The... After that assessment, it goes to
+our agency relations team who then talks to
+
+1421
+01:17:18.525 --> 01:17:21.485
+<v Joe Morrisroe (OTI)>their agency counterparts. This
+is what the public is asking for.
+
+1422
+01:17:22.205 --> 01:17:26.130
+<v Joe Morrisroe (OTI)>What do you think? And, typically, what
+they'll do is assess first, does it already
+
+1423
+01:17:26.130 --> 01:17:28.530
+<v Joe Morrisroe (OTI)>exist? Does it exist in
+some form or fashion?
+
+1424
+01:17:28.770 --> 01:17:32.050
+<v Joe Morrisroe (OTI)>And then it then is on the agency to
+
+1425
+01:17:32.210 --> 01:17:35.650
+<v Joe Morrisroe (OTI)>look at that, consider that, and determine
+that they should add a service request.
+
+1426
+01:17:36.625 --> 01:17:40.625
+<v Joe Morrisroe (OTI)>In keeping compliance with the local law,
+we provide an update every year on whether
+
+1427
+01:17:40.625 --> 01:17:45.665
+<v Joe Morrisroe (OTI)>anything has moved from a suggestion to a
+service request. Okay. I wanna ask a few
+
+1428
+01:17:45.665 --> 01:17:50.785
+<v Joe Morrisroe (OTI)>questions about NYPD and sort of the
+relationship between NYPD three 11911.
+
+1429
+01:17:51.940 --> 01:17:55.140
+<v CM Carmen De La Rosa>So you you testified earlier that...
+
+1430
+01:17:55.460 --> 01:17:59.780
+<v CM Carmen De La Rosa>I mean, I'm saying it seems like there's
+some challenges in terms of oversight at
+
+1431
+01:17:59.780 --> 01:18:03.380
+<v CM Carmen De La Rosa>NYPD because that's a different operation.
+Right? There were some questions that the
+
+1432
+01:18:03.380 --> 01:18:07.535
+<v CM Carmen De La Rosa>colleagues asked that you said that's
+a better suited for NYPD to answer.
+
+1433
+01:18:07.855 --> 01:18:08.575
+<v CM Carmen De La Rosa>Can
+
+1434
+01:18:09.775 --> 01:18:12.575
+<v CM Carmen De La Rosa>you explain sort of the dynamic between
+
+1435
+01:18:12.735 --> 01:18:17.215
+<v CM Carmen De La Rosa>the three... Your 311 operation and
+NYPD when there are complaints that are
+
+1436
+01:18:18.690 --> 01:18:21.650
+<v CM Carmen De La Rosa>directed towards NYPD
+that are not fulfilled?
+
+1437
+01:18:22.530 --> 01:18:26.610
+<v Joe Morrisroe (OTI)>Yes. I I follow what you're saying there.
+All I can speak to is the three on one
+
+1438
+01:18:26.610 --> 01:18:29.170
+<v Joe Morrisroe (OTI)>side Mhmm. In terms of
+the intake that we do.
+
+1439
+01:18:29.970 --> 01:18:32.930
+<v Joe Morrisroe (OTI)>Our goal then is to make sure we're
+getting the information accurate.
+
+1440
+01:18:33.335 --> 01:18:37.975
+<v Joe Morrisroe (OTI)>The forms are working. We calibrate with
+NYPD on a regular basis to make sure, you
+
+1441
+01:18:37.975 --> 01:18:39.495
+<v Joe Morrisroe (OTI)>know, they're getting routed correctly.
+
+1442
+01:18:39.655 --> 01:18:43.415
+<v Joe Morrisroe (OTI)>So that's where we put our energy and our
+focus. We have feedback mechanisms. We
+
+1443
+01:18:43.415 --> 01:18:47.950
+<v Joe Morrisroe (OTI)>have a dedicated liaison at NYPD who works
+with our agency relations, our senior
+
+1444
+01:18:47.950 --> 01:18:48.910
+<v Joe Morrisroe (OTI)>director there.
+
+1445
+01:18:49.310 --> 01:18:54.350
+<v Joe Morrisroe (OTI)>So there's always that combination. And, I
+think I would characterize both groups as
+
+1446
+01:18:54.350 --> 01:18:58.670
+<v Joe Morrisroe (OTI)>being very, public centric and and using
+data to kind of exchange. So I think we
+
+1447
+01:18:58.670 --> 01:19:02.195
+<v Joe Morrisroe (OTI)>have a pretty good feel in that respect.
+But everything we do is focused on the
+
+1448
+01:19:02.195 --> 01:19:06.115
+<v Joe Morrisroe (OTI)>intake and getting them what they need,
+and then our role kind of ends at that
+
+1449
+01:19:06.115 --> 01:19:09.155
+<v Joe Morrisroe (OTI)>point, and we defer to the
+agency. Okay. And then,
+
+1450
+01:19:09.635 --> 01:19:12.915
+<v CM Carmen De La Rosa>if someone calls 311
+instead of calling 911,
+
+1451
+01:19:13.075 --> 01:19:17.640
+<v Joe Morrisroe (OTI)>are they automatically routed over to 911
+if it's an emergency? I I do appreciate
+
+1452
+01:19:17.640 --> 01:19:20.760
+<v Joe Morrisroe (OTI)>that question. That's one of the things
+that we... From day one of training, that's
+
+1453
+01:19:20.760 --> 01:19:24.920
+<v Joe Morrisroe (OTI)>one of the things that's reinforced to
+everyone in the call center. So it does
+
+1454
+01:19:24.920 --> 01:19:29.480
+<v Joe Morrisroe (OTI)>happen. Someone could call 311 not
+knowingly or or just choosing to call 311.
+
+1455
+01:19:29.895 --> 01:19:30.935
+<v Joe Morrisroe (OTI)>In
+
+1456
+01:19:30.935 --> 01:19:32.774
+<v Joe Morrisroe (OTI)>short order, we train
+
+1457
+01:19:32.775 --> 01:19:35.095
+<v Joe Morrisroe (OTI)>and reinforce and reinforce,
+
+1458
+01:19:35.655 --> 01:19:40.055
+<v Joe Morrisroe (OTI)>to... If any suggestion of an emergency,
+any suggestion of anything dangerous,
+
+1459
+01:19:40.055 --> 01:19:41.095
+<v Joe Morrisroe (OTI)>threat, incident,
+
+1460
+01:19:41.335 --> 01:19:44.935
+<v Joe Morrisroe (OTI)>transfer to 911. We actually call it a
+hot transfer because all they do is hit a
+
+1461
+01:19:44.935 --> 01:19:49.960
+<v Joe Morrisroe (OTI)>button, and then the 911 operator comes
+on. So our approach is get that to the
+
+1462
+01:19:49.960 --> 01:19:53.880
+<v Joe Morrisroe (OTI)>expert. Get that to 911. Let them make
+the determination if it's an emergency or
+
+1463
+01:19:53.880 --> 01:19:54.760
+<v Joe Morrisroe (OTI)>not. Mhmm.
+
+1464
+01:19:55.240 --> 01:19:59.720
+<v Joe Morrisroe (OTI)>Within the call center, we have a we have
+a jargon, but it serves the purpose. When
+
+1465
+01:19:59.720 --> 01:20:03.875
+<v Joe Morrisroe (OTI)>in doubt, route. So make sure that
+three one one agent is not making that
+
+1466
+01:20:03.875 --> 01:20:04.754
+<v Joe Morrisroe (OTI)>determination.
+
+1467
+01:20:04.835 --> 01:20:07.235
+<v Joe Morrisroe (OTI)>The professional at 911 is
+making that determination.
+
+1468
+01:20:07.475 --> 01:20:13.600
+<v CM Carmen De La Rosa>And I'm assuming that your training for
+the call center staff is robust in that in
+
+1469
+01:20:13.600 --> 01:20:15.040
+<v CM Carmen De La Rosa>that area? Yes.
+
+1470
+01:20:15.120 --> 01:20:20.000
+<v Joe Morrisroe (OTI)>It is. The training itself is very robust,
+and then then even our contracted vendors
+
+1471
+01:20:20.000 --> 01:20:21.520
+<v Joe Morrisroe (OTI)>follow the same protocol.
+
+1472
+01:20:21.760 --> 01:20:23.840
+<v Joe Morrisroe (OTI)>But it is something that is reinforced,
+
+1473
+01:20:23.840 --> 01:20:27.680
+<v Joe Morrisroe (OTI)>as I said, I I think literally day one
+of training, if not day one, day two,
+
+1474
+01:20:28.495 --> 01:20:29.855
+<v Joe Morrisroe (OTI)>because it's so important.
+
+1475
+01:20:30.175 --> 01:20:31.535
+<v CM Carmen De La Rosa>What about
+
+1476
+01:20:32.335 --> 01:20:34.815
+<v CM Carmen De La Rosa>when... If there is a... Let's say,
+
+1477
+01:20:36.175 --> 01:20:38.895
+<v CM Carmen De La Rosa>we see that, for example,
+for the nor'easter.
+
+1478
+01:20:38.895 --> 01:20:39.455
+<v CM Carmen De La Rosa>Right?
+
+1479
+01:20:39.855 --> 01:20:42.415
+<v CM Carmen De La Rosa>Obviously, you were expecting
+there to be an increase.
+
+1480
+01:20:43.400 --> 01:20:48.120
+<v CM Carmen De La Rosa>We've seen for when there is emergencies,
+like weather related emergency, Notify NYC
+
+1481
+01:20:48.280 --> 01:20:52.360
+<v CM Carmen De La Rosa>has a robust, like, public education
+campaign. I think I even did one of those PSAs
+
+1482
+01:20:52.360 --> 01:20:54.200
+<v CM Carmen De La Rosa>where I'm like, Notify NYC.
+
+1483
+01:20:54.440 --> 01:20:56.200
+<v CM Carmen De La Rosa>Do you do you all have a similar
+
+1484
+01:20:57.035 --> 01:20:59.354
+<v CM Carmen De La Rosa>budget or plan for
+
+1485
+01:20:59.675 --> 01:21:00.555
+<v CM Carmen De La Rosa>PSAs
+
+1486
+01:21:00.555 --> 01:21:05.755
+<v Joe Morrisroe (OTI)>around 03/11 and how 03/11 works and,
+like, what the purpose is? I find that in
+
+1487
+01:21:05.755 --> 01:21:09.515
+<v Joe Morrisroe (OTI)>government, one of the things that we're
+often doing is clarifying for people Mhmm.
+
+1488
+01:21:09.515 --> 01:21:13.080
+<v Joe Morrisroe (OTI)>Like, the expectations of what your city
+council member could do, what three one one
+
+1489
+01:21:13.080 --> 01:21:19.160
+<v Joe Morrisroe (OTI)>can do. So is there a a communication
+strategy behind three one one? Okay. I do
+
+1490
+01:21:19.160 --> 01:21:22.760
+<v Joe Morrisroe (OTI)>share that same feeling. Right? We we we
+clarify a lot of times what each one does.
+
+1491
+01:21:23.315 --> 01:21:27.235
+<v Joe Morrisroe (OTI)>I will say on the NISOM side, we work
+very closely with NISOM. We have actually
+
+1492
+01:21:27.235 --> 01:21:32.195
+<v Joe Morrisroe (OTI)>operational protocols where we have
+been... Their their their command center is
+
+1493
+01:21:32.195 --> 01:21:34.835
+<v Joe Morrisroe (OTI)>contacting our command center every
+day just to make sure our lines are
+
+1494
+01:21:34.835 --> 01:21:38.355
+<v Joe Morrisroe (OTI)>communicating. Right? And then everything
+after that, we work very closely with with
+
+1495
+01:21:38.355 --> 01:21:38.755
+<v Joe Morrisroe (OTI)>NISOM.
+
+1496
+01:21:40.090 --> 01:21:43.450
+<v Joe Morrisroe (OTI)>With respect to an operating budget, no.
+Three on one does not have a a marketing
+
+1497
+01:21:43.450 --> 01:21:47.130
+<v Joe Morrisroe (OTI)>budget or an outreach budget, and it's
+actually not ever been part of a three one
+
+1498
+01:21:47.130 --> 01:21:48.170
+<v Joe Morrisroe (OTI)>one. I
+
+1499
+01:21:48.490 --> 01:21:50.490
+<v CM Carmen De La Rosa>think that that's an interesting,
+
+1500
+01:21:51.210 --> 01:21:54.915
+<v CM Carmen De La Rosa>something to look at. And I know that this
+is, you know, a budget question as well
+
+1501
+01:21:54.915 --> 01:21:58.675
+<v CM Carmen De La Rosa>in the future when we have budget hearings.
+But I I do think that it's important,
+
+1502
+01:21:58.995 --> 01:22:00.835
+<v CM Carmen De La Rosa>that New Yorkers understand,
+
+1503
+01:22:01.395 --> 01:22:05.875
+<v CM Carmen De La Rosa>the expectation and and the capacity of
+three one one and where things lie in the in
+
+1504
+01:22:05.875 --> 01:22:10.210
+<v CM Carmen De La Rosa>the ecosystem of getting them help, especially
+as we expand offices like the office
+
+1505
+01:22:10.210 --> 01:22:13.650
+<v CM Carmen De La Rosa>of community safety, for example. Right?
+And there's some changes that are coming
+
+1506
+01:22:13.650 --> 01:22:15.970
+<v CM Carmen De La Rosa>down the line in this
+administration, which are exciting.
+
+1507
+01:22:16.370 --> 01:22:20.370
+<v CM Carmen De La Rosa>But I'm not quite sure if if the
+entire city really understands
+
+1508
+01:22:20.555 --> 01:22:24.315
+<v CM Carmen De La Rosa>where jurisdictions fall. So more to talk
+about on that. We're grateful for your
+
+1509
+01:22:24.315 --> 01:22:25.515
+<v CM Carmen De La Rosa>time today for
+
+1510
+01:22:25.915 --> 01:22:29.915
+<v CM Carmen De La Rosa>answering all of our questions, and we
+look forward to a part two for more
+
+1511
+01:22:29.915 --> 01:22:30.795
+<v CM Carmen De La Rosa>legislation.
+
+1512
+01:22:31.915 --> 01:22:37.160
+<v CM Carmen De La Rosa>And thank you so much. You may you may be
+dismissed. Thank you. Thank you. I now
+
+1513
+01:22:37.160 --> 01:22:42.280
+<v CM Carmen De La Rosa>open the hearing for public testimony, and
+I remind members of the public that this
+
+1514
+01:22:42.280 --> 01:22:45.880
+<v CM Carmen De La Rosa>is a formal government proceeding, and the
+decorum should be observed at all times.
+
+1515
+01:22:45.880 --> 01:22:49.585
+<v CM Carmen De La Rosa>As such, members of the public shall remain
+silent at all times, and the witness
+
+1516
+01:22:49.585 --> 01:22:53.585
+<v CM Carmen De La Rosa>table is reserved for people who wish to
+testify. No video recording or photography
+
+1517
+01:22:53.585 --> 01:22:56.945
+<v CM Carmen De La Rosa>is allowed from the witness
+table, and furthermore, members
+
+1518
+01:22:57.185 --> 01:23:03.040
+<v CM Carmen De La Rosa>of the public may not present audio or
+video recordings as testimony may but may
+
+1519
+01:23:03.040 --> 01:23:07.040
+<v CM Carmen De La Rosa>submit transcripts of such recordings to
+the sergeant at arms for inclusion in
+
+1520
+01:23:07.520 --> 01:23:08.720
+<v CM Carmen De La Rosa>the hearing record.
+
+1521
+01:23:08.960 --> 01:23:12.240
+<v CM Carmen De La Rosa>If you wish to speak at today's hearing,
+please fill out an appearance card with the
+
+1522
+01:23:12.240 --> 01:23:16.320
+<v CM Carmen De La Rosa>sergeant at arms and wait to be recognized.
+When recognized, you have two minutes to
+
+1523
+01:23:16.320 --> 01:23:21.095
+<v CM Carmen De La Rosa>speak on today's topic on New York City's
+three one one system intro one seventy
+
+1524
+01:23:21.095 --> 01:23:25.894
+<v CM Carmen De La Rosa>three, intro six six nine, or intro 800. If
+you have written statement or additional
+
+1525
+01:23:26.055 --> 01:23:30.135
+<v CM Carmen De La Rosa>written testimony you wish to submit for
+the record, please provide a copy of your
+
+1526
+01:23:30.135 --> 01:23:34.470
+<v CM Carmen De La Rosa>testimony to the sergeant at arms. You may
+you may also email written testimony to
+
+1527
+01:23:34.470 --> 01:23:37.030
+<v CM Carmen De La Rosa>testimony@council.nyc.gov
+
+1528
+01:23:37.030 --> 01:23:41.030
+<v CM Carmen De La Rosa>within seventy two hours of this hearing.
+Audio and video recordings will not be
+
+1529
+01:23:41.030 --> 01:23:41.750
+<v CM Carmen De La Rosa>accepted.
+
+1530
+01:23:42.230 --> 01:23:42.870
+<v CM Carmen De La Rosa>Our
+
+1531
+01:23:43.510 --> 01:23:46.070
+<v CM Carmen De La Rosa>our panels is Jennings.
+
+1532
+01:23:47.545 --> 01:23:49.624
+<v CM Carmen De La Rosa>Next panel. Thank you so much.
+
+1533
+01:23:52.745 --> 01:23:53.705
+<v CM Carmen De La Rosa>Wherever
+
+1534
+01:23:53.705 --> 01:23:54.265
+<v CM Carmen De La Rosa>you like.
+
+1535
+01:23:54.585 --> 01:23:56.025
+<v CM Carmen De La Rosa>Jennings.
+
+1536
+01:24:13.130 --> 01:24:17.610
+<v CM Carmen De La Rosa>Okay. Miss Jennings, you may begin
+when you're ready. Oh oh, give us
+
+1537
+01:24:30.060 --> 01:24:34.460
+<v Jennings [first name unknown] (public)>Thank you so much, miss Jennings. Miss
+Jennings speaking. Thank you. Hello, miss
+
+1538
+01:24:34.460 --> 01:24:35.260
+<v Jennings [first name unknown] (public)>Rosa.
+
+1539
+01:24:35.820 --> 01:24:39.260
+<v Jennings [first name unknown] (public)>I called one of the
+people on the committee
+
+1540
+01:24:39.260 --> 01:24:40.940
+<v Jennings [first name unknown] (public)>this morning. I forget who.
+
+1541
+01:24:41.180 --> 01:24:42.780
+<v Jennings [first name unknown] (public)>And the person answered,
+
+1542
+01:24:42.940 --> 01:24:44.745
+<v Jennings [first name unknown] (public)>who is this? I said,
+
+1543
+01:24:45.545 --> 01:24:46.905
+<v Jennings [first name unknown] (public)>constituent.
+
+1544
+01:24:47.145 --> 01:24:47.625
+<v Jennings [first name unknown] (public)>And,
+
+1545
+01:24:48.585 --> 01:24:49.945
+<v Jennings [first name unknown] (public)>it was interesting.
+
+1546
+01:24:50.425 --> 01:24:53.465
+<v Jennings [first name unknown] (public)>There were a lot of phone
+beeping on the other end.
+
+1547
+01:24:53.785 --> 01:24:58.580
+<v Jennings [first name unknown] (public)>The wonderful man that just left.
+I've been stalked since 2006.
+
+1548
+01:24:58.980 --> 01:24:59.860
+<v Jennings [first name unknown] (public)>311
+
+1549
+01:24:59.860 --> 01:25:01.860
+<v Jennings [first name unknown] (public)>got so many calls from me,
+
+1550
+01:25:02.180 --> 01:25:05.700
+<v Jennings [first name unknown] (public)>and they always said that they're
+gonna get back to me in two weeks.
+
+1551
+01:25:06.260 --> 01:25:07.620
+<v Jennings [first name unknown] (public)>I've been assaulted.
+
+1552
+01:25:07.620 --> 01:25:10.900
+<v Jennings [first name unknown] (public)>I'm chased by moms on every
+corner. I'm staying somewhere
+
+1553
+01:25:11.755 --> 01:25:12.715
+<v Jennings [first name unknown] (public)>that now
+
+1554
+01:25:13.035 --> 01:25:19.755
+<v Jennings [first name unknown] (public)>was h e l l l. Now he has cameras in
+there and a tracking device on me. Last
+
+1555
+01:25:19.755 --> 01:25:23.675
+<v Jennings [first name unknown] (public)>week, I went to family court to get what
+he call order of protection and such.
+
+1556
+01:25:24.235 --> 01:25:26.875
+<v Jennings [first name unknown] (public)>I can't imagine where my calls are going
+
+1557
+01:25:27.410 --> 01:25:29.490
+<v Jennings [first name unknown] (public)>because I'm gonna say something that's...
+
+1558
+01:25:29.890 --> 01:25:31.330
+<v Jennings [first name unknown] (public)>In 2007,
+
+1559
+01:25:31.330 --> 01:25:34.530
+<v Jennings [first name unknown] (public)>I spoke to a private eye. A private
+eye said he couldn't help me,
+
+1560
+01:25:35.010 --> 01:25:38.530
+<v Jennings [first name unknown] (public)>but my phone will blow up. I
+have a joke that's not funny.
+
+1561
+01:25:38.850 --> 01:25:43.825
+<v Jennings [first name unknown] (public)>FBI and NSA are the least on my phone. I
+can't imagine where my calls are rerouted
+
+1562
+01:25:43.825 --> 01:25:49.105
+<v Jennings [first name unknown] (public)>to because it doesn't take twenty years
+for three one one to reach out to whatever
+
+1563
+01:25:49.105 --> 01:25:49.985
+<v Jennings [first name unknown] (public)>department
+
+1564
+01:25:50.065 --> 01:25:51.345
+<v Jennings [first name unknown] (public)>in NYPD,
+
+1565
+01:25:51.345 --> 01:25:55.490
+<v Jennings [first name unknown] (public)>the horrible forty seven precinct, and
+the wonderful Riley here that's not here
+
+1566
+01:25:55.490 --> 01:25:59.970
+<v Jennings [first name unknown] (public)>today that's around the corner from where
+I'm at, that I've gone many a times, asked
+
+1567
+01:25:59.970 --> 01:26:01.410
+<v Jennings [first name unknown] (public)>for help, and got nothing.
+
+1568
+01:26:01.730 --> 01:26:05.970
+<v Jennings [first name unknown] (public)>And the wonderful Jermani Williams
+that I saw at the oversight
+
+1569
+01:26:06.770 --> 01:26:11.675
+<v Jennings [first name unknown] (public)>committee the other day, and I asked to
+meet with him. I don't hear from anybody.
+
+1570
+01:26:12.795 --> 01:26:18.155
+<v Jennings [first name unknown] (public)>I couldn't. If I set for you to spend the
+day watching me, your jewel wouldn't drop.
+
+1571
+01:26:18.235 --> 01:26:19.754
+<v Jennings [first name unknown] (public)>You wouldn't have a jewel.
+
+1572
+01:26:20.075 --> 01:26:23.115
+<v Jennings [first name unknown] (public)>I would love to know who's
+sending these people messages
+
+1573
+01:26:23.355 --> 01:26:25.195
+<v Jennings [first name unknown] (public)>to chase me in mobs
+
+1574
+01:26:25.550 --> 01:26:31.310
+<v Jennings [first name unknown] (public)>down on the streets. And when I call for
+311 like I did last night, because I sat
+
+1575
+01:26:31.310 --> 01:26:35.710
+<v Jennings [first name unknown] (public)>and I couldn't move, I'm working on
+a third heart attack caused by this.
+
+1576
+01:26:36.590 --> 01:26:37.790
+<v Jennings [first name unknown] (public)>And I called 311.
+
+1577
+01:26:38.085 --> 01:26:42.085
+<v Jennings [first name unknown] (public)>And I said, don't give me 911 because
+I was gonna see you SS them out.
+
+1578
+01:26:42.885 --> 01:26:47.685
+<v CM Carmen De La Rosa>It's finished? Yes. Your time is up. If
+you could just conclude. Thank you. I beg
+
+1579
+01:26:47.685 --> 01:26:50.965
+<v CM Carmen De La Rosa>your pardon? Mhmm. What? If
+you could just conclude.
+
+1580
+01:26:51.525 --> 01:26:52.325
+<v Jennings [first name unknown] (public)>Your time is morning.
+
+1581
+01:26:53.130 --> 01:26:57.690
+<v Jennings [first name unknown] (public)>What is Joe Morrisroe doing with those 311
+calls and where are they going? Because
+
+1582
+01:26:57.690 --> 01:27:02.650
+<v Jennings [first name unknown] (public)>Eric Dinowitz tried to get a care three
+one one that you get a SON number. I get
+
+1583
+01:27:02.650 --> 01:27:03.210
+<v Jennings [first name unknown] (public)>nothing.
+
+1584
+01:27:04.010 --> 01:27:04.890
+<v Jennings [first name unknown] (public)>So yesterday,
+
+1585
+01:27:05.145 --> 01:27:09.785
+<v Jennings [first name unknown] (public)>the 25 letters went to the White House,
+and there's been 5,000 so far that's going
+
+1586
+01:27:09.785 --> 01:27:14.585
+<v Jennings [first name unknown] (public)>under every bus and train camera because
+I fear for my life and safety. Now I would
+
+1587
+01:27:14.585 --> 01:27:18.185
+<v Jennings [first name unknown] (public)>like to meet with you if it's possible,
+but everyone that I ask to meet with, I get
+
+1588
+01:27:18.185 --> 01:27:21.970
+<v Jennings [first name unknown] (public)>pointed to the chief of staff, and I never
+meet with them. Okay. Thank you. Thank
+
+1589
+01:27:21.970 --> 01:27:24.530
+<v Jennings [first name unknown] (public)>you so much for coming.
+Thank you so much. Uh-huh.
+
+1590
+01:27:24.930 --> 01:27:28.850
+<v CM Carmen De La Rosa>If if we have an... Inadvertently
+missed anyone in person,
+
+1591
+01:27:29.570 --> 01:27:33.730
+<v CM Carmen De La Rosa>please let the sergeant at arms know.
+But we do have one person on Zoom.
+
+1592
+01:27:36.825 --> 01:27:37.625
+<v CM Carmen De La Rosa>Okay.
+
+1593
+01:27:38.105 --> 01:27:39.145
+<v CM Carmen De La Rosa>Chowdhury
+
+1594
+01:27:39.145 --> 01:27:40.025
+<v CM Carmen De La Rosa>Hasan?
+
+1595
+01:27:47.145 --> 01:27:47.865
+<v CM Carmen De La Rosa>Hello?
+
+1596
+01:27:48.825 --> 01:27:49.225
+<v CM Carmen De La Rosa>Yes.
+
+1597
+01:27:50.220 --> 01:27:51.740
+<v CM Carmen De La Rosa>Are you here to testify?
+
+1598
+01:27:51.980 --> 01:27:55.740
+<v Chowdhury Hasan Mahmud (public)>Yes. Thank you very much. Good morning,
+chair and distinguished member of the
+
+1599
+01:27:55.740 --> 01:27:57.180
+<v Chowdhury Hasan Mahmud (public)>committee on technology.
+
+1600
+01:27:57.180 --> 01:27:59.260
+<v Chowdhury Hasan Mahmud (public)>My name is Chowdhury Mahmud.
+
+1601
+01:28:00.860 --> 01:28:04.895
+<v CM Carmen De La Rosa>Thank you. Please please provide your
+testimony. You have two minutes. Thank you.
+
+1602
+01:28:04.895 --> 01:28:07.375
+<v CM Carmen De La Rosa>Yeah. I am Chowdhury
+
+1603
+01:28:07.375 --> 01:28:11.935
+<v Chowdhury Hasan Mahmud (public)>Hasan Mahmud. I'm a permanent civil service
+employee who is a company specialist
+
+1604
+01:28:11.935 --> 01:28:15.935
+<v Chowdhury Hasan Mahmud (public)>software at at at the NYC for
+board of enterprise technology.
+
+1605
+01:28:15.935 --> 01:28:18.655
+<v Chowdhury Hasan Mahmud (public)>I have failed here at Sun
+City, and I am certified
+
+1606
+01:28:19.060 --> 01:28:21.140
+<v Chowdhury Hasan Mahmud (public)>PMP, CISM, and CISA.
+
+1607
+01:28:21.460 --> 01:28:24.980
+<v Chowdhury Hasan Mahmud (public)>I have previously submitted the written
+testimony in the committee for technology,
+
+1608
+01:28:24.980 --> 01:28:26.340
+<v Chowdhury Hasan Mahmud (public)>oversight investigations,
+
+1609
+01:28:26.340 --> 01:28:29.220
+<v Chowdhury Hasan Mahmud (public)>civil service labor, and fire
+and emergency management.
+
+1610
+01:28:30.180 --> 01:28:34.660
+<v Chowdhury Hasan Mahmud (public)>All documenting the same systematic
+failure somewhere in the system for the
+
+1611
+01:28:35.275 --> 01:28:38.395
+<v Chowdhury Hasan Mahmud (public)>three one one and nine one one, I would
+say, like, how does it... They're routed
+
+1612
+01:28:38.395 --> 01:28:43.195
+<v Chowdhury Hasan Mahmud (public)>out. I returned to the base specific
+technology issue that directly affecting every
+
+1613
+01:28:43.195 --> 01:28:46.715
+<v Chowdhury Hasan Mahmud (public)>day New Yorkers who use that
+311 reporting a fire hazard
+
+1614
+01:28:47.040 --> 01:28:48.800
+<v Chowdhury Hasan Mahmud (public)>or fire safety complaint.
+
+1615
+01:28:49.200 --> 01:28:50.320
+<v Chowdhury Hasan Mahmud (public)>So 311
+
+1616
+01:28:50.320 --> 01:28:54.400
+<v Chowdhury Hasan Mahmud (public)>is the front door of the fire safety in the
+city when a resident reports an ultimate
+
+1617
+01:28:54.400 --> 01:28:59.120
+<v Chowdhury Hasan Mahmud (public)>fire escape and missing exit
+sign or block, you know, block
+
+1618
+01:28:59.405 --> 01:29:04.525
+<v Chowdhury Hasan Mahmud (public)>in this case. This service SQL flows to
+311 to be in a for inspection and action.
+
+1619
+01:29:04.845 --> 01:29:08.365
+<v Chowdhury Hasan Mahmud (public)>They actually see the routing and classification
+determines whether evaluation gets
+
+1620
+01:29:08.365 --> 01:29:09.085
+<v Chowdhury Hasan Mahmud (public)>issued,
+
+1621
+01:29:09.325 --> 01:29:13.170
+<v Chowdhury Hasan Mahmud (public)>whether inspection has happened, and,
+ultimately, whether the building is safe. So
+
+1622
+01:29:13.170 --> 01:29:17.330
+<v Chowdhury Hasan Mahmud (public)>the classification system depends entirely
+integrity on the, you know, technology
+
+1623
+01:29:17.330 --> 01:29:20.130
+<v Chowdhury Hasan Mahmud (public)>infrastructure both on a BNY, OTI,
+
+1624
+01:29:20.530 --> 01:29:24.690
+<v Chowdhury Hasan Mahmud (public)>and also tier on the system, as I said.
+The same infrastructure I documented,
+
+1625
+01:29:24.690 --> 01:29:28.770
+<v Chowdhury Hasan Mahmud (public)>operated without independent QA, which
+is completed procurement accountability
+
+1626
+01:29:29.145 --> 01:29:33.064
+<v Chowdhury Hasan Mahmud (public)>and also, you know, requires
+without functioning internal audit.
+
+1627
+01:29:33.625 --> 01:29:36.185
+<v Chowdhury Hasan Mahmud (public)>So these are the major
+issues I have found.
+
+1628
+01:29:36.745 --> 01:29:38.585
+<v Chowdhury Hasan Mahmud (public)>And the misclassified
+
+1629
+01:29:38.585 --> 01:29:41.225
+<v Chowdhury Hasan Mahmud (public)>q one one complaint, do not inspected,
+
+1630
+01:29:41.305 --> 01:29:43.385
+<v Chowdhury Hasan Mahmud (public)>uninspected hazard become fires.
+
+1631
+01:29:43.770 --> 01:29:45.690
+<v Chowdhury Hasan Mahmud (public)>This is a major issue nowadays.
+
+1632
+01:29:45.850 --> 01:29:51.290
+<v Chowdhury Hasan Mahmud (public)>So the committee on technology should require
+a BNY and OTI to report how many three
+
+1633
+01:29:51.290 --> 01:29:54.170
+<v Chowdhury Hasan Mahmud (public)>one one fire related service requests
+
+1634
+01:29:54.570 --> 01:29:56.250
+<v Chowdhury Hasan Mahmud (public)>closes out without inspection.
+
+1635
+01:29:56.975 --> 01:30:01.135
+<v Chowdhury Hasan Mahmud (public)>What are the classification error rate?
+And are those error... Thanks for your
+
+1636
+01:30:01.135 --> 01:30:02.895
+<v Chowdhury Hasan Mahmud (public)>testimony. Your time is expired.
+
+1637
+01:30:03.295 --> 01:30:04.415
+<v CM Carmen De La Rosa>Thank you.
+
+1638
+01:30:04.655 --> 01:30:06.735
+<v CM Carmen De La Rosa>Thank you. If you if you have,
+
+1639
+01:30:07.375 --> 01:30:11.455
+<v CM Carmen De La Rosa>a suggestion for legislation or anything
+else, you can send that as part of your
+
+1640
+01:30:11.455 --> 01:30:15.100
+<v CM Carmen De La Rosa>written testimony, and we'll we'll happy
+to review it. Thank you so much for...
+
+1641
+01:30:15.100 --> 01:30:19.500
+<v CM Carmen De La Rosa>Sure. I'll send that written testimony by
+by twenty... Seventy two hours. Thank you.
+
+1642
+01:30:19.500 --> 01:30:23.100
+<v CM Carmen De La Rosa>Thank you so much. If we have inadvertently
+missed anyone who is registered to
+
+1643
+01:30:23.100 --> 01:30:28.085
+<v CM Carmen De La Rosa>testify today and has yet to been called,
+please use the Zoom hand hand raise
+
+1644
+01:30:28.085 --> 01:30:28.805
+<v CM Carmen De La Rosa>function,
+
+1645
+01:30:28.885 --> 01:30:32.725
+<v CM Carmen De La Rosa>and you will be called on in the order your
+hand has been raised. There's no one on
+
+1646
+01:30:32.725 --> 01:30:37.205
+<v CM Carmen De La Rosa>Zoom. There's no one on Zoom. So thank you
+all for your testimonies today, and this
+
+1647
+01:30:37.205 --> 01:30:38.085
+<v CM Carmen De La Rosa>hearing is adjourned.

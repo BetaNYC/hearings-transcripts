@@ -1,0 +1,23 @@
+{
+  "_comment": "Word cloud groups and people for the 2026-09-30 hearing. Inherits method, display, stopwords, capitalization and join terms from wordclouds.json (made for 2026-10-05); replaces groups, people and the method notes. The two public witnesses spoke too little for a group page of their own.",
+  "extends": "wordclouds.json",
+  "people_method": {
+    "min_person_count": 2,
+    "brief_threshold": 10,
+    "_comment": "Each person is compared with every other speaker at the hearing, including the rest of their own group.",
+    "intro": "Individual pages for the City's witness and the chair, who asked most of the questions."
+  },
+  "groups": [
+    {"slug": "council-members", "nav": "Council Members", "who": "Council Members",
+     "note": "Including Chair De La Rosa, who asked most of the questions",
+     "match": {"category": "council"}},
+    {"slug": "city-officials", "nav": "City officials", "who": "the City's witness",
+     "note": "One witness, Joe Morrisroe, Deputy Commissioner, NYC 311 (OTI)",
+     "match": {"category": "city-official"}}
+  ],
+  "people": [
+    {"slug": "joe-morrisroe", "name": "Joe Morrisroe", "affiliation": "Deputy Commissioner, NYC 311 (OTI)", "group": "city-officials"},
+    {"slug": "carmen-de-la-rosa", "name": "Carmen De La Rosa", "affiliation": "Council Member, chair of the Committee on Technology", "group": "council-members"}
+  ],
+  "removed_note_html": "Common words, speakers&#x27; names, &ldquo;New York&rdquo;, &ldquo;city&rdquo;, &ldquo;AI&rdquo; and hearing boilerplate are left out, using the word lists made for the 2026-10-05 hearing, which include filler an AI assistant proposed cutting from that hearing&#x27;s lists. This hearing&#x27;s lists were not reviewed by hand. Word lists: <a href=\"https://github.com/BetaNYC/hearings-transcripts/blob/main/scripts/meta/wordclouds.json\">scripts/meta/wordclouds.json</a>; this hearing&#x27;s groups: <a href=\"https://github.com/BetaNYC/hearings-transcripts/blob/main/scripts/meta/2026-09-30-technology-311-wordclouds.json\">scripts/meta/2026-09-30-technology-311-wordclouds.json</a>."
+}

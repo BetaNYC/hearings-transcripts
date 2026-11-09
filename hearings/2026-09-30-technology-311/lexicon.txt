@@ -1,0 +1,47 @@
+# Deepgram keyterms for the 2026-09-30 Committee on Technology hearing (Legistar event 22733).
+# Format and rules: lexicon/README.md. One term per line; `#` starts a comment.
+# Only people, organizations and terms that are in this hearing. No BetaNYC names.
+# Built 2026-11-08. Deepgram limit: 100 terms, 500 tokens (https://developers.deepgram.com/docs/keyterm).
+
+# source: Legistar Web API, OfficeRecords for body 5213 (Committee on Technology) active 2026-09-30.
+# Legistar gives "Carmen N. De La Rosa", "Shahana K. Hanif", "Kevin C. Riley"; middle initials
+# dropped here because they are not spoken. "Gutierrez" is sent unaccented (Legistar: "Gutiérrez"),
+# following the 2026-10-16 lesson in docs/PIPELINE.md; the accent is restored in naming.
+Carmen De La Rosa
+Jennifer Gutierrez
+Shahana Hanif
+Kevin Riley
+Julie Won
+
+# source: Legistar Web API, Matters/{id}/Sponsors: prime sponsors of Int 0173-2026 (Eric Dinowitz),
+# Int 0800-2026 (Lynn C. Schulman) and Int 0669-2026 (Nantasha M. Williams, title Deputy Speaker in
+# OfficeRecords). Meeting minutes list Dinowitz and Schulman as other Council Members attending.
+Eric Dinowitz
+Lynn Schulman
+Nantasha Williams
+
+# source: OTI written testimony (Legistar attachment "Hearing Testimony", T2026-2556, 2026-10-11):
+# witness name and the terms it uses. Captions: "MORRISROE" at 00:12:28, "ESRI" at 00:30:19,
+# "RSAT" 5 times.
+Joe Morrisroe
+NYC311
+OTI
+ESRI
+RSAT
+
+# source: Council captions (NYCC-250-8-3_260930-131436.vtt): "SMART SELECT" at 00:43:05,
+# "PASSPORT" at 00:53:11 (the City's procurement portal, written PASSPort), "WHATSAPP" 4 times.
+Smart Select
+PASSPort
+WhatsApp
+
+# source: Council's official transcript (Legistar attachment "Hearing Transcript", T2026-2556,
+# 2026-11-02): the overflow vendor "King TeleServices" and the survey firm "CFI Group".
+King TeleServices
+CFI Group
+
+# source: public witness's own briefing sheet in the Hearing Testimony attachment (T2026-2556):
+# "Chowdhury Hasan Mahmud". Captions: "CHAUDHRY HASSAN" at 01:27:53, "CHAUDHARY HASSAN MAHMOOD"
+# at 01:28:09. Official transcript: "Chaudhury Hassan Mahmood". Captions: "MISS JENNINGS" at 01:24:17.
+Chowdhury Hasan Mahmud
+Jennings

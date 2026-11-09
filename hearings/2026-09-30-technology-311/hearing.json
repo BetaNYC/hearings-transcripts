@@ -1,0 +1,123 @@
+{
+  "slug": "2026-09-30-technology-311",
+  "title": "Oversight - New York City’s 311 System",
+  "body": "NYC Council Committee on Technology",
+  "date": "2026-09-30",
+  "start_time_local": "13:00",
+  "timezone": "America/New_York",
+  "location": "250 Broadway, 8th Floor, Hearing Room 3, New York, NY",
+  "legistar": {
+    "event_id": 22733,
+    "url": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22733&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+    "agenda_url": "https://nyc.legistar1.com/nyc/meetings/2026/9/22733_A_Committee_on_Technology_26-09-30_Committee_Agenda.pdf"
+  },
+  "video": {
+    "duration_hms": "01:34:30",
+    "council_source_url": "https://councilnyc.viebit.com/vod/?s=true&v=NYCC-250-8-3_260930-131436.mp4",
+    "internet_archive_url": "",
+    "archive_playable": false
+  },
+  "oversight_topic": {
+    "file": "T2026-2556",
+    "name": "Oversight - New York City’s 311 System"
+  },
+  "bills": [
+    {
+      "file": "Int 0173-2026",
+      "name": "Use of global positioning system coordinates for 311 complaints and service requests",
+      "lead_sponsor": "Eric Dinowitz"
+    },
+    {
+      "file": "Int 0669-2026",
+      "name": "Referring 311 non-emergency traffic condition complaints to the transportation bureau of the police department",
+      "lead_sponsor": "Nantasha Williams"
+    },
+    {
+      "file": "Int 0800-2026",
+      "name": "Requiring the 311 customer service center to redirect requests for service or complaints to the appropriate agency",
+      "lead_sponsor": "Lynn Schulman"
+    }
+  ],
+  "media": {
+    "audio_opus": {
+      "path": "media/hearing-audio-16k.opus",
+      "format": "Opus audio, 16 kbps mono"
+    },
+    "audio_mp3": {
+      "release_tag": "2026-09-30-technology-311",
+      "release_url": "",
+      "asset_name": "hearing-audio-64k.mp3",
+      "bytes": 45366483,
+      "format": "MP3 audio, 64 kbps mono, 16 kHz",
+      "release_published": false
+    }
+  },
+  "transcription": {
+    "engine": "Deepgram",
+    "model": "nova-3",
+    "diarized": true,
+    "generated": "2026-11-08",
+    "keyterms": "hearings/2026-09-30-technology-311/lexicon.txt (20 terms, sources in the file); BetaNYC's organization list not used.",
+    "turn_merge_rule": "Consecutive Deepgram segments merged into one turn when they share a speaker cluster and the gap between them is under 5 seconds.",
+    "runs": "One run (2026-11-08), with the hearing's own keyterm list."
+  },
+  "disclosure": "",
+  "context": {
+    "text": "The committee report states that the Committee on Technology would hold an oversight hearing on New York City's 311 system and hear three bills (Int. No. 173, Dinowitz; Int. No. 669, Williams; Int. No. 800, Schulman), and that those invited to testify included representatives from the Office of Technology and Innovation (OTI), the 311 Customer Service Center, and members of the public. It states that OTI manages 311's operations and technology.",
+    "source": "Committee Report, T2026-2556, Committee on Technology, September 30, 2026, Introduction and Background (Legistar attachment, last modified 2026-09-30), legistar/t2026-2556-committee-report.docx"
+  },
+  "chair": "Carmen De La Rosa",
+  "council_members_present": [
+    {
+      "name": "Carmen De La Rosa",
+      "role": "Council Member"
+    },
+    {
+      "name": "Eric Dinowitz",
+      "role": "Council Member"
+    },
+    {
+      "name": "Lynn Schulman",
+      "role": "Council Member"
+    },
+    {
+      "name": "Kevin Riley",
+      "role": "Council Member"
+    },
+    {
+      "name": "Jennifer Gutiérrez",
+      "role": "Council Member"
+    }
+  ],
+  "council_members_present_source": "From the speaker labels (who is heard on the recording), not the committee roster. The Council's meeting minutes also list Shahana Hanif and Julie Won as present; they did not speak. Carmen De La Rosa chairs the Committee on Technology (Legistar). Deputy Speaker Nantasha Williams, Int 0669's sponsor, did not attend; the chair read her statement (00:09:32).",
+  "mixed_turns": 61,
+  "naming_sources": "self-introductions, the chair calling on people, a Zoom name label read from a video frame, the Council's own captions and official transcript, and voice clusters",
+  "witness_spelling": "Joe Morrisroe's name and title (Deputy Commissioner, NYC 311) follow OTI's written testimony in Legistar. \"Chowdhury Hasan Mahmud\" follows his own written briefing sheet, posted with the hearing testimony in Legistar, and his Zoom name label (video frame at 01:28:30); the Council's official transcript has \"Chaudhury Hassan Mahmood\" and the captions \"CHAUDHARY HASSAN MAHMOOD\". The Council's official transcript (Legistar attachment, posted 2026-11-02) was used as a second source for names and disputed words; corrections are welcome as GitHub issues.",
+  "known_gaps": [
+    "The in-person public witness gave only her surname, Jennings (\"Miss Jennings\" in the chair's call and the official transcript), so her label reads \"Jennings [first name unknown]\".",
+    "Council Member Schulman's opening statement (00:08:09) describes a bill on complaints about conditions in city jails. At 00:25:59 she says that statement was for a different 311 bill. Int 0800-2026, as titled in Legistar, is about redirecting 311 requests to the appropriate agency.",
+    "The Committee Counsel who read the affirmation is not named on tape (the committee report lists Irene Byhovsky as Legislative Counsel), so the label stays \"Committee Counsel\".",
+    "Turn 31 (00:25:22) is one word, \"'26\", labeled as the chair with low confidence: the official transcript has no matching line for her there.",
+    "Turn 143 (01:26:51) is in Deepgram's voice cluster for Joe Morrisroe, who had already been dismissed; it is labeled as Jennings because the captions and the official transcript give her these words (\"I'm just wondering\").",
+    "The Council's official transcript sometimes runs two speakers together (for example 00:38:32 to 00:39:45, where Council Member Gutiérrez's questions appear under the Deputy Commissioner). Turns follow Deepgram's voice clusters there.",
+    "Public Advocate Jumaane Williams submitted written testimony (in the Legistar hearing testimony attachment); he did not speak at the hearing.",
+    "The word lists for this hearing's word clouds were not reviewed by hand. They reuse the stopwords made for the 2026-10-05 hearing."
+  ],
+  "stats": {
+    "turns": 151,
+    "speakers": 10,
+    "words": 16379,
+    "duration_sec": 5670.756,
+    "confidence_counts": {
+      "high": 148,
+      "medium": 2,
+      "low": 1
+    },
+    "unidentified_turns": 0,
+    "legistar_documents": 33
+  },
+  "license": {
+    "data": "CC-BY-4.0 (BetaNYC's transcripts, labels and exports)",
+    "public_records": "Video, audio and Legistar documents are public records produced by the New York City Council."
+  }
+}
