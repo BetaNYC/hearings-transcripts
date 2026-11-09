@@ -5,6 +5,9 @@ Pure standard library. No network access. Reuses the word cloud pages' style.
 
   python3 scripts/build_qa.py --config scripts/meta/2026-10-05-committee-of-the-whole-ai-city-qa.json
 
+Optional config keys: "topic" (the meta description's "hearing on <topic>", default "AI") and
+opening.summary (the opening statement's summary line, default the 2026-10-05 wording).
+
 Reads   scripts/meta/<slug>-city-qa.json (sections, question headlines, follow-ups)
         hearings/<slug>/transcript/turns.json, hearings/<slug>/hearing.json
 Writes  hearings/<slug>/<page>
@@ -94,6 +97,8 @@ def build(cfg_path: Path) -> Path:
 
     opening = "".join(render_turn(by_id[i], officials, notes) for i in cfg["opening"]["turns"])
     words = sum(len(by_id[i]["text_clean"].split()) for i in cfg["opening"]["turns"])
+    opening_label = (esc(cfg["opening"]["summary"]) if "summary" in cfg["opening"]
+                     else "Sarah Milstein's opening statement for OTI and DCWP")
 
     sections = []
     for s in cfg["sections"]:
@@ -114,7 +119,7 @@ def build(cfg_path: Path) -> Path:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(cfg['title'])} · {esc(hearing_name)} · BetaNYC</title>
-<meta name="description" content="Every question Council Members asked the City's panel at the {esc(hearing_name)} hearing on AI, and the administration's answers, from BetaNYC's transcript.">
+<meta name="description" content="Every question Council Members asked the City's panel at the {esc(hearing_name)} hearing on {esc(cfg.get('topic', 'AI'))}, and the administration's answers, from BetaNYC's transcript.">
 {FONTS}
 <style>{STYLE}{QA_STYLE}</style>
 </head>
@@ -153,7 +158,7 @@ def build(cfg_path: Path) -> Path:
 
 <section class="card" id="opening" aria-labelledby="open-h">
 <h2 id="open-h">Opening statement</h2>
-<details><summary>Read Sarah Milstein's opening statement for OTI and DCWP ({words:,} words, {esc(cfg['opening']['start_hms'])})</summary>{opening}</details>
+<details><summary>Read {opening_label} ({words:,} words, {esc(cfg['opening']['start_hms'])})</summary>{opening}</details>
 </section>
 
 <section class="card how" id="how" aria-labelledby="how-h">

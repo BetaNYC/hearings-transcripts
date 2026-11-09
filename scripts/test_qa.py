@@ -109,5 +109,77 @@ class PageTests(unittest.TestCase):
             self.assertIn(f'href="{href}"', p.read_text(), p)
 
 
+class Page311Tests(unittest.TestCase):
+    """The 2026-09-30 311 hearing's City Q&A page (built with the optional topic and opening.summary keys)."""
+
+    SLUG = "2026-09-30-technology-311"
+
+    @classmethod
+    def setUpClass(cls):
+        cls.h = REPO / "hearings" / cls.SLUG
+        cls.cfg_path = REPO / "scripts" / "meta" / f"{cls.SLUG}-city-qa.json"
+        cls.cfg = json.loads(cls.cfg_path.read_text())
+        cls.page = cls.h / cls.cfg["page"]
+        cls.html = cls.page.read_text()
+        cls.turns = {t["turn_id"]: t for t in json.loads((cls.h / "transcript" / "turns.json").read_text())}
+
+    def test_page_is_current(self):
+        before = self.html
+        bq.build(self.cfg_path)
+        self.assertEqual(self.page.read_text(), before, "city-qa.html is stale: rerun build_qa.py")
+
+    def test_turns_shown_once_and_inside_the_panel(self):
+        ids = list(self.cfg["opening"]["turns"])
+        for s in self.cfg["sections"]:
+            ids += [t["turn_id"] for t in bq.section_turns(self.turns, s)]
+        self.assertEqual(len(ids), len(set(ids)))
+        lo, hi = bq.hms_to_sec(self.cfg["panel"]["start_hms"]), bq.hms_to_sec(self.cfg["panel"]["end_hms"])
+        for i in ids:
+            self.assertTrue(lo <= self.turns[i]["start_sec"] <= hi, i)
+
+    def test_question_and_followup_times_land_in_the_panel(self):
+        for s in self.cfg["sections"]:
+            ts = bq.section_turns(self.turns, s)
+            for hms, _ in s["questions"]:
+                sec = bq.hms_to_sec(hms)
+                self.assertTrue(ts[0]["start_sec"] - 1 <= sec <= ts[-1]["end_sec"], (s["id"], hms))
+        promise = re.compile(r"get back to you|come back|check that|double-check|work with you|we'll get back", re.I)
+        for who, _, _, hms in self.cfg["followups"]:
+            t = bq.turn_at(list(self.turns.values()), hms)
+            # A promise inside a two-voice turn may sit in a turn credited to the questioner, so the
+            # turn must be the official's or a mixed one, and must hold the promise itself.
+            self.assertTrue(t["speaker_name"] == who or t.get("mixed") in (True, "true"), hms)
+            self.assertRegex(t["text_clean"], promise, hms)
+
+    def test_every_answer_is_verbatim(self):
+        import html as h
+        for tid, text in re.findall(r'<div class="turn[^"]*" id="t(\d+)">.*?<p>(.*?)</p>', self.html, re.S):
+            self.assertEqual(h.unescape(text), self.turns[int(tid)]["text_clean"])
+
+    def test_officials_spoke_and_city_turns_are_shaded(self):
+        names = {o["name"] for o in self.cfg["officials"]}
+        spoke = {t["speaker_name"] for t in self.turns.values()}
+        self.assertTrue(names <= spoke)
+        for tid in re.findall(r'<div class="turn city" id="t(\d+)">', self.html):
+            self.assertIn(self.turns[int(tid)]["speaker_name"], names, tid)
+
+    def test_linked_from_gallery_and_home(self):
+        for p, href in ((self.h / "wordclouds" / "index.html", "../city-qa.html"),
+                        (REPO / "index.html", f"hearings/{self.SLUG}/city-qa.html")):
+            self.assertIn(f'href="{href}"', p.read_text(), p)
+
+    def test_topic_and_opening_summary_used(self):
+        self.assertIn("hearing on the 311 system", self.html)
+        self.assertIn("Read Joe Morrisroe&#x27;s opening statement for OTI (", self.html)
+        self.assertNotIn("Sarah Milstein", self.html)
+
+    def test_every_in_page_link_has_a_target_and_relative_links_resolve(self):
+        ids = set(re.findall(r'id="([^"]+)"', self.html))
+        for ref in re.findall(r'href="#([^"]+)"', self.html):
+            self.assertIn(ref, ids)
+        for rel in relative_links(self.html):
+            self.assertTrue((self.page.parent / rel).resolve().exists(), rel)
+
+
 if __name__ == "__main__":
     unittest.main()

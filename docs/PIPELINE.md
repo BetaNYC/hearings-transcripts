@@ -24,6 +24,10 @@ D=~/Movies/BetaNYC/council-hearings/$SLUG                  # raw files; never in
       `python3 scripts/fetch_legistar.py <id> --out "$D/legistar/<YYYY-MM-DD>-post-hearing"`.
       `build_hearing.py --legistar-post-dir` merges it with the first download; where both have
       a file, the post-hearing copy wins.
+- [ ] Lesson (2026-11-08, 2026-09-30 hearing): a hearing processed weeks later may already have the
+      Council's official transcript ("Hearing Transcript") and written testimony in the first
+      download. Use the official transcript as a second source for names and disputed words, but
+      not for who spoke: it sometimes runs two speakers together.
 
 ## 2. Video, captions, audio (scripted)
 
@@ -143,6 +147,11 @@ operator's private workspace.
       hearing's `groups`, `people` and `people_method`; say in `removed_note_html` whether its
       lists were reviewed by hand. (2026-10-16's file is an example.)
 - [ ] `python3 scripts/build_wordclouds.py --slug $SLUG`, then `python3 scripts/build_hearing.py --index-only`.
+- [ ] When the City testified, write `scripts/meta/$SLUG-city-qa.json` (copy an existing one: the
+      panel's times, each Council Member's turn range and question headlines, the City's position
+      on each bill, every follow-up the City promised, with its time), then
+      `python3 scripts/build_qa.py --config scripts/meta/$SLUG-city-qa.json` and
+      `python3 scripts/build_hearing.py --index-only`.
 
 ## 8. Validate the hearing record (manual)
 
