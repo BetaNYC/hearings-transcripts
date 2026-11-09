@@ -33,7 +33,7 @@ what, jump to the moment in the video, and count who got the floor.
 | `transcript/words.json` | JSON | `[{turn_id, word, start, end}]`, every recognized word with its timing |
 | `transcript/captions.vtt` | WebVTT | Captions with the speaker in a `<v>` tag; cues of 7 seconds or less, at most two lines |
 | `speakers.csv` | CSV | `speaker_name, speaker_role, category, turns, talk_seconds, first_heard_hms` |
-| `legistar/` | PDF, DOCX, CSV | The Council's documents for the hearing, plus `manifest.csv` (source URL and last-modified time for each) |
+| `legistar/` | PDF, DOCX, CSV | The Council's documents for the hearing, plus `manifest.csv` (source URL and last-modified time for each). A document that shows a member of the public's personal contact details is not copied here: `manifest.csv` marks it `hosted` = `no` and the pages link to the Council's copy |
 | `media/` | Opus, README | Small audio file; links to the video and the full-quality MP3 |
 | `city-qa.html` | HTML | "What the City said": every question Council Members asked the administration's panel, with the full exchange from the transcript, the follow-ups the City promised and its position on each bill. Built by `scripts/build_qa.py` from `scripts/meta/<slug>-city-qa.json` |
 | `panels.json` | JSON | When present: the hearing's parts in order, `[{panel_id, title, start_hms, end_hms, turn_ids, members:[{name, role, org}]}]`; `turn_ids` are `turn_id`s in `turns.csv`, each in at most one panel |

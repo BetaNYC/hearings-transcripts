@@ -154,6 +154,11 @@ the build. The 2026-10-05 hearing was made from hand-made downloads, read with
 of `[matter, attachment, last_modified_utc, url, filename, bytes]`). Leave the options off to keep
 the existing `legistar/` folder.
 
+A file named in the meta's `legistar_not_hosted` (`{filename: note}`) is not copied. `manifest.csv`
+then gains `hosted` (`yes`/`no`) and `note` columns, `bytes` is the size of the Council's file, and
+`index.html` and the hearing README link to its `legistar_url` instead. A name not in the download
+stops the build, and so does a kept `legistar/` folder that still holds a file the meta names.
+
 Re-running is safe: every output is rewritten in full, and the Opus file is copied only when
 missing or a different size.
 
@@ -258,8 +263,8 @@ is idempotent.
 
 `test_fetch.py` checks the pure parts of steps 1 to 3 without network access: attachment
 file names against the 2026-10-05 manifest, manifest columns, agenda-first ordering and
-duplicate names, Viebit `pageConfig` parsing and host checks, the ffmpeg arguments, and turn
-merging in the raw text.
+duplicate names, Viebit `pageConfig` parsing and host checks, the ffmpeg arguments, turn
+merging in the raw text, and files listed but not hosted (`legistar_not_hosted`).
 
 `test_validate_clean.py` checks the clean-transcript validator: header skipping, prefix and turn-count
 failures, shrink warnings and the `--names` report.
@@ -278,4 +283,5 @@ inside the panel and shown once, answers verbatim, in-page links, and that each 
 
 `test_build.py` checks the 2026-10-05 hearing's built files: 830 turns, transcript prefixes, word timings inside
 their turns, CSV columns and confidence values, WebVTT header and ordering, file sizes,
-every relative link in `index.html`, and that speaker talk time sums to turn time.
+every relative link in `index.html`, and that speaker talk time sums to turn time; and, for
+2026-09-30, that the testimony files marked not hosted are absent and linked to the Council's site.

@@ -28,6 +28,11 @@ D=~/Movies/BetaNYC/council-hearings/$SLUG                  # raw files; never in
       Council's official transcript ("Hearing Transcript") and written testimony in the first
       download. Use the official transcript as a second source for names and disputed words, but
       not for who spoke: it sometimes runs two speakers together.
+- [ ] Before publishing, scan the Council's documents (PDF and DOCX) for personal contact details
+      of members of the public: a personal email address, home phone or home address. Don't copy
+      such a file; link to the Council's copy instead. Name it in the meta file's
+      `legistar_not_hosted` (`{filename: note}`); the build leaves it out of `legistar/`, marks it
+      in `manifest.csv` and links the Council's URL. Written testimony is where this turns up.
 
 ## 2. Video, captions, audio (scripted)
 

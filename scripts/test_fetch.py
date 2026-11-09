@@ -176,6 +176,50 @@ class LegistarIntoBuild(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 bh.build_legistar(self.META, d / "out", None, d / "pre", None, None)
 
+    def test_not_hosted_file_is_listed_not_copied(self):
+        import build_hearing as bh
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            testimony = att(2, "Hearing Testimony", "https://nyc.legistar1.com/nyc/attachments/9f.pdf", 2)
+            self.write_fetch(d / "pre", [testimony], {"t2026-2684-hearing-testimony.pdf": b"%PDF testimony"})
+            meta = {**self.META, "legistar_not_hosted": {"t2026-2684-hearing-testimony.pdf": "personal details"}}
+            manifest = bh.build_legistar(meta, d / "out", None, d / "pre", None, None)
+            leg = d / "out" / "legistar"
+            self.assertFalse((leg / "t2026-2684-hearing-testimony.pdf").exists())
+            self.assertTrue((leg / "meeting-agenda.pdf").is_file())
+            rows = list(csv.DictReader(io.StringIO((leg / "manifest.csv").read_text(encoding="utf-8"))))
+            self.assertEqual(list(rows[0]), bh.MANIFEST_FIELDS + bh.NOT_HOSTED_FIELDS)
+            got = {r["filename"]: r for r in rows}
+            t = got["t2026-2684-hearing-testimony.pdf"]
+            self.assertEqual((t["hosted"], t["note"]), ("no", "personal details"))
+            self.assertEqual(t["legistar_url"], "https://nyc.legistar1.com/nyc/attachments/9f.pdf")
+            self.assertEqual(int(t["bytes"]), len(b"%PDF testimony"))  # the Council's file
+            self.assertEqual((got["meeting-agenda.pdf"]["hosted"], got["meeting-agenda.pdf"]["note"]), ("yes", ""))
+            self.assertEqual([bh.is_hosted(m) for m in manifest].count(False), 1)
+            # Kept as built: passes. A meta naming a file the folder still holds: stops.
+            bh.check_not_hosted(meta, d / "out", rows)
+            (leg / "t2026-2684-hearing-testimony.pdf").write_bytes(b"%PDF testimony")
+            with self.assertRaises(SystemExit):
+                bh.check_not_hosted(meta, d / "out", rows)
+
+    def test_not_hosted_unknown_file_stops_the_build(self):
+        import build_hearing as bh
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            self.write_fetch(d / "pre", [], {})
+            meta = {**self.META, "legistar_not_hosted": {"no-such-file.pdf": "x"}}
+            with self.assertRaises(SystemExit):
+                bh.build_legistar(meta, d / "out", None, d / "pre", None, None)
+
+    def test_manifest_without_not_hosted_keeps_its_columns(self):
+        import build_hearing as bh
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            self.write_fetch(d / "pre", [], {})
+            bh.build_legistar(self.META, d / "out", None, d / "pre", None, None)
+            header = (d / "out" / "legistar" / "manifest.csv").read_text(encoding="utf-8").splitlines()[0]
+            self.assertEqual(header, ",".join(bh.MANIFEST_FIELDS))
+
 
 PAGE = """<html><head><title>x</title></head><body>
 <script>

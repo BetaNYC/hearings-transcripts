@@ -11,6 +11,12 @@
     "url": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22733&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
     "agenda_url": "https://nyc.legistar1.com/nyc/meetings/2026/9/22733_A_Committee_on_Technology_26-09-30_Committee_Agenda.pdf"
   },
+  "legistar_not_hosted": {
+    "int-0173-2026-hearing-testimony-9-30-26.pdf": "it includes a witness's personal contact details",
+    "int-0669-2026-hearing-testimony-9-30-26.pdf": "it includes a witness's personal contact details",
+    "int-0800-2026-hearing-testimony-9-30-26.pdf": "it includes a witness's personal contact details",
+    "t2026-2556-hearing-testimony.pdf": "it includes a witness's personal contact details"
+  },
   "video": {
     "duration_hms": "01:34:30",
     "council_source_url": "https://councilnyc.viebit.com/vod/?s=true&v=NYCC-250-8-3_260930-131436.mp4",

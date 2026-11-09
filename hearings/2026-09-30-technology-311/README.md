@@ -20,7 +20,7 @@ record.** Check the video before quoting anyone.
 | `transcript/words.json` | Every word with its start and end time in seconds and its `turn_id` (unedited words) |
 | `transcript/captions.vtt` | WebVTT captions, speaker in a `<v>` tag, cues of 7 seconds or less |
 | `speakers.csv` | One row per speaker: `speaker_name, speaker_role, category, turns, talk_seconds, first_heard_hms` |
-| `legistar/` | 33 documents from Legistar plus `manifest.csv` with each document's Legistar URL and last-modified time |
+| `legistar/` | 29 documents from Legistar plus `manifest.csv` with each document's Legistar URL and last-modified time. 4 more are listed in `manifest.csv` and link to the Council's site instead of being copied here, because they include a member of the public's personal contact details |
 | `media/` | 16 kbps Opus audio, and pointers to the video and the full-quality MP3 |
 | `panels.json` | The hearing's parts in order: `[{panel_id, title, start_hms, end_hms, turn_ids, members:[{name, role, org}]}]`. `turn_ids` are `turn_id`s in `turns.csv`; each turn is in at most one panel |
 | `panels.html` | Who spoke, panel by panel: a timeline of every turn and talk time per panel (built by `scripts/build_panels.py`) |

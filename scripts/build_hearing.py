@@ -20,6 +20,10 @@ Inputs (all local files):
                     is one (newer copies win). --legistar-pre-readme / --legistar-post-json read
                     the hand-made 2026-10-05 format instead.
                     If omitted, the existing legistar/manifest.csv is kept.
+                    A file named in the meta's "legistar_not_hosted" ({filename: note}) is not
+                    copied: manifest.csv gains "hosted" and "note" columns and the pages link
+                    to the Council's copy. Used when a document shows a member of the public's
+                    personal contact details.
 
   python3 scripts/build_hearing.py --index-only     rebuilds index.html only.
 
@@ -71,6 +75,9 @@ def turn_fields(meta: dict) -> list[str]:
 SPEAKER_FIELDS = ["speaker_name", "speaker_role", "category", "turns", "talk_seconds", "first_heard_hms"]
 MANIFEST_FIELDS = ["matter_file", "matter_title", "attachment_name", "legistar_url",
                    "last_modified_utc", "filename", "bytes"]
+# Added only when the meta's "legistar_not_hosted" names a file: the Council posted it, but it shows a
+# member of the public's personal contact details, so it is listed and linked, not copied here.
+NOT_HOSTED_FIELDS = ["hosted", "note"]
 
 # ---- speaker categories ---------------------------------------------------------
 # Derived from the label's role (and name, for unidentified speakers). Documented in README.md.
@@ -474,6 +481,10 @@ def build_legistar(meta: dict, out: Path, pre_readme: Path | None, pre_dir: Path
             die(f"post-hearing {fname}: {src.stat().st_size} bytes on disk, manifest says {nbytes}")
         rows[(matter, name)] = {"matter_file": matter, "attachment_name": name, "legistar_url": url,
                                 "last_modified_utc": mod, "filename": fname, "_src": src}
+    not_hosted = meta.get("legistar_not_hosted", {})
+    unknown = sorted(set(not_hosted) - {r["filename"] for r in rows.values()})
+    if unknown:
+        die(f"legistar_not_hosted names files not in the download: {', '.join(unknown)}")
     # A filename shared by several matters (or re-saved post-hearing) resolves to the newest copy.
     newest: dict[str, Path] = {}
     for r in rows.values():
@@ -486,18 +497,38 @@ def build_legistar(meta: dict, out: Path, pre_readme: Path | None, pre_dir: Path
     for fname, src in sorted(newest.items()):
         if not src.is_file():
             die(f"legistar source missing: {src}")
-        shutil.copy2(src, dest / fname)
+        if fname not in not_hosted:
+            shutil.copy2(src, dest / fname)
     manifest = []
     for r in sorted(rows.values(), key=lambda r: (r["matter_file"] != meta["oversight_topic"]["file"],
                                                    r["matter_file"], r["attachment_name"])):
         if r["matter_file"] not in titles:
             die(f"no title for matter {r['matter_file']!r}")
-        manifest.append({**{k: r[k] for k in ("matter_file", "attachment_name", "legistar_url",
-                                                 "last_modified_utc", "filename")},
-                         "matter_title": titles[r["matter_file"]],
-                         "bytes": (dest / r["filename"]).stat().st_size})
-    write_csv(dest / "manifest.csv", MANIFEST_FIELDS, manifest)
+        fname = r["filename"]
+        row = {**{k: r[k] for k in ("matter_file", "attachment_name", "legistar_url",
+                                    "last_modified_utc", "filename")},
+               "matter_title": titles[r["matter_file"]],
+               # Not hosted: the size of the Council's file.
+               "bytes": (newest[fname] if fname in not_hosted else dest / fname).stat().st_size}
+        if not_hosted:
+            row.update(hosted="no" if fname in not_hosted else "yes", note=not_hosted.get(fname, ""))
+        manifest.append(row)
+    write_csv(dest / "manifest.csv", MANIFEST_FIELDS + (NOT_HOSTED_FIELDS if not_hosted else []), manifest)
     return manifest
+
+
+def is_hosted(m: dict) -> bool:
+    return m.get("hosted", "yes") != "no"
+
+
+def check_not_hosted(meta: dict, out: Path, manifest: list[dict]) -> None:
+    """When legistar/ is kept as it is, every file the meta says not to host must already be marked
+    in manifest.csv and absent from the folder."""
+    marked = {m["filename"] for m in manifest if not is_hosted(m)}
+    for fname in meta.get("legistar_not_hosted", {}):
+        if fname not in marked or (out / "legistar" / fname).exists():
+            die(f"legistar/{fname} is in legistar_not_hosted but legistar/ was built without it; "
+                "rebuild with --legistar-pre-dir")
 
 
 def read_manifest(out: Path) -> list[dict]:
@@ -516,7 +547,11 @@ def hearing_readme(meta: dict, stats: dict, speakers: list[dict], manifest: list
     for s in speakers:
         cats[s["category"]] = cats.get(s["category"], 0) + 1
     cat_lines = "\n".join(f"| `{k}` | {CATEGORIES[k][0]} | {cats.get(k, 0)} |" for k in CATEGORIES)
-    docs = len({m["filename"] for m in manifest})
+    docs = len({m["filename"] for m in manifest if is_hosted(m)})
+    linked = len({m["filename"] for m in manifest if not is_hosted(m)})
+    linked_note = (f". {linked} more are listed in `manifest.csv` and link to the Council's site instead of being "
+                   f"copied here, because they include a member of the public's personal contact details"
+                   if linked else "")
     notes = [archive_note(meta) if meta["video"].get("internet_archive_url")
              else "The video has not been uploaded to the Internet Archive yet.",
              release_note(meta) if meta["media"]["audio_mp3"].get("release_url")
@@ -548,7 +583,7 @@ record.** Check the video before quoting anyone.
 | `transcript/words.json` | Every word with its start and end time in seconds and its `turn_id` (unedited words) |
 | `transcript/captions.vtt` | WebVTT captions, speaker in a `<v>` tag, cues of 7 seconds or less |
 | `speakers.csv` | One row per speaker: `{', '.join(SPEAKER_FIELDS)}` |
-| `legistar/` | {docs} documents from Legistar plus `manifest.csv` with each document's Legistar URL and last-modified time |
+| `legistar/` | {docs} documents from Legistar plus `manifest.csv` with each document's Legistar URL and last-modified time{linked_note} |
 | `media/` | 16 kbps Opus audio, and pointers to the video and the full-quality MP3 |
 {panels_file_rows(meta['slug'])}
 Times are seconds from the start of the Council's recording (00:00:00 is the first frame,
@@ -851,9 +886,17 @@ def hearing_card(slug: str) -> str:
             continue
         seen.add(m["filename"])
         ext = Path(m["filename"]).suffix.lstrip(".").upper()
+        if not is_hosted(m):
+            doc_items.append(f'<li><a href="{esc(m["legistar_url"])}">{esc(m["matter_file"])}: '
+                             f'{esc(m["attachment_name"])}</a> <span class="meta">{ext}. On the Council\'s site '
+                             f'(not copied here: {esc(m["note"])})</span></li>')
+            continue
         doc_items.append(f'<li><a href="{esc(p + "legistar/" + m["filename"])}" download>'
                          f'{esc(m["matter_file"])}: {esc(m["attachment_name"])}</a> '
                          f'<span class="meta">{ext}, {human_bytes(int(m["bytes"]))}</span></li>')
+    linked = sum(not is_hosted(m) for m in {m["filename"]: m for m in manifest}.values())
+    docs_summary = (f"{len(doc_items)} files" if not linked else
+                    f"{len(doc_items) - linked} files, {linked} more on the Council's site")
     legend = "".join(f'<li><span class="sw" style="background:{c}" aria-hidden="true"></span>{esc(n)}</li>'
                      for k, (n, c) in CATEGORIES.items() if any(s["category"] == k for s in speakers[:25]))
     table = "".join(f"<tr><td>{esc(s['speaker_name'])}</td><td>{esc(s['speaker_role'])}</td>"
@@ -891,7 +934,7 @@ def hearing_card(slug: str) -> str:
 {file_items}
   </ul>
   <details>
-    <summary>Legistar documents ({len(doc_items)} files)</summary>
+    <summary>Legistar documents ({docs_summary})</summary>
     <ul class="files">{''.join(doc_items)}</ul>
   </details>
   <details>
@@ -1113,13 +1156,14 @@ def build_hearing(a: argparse.Namespace) -> None:
         manifest = build_legistar(meta, out, pre_readme, pre_dir, post_json, post_dir)
     else:
         manifest = read_manifest(out)
+        check_not_hosted(meta, out, manifest)
 
     conf = {c: sum(t["confidence"] == c for t in turns) for c in VALID_CONFIDENCE}
     stats = {"turns": len(turns), "speakers": len(speakers), "words": len(words),
              "duration_sec": dg.get("duration_sec"), "confidence_counts": conf,
              "unidentified_turns": sum(categorize(t["speaker_name"], t["speaker_role"]) == "unidentified"
                                        for t in turns),
-             "legistar_documents": len({m["filename"] for m in manifest})}
+             "legistar_documents": len({m["filename"] for m in manifest if is_hosted(m)})}
     hearing = {**meta, "stats": stats,
                "license": {"data": "CC-BY-4.0 (BetaNYC's transcripts, labels and exports)",
                            "public_records": "Video, audio and Legistar documents are public records "
