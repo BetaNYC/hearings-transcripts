@@ -37,7 +37,7 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from feedback import ABOUT_URL, feedback_html  # noqa: E402
+from feedback import ABOUT_URL, feedback_html, whats_changed_link  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = REPO / "scripts" / "meta" / "wordclouds.json"
@@ -361,7 +361,7 @@ def footer(root: str, page_rel: str, hearing: dict | None) -> str:
     return (f'<footer><div class="wrap">{feedback_html(page_rel, hearing)}'
             f'BetaNYC · <a href="https://beta.nyc/">beta.nyc</a> · '
             f'<a href="{root}index.html">All hearing transcripts</a> · '
-            f'<a href="{ABOUT_URL}">About this repository</a></div></footer>')
+            f'<a href="{ABOUT_URL}">About this repository</a> · {whats_changed_link(root)}</div></footer>')
 
 
 def group_nav(groups: list[dict], current: str | None, prefix: str) -> str:

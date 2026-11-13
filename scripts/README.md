@@ -248,6 +248,16 @@ Archimedean spiral with bounding-box collision, measured with the page font afte
 shrinking all words together until every phrase fits). Re-running rewrites every output and
 produces identical files.
 
+## whats_changed.py
+
+A copy of BetaNYC's shared What's changed checker and renderer (canonical in the BetaNYC AI workspace, `scripts/whats_changed.py`; never edit this copy). It checks `WHATS-CHANGED.md` and writes the list on `whats-changed.html` between the `whats-changed` markers; the rest of that page is hand-written, and its footer link comes from `feedback.py`. Every builder's footer links to the page through `feedback.whats_changed_link()`.
+
+```sh
+python3 scripts/whats_changed.py check WHATS-CHANGED.md
+python3 scripts/whats_changed.py render WHATS-CHANGED.md --format fragment --into whats-changed.html \
+  --repo-url https://github.com/BetaNYC/hearings-transcripts
+```
+
 ## Tests
 
 ```sh

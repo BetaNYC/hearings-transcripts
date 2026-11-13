@@ -37,6 +37,17 @@ def repo_blob(path: str, anchor: str = "") -> str:
 ABOUT_URL = repo_blob("README.md")
 CORRECTIONS_URL = repo_blob("README.md", "corrections")
 
+# The What's changed page (BetaNYC's What's changed standard): hand-written at the site root,
+# its list generated from WHATS-CHANGED.md by scripts/whats_changed.py. Every page's footer
+# links to it.
+WHATS_CHANGED_PAGE = "whats-changed.html"
+
+
+def whats_changed_link(root: str) -> str:
+    """Footer link to the What's changed page; `root` is the relative path to the site root
+    ("" for index.html, "../../" for a hearing page)."""
+    return f'<a href="{root}{WHATS_CHANGED_PAGE}">What&rsquo;s changed</a>'
+
 
 def hearing_label(hearing: dict | None) -> str:
     if not hearing:

@@ -6,6 +6,8 @@ build visualizations from what was said.
 
 Browse and download: **https://betanyc.github.io/hearings-transcripts/** (or open `index.html`).
 
+What's changed: every change a reader would notice, newest first, is in [`WHATS-CHANGED.md`](WHATS-CHANGED.md) and on the site at https://betanyc.github.io/hearings-transcripts/whats-changed.html, linked from the bottom of every page.
+
 ## Hearings
 
 | Date | Body | Title | Folder |
@@ -170,3 +172,5 @@ and `python3 scripts/build_wordclouds.py` (a hearing's own groups go in
 `python3 -m unittest discover -s scripts`. MP3s and video never go into git: the full-quality
 MP3 goes to a GitHub Release and the video to the Internet Archive (GitHub also refuses files over
 100 MB).
+
+Every new hearing, new page or fix a reader would notice also gets an entry at the top of [`WHATS-CHANGED.md`](WHATS-CHANGED.md), dated the day it is merged (old entries are never edited; add a dated `Update` line instead). Then rebuild the What's changed page with `python3 scripts/whats_changed.py render WHATS-CHANGED.md --format fragment --into whats-changed.html --repo-url https://github.com/BetaNYC/hearings-transcripts`. CI checks both.

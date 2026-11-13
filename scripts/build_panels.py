@@ -43,7 +43,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from feedback import ABOUT_URL, feedback_html, repo_blob  # noqa: E402
+from feedback import ABOUT_URL, feedback_html, repo_blob, whats_changed_link  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 SCRIPT = "build_panels"
@@ -463,7 +463,7 @@ def render(hearing: dict, panels: list[dict], turns: list[dict]) -> str:
 <p>Built by <code>scripts/build_panels.py</code> from <code>panels.json</code>, <code>transcript/turns.csv</code> and <code>speakers.csv</code>. This is a machine transcript, not an official record; check the video before quoting anyone.</p>
 </div>
 </main>
-<footer><div class="wrap">{feedback_html(f"hearings/{slug}/panels.html", hearing)}BetaNYC · <a href="https://beta.nyc/">beta.nyc</a> · <a href="{root}index.html">All hearing transcripts</a> · <a href="{ABOUT_URL}">About this repository</a></div></footer>
+<footer><div class="wrap">{feedback_html(f"hearings/{slug}/panels.html", hearing)}BetaNYC · <a href="https://beta.nyc/">beta.nyc</a> · <a href="{root}index.html">All hearing transcripts</a> · <a href="{ABOUT_URL}">About this repository</a> · {whats_changed_link(root)}</div></footer>
 <div class="tip" id="tip" aria-hidden="true"></div>
 <script>
 const TURNS={json_for_script(js_turns)};
