@@ -41,3 +41,6 @@ jobs:
           python3 scripts/whats_changed.py render WHATS-CHANGED.md --format fragment
           --into whats-changed.html
           --repo-url https://github.com/BetaNYC/hearings-transcripts --check
+
+      - name: Page tests (structure, footer link on every page, the two checks above)
+        run: python3 -m unittest scripts/test_whats_changed.py -v

@@ -11,6 +11,7 @@ Run from the repository root:  python3 -m unittest discover -s scripts -v
 
 from __future__ import annotations
 
+import json
 import re
 import subprocess
 import sys
@@ -96,17 +97,32 @@ class WhatsChanged(unittest.TestCase):
             self.assertTrue(p.find(tag), f"no <{tag}>")
         self.assertTrue(p.find("a", href="#main"), "no skip link")
         self.assertTrue(p.find("main", id="main"))
+        r = run([sys.executable, str(SCRIPT), "json", "WHATS-CHANGED.md"])
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        entries = [e for e in json.loads(r.stdout)["entries"] if e.get("valid", True)]
+        # Every entry is an <article> labeled by its h2, and every dated entry's date is a
+        # <time> (Update lines add more, so this is a subset check, not a count).
         articles = p.find("article")
-        self.assertEqual(len(articles), 10)
+        self.assertEqual(len(articles), len(entries))
         self.assertTrue(all("aria-labelledby" in a for a in articles))
-        self.assertEqual(len([a for a in p.find("time") if "datetime" in a]), 10)
-        # The filter is hidden until its script runs, so with JavaScript off every entry shows.
+        times = {a["datetime"] for a in p.find("time") if "datetime" in a}
+        self.assertLessEqual({e["date"] for e in entries if e["date"]}, times)
+        # The filter offers a box per subject tag in use, plus "Corrections only" when there is
+        # a correction, and appears only with two or more choices. It is hidden until its
+        # script runs, so with JavaScript off every entry shows.
+        used = {t for e in entries for t in e["tags"] if t in ("Site", "Data", "MCP")}
+        choices = len(used) + (1 if any("Correction" in e["tags"] for e in entries) else 0)
+        boxes = p.find("input", type="checkbox")
+        if choices < 2:
+            self.assertFalse(p.find("fieldset") or boxes)
+            return
         self.assertEqual(len(p.find("fieldset")), 1)
         wrappers = p.find("div", **{"class": "wc-filters"})
         self.assertEqual(len(wrappers), 1)
         self.assertIn("hidden", wrappers[0])
         self.assertEqual(p.text["legend"].strip(), "Show changes to")
-        self.assertEqual(len(p.find("input", type="checkbox")), 4)
+        self.assertEqual(len(boxes), choices)
+        self.assertEqual({b["value"] for b in boxes if b.get("name") == "wc-tag"}, used)
         self.assertTrue(any(a.get("role") == "status" and a.get("aria-live") == "polite" for _, a in p.tags))
 
 

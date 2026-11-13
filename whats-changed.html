@@ -26,7 +26,7 @@ nav.site a { display:inline-block; min-height:44px; line-height:44px; margin-rig
 h1 { font-family:Poppins, sans-serif; font-weight:700; font-size:clamp(32px, 5vw, 51px); line-height:1.4; color:#000; margin:36px 0 16px; }
 a { color:var(--blue); text-decoration:underline; }
 a:focus-visible { outline:3px solid var(--blue); outline-offset:2px; }
-.skip { position:absolute; left:-9999px; top:0; background:#fff; padding:8px 12px; }
+.skip { position:absolute; left:-9999px; top:0; background:#fff; padding:0 12px; min-height:44px; display:inline-flex; align-items:center; }
 .skip:focus { left:8px; top:8px; }
 footer { border-top:1px solid var(--border); margin-top:54px; padding:24px 0; font-size:15px; }
 </style>
@@ -70,8 +70,6 @@ footer { border-top:1px solid var(--border); margin-top:54px; padding:24px 0; fo
 <legend>Show changes to</legend>
 <label class="wc-option"><input type="checkbox" name="wc-tag" value="Site" checked> Site</label>
 <label class="wc-option"><input type="checkbox" name="wc-tag" value="Data" checked> Data</label>
-<label class="wc-option"><input type="checkbox" name="wc-tag" value="MCP" checked> MCP</label>
-<label class="wc-option"><input type="checkbox" name="wc-corrections" value="Correction"> Corrections only</label>
 </fieldset>
 </div>
 <p class="wc-status" role="status" aria-live="polite" aria-atomic="true">Showing all 10 changes.</p>
@@ -174,7 +172,7 @@ footer { border-top:1px solid var(--border); margin-top:54px; padding:24px 0; fo
       Array.prototype.forEach.call(entries, function (el) {
         var tags = (el.getAttribute("data-tags") || "").split(" ");
         var ok = tags.some(function (t) { return on[t]; });
-        if (corrBox.checked && tags.indexOf("Correction") < 0) ok = false;
+        if (corrBox && corrBox.checked && tags.indexOf("Correction") < 0) ok = false;
         el.hidden = !ok;
         if (ok) shown++;
       });
@@ -187,7 +185,7 @@ footer { border-top:1px solid var(--border); margin-top:54px; padding:24px 0; fo
       var el = id && document.getElementById(id);
       if (el && root.contains(el) && el.closest(".wc-entry[hidden]")) {
         Array.prototype.forEach.call(tagBoxes, function (b) { b.checked = true; });
-        corrBox.checked = false;
+        if (corrBox) corrBox.checked = false;
         apply();
         el.scrollIntoView();
       }
