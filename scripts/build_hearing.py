@@ -48,7 +48,13 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from feedback import ABOUT_URL, CORRECTIONS_URL, feedback_html, repo_blob  # noqa: E402
+from feedback import (  # noqa: E402
+    ABOUT_URL,
+    CORRECTIONS_URL,
+    feedback_html,
+    repo_blob,
+    whats_changed_link,
+)
 
 REPO = Path(__file__).resolve().parent.parent
 GAP_SEC = 5.0
@@ -1087,7 +1093,7 @@ a:focus-visible {{ outline:3px solid var(--blue); outline-offset:2px; }}
 <h2>License and citation</h2>
 <p class="lede">BetaNYC's work here (transcripts, speaker labels, exports, and this page's text) is licensed <a href="LICENSE-DATA">CC BY 4.0</a>. The code is <a href="LICENSE">MIT</a>. The video, audio and Legistar documents are public records produced by the New York City Council; our license does not cover them. To cite, see <a href="CITATION.cff">CITATION.cff</a>, or: BetaNYC (2026). <em>NYC Council hearing transcripts</em>. https://github.com/BetaNYC/hearings-transcripts</p>
 </main>
-<footer><div class="wrap">{feedback_html("index.html", None)}BetaNYC · <a href="https://beta.nyc/">beta.nyc</a> · <a href="{ABOUT_URL}">About this repository</a> · <a href="{CORRECTIONS_URL}">How to report a correction</a></div></footer>
+<footer><div class="wrap">{feedback_html("index.html", None)}BetaNYC · <a href="https://beta.nyc/">beta.nyc</a> · <a href="{ABOUT_URL}">About this repository</a> · <a href="{CORRECTIONS_URL}">How to report a correction</a> · {whats_changed_link("")}</div></footer>
 </body>
 </html>
 """
